@@ -660,18 +660,18 @@
 	}
 
 	.pricing-card {
-		background: white;
-		border: 2px solid #ececec;
-		border-radius: 16px;
+		background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+		border: none;
+		border-radius: 20px;
 		padding: 48px 32px;
 		text-align: center;
 		transition: all 0.3s;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 	}
 
 	.pricing-card:hover {
-		border-color: #90278e;
-		transform: translateY(-4px);
-		box-shadow: 0 20px 40px rgba(144, 39, 142, 0.15);
+		transform: translateY(-8px);
+		box-shadow: 0 20px 40px rgba(144, 39, 142, 0.2), 0 0 30px rgba(255, 0, 149, 0.15);
 	}
 
 	.pricing-icon {
@@ -763,17 +763,17 @@
 	}
 
 	.testimonial-card {
-		background: white;
-		border: 2px solid #ececec;
-		border-radius: 12px;
+		background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+		border: none;
+		border-radius: 16px;
 		padding: 32px;
 		transition: all 0.3s;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 	}
 
 	.testimonial-card:hover {
-		border-color: #ff0095;
-		transform: translateY(-4px);
-		box-shadow: 0 10px 30px rgba(255, 0, 149, 0.1);
+		transform: translateY(-6px);
+		box-shadow: 0 15px 35px rgba(255, 0, 149, 0.15), 0 0 25px rgba(255, 0, 149, 0.1);
 	}
 
 	.testimonial-header {
@@ -850,7 +850,7 @@
 
 	.bubble {
 		border-radius: 50%;
-		background: #f3f4f6;
+		background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -858,11 +858,13 @@
 		text-align: center;
 		padding: 20px;
 		transition: all 0.3s;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 	}
 
 	.bubble:hover {
-		background: #e5e7eb;
-		transform: scale(1.05);
+		background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+		transform: scale(1.08);
+		box-shadow: 0 10px 30px rgba(144, 39, 142, 0.15), 0 0 20px rgba(144, 39, 142, 0.1);
 	}
 
 	.bubble-large {
@@ -1159,18 +1161,18 @@
 	}
 
 	.contact-card {
-		background: white;
-		border: 2px solid #ececec;
-		border-radius: 10px;
+		background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+		border: none;
+		border-radius: 16px;
 		padding: 40px;
 		text-align: center;
 		transition: all 0.3s;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 	}
 
 	.contact-card:hover {
-		border-color: #a7d8e9;
-		transform: translateY(-4px);
-		box-shadow: 0 8px 16px rgba(167, 216, 233, 0.2);
+		transform: translateY(-6px);
+		box-shadow: 0 15px 35px rgba(167, 216, 233, 0.25), 0 0 25px rgba(167, 216, 233, 0.15);
 	}
 
 	.contact-icon {
