@@ -735,11 +735,9 @@
 	}
 
 	.insurers-grid {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		gap: 40px 56px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 48px 40px;
 		margin-bottom: 80px;
 		max-width: 900px;
 		margin-left: auto;
@@ -750,20 +748,19 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		transition: opacity 0.3s;
 	}
 
 	.insurer-logo img {
-		height: 40px;
+		height: 50px;
 		width: auto;
+		max-width: 160px;
 		object-fit: contain;
-		filter: grayscale(100%) brightness(0.6);
-		opacity: 0.6;
+		filter: grayscale(100%) brightness(0) invert(0);
+		opacity: 0.7;
 		transition: all 0.3s;
 	}
 
 	.insurer-logo:hover img {
-		filter: grayscale(0%) brightness(1);
 		opacity: 1;
 	}
 
@@ -1197,11 +1194,13 @@
 		}
 
 		.insurers-grid {
-			gap: 24px 32px;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 32px 24px;
 		}
 
 		.insurer-logo img {
-			height: 28px;
+			height: 36px;
+			max-width: 120px;
 		}
 
 		.certifications {
