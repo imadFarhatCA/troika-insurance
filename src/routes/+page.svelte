@@ -1,11 +1,7 @@
 <script lang="ts">
 	import heroIllustration from '$lib/assets/hero-illustration.svg';
 	import logo from '$lib/assets/logo.svg';
-	import rentersIcon from '$lib/assets/icons/RENTERS Icon.svg';
-	import homeownersIcon from '$lib/assets/icons/HOMEOWNERS Icon.svg';
-	import corporateIcon from '$lib/assets/icons/CORPORATE Icon.svg';
-	import carIcon from '$lib/assets/icons/Car Icon.svg';
-	import customIcon from '$lib/assets/icons/CUSTOM Icon.svg';
+	import PricingSection from '$lib/components/PricingSection.svelte';
 
 	let mobileMenuOpen = false;
 
@@ -80,74 +76,7 @@
 	</section>
 
 	<!-- Pricing Section -->
-	<section id="pricing" class="pricing">
-		<div class="container">
-			<h2>Incredible Prices. Monthly Subscription.<br/>Bundle Discounts.</h2>
-			<p class="pricing-subtitle">
-				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
-					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#90278e"/>
-				</svg>
-				Amazing savings when you bundle
-			</p>
-
-			<div class="pricing-grid">
-				<!-- Renters -->
-				<div class="pricing-card" id="renters">
-					<div class="pricing-icon">
-						<img src={rentersIcon} alt="Renters Insurance" />
-					</div>
-					<h3>Renters</h3>
-					<p>Coverage for your stuff, and peace of mind</p>
-					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
-					<p class="pricing-from">from $5 / month</p>
-				</div>
-
-				<!-- Homeowners -->
-				<div class="pricing-card" id="homeowners">
-					<div class="pricing-icon">
-						<img src={homeownersIcon} alt="Homeowners Insurance" />
-					</div>
-					<h3>Homeowners</h3>
-					<p>Protection for your home and stuff</p>
-					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
-					<p class="pricing-from">from $25 / month</p>
-				</div>
-
-				<!-- Commercial -->
-				<div class="pricing-card" id="commercial">
-					<div class="pricing-icon">
-						<img src={corporateIcon} alt="Commercial Insurance" />
-					</div>
-					<h3>Commercial</h3>
-					<p>Coverage for your business</p>
-					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
-					<p class="pricing-from">from $50 / month</p>
-				</div>
-
-				<!-- Car -->
-				<div class="pricing-card" id="car">
-					<div class="pricing-icon">
-						<img src={carIcon} alt="Car Insurance" />
-					</div>
-					<h3>Car</h3>
-					<p>Protect your car, passengers, and the planet</p>
-					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
-					<p class="pricing-from">as low as $30 / month</p>
-				</div>
-
-				<!-- Custom -->
-				<div class="pricing-card" id="custom">
-					<div class="pricing-icon">
-						<img src={customIcon} alt="Custom Insurance" />
-					</div>
-					<h3>Custom</h3>
-					<p>Tailored coverage for unique needs</p>
-					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
-					<p class="pricing-from">custom pricing</p>
-				</div>
-			</div>
-		</div>
-	</section>
+	<PricingSection />
 
 	<!-- About Section -->
 	<section id="about" class="about">
@@ -626,119 +555,9 @@
 		50% { transform: translateY(-20px); }
 	}
 
-	/* Pricing Section */
-	.pricing {
-		padding: 100px 24px;
-		background: white;
-	}
-
 	.container {
 		max-width: 1200px;
 		margin: 0 auto;
-	}
-
-	.pricing h2 {
-		text-align: center;
-		font-size: 48px;
-		font-weight: 700;
-		color: #3b3b3b;
-		margin: 0 0 24px 0;
-		line-height: 1.2;
-	}
-
-	.pricing-subtitle {
-		text-align: center;
-		font-size: 18px;
-		color: #646464;
-		margin: 0 0 60px 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.pricing-grid {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		gap: 24px;
-		max-width: 100%;
-		margin: 0 auto;
-		padding: 0 40px;
-	}
-
-	.pricing-card {
-		background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
-		border: none;
-		border-radius: 20px;
-		padding: 36px 20px;
-		text-align: center;
-		transition: all 0.3s;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-		display: flex;
-		flex-direction: column;
-	}
-
-	.pricing-card:hover {
-		transform: translateY(-8px);
-		box-shadow: 0 20px 40px rgba(144, 39, 142, 0.2), 0 0 30px rgba(255, 0, 149, 0.15);
-	}
-
-	.pricing-icon {
-		width: 100px;
-		height: 100px;
-		margin: 0 auto 20px;
-	}
-
-	.pricing-icon svg,
-	.pricing-icon img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-	}
-
-	.pricing-card h3 {
-		font-size: 22px;
-		font-weight: 700;
-		color: #3b3b3b;
-		margin: 0 0 8px 0;
-	}
-
-	.pricing-card > p {
-		color: #646464;
-		margin: 0 0 32px 0;
-		font-size: 13px;
-		line-height: 1.6;
-		flex-grow: 1;
-	}
-
-	.btn-pricing {
-		display: block;
-		background: #ff0095;
-		color: white;
-		padding: 14px 24px;
-		border-radius: 8px;
-		text-decoration: none;
-		font-weight: 700;
-		font-size: 13px;
-		transition: all 0.3s;
-		border: none;
-		cursor: pointer;
-		letter-spacing: 0.5px;
-		margin: 0 auto 12px;
-		white-space: nowrap;
-	}
-
-	.btn-pricing:hover {
-		background: #d6007d;
-		transform: translateY(-2px);
-		box-shadow: 0px 15px 40px rgba(255, 0, 149, 0.4);
-	}
-
-	.pricing-from {
-		margin: 0;
-		font-size: 10px;
-		color: #b8b8b8;
-		font-weight: 400;
-		text-transform: lowercase;
 	}
 
 	/* Testimonials Section */
@@ -1310,9 +1129,10 @@
 		}
 
 		.illustration {
-			width: 100%;
-			height: 60%;
-			object-position: center bottom;
+			width: 120%;
+			height: 70%;
+			object-fit: cover;
+			object-position: center center;
 		}
 
 		.about-content,
@@ -1329,7 +1149,6 @@
 
 		.about-text h2,
 		.claims-text h2,
-		.pricing h2,
 		.testimonials h2,
 		.switch-section h2,
 		.social-impact h2,
@@ -1337,7 +1156,6 @@
 			font-size: 36px;
 		}
 
-		.pricing-grid,
 		.testimonials-grid {
 			grid-template-columns: 1fr;
 		}
@@ -1403,13 +1221,12 @@
 		}
 
 		.illustration {
-			width: 100%;
-			height: 55%;
-			object-fit: contain;
-			object-position: center bottom;
+			width: 140%;
+			height: 60%;
+			object-fit: cover;
+			object-position: center center;
 		}
 
-		.pricing,
 		.about,
 		.claims,
 		.testimonials,
@@ -1419,7 +1236,6 @@
 			padding: 60px 20px;
 		}
 
-		.pricing-grid,
 		.testimonials-grid {
 			grid-template-columns: 1fr;
 		}
