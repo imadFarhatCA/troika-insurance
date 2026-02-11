@@ -1,6 +1,10 @@
 <script lang="ts">
 	import heroIllustration from '$lib/assets/hero-illustration.svg';
 	import logo from '$lib/assets/logo.svg';
+	import rentersIcon from '$lib/assets/icons/RENTERS Icon.svg';
+	import homeownersIcon from '$lib/assets/icons/HOMEOWNERS Icon.svg';
+	import corporateIcon from '$lib/assets/icons/CORPORATE Icon.svg';
+	import carIcon from '$lib/assets/icons/Car Icon.svg';
 
 	let mobileMenuOpen = false;
 
@@ -86,14 +90,21 @@
 			</p>
 
 			<div class="pricing-grid">
+				<!-- Renters -->
+				<div class="pricing-card" id="renters">
+					<div class="pricing-icon">
+						<img src={rentersIcon} alt="Renters Insurance" />
+					</div>
+					<h3>Renters</h3>
+					<p>Coverage for your stuff, and peace of mind</p>
+					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
+					<p class="pricing-from">FROM $5/MO</p>
+				</div>
+
 				<!-- Homeowners -->
 				<div class="pricing-card" id="homeowners">
 					<div class="pricing-icon">
-						<svg viewBox="0 0 100 100">
-							<rect x="15" y="35" width="70" height="55" fill="none" stroke="#3b3b3b" stroke-width="3" rx="2"/>
-							<path d="M 10 38 L 50 8 L 90 38" fill="none" stroke="#3b3b3b" stroke-width="3"/>
-							<rect x="42" y="58" width="16" height="32" fill="none" stroke="#3b3b3b" stroke-width="2"/>
-						</svg>
+						<img src={homeownersIcon} alt="Homeowners Insurance" />
 					</div>
 					<h3>Homeowners</h3>
 					<p>Protection for your home and stuff</p>
@@ -104,18 +115,7 @@
 				<!-- Commercial -->
 				<div class="pricing-card" id="commercial">
 					<div class="pricing-icon">
-						<svg viewBox="0 0 100 100">
-							<rect x="15" y="20" width="70" height="70" fill="none" stroke="#3b3b3b" stroke-width="3" rx="2"/>
-							<g fill="none" stroke="#3b3b3b" stroke-width="2">
-								<rect x="25" y="30" width="15" height="12"/>
-								<rect x="25" y="48" width="15" height="12"/>
-								<rect x="25" y="66" width="15" height="12"/>
-								<rect x="45" y="30" width="15" height="12"/>
-								<rect x="45" y="48" width="15" height="12"/>
-								<rect x="65" y="30" width="15" height="12"/>
-								<rect x="65" y="48" width="15" height="12"/>
-							</g>
-						</svg>
+						<img src={corporateIcon} alt="Commercial Insurance" />
 					</div>
 					<h3>Commercial</h3>
 					<p>Coverage for your business</p>
@@ -126,19 +126,26 @@
 				<!-- Car -->
 				<div class="pricing-card" id="car">
 					<div class="pricing-icon">
-						<svg viewBox="0 0 100 100">
-							<rect x="15" y="48" width="70" height="28" fill="none" stroke="#3b3b3b" stroke-width="3" rx="6"/>
-							<path d="M 20 48 L 28 35 L 72 35 L 80 48" fill="none" stroke="#3b3b3b" stroke-width="3"/>
-							<circle cx="30" cy="76" r="6" fill="none" stroke="#3b3b3b" stroke-width="3"/>
-							<circle cx="70" cy="76" r="6" fill="none" stroke="#3b3b3b" stroke-width="3"/>
-							<rect x="35" y="40" width="10" height="8" fill="none" stroke="#3b3b3b" stroke-width="2"/>
-							<rect x="55" y="40" width="10" height="8" fill="none" stroke="#3b3b3b" stroke-width="2"/>
-						</svg>
+						<img src={carIcon} alt="Car Insurance" />
 					</div>
 					<h3>Car</h3>
 					<p>Protect your car, passengers, and the planet</p>
 					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
 					<p class="pricing-from">AS LOW AS $30/MO</p>
+				</div>
+
+				<!-- Custom -->
+				<div class="pricing-card" id="custom">
+					<div class="pricing-icon">
+						<svg viewBox="0 0 100 100">
+							<circle cx="50" cy="50" r="35" fill="none" stroke="#90278e" stroke-width="3"/>
+							<path d="M 50 25 L 50 50 L 65 65" fill="none" stroke="#90278e" stroke-width="3" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<h3>Custom</h3>
+					<p>Tailored coverage for unique needs</p>
+					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
+					<p class="pricing-from">CUSTOM PRICING</p>
 				</div>
 			</div>
 		</div>
@@ -187,19 +194,19 @@
 
 			<div class="stars-container">
 				<svg width="120" height="120" viewBox="0 0 24 24" fill="#90278e">
-					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="0.5" stroke-linejoin="round"/>
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
 				</svg>
 				<svg width="120" height="120" viewBox="0 0 24 24" fill="#90278e">
-					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="0.5" stroke-linejoin="round"/>
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
 				</svg>
 				<svg width="120" height="120" viewBox="0 0 24 24" fill="#90278e">
-					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="0.5" stroke-linejoin="round"/>
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
 				</svg>
 				<svg width="120" height="120" viewBox="0 0 24 24" fill="#90278e">
-					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="0.5" stroke-linejoin="round"/>
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
 				</svg>
 				<svg width="120" height="120" viewBox="0 0 24 24" fill="#90278e">
-					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="0.5" stroke-linejoin="round"/>
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
 				</svg>
 			</div>
 
@@ -653,9 +660,9 @@
 
 	.pricing-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 32px;
-		max-width: 1000px;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 24px;
+		max-width: 1400px;
 		margin: 0 auto;
 	}
 
@@ -680,9 +687,11 @@
 		margin: 0 auto 24px;
 	}
 
-	.pricing-icon svg {
+	.pricing-icon svg,
+	.pricing-icon img {
 		width: 100%;
 		height: 100%;
+		object-fit: contain;
 	}
 
 	.pricing-card h3 {
@@ -700,7 +709,7 @@
 	}
 
 	.btn-pricing {
-		display: inline-block;
+		display: block;
 		background: #ff0095;
 		color: white;
 		padding: 16px 32px;
@@ -712,6 +721,8 @@
 		border: none;
 		cursor: pointer;
 		letter-spacing: 0.5px;
+		margin: 0 auto;
+		width: fit-content;
 	}
 
 	.btn-pricing:hover {
