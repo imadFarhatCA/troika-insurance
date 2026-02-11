@@ -395,7 +395,7 @@
 		text-decoration: none;
 		font-weight: 700;
 		font-size: 18px;
-		box-shadow: 0px 20px 60px rgba(255, 0, 131, 0.6);
+		box-shadow: 0px 20px 60px rgba(144, 39, 142, 0.5);
 		transition: all 0.3s, transform 0.5s;
 		border: none;
 		cursor: pointer;
@@ -404,7 +404,7 @@
 	.btn-primary:hover {
 		background: #751e73;
 		transform: translateY(-2px);
-		box-shadow: 0px 25px 70px rgba(255, 0, 131, 0.8);
+		box-shadow: 0px 25px 70px rgba(144, 39, 142, 0.7);
 	}
 
 	.btn-primary:active {
@@ -452,8 +452,8 @@
 	.products h2 {
 		text-align: center;
 		font-size: 48px;
-		font-weight: 800;
-		color: #1f2937;
+		font-weight: 700;
+		color: #3b3b3b;
 		margin: 0 0 60px 0;
 	}
 
@@ -608,14 +608,14 @@
 
 	.claims-text h2 {
 		font-size: 48px;
-		font-weight: 800;
-		color: #1f2937;
+		font-weight: 700;
+		color: #3b3b3b;
 		margin: 0 0 24px 0;
 	}
 
 	.claims-text p {
 		font-size: 18px;
-		color: #6b7280;
+		color: #646464;
 		margin: 0 0 32px 0;
 		line-height: 1.7;
 	}
@@ -624,11 +624,11 @@
 		display: inline-block;
 		background: white;
 		color: #90278e;
-		padding: 15px 30px;
-		border-radius: 5px;
+		padding: 18px 42px;
+		border-radius: 50px;
 		text-decoration: none;
 		font-weight: 700;
-		font-size: 14px;
+		font-size: 16px;
 		border: 2px solid #90278e;
 		transition: all 0.3s;
 		cursor: pointer;
@@ -638,7 +638,7 @@
 		background: #90278e;
 		color: white;
 		transform: translateY(-2px);
-		box-shadow: 0px 10px 40px -10px rgba(144, 39, 142, 0.5);
+		box-shadow: 0px 20px 50px rgba(144, 39, 142, 0.4);
 	}
 
 	.btn-secondary:active {
@@ -656,15 +656,15 @@
 	.contact h2 {
 		text-align: center;
 		font-size: 48px;
-		font-weight: 800;
-		color: #1f2937;
+		font-weight: 700;
+		color: #3b3b3b;
 		margin: 0 0 16px 0;
 	}
 
 	.contact-subtitle {
 		text-align: center;
 		font-size: 18px;
-		color: #6b7280;
+		color: #646464;
 		margin: 0 0 48px 0;
 	}
 
@@ -699,12 +699,12 @@
 	.contact-card h3 {
 		font-size: 20px;
 		font-weight: 700;
-		color: #1f2937;
+		color: #3b3b3b;
 		margin: 0 0 12px 0;
 	}
 
 	.contact-card p {
-		color: #6b7280;
+		color: #646464;
 		margin: 0;
 		font-size: 16px;
 	}
