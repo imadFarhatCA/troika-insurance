@@ -86,7 +86,7 @@
 			<div class="about-boxes">
 				<div class="about-box about-box-purple">
 					<div class="about-box-icon">
-						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
 						</svg>
 					</div>
@@ -95,7 +95,7 @@
 				</div>
 				<div class="about-box about-box-pink">
 					<div class="about-box-icon">
-						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<circle cx="12" cy="12" r="10"/>
 							<line x1="12" y1="16" x2="12" y2="12"/>
 							<line x1="12" y1="8" x2="12.01" y2="8"/>
@@ -106,7 +106,7 @@
 				</div>
 				<div class="about-box about-box-blue">
 					<div class="about-box-icon">
-						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
 							<circle cx="9" cy="7" r="4"/>
 							<path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
@@ -756,7 +756,7 @@
 	/* About Section */
 	.about {
 		padding: 100px 24px;
-		background: linear-gradient(135deg, #FFB4DA 0%, #a7d8e9 100%);
+		background: #ececec;
 	}
 
 	.about-title {
@@ -788,59 +788,60 @@
 	}
 
 	.about-box {
-		border-radius: 20px;
+		background: white;
+		border-radius: 16px;
 		padding: 40px 32px;
-		text-align: center;
+		text-align: left;
 		transition: all 0.3s;
+		border-left: 4px solid transparent;
+		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 	}
 
 	.about-box:hover {
-		transform: translateY(-6px);
+		transform: translateY(-4px);
+		box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 	}
 
 	.about-box-purple {
-		background: #92278f;
-		box-shadow: 0 8px 30px rgba(146, 39, 143, 0.3);
-	}
-
-	.about-box-purple:hover {
-		box-shadow: 0 15px 40px rgba(146, 39, 143, 0.5);
+		border-left-color: #92278f;
 	}
 
 	.about-box-pink {
-		background: #ff0095;
-		box-shadow: 0 8px 30px rgba(255, 0, 149, 0.3);
-	}
-
-	.about-box-pink:hover {
-		box-shadow: 0 15px 40px rgba(255, 0, 149, 0.5);
+		border-left-color: #ff0095;
 	}
 
 	.about-box-blue {
-		background: #4dadc9;
-		box-shadow: 0 8px 30px rgba(167, 216, 233, 0.4);
-	}
-
-	.about-box-blue:hover {
-		box-shadow: 0 15px 40px rgba(167, 216, 233, 0.6);
+		border-left-color: #a7d8e9;
 	}
 
 	.about-box-icon {
 		margin-bottom: 20px;
 	}
 
+	.about-box-purple .about-box-icon {
+		color: #92278f;
+	}
+
+	.about-box-pink .about-box-icon {
+		color: #ff0095;
+	}
+
+	.about-box-blue .about-box-icon {
+		color: #4dadc9;
+	}
+
 	.about-box h3 {
-		font-size: 24px;
+		font-size: 22px;
 		font-weight: 700;
-		color: white;
-		margin: 0 0 16px 0;
+		color: #4a4a4a;
+		margin: 0 0 12px 0;
 	}
 
 	.about-box p {
-		font-size: 16px;
-		color: rgba(255, 255, 255, 0.9);
+		font-size: 15px;
+		color: #6b7280;
 		margin: 0;
-		line-height: 1.6;
+		line-height: 1.7;
 	}
 
 	/* Claims Section */
