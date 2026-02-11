@@ -290,39 +290,6 @@
 				</div>
 			</div>
 
-			<div class="certifications">
-				<div class="cert-item">
-					<div class="cert-badge">
-						<svg width="80" height="80" viewBox="0 0 100 100">
-							<circle cx="50" cy="50" r="45" fill="none" stroke="#92278f" stroke-width="3"/>
-							<text x="50" y="45" text-anchor="middle" font-size="18" font-weight="700" fill="#4a4a4a">B-CORP</text>
-							<text x="50" y="60" text-anchor="middle" font-size="10" fill="#4a4a4a">Certified</text>
-						</svg>
-					</div>
-					<h4>Designed for Social Impact</h4>
-				</div>
-
-				<div class="cert-item">
-					<div class="cert-badge">
-						<svg width="80" height="80" viewBox="0 0 100 100">
-							<rect x="10" y="10" width="80" height="80" fill="none" stroke="#92278f" stroke-width="3" rx="8"/>
-							<text x="50" y="50" text-anchor="middle" font-size="20" font-weight="700" fill="#4a4a4a">A+</text>
-							<text x="50" y="70" text-anchor="middle" font-size="10" fill="#4a4a4a">RATED</text>
-						</svg>
-					</div>
-					<h4>A-Rated and Backed by Giants</h4>
-				</div>
-
-				<div class="cert-item">
-					<div class="cert-badge">
-						<svg width="80" height="80" viewBox="0 0 100 100">
-							<path d="M50 10 L70 30 L90 30 L90 70 L70 70 L50 90 L30 70 L10 70 L10 30 L30 30 Z" fill="none" stroke="#92278f" stroke-width="3"/>
-							<text x="50" y="55" text-anchor="middle" font-size="12" font-weight="700" fill="#4a4a4a">SECURE</text>
-						</svg>
-					</div>
-					<h4>Your Data is Protected</h4>
-				</div>
-			</div>
 		</div>
 	</section>
 
@@ -737,9 +704,9 @@
 	.insurers-grid {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 48px 40px;
-		margin-bottom: 80px;
-		max-width: 900px;
+		gap: 24px 20px;
+		margin-bottom: 0;
+		max-width: 1000px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -751,9 +718,9 @@
 	}
 
 	.insurer-logo img {
-		height: 50px;
+		height: 150px;
 		width: auto;
-		max-width: 160px;
+		max-width: 220px;
 		object-fit: contain;
 		filter: grayscale(100%) brightness(0) invert(0);
 		opacity: 0.7;
@@ -764,30 +731,6 @@
 		opacity: 1;
 	}
 
-	.certifications {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 48px;
-		max-width: 900px;
-		margin: 0 auto;
-	}
-
-	.cert-item {
-		text-align: center;
-	}
-
-	.cert-badge {
-		margin-bottom: 24px;
-		display: flex;
-		justify-content: center;
-	}
-
-	.cert-item h4 {
-		font-size: 18px;
-		font-weight: 600;
-		color: #4a4a4a;
-		margin: 0;
-	}
 
 	/* About Section */
 	.about {
@@ -1195,17 +1138,12 @@
 
 		.insurers-grid {
 			grid-template-columns: repeat(3, 1fr);
-			gap: 32px 24px;
+			gap: 16px 12px;
 		}
 
 		.insurer-logo img {
-			height: 36px;
-			max-width: 120px;
-		}
-
-		.certifications {
-			grid-template-columns: 1fr;
-			gap: 32px;
+			height: 80px;
+			max-width: 140px;
 		}
 
 		.footer-links {
