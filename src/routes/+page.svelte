@@ -658,10 +658,11 @@
 
 	.pricing-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-		gap: 20px;
-		max-width: 90%;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 32px;
+		max-width: 1400px;
 		margin: 0 auto;
+		padding: 0 60px;
 	}
 
 	.pricing-card {
