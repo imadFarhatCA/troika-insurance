@@ -337,7 +337,10 @@
 	/* Hero Section */
 	.hero {
 		background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-		padding: 80px 24px 100px;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		padding: 80px 24px;
 	}
 
 	.hero-container {
@@ -345,24 +348,25 @@
 		margin: 0 auto;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 60px;
+		gap: 80px;
 		align-items: center;
+		width: 100%;
 	}
 
 	.hero-content h1 {
-		font-size: 56px;
+		font-size: 64px;
 		font-weight: 800;
 		color: #1f2937;
 		margin: 0 0 24px 0;
 		line-height: 1.1;
-		letter-spacing: -1px;
+		letter-spacing: -1.5px;
 	}
 
 	.hero-subtitle {
-		font-size: 20px;
+		font-size: 22px;
 		color: #6b7280;
-		margin: 0 0 32px 0;
-		line-height: 1.5;
+		margin: 0 0 40px 0;
+		line-height: 1.6;
 	}
 
 	.btn-primary {
@@ -399,7 +403,7 @@
 
 	.illustration {
 		width: 100%;
-		max-width: 400px;
+		max-width: 500px;
 		height: auto;
 		animation: float 6s ease-in-out infinite;
 	}
@@ -757,6 +761,11 @@
 			display: flex;
 		}
 
+		.hero {
+			min-height: 100vh;
+			padding: 60px 24px;
+		}
+
 		.hero-container,
 		.about-content,
 		.claims-content,
@@ -766,7 +775,7 @@
 		}
 
 		.hero-content h1 {
-			font-size: 40px;
+			font-size: 48px;
 		}
 
 		.about-text h2,
@@ -787,15 +796,20 @@
 
 	@media (max-width: 640px) {
 		.hero {
-			padding: 60px 20px 80px;
+			min-height: 100vh;
+			padding: 40px 20px;
 		}
 
 		.hero-content h1 {
-			font-size: 32px;
+			font-size: 36px;
 		}
 
 		.hero-subtitle {
 			font-size: 18px;
+		}
+
+		.illustration {
+			max-width: 100%;
 		}
 
 		.products,
