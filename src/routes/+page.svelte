@@ -464,9 +464,9 @@
 	}
 
 	.nav-container {
-		max-width: 1200px;
+		max-width: 100%;
 		margin: 0 auto;
-		padding: 20px 24px 20px 70px;
+		padding: 20px 60px 20px 120px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -659,17 +659,17 @@
 	.pricing-grid {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
-		gap: 32px;
-		max-width: 1400px;
+		gap: 24px;
+		max-width: 100%;
 		margin: 0 auto;
-		padding: 0 60px;
+		padding: 0 40px;
 	}
 
 	.pricing-card {
 		background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
 		border: none;
 		border-radius: 20px;
-		padding: 40px 28px;
+		padding: 36px 20px;
 		text-align: center;
 		transition: all 0.3s;
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -683,9 +683,9 @@
 	}
 
 	.pricing-icon {
-		width: 120px;
-		height: 120px;
-		margin: 0 auto 24px;
+		width: 100px;
+		height: 100px;
+		margin: 0 auto 20px;
 	}
 
 	.pricing-icon svg,
@@ -696,16 +696,16 @@
 	}
 
 	.pricing-card h3 {
-		font-size: 24px;
+		font-size: 22px;
 		font-weight: 700;
 		color: #3b3b3b;
-		margin: 0 0 12px 0;
+		margin: 0 0 8px 0;
 	}
 
 	.pricing-card > p {
 		color: #646464;
-		margin: 0 0 40px 0;
-		font-size: 14px;
+		margin: 0 0 32px 0;
+		font-size: 13px;
 		line-height: 1.6;
 		flex-grow: 1;
 	}
@@ -714,17 +714,17 @@
 		display: block;
 		background: #ff0095;
 		color: white;
-		padding: 16px 32px;
+		padding: 14px 24px;
 		border-radius: 8px;
 		text-decoration: none;
 		font-weight: 700;
-		font-size: 14px;
+		font-size: 13px;
 		transition: all 0.3s;
 		border: none;
 		cursor: pointer;
 		letter-spacing: 0.5px;
 		margin: 0 auto 12px;
-		width: fit-content;
+		white-space: nowrap;
 	}
 
 	.btn-pricing:hover {
