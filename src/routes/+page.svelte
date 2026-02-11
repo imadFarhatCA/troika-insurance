@@ -466,7 +466,7 @@
 	.nav-container {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 20px 24px;
+		padding: 20px 24px 20px 70px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -559,7 +559,7 @@
 
 	.hero-content h1 {
 		font-size: 72px;
-		font-weight: 700;
+		font-weight: 400;
 		color: #3b3b3b;
 		margin: 0 0 24px 0;
 		line-height: 1.05;
@@ -614,7 +614,7 @@
 	}
 
 	.illustration {
-		width: 80%;
+		width: 70%;
 		height: 100%;
 		object-fit: contain;
 		object-position: right center;
