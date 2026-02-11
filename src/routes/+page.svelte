@@ -74,62 +74,71 @@
 		</div>
 	</section>
 
-	<!-- Products Section -->
-	<section id="products" class="products">
+	<!-- Pricing Section -->
+	<section id="pricing" class="pricing">
 		<div class="container">
-			<h2>What can we cover?</h2>
+			<h2>Incredible Prices. Monthly Subscription.<br/>Bundle Discounts.</h2>
+			<p class="pricing-subtitle">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#90278e"/>
+				</svg>
+				Amazing savings when you bundle
+			</p>
 
-			<div class="products-grid">
+			<div class="pricing-grid">
 				<!-- Homeowners -->
-				<div class="product-card" id="homeowners">
-					<div class="product-icon">
+				<div class="pricing-card" id="homeowners">
+					<div class="pricing-icon">
 						<svg viewBox="0 0 100 100">
-							<rect x="20" y="40" width="60" height="50" fill="#90278e" rx="4"/>
-							<path d="M 10 40 L 50 10 L 90 40 Z" fill="#FFB4DA"/>
-							<rect x="42" y="60" width="16" height="30" fill="#f3f4f6" rx="2"/>
+							<rect x="15" y="35" width="70" height="55" fill="none" stroke="#3b3b3b" stroke-width="3" rx="2"/>
+							<path d="M 10 38 L 50 8 L 90 38" fill="none" stroke="#3b3b3b" stroke-width="3"/>
+							<rect x="42" y="58" width="16" height="32" fill="none" stroke="#3b3b3b" stroke-width="2"/>
 						</svg>
 					</div>
 					<h3>Homeowners</h3>
-					<p>Protect your home and belongings with comprehensive coverage that's easy to understand.</p>
-					<a href="#quote" class="link-arrow">Get covered →</a>
+					<p>Protection for your home and stuff</p>
+					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
+					<p class="pricing-from">FROM $25/MO</p>
 				</div>
 
 				<!-- Commercial -->
-				<div class="product-card" id="commercial">
-					<div class="product-icon">
+				<div class="pricing-card" id="commercial">
+					<div class="pricing-icon">
 						<svg viewBox="0 0 100 100">
-							<rect x="15" y="20" width="70" height="70" fill="#90278e" rx="4"/>
-							<g fill="#FFB4DA">
-								<rect x="25" y="30" width="15" height="15" rx="1"/>
-								<rect x="25" y="50" width="15" height="15" rx="1"/>
-								<rect x="25" y="70" width="15" height="15" rx="1"/>
-								<rect x="45" y="30" width="15" height="15" rx="1"/>
-								<rect x="45" y="50" width="15" height="15" rx="1"/>
-								<rect x="65" y="30" width="15" height="15" rx="1"/>
-								<rect x="65" y="50" width="15" height="15" rx="1"/>
+							<rect x="15" y="20" width="70" height="70" fill="none" stroke="#3b3b3b" stroke-width="3" rx="2"/>
+							<g fill="none" stroke="#3b3b3b" stroke-width="2">
+								<rect x="25" y="30" width="15" height="12"/>
+								<rect x="25" y="48" width="15" height="12"/>
+								<rect x="25" y="66" width="15" height="12"/>
+								<rect x="45" y="30" width="15" height="12"/>
+								<rect x="45" y="48" width="15" height="12"/>
+								<rect x="65" y="30" width="15" height="12"/>
+								<rect x="65" y="48" width="15" height="12"/>
 							</g>
 						</svg>
 					</div>
 					<h3>Commercial</h3>
-					<p>Business insurance that scales with you. From liability to property coverage.</p>
-					<a href="#quote" class="link-arrow">Learn more →</a>
+					<p>Coverage for your business</p>
+					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
+					<p class="pricing-from">FROM $50/MO</p>
 				</div>
 
 				<!-- Car -->
-				<div class="product-card" id="car">
-					<div class="product-icon">
+				<div class="pricing-card" id="car">
+					<div class="pricing-icon">
 						<svg viewBox="0 0 100 100">
-							<rect x="15" y="45" width="70" height="30" fill="#90278e" rx="8"/>
-							<path d="M 20 45 L 30 30 L 70 30 L 80 45 Z" fill="#FFB4DA"/>
-							<circle cx="30" cy="75" r="8" fill="#6b7280"/>
-							<circle cx="70" cy="75" r="8" fill="#6b7280"/>
-							<rect x="35" y="35" width="12" height="12" fill="#a7d8e9" rx="2"/>
-							<rect x="53" y="35" width="12" height="12" fill="#a7d8e9" rx="2"/>
+							<rect x="15" y="48" width="70" height="28" fill="none" stroke="#3b3b3b" stroke-width="3" rx="6"/>
+							<path d="M 20 48 L 28 35 L 72 35 L 80 48" fill="none" stroke="#3b3b3b" stroke-width="3"/>
+							<circle cx="30" cy="76" r="6" fill="none" stroke="#3b3b3b" stroke-width="3"/>
+							<circle cx="70" cy="76" r="6" fill="none" stroke="#3b3b3b" stroke-width="3"/>
+							<rect x="35" y="40" width="10" height="8" fill="none" stroke="#3b3b3b" stroke-width="2"/>
+							<rect x="55" y="40" width="10" height="8" fill="none" stroke="#3b3b3b" stroke-width="2"/>
 						</svg>
 					</div>
 					<h3>Car</h3>
-					<p>Auto insurance with instant quotes and claims that are handled in minutes, not weeks.</p>
-					<a href="#quote" class="link-arrow">Get a quote →</a>
+					<p>Protect your car, passengers, and the planet</p>
+					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
+					<p class="pricing-from">AS LOW AS $30/MO</p>
 				</div>
 			</div>
 		</div>
@@ -167,6 +176,115 @@
 					</svg>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<!-- Testimonials Section -->
+	<section class="testimonials">
+		<div class="container">
+			<h2>The (Almost) 5 Star Insurance Company</h2>
+			<p class="testimonials-subtitle">Troika has earned top ratings from customers,<br/>and is trusted by thousands of families and businesses</p>
+
+			<div class="stars-container">
+				<svg width="120" height="120" viewBox="0 0 24 24" fill="#ff0095">
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+				</svg>
+				<svg width="120" height="120" viewBox="0 0 24 24" fill="#ff0095">
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+				</svg>
+				<svg width="120" height="120" viewBox="0 0 24 24" fill="#ff0095">
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+				</svg>
+				<svg width="120" height="120" viewBox="0 0 24 24" fill="#ff0095">
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+				</svg>
+				<svg width="120" height="120" viewBox="0 0 24 24" fill="#ff0095">
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+				</svg>
+			</div>
+
+			<div class="testimonials-grid">
+				<div class="testimonial-card">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar">JD</div>
+						<div class="testimonial-author">
+							<h4>John Davis</h4>
+							<p>@johndavis</p>
+						</div>
+					</div>
+					<p>Switched to Troika for homeowners insurance and couldn't be happier. The process was incredibly smooth and I'm saving $200/year!</p>
+				</div>
+
+				<div class="testimonial-card">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar">SM</div>
+						<div class="testimonial-author">
+							<h4>Sarah Martinez</h4>
+							<p>@sarahm</p>
+						</div>
+					</div>
+					<p>Filed a claim and got paid in literally 3 minutes. This is the future of insurance. No more waiting weeks for a response!</p>
+				</div>
+
+				<div class="testimonial-card">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar">MK</div>
+						<div class="testimonial-author">
+							<h4>Michael Kim</h4>
+							<p>@mkim_biz</p>
+						</div>
+					</div>
+					<p>Best business insurance I've found. Clear pricing, no hidden fees, and actual human support when I need it.</p>
+				</div>
+
+				<div class="testimonial-card">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar">AL</div>
+						<div class="testimonial-author">
+							<h4>Amanda Lopez</h4>
+							<p>@alopez</p>
+						</div>
+					</div>
+					<p>Finally, an insurance company that speaks plain English. Got my car insured in under 5 minutes from my phone.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Switch Section -->
+	<section class="switch-section">
+		<div class="container">
+			<h2>Already insured? We'll help you switch!</h2>
+			<p class="switch-subtitle">People left these insurance companies to join Troika:</p>
+
+			<div class="competitor-bubbles">
+				<div class="bubble bubble-large">
+					<span class="bubble-percent">31%</span>
+					<span class="bubble-text">Assurant, Farmers,<br/>Homesite, Progressive,<br/>Stillwater & more...</span>
+				</div>
+				<div class="bubble bubble-medium">
+					<span class="bubble-percent">19%</span>
+					<span class="bubble-text">Allstate</span>
+				</div>
+				<div class="bubble bubble-medium">
+					<span class="bubble-percent">16%</span>
+					<span class="bubble-text">State Farm</span>
+				</div>
+				<div class="bubble bubble-small">
+					<span class="bubble-percent">14%</span>
+					<span class="bubble-text">Travelers</span>
+				</div>
+				<div class="bubble bubble-small">
+					<span class="bubble-percent">10%</span>
+					<span class="bubble-text">Geico</span>
+				</div>
+				<div class="bubble bubble-small">
+					<span class="bubble-percent">10%</span>
+					<span class="bubble-text">Liberty<br/>Mutual</span>
+				</div>
+			</div>
+
+			<a href="#quote" class="btn-switch">CHECK PRICES AND SWITCH</a>
 		</div>
 	</section>
 
@@ -217,6 +335,71 @@
 					</div>
 					<h3>Phone</h3>
 					<p>+1 (555) 123-4567</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Social Impact Section -->
+	<section class="social-impact">
+		<div class="container">
+			<h2>Insurance with Impact</h2>
+			<p class="impact-subtitle">We donate to causes you care about</p>
+
+			<div class="causes-grid">
+				<div class="cause-logo">
+					<svg viewBox="0 0 120 60" fill="#3b3b3b">
+						<text x="60" y="35" text-anchor="middle" font-size="16" font-weight="600">Direct Relief</text>
+					</svg>
+				</div>
+				<div class="cause-logo">
+					<svg viewBox="0 0 120 60" fill="#3b3b3b">
+						<text x="60" y="35" text-anchor="middle" font-size="14" font-weight="600">American Red Cross</text>
+					</svg>
+				</div>
+				<div class="cause-logo">
+					<svg viewBox="0 0 120 60" fill="#3b3b3b">
+						<text x="60" y="35" text-anchor="middle" font-size="16" font-weight="600">Habitat for Humanity</text>
+					</svg>
+				</div>
+				<div class="cause-logo">
+					<svg viewBox="0 0 120 60" fill="#3b3b3b">
+						<text x="60" y="35" text-anchor="middle" font-size="16" font-weight="600">Feeding America</text>
+					</svg>
+				</div>
+			</div>
+
+			<div class="certifications">
+				<div class="cert-item">
+					<div class="cert-badge">
+						<svg width="80" height="80" viewBox="0 0 100 100">
+							<circle cx="50" cy="50" r="45" fill="none" stroke="#90278e" stroke-width="3"/>
+							<text x="50" y="45" text-anchor="middle" font-size="18" font-weight="700" fill="#3b3b3b">B-CORP</text>
+							<text x="50" y="60" text-anchor="middle" font-size="10" fill="#646464">Certified</text>
+						</svg>
+					</div>
+					<h4>Designed for Social Impact</h4>
+				</div>
+
+				<div class="cert-item">
+					<div class="cert-badge">
+						<svg width="80" height="80" viewBox="0 0 100 100">
+							<rect x="10" y="10" width="80" height="80" fill="none" stroke="#90278e" stroke-width="3" rx="8"/>
+							<text x="50" y="50" text-anchor="middle" font-size="20" font-weight="700" fill="#3b3b3b">A+</text>
+							<text x="50" y="70" text-anchor="middle" font-size="10" fill="#646464">RATED</text>
+						</svg>
+					</div>
+					<h4>A-Rated and Backed by Giants</h4>
+				</div>
+
+				<div class="cert-item">
+					<div class="cert-badge">
+						<svg width="80" height="80" viewBox="0 0 100 100">
+							<path d="M50 10 L70 30 L90 30 L90 70 L70 70 L50 90 L30 70 L10 70 L10 30 L30 30 Z" fill="none" stroke="#90278e" stroke-width="3"/>
+							<text x="50" y="55" text-anchor="middle" font-size="12" font-weight="700" fill="#3b3b3b">SECURE</text>
+						</svg>
+					</div>
+					<h4>Your Data is Protected</h4>
 				</div>
 			</div>
 		</div>
@@ -438,8 +621,8 @@
 		50% { transform: translateY(-20px); }
 	}
 
-	/* Products Section */
-	.products {
+	/* Pricing Section */
+	.pricing {
 		padding: 100px 24px;
 		background: white;
 	}
@@ -449,70 +632,369 @@
 		margin: 0 auto;
 	}
 
-	.products h2 {
+	.pricing h2 {
 		text-align: center;
 		font-size: 48px;
 		font-weight: 700;
 		color: #3b3b3b;
+		margin: 0 0 24px 0;
+		line-height: 1.2;
+	}
+
+	.pricing-subtitle {
+		text-align: center;
+		font-size: 18px;
+		color: #646464;
 		margin: 0 0 60px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
-	.products-grid {
+	.pricing-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 		gap: 32px;
+		max-width: 1000px;
+		margin: 0 auto;
 	}
 
-	.product-card {
+	.pricing-card {
 		background: white;
 		border: 2px solid #ececec;
-		border-radius: 10px;
-		padding: 40px 32px;
+		border-radius: 16px;
+		padding: 48px 32px;
+		text-align: center;
 		transition: all 0.3s;
 	}
 
-	.product-card:hover {
+	.pricing-card:hover {
 		border-color: #90278e;
 		transform: translateY(-4px);
-		box-shadow: 0 30px 18px -13px rgba(0, 0, 0, 0.06);
+		box-shadow: 0 20px 40px rgba(144, 39, 142, 0.15);
 	}
 
-	.product-icon {
+	.pricing-icon {
 		width: 100px;
 		height: 100px;
-		margin: 0 0 24px 0;
+		margin: 0 auto 24px;
 	}
 
-	.product-icon svg {
+	.pricing-icon svg {
 		width: 100%;
 		height: 100%;
 	}
 
-	.product-card h3 {
+	.pricing-card h3 {
 		font-size: 28px;
+		font-weight: 700;
+		color: #3b3b3b;
+		margin: 0 0 12px 0;
+	}
+
+	.pricing-card > p {
+		color: #646464;
+		margin: 0 0 32px 0;
+		font-size: 16px;
+		line-height: 1.6;
+	}
+
+	.btn-pricing {
+		display: inline-block;
+		background: #ff0095;
+		color: white;
+		padding: 16px 32px;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 14px;
+		transition: all 0.3s;
+		border: none;
+		cursor: pointer;
+		letter-spacing: 0.5px;
+	}
+
+	.btn-pricing:hover {
+		background: #d6007d;
+		transform: translateY(-2px);
+		box-shadow: 0px 15px 40px rgba(255, 0, 149, 0.4);
+	}
+
+	.pricing-from {
+		margin: 16px 0 0 0;
+		font-size: 13px;
+		color: #9ca3af;
+		font-weight: 500;
+	}
+
+	/* Testimonials Section */
+	.testimonials {
+		padding: 100px 24px;
+		background: #f9fafb;
+	}
+
+	.testimonials h2 {
+		text-align: center;
+		font-size: 48px;
 		font-weight: 700;
 		color: #3b3b3b;
 		margin: 0 0 16px 0;
 	}
 
-	.product-card p {
+	.testimonials-subtitle {
+		text-align: center;
+		font-size: 18px;
 		color: #646464;
-		margin: 0 0 24px 0;
-		font-size: 16px;
+		margin: 0 0 48px 0;
 		line-height: 1.6;
 	}
 
-	.link-arrow {
-		color: #90278e;
-		text-decoration: none;
-		font-weight: 600;
-		font-size: 16px;
+	.stars-container {
+		display: flex;
+		justify-content: center;
+		gap: 16px;
+		margin-bottom: 60px;
+	}
+
+	.testimonials-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 24px;
+	}
+
+	.testimonial-card {
+		background: white;
+		border: 2px solid #ececec;
+		border-radius: 12px;
+		padding: 32px;
 		transition: all 0.3s;
 	}
 
-	.link-arrow:hover {
-		color: #751e73;
-		gap: 8px;
+	.testimonial-card:hover {
+		border-color: #ff0095;
+		transform: translateY(-4px);
+		box-shadow: 0 10px 30px rgba(255, 0, 149, 0.1);
+	}
+
+	.testimonial-header {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 16px;
+	}
+
+	.testimonial-avatar {
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, #90278e 0%, #ff0095 100%);
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		font-size: 16px;
+		flex-shrink: 0;
+	}
+
+	.testimonial-author h4 {
+		margin: 0;
+		font-size: 16px;
+		font-weight: 700;
+		color: #3b3b3b;
+	}
+
+	.testimonial-author p {
+		margin: 4px 0 0 0;
+		font-size: 14px;
+		color: #9ca3af;
+	}
+
+	.testimonial-card > p {
+		color: #646464;
+		line-height: 1.7;
+		margin: 0;
+		font-size: 15px;
+	}
+
+	/* Switch Section */
+	.switch-section {
+		padding: 100px 24px;
+		background: white;
+	}
+
+	.switch-section h2 {
+		text-align: center;
+		font-size: 48px;
+		font-weight: 700;
+		color: #3b3b3b;
+		margin: 0 0 16px 0;
+	}
+
+	.switch-subtitle {
+		text-align: center;
+		font-size: 18px;
+		color: #646464;
+		margin: 0 0 60px 0;
+	}
+
+	.competitor-bubbles {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 32px;
+		margin-bottom: 60px;
+		padding: 40px 0;
+	}
+
+	.bubble {
+		border-radius: 50%;
+		background: #f3f4f6;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 20px;
+		transition: all 0.3s;
+	}
+
+	.bubble:hover {
+		background: #e5e7eb;
+		transform: scale(1.05);
+	}
+
+	.bubble-large {
+		width: 220px;
+		height: 220px;
+	}
+
+	.bubble-medium {
+		width: 180px;
+		height: 180px;
+	}
+
+	.bubble-small {
+		width: 150px;
+		height: 150px;
+	}
+
+	.bubble-percent {
+		font-size: 42px;
+		font-weight: 700;
+		color: #3b3b3b;
+		margin-bottom: 8px;
+	}
+
+	.bubble-medium .bubble-percent {
+		font-size: 36px;
+	}
+
+	.bubble-small .bubble-percent {
+		font-size: 32px;
+	}
+
+	.bubble-text {
+		font-size: 14px;
+		color: #646464;
+		line-height: 1.4;
+	}
+
+	.bubble-large .bubble-text {
+		font-size: 13px;
+	}
+
+	.btn-switch {
+		display: inline-block;
+		background: #ff0095;
+		color: white;
+		padding: 18px 48px;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 15px;
+		transition: all 0.3s;
+		border: none;
+		cursor: pointer;
+		letter-spacing: 0.5px;
+		margin: 0 auto;
+		display: block;
+		width: fit-content;
+	}
+
+	.btn-switch:hover {
+		background: #d6007d;
+		transform: translateY(-2px);
+		box-shadow: 0px 20px 50px rgba(255, 0, 149, 0.4);
+	}
+
+	/* Social Impact Section */
+	.social-impact {
+		padding: 100px 24px;
+		background: #f9fafb;
+	}
+
+	.social-impact h2 {
+		text-align: center;
+		font-size: 48px;
+		font-weight: 700;
+		color: #3b3b3b;
+		margin: 0 0 16px 0;
+	}
+
+	.impact-subtitle {
+		text-align: center;
+		font-size: 18px;
+		color: #646464;
+		margin: 0 0 60px 0;
+	}
+
+	.causes-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 40px;
+		margin-bottom: 80px;
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.cause-logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0.7;
+		transition: opacity 0.3s;
+	}
+
+	.cause-logo:hover {
+		opacity: 1;
+	}
+
+	.certifications {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 48px;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.cert-item {
+		text-align: center;
+	}
+
+	.cert-badge {
+		margin-bottom: 24px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.cert-item h4 {
+		font-size: 18px;
+		font-weight: 600;
+		color: #3b3b3b;
+		margin: 0;
 	}
 
 	/* About Section */
@@ -831,9 +1313,36 @@
 
 		.about-text h2,
 		.claims-text h2,
-		.products h2,
+		.pricing h2,
+		.testimonials h2,
+		.switch-section h2,
+		.social-impact h2,
 		.contact h2 {
 			font-size: 36px;
+		}
+
+		.pricing-grid,
+		.testimonials-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.competitor-bubbles {
+			gap: 20px;
+		}
+
+		.bubble-large {
+			width: 180px;
+			height: 180px;
+		}
+
+		.bubble-medium {
+			width: 150px;
+			height: 150px;
+		}
+
+		.bubble-small {
+			width: 130px;
+			height: 130px;
 		}
 
 		.claims-content {
@@ -884,15 +1393,50 @@
 			object-position: center bottom;
 		}
 
-		.products,
+		.pricing,
 		.about,
 		.claims,
+		.testimonials,
+		.switch-section,
+		.social-impact,
 		.contact {
 			padding: 60px 20px;
 		}
 
-		.products-grid {
+		.pricing-grid,
+		.testimonials-grid {
 			grid-template-columns: 1fr;
+		}
+
+		.stars-container svg {
+			width: 60px;
+			height: 60px;
+		}
+
+		.competitor-bubbles {
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		.bubble-large,
+		.bubble-medium,
+		.bubble-small {
+			width: 160px;
+			height: 160px;
+		}
+
+		.bubble-percent {
+			font-size: 32px;
+		}
+
+		.causes-grid {
+			grid-template-columns: 1fr 1fr;
+			gap: 24px;
+		}
+
+		.certifications {
+			grid-template-columns: 1fr;
+			gap: 32px;
 		}
 
 		.footer-links {
