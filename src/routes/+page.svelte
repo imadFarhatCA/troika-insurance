@@ -1,5 +1,6 @@
 <script lang="ts">
 	import heroIllustration from '$lib/assets/hero-illustration.svg';
+	import logo from '$lib/assets/logo.svg';
 
 	let mobileMenuOpen = false;
 
@@ -12,7 +13,9 @@
 	<!-- Navigation -->
 	<nav class="nav">
 		<div class="nav-container">
-			<a href="/" class="logo">Troika</a>
+			<a href="/" class="logo">
+				<img src={logo} alt="Troika Insurance" class="logo-img" />
+			</a>
 
 			<!-- Desktop Menu -->
 			<div class="nav-links">
@@ -224,7 +227,7 @@
 		<div class="container">
 			<div class="footer-content">
 				<div class="footer-brand">
-					<div class="logo">Troika</div>
+					<img src={logo} alt="Troika Insurance" class="footer-logo" />
 					<p>Insurance made simple</p>
 				</div>
 				<div class="footer-links">
@@ -282,11 +285,14 @@
 	}
 
 	.logo {
-		font-size: 28px;
-		font-weight: 800;
-		color: #90278e;
+		display: flex;
+		align-items: center;
 		text-decoration: none;
-		letter-spacing: -0.5px;
+	}
+
+	.logo-img {
+		height: 40px;
+		width: auto;
 	}
 
 	.nav-links {
@@ -698,9 +704,10 @@
 		margin-bottom: 48px;
 	}
 
-	.footer-brand .logo {
-		color: white;
-		margin-bottom: 12px;
+	.footer-logo {
+		height: 50px;
+		width: auto;
+		margin-bottom: 16px;
 	}
 
 	.footer-brand p {
