@@ -348,17 +348,24 @@
 		min-height: 100vh;
 		display: flex;
 		align-items: center;
-		padding: 80px 24px;
+		padding: 0;
+		position: relative;
+		overflow: hidden;
 	}
 
 	.hero-container {
-		max-width: 1400px;
-		margin: 0 auto;
-		display: grid;
-		grid-template-columns: 1fr 1.2fr;
-		gap: 60px;
-		align-items: center;
+		max-width: 100%;
 		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0;
+		align-items: center;
+		position: relative;
+	}
+
+	.hero-content {
+		padding: 80px 80px 80px 120px;
+		z-index: 2;
 	}
 
 	.hero-content h1 {
@@ -406,15 +413,18 @@
 
 	.hero-illustration {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center;
+		position: relative;
+		height: 100vh;
+		padding-right: 0;
 	}
 
 	.illustration {
 		width: 100%;
-		height: 100vh;
-		max-height: 100vh;
-		object-fit: contain;
+		height: 100%;
+		object-fit: cover;
+		object-position: left center;
 		animation: float 6s ease-in-out infinite;
 	}
 
@@ -775,10 +785,23 @@
 
 		.hero {
 			min-height: 100vh;
-			padding: 60px 24px;
+			padding: 0;
 		}
 
-		.hero-container,
+		.hero-container {
+			grid-template-columns: 1fr;
+			gap: 0;
+		}
+
+		.hero-content {
+			padding: 60px 40px 40px 40px;
+		}
+
+		.hero-illustration {
+			height: 50vh;
+			padding: 0;
+		}
+
 		.about-content,
 		.claims-content,
 		.footer-content {
@@ -810,7 +833,11 @@
 	@media (max-width: 640px) {
 		.hero {
 			min-height: 100vh;
-			padding: 40px 20px;
+			padding: 0;
+		}
+
+		.hero-content {
+			padding: 40px 24px 30px 24px;
 		}
 
 		.hero-content h1 {
@@ -822,14 +849,17 @@
 			font-size: 18px;
 		}
 
+		.hero-illustration {
+			height: 45vh;
+		}
+
 		.illustration {
-			height: 60vh;
-			max-height: 60vh;
+			object-fit: contain;
 		}
 
 		.hero-container {
 			grid-template-columns: 1fr;
-			gap: 40px;
+			gap: 0;
 		}
 
 		.products,
