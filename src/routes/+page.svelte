@@ -78,32 +78,43 @@
 	<!-- About Section -->
 	<section id="about" class="about">
 		<div class="container">
-			<div class="about-content">
-				<div class="about-text">
-					<h2>Insurance, but better</h2>
-					<p>We're rebuilding insurance from the ground up. No confusing jargon, no hidden fees, just straightforward protection when you need it most.</p>
-					<ul class="feature-list">
-						<li>
-							<span class="check-icon">&#10003;</span>
-							<span>Instant quotes in 90 seconds</span>
-						</li>
-						<li>
-							<span class="check-icon">&#10003;</span>
-							<span>Claims paid in minutes</span>
-						</li>
-						<li>
-							<span class="check-icon">&#10003;</span>
-							<span>Cancel anytime, no fees</span>
-						</li>
-					</ul>
+			<h2 class="about-title">Coverage You Can Trust, Guidance You Can Feel</h2>
+			<div class="about-description">
+				<p>At Troika, insurance isn't a product—it's a partnership. We assess, we advise, and you decide, with full clarity and transparency at every step. Your needs stay at the center of every recommendation, so you can protect what matters most with confidence.</p>
+				<p>Our philosophy is simple: three parties, one shared goal—your best interest. With transparent advice and tailored protection, we help you safeguard your assets, your business, and your future with confidence.</p>
+			</div>
+			<div class="about-boxes">
+				<div class="about-box about-box-purple">
+					<div class="about-box-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+						</svg>
+					</div>
+					<h3>Trust</h3>
+					<p>We take pride in performing honest assessments.</p>
 				</div>
-				<div class="about-illustration">
-					<svg viewBox="0 0 300 300">
-						<path d="M 150 30 L 240 80 L 240 160 Q 240 220 150 270 Q 60 220 60 160 L 60 80 Z"
-							fill="#92278f" stroke="#FFB4DA" stroke-width="4"/>
-						<path d="M 100 150 L 130 180 L 200 100"
-							stroke="#a7d8e9" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>
+				<div class="about-box about-box-pink">
+					<div class="about-box-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="12" cy="12" r="10"/>
+							<line x1="12" y1="16" x2="12" y2="12"/>
+							<line x1="12" y1="8" x2="12.01" y2="8"/>
+						</svg>
+					</div>
+					<h3>Transparency</h3>
+					<p>Every recommendation we make is based solely on what truly serves you, never on selling a product.</p>
+				</div>
+				<div class="about-box about-box-blue">
+					<div class="about-box-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+							<circle cx="9" cy="7" r="4"/>
+							<path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+							<path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+						</svg>
+					</div>
+					<h3>Tailored Protection</h3>
+					<p>We work under a "power of three" philosophy: you, us, and the insurer. Three parties, one common goal, your best interest at the center of every decision.</p>
 				</div>
 			</div>
 		</div>
@@ -118,7 +129,7 @@
 			<div class="stars-container">
 				{#each Array(5) as _, i}
 					<svg class="review-star" style="animation-delay: {i * 0.8}s" width="160" height="160" viewBox="0 0 24 24" fill="#92278f">
-						<path d="M12 4C12.2 4 12.4 4.1 12.5 4.3L14.6 8.8L19.4 9.5C19.6 9.5 19.8 9.7 19.9 9.9C19.9 10.1 19.9 10.3 19.7 10.5L16.2 13.8L17 18.8C17 19 17 19.2 16.8 19.4C16.6 19.5 16.4 19.5 16.2 19.4L12 17.2L7.8 19.4C7.6 19.5 7.4 19.5 7.2 19.4C7 19.2 7 19 7 18.8L7.8 13.8L4.3 10.5C4.1 10.3 4.1 10.1 4.1 9.9C4.2 9.7 4.4 9.5 4.6 9.5L9.4 8.8L11.5 4.3C11.6 4.1 11.8 4 12 4Z"/>
+						<path d="M12 2.5C12.3 2.5 12.6 2.7 12.7 3L14.8 7.8 20 8.5C20.3 8.6 20.6 8.8 20.7 9.1 20.8 9.4 20.7 9.7 20.5 9.9L16.7 13.6 17.6 18.8C17.7 19.1 17.5 19.4 17.3 19.6 17.1 19.7 16.8 19.8 16.5 19.6L12 17.2 7.5 19.6C7.2 19.8 6.9 19.7 6.7 19.6 6.5 19.4 6.3 19.1 6.4 18.8L7.3 13.6 3.5 9.9C3.3 9.7 3.2 9.4 3.3 9.1 3.4 8.8 3.7 8.6 4 8.5L9.2 7.8 11.3 3C11.4 2.7 11.7 2.5 12 2.5Z"/>
 					</svg>
 				{/each}
 			</div>
@@ -361,7 +372,7 @@
 	}
 
 	.logo-img {
-		height: 80px;
+		height: 96px;
 		width: auto;
 		object-fit: contain;
 	}
@@ -511,7 +522,9 @@
 
 	@keyframes starShimmer {
 		0%, 100% { filter: brightness(1); }
-		50% { filter: brightness(1.15) drop-shadow(0 0 6px rgba(255, 180, 218, 0.3)); }
+		40% { filter: brightness(1.3) drop-shadow(0 0 12px rgba(255, 180, 218, 0.5)); }
+		50% { filter: brightness(1.35) drop-shadow(0 0 16px rgba(255, 180, 218, 0.6)); }
+		60% { filter: brightness(1.3) drop-shadow(0 0 12px rgba(255, 180, 218, 0.5)); }
 	}
 
 	.testimonials-grid {
@@ -712,7 +725,7 @@
 	.insurers-grid {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 16px 10px;
+		gap: 8px 4px;
 		margin-bottom: 0;
 		max-width: 900px;
 		margin-left: auto;
@@ -726,9 +739,9 @@
 	}
 
 	.insurer-logo img {
-		height: 180px;
+		height: 220px;
 		width: auto;
-		max-width: 200px;
+		max-width: 240px;
 		object-fit: contain;
 		filter: grayscale(100%) brightness(0) invert(0);
 		opacity: 0.7;
@@ -746,65 +759,88 @@
 		background: linear-gradient(135deg, #FFB4DA 0%, #a7d8e9 100%);
 	}
 
-	.about-content {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 80px;
-		align-items: center;
-	}
-
-	.about-text h2 {
+	.about-title {
+		text-align: center;
 		font-size: 48px;
 		font-weight: 700;
 		color: #4a4a4a;
-		margin: 0 0 24px 0;
+		margin: 0 0 32px 0;
 		letter-spacing: -1px;
 	}
 
-	.about-text p {
+	.about-description {
+		max-width: 800px;
+		margin: 0 auto 60px;
+		text-align: center;
+	}
+
+	.about-description p {
 		font-size: 18px;
 		color: #4a4a4a;
-		margin: 0 0 32px 0;
+		margin: 0 0 20px 0;
 		line-height: 1.7;
 	}
 
-	.feature-list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
+	.about-boxes {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 32px;
 	}
 
-	.feature-list li {
-		display: flex;
-		align-items: center;
-		gap: 16px;
-		margin-bottom: 16px;
-		font-size: 18px;
-		color: #4a4a4a;
+	.about-box {
+		border-radius: 20px;
+		padding: 40px 32px;
+		text-align: center;
+		transition: all 0.3s;
 	}
 
-	.check-icon {
-		width: 28px;
-		height: 28px;
+	.about-box:hover {
+		transform: translateY(-6px);
+	}
+
+	.about-box-purple {
 		background: #92278f;
-		color: white;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		box-shadow: 0 8px 30px rgba(146, 39, 143, 0.3);
+	}
+
+	.about-box-purple:hover {
+		box-shadow: 0 15px 40px rgba(146, 39, 143, 0.5);
+	}
+
+	.about-box-pink {
+		background: #ff0095;
+		box-shadow: 0 8px 30px rgba(255, 0, 149, 0.3);
+	}
+
+	.about-box-pink:hover {
+		box-shadow: 0 15px 40px rgba(255, 0, 149, 0.5);
+	}
+
+	.about-box-blue {
+		background: #4dadc9;
+		box-shadow: 0 8px 30px rgba(167, 216, 233, 0.4);
+	}
+
+	.about-box-blue:hover {
+		box-shadow: 0 15px 40px rgba(167, 216, 233, 0.6);
+	}
+
+	.about-box-icon {
+		margin-bottom: 20px;
+	}
+
+	.about-box h3 {
+		font-size: 24px;
 		font-weight: 700;
-		flex-shrink: 0;
+		color: white;
+		margin: 0 0 16px 0;
 	}
 
-	.about-illustration {
-		display: flex;
-		justify-content: center;
-	}
-
-	.about-illustration svg {
-		width: 100%;
-		max-width: 300px;
-		height: auto;
+	.about-box p {
+		font-size: 16px;
+		color: rgba(255, 255, 255, 0.9);
+		margin: 0;
+		line-height: 1.6;
 	}
 
 	/* Claims Section */
@@ -1010,7 +1046,7 @@
 		}
 
 		.logo-img {
-			height: 60px;
+			height: 72px;
 			width: auto;
 			object-fit: contain;
 		}
@@ -1031,11 +1067,16 @@
 			z-index: 10;
 		}
 
-		.about-content,
 		.claims-content,
 		.footer-content {
 			grid-template-columns: 1fr;
 			gap: 40px;
+		}
+
+		.about-boxes {
+			grid-template-columns: 1fr;
+			max-width: 500px;
+			margin: 0 auto;
 		}
 
 		.hero-content h1 {
@@ -1043,7 +1084,7 @@
 			letter-spacing: -1.5px;
 		}
 
-		.about-text h2,
+		.about-title,
 		.claims-text h2,
 		.testimonials h2,
 		.switch-section h2,
@@ -1156,8 +1197,8 @@
 		}
 
 		.insurer-logo img {
-			height: 90px;
-			max-width: 110px;
+			height: 110px;
+			max-width: 130px;
 		}
 
 		.footer-links {
