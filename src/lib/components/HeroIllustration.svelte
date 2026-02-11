@@ -40,8 +40,8 @@
 		}
 
 		.illustration {
-			width: 140%;
-			max-width: 140%;
+			width: 280%;
+			max-width: 280%;
 			height: auto;
 			object-fit: contain;
 			object-position: center bottom;
