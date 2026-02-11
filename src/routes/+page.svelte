@@ -186,20 +186,20 @@
 			<p class="testimonials-subtitle">Troika has earned top ratings from customers,<br/>and is trusted by thousands of families and businesses</p>
 
 			<div class="stars-container">
-				<svg width="120" height="120" viewBox="0 0 24 24" fill="#ff0095">
-					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+				<svg width="120" height="120" viewBox="0 0 24 24" fill="#90278e">
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="0.5" stroke-linejoin="round"/>
 				</svg>
-				<svg width="120" height="120" viewBox="0 0 24 24" fill="#ff0095">
-					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+				<svg width="120" height="120" viewBox="0 0 24 24" fill="#90278e">
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="0.5" stroke-linejoin="round"/>
 				</svg>
-				<svg width="120" height="120" viewBox="0 0 24 24" fill="#ff0095">
-					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+				<svg width="120" height="120" viewBox="0 0 24 24" fill="#90278e">
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="0.5" stroke-linejoin="round"/>
 				</svg>
-				<svg width="120" height="120" viewBox="0 0 24 24" fill="#ff0095">
-					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+				<svg width="120" height="120" viewBox="0 0 24 24" fill="#90278e">
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="0.5" stroke-linejoin="round"/>
 				</svg>
-				<svg width="120" height="120" viewBox="0 0 24 24" fill="#ff0095">
-					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+				<svg width="120" height="120" viewBox="0 0 24 24" fill="#90278e">
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#90278e" stroke-width="0.5" stroke-linejoin="round"/>
 				</svg>
 			</div>
 
@@ -574,7 +574,7 @@
 		background: #90278e;
 		color: #ffffff;
 		padding: 20px 48px;
-		border-radius: 50px;
+		border-radius: 8px;
 		text-decoration: none;
 		font-weight: 700;
 		font-size: 18px;
@@ -704,7 +704,7 @@
 		background: #ff0095;
 		color: white;
 		padding: 16px 32px;
-		border-radius: 50px;
+		border-radius: 8px;
 		text-decoration: none;
 		font-weight: 700;
 		font-size: 14px;
@@ -912,7 +912,7 @@
 		background: #ff0095;
 		color: white;
 		padding: 18px 48px;
-		border-radius: 50px;
+		border-radius: 8px;
 		text-decoration: none;
 		font-weight: 700;
 		font-size: 15px;
@@ -1109,7 +1109,7 @@
 		background: white;
 		color: #90278e;
 		padding: 18px 42px;
-		border-radius: 50px;
+		border-radius: 8px;
 		text-decoration: none;
 		font-weight: 700;
 		font-size: 16px;
