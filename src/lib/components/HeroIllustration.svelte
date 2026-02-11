@@ -40,18 +40,11 @@
 		}
 
 		.illustration {
-			width: 80%;
+			width: 100%;
 			height: auto;
-			max-height: 45%;
-			object-fit: contain;
+			object-fit: none;
 			object-position: center bottom;
-		}
-	}
-
-	@media (max-width: 640px) {
-		.illustration {
-			width: 80%;
-			max-height: 40%;
+			overflow: hidden;
 		}
 	}
 </style>

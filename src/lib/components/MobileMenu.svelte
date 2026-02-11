@@ -54,7 +54,9 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: white;
+		background: rgba(255, 255, 255, 0.9);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 		z-index: 999;
 		display: flex;
 		flex-direction: column;

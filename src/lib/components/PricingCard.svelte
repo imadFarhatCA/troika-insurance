@@ -92,4 +92,39 @@
 		font-weight: 400;
 		text-transform: lowercase;
 	}
+
+	@media (max-width: 640px) {
+		.pricing-card {
+			padding: 20px 12px 14px;
+			border-radius: 14px;
+		}
+
+		.pricing-icon {
+			width: 60px;
+			height: 60px;
+			margin: 0 auto 12px;
+		}
+
+		.pricing-card h3 {
+			font-size: 15px;
+			margin: 0 0 4px 0;
+		}
+
+		.pricing-card > p {
+			font-size: 10px;
+			margin: 0 0 16px 0;
+			line-height: 1.4;
+		}
+
+		.btn-pricing {
+			padding: 10px 12px;
+			font-size: 9px;
+			border-radius: 6px;
+			margin: 0 auto 8px;
+		}
+
+		.pricing-from {
+			font-size: 8px;
+		}
+	}
 </style>

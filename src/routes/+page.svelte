@@ -26,12 +26,26 @@
 				<a href="#car">Car</a>
 				<a href="#about">About</a>
 				<a href="#claims">Claims</a>
-				<a href="#contact" class="contact-icon" aria-label="Contact">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+				<div class="social-icons">
+				<a href="#contact" class="social-icon" aria-label="Contact">
+					<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 						<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
 						<polyline points="22,6 12,13 2,6"></polyline>
 					</svg>
 				</a>
+				<a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+					<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+					</svg>
+				</a>
+				<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+					<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+						<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+						<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+					</svg>
+				</a>
+			</div>
 			</div>
 
 			<MobileMenu open={mobileMenuOpen} onToggle={toggleMobileMenu} />
@@ -96,8 +110,8 @@
 			<div class="stars-container">
 				{#each Array(5) as _}
 					<svg width="120" height="120" viewBox="0 0 24 24" fill="#92278f">
-						<path d="M12 2.5C12.3 2.5 12.6 2.7 12.7 3L15.2 8.4L21 9.2C21.3 9.3 21.6 9.5 21.7 9.8C21.8 10.1 21.7 10.4 21.5 10.6L17.2 14.7L18.2 20.8C18.3 21.1 18.2 21.4 17.9 21.6C17.7 21.8 17.4 21.8 17.1 21.7L12 18.9L6.9 21.7C6.6 21.8 6.3 21.8 6.1 21.6C5.8 21.4 5.7 21.1 5.8 20.8L6.8 14.7L2.5 10.6C2.3 10.4 2.2 10.1 2.3 9.8C2.4 9.5 2.7 9.3 3 9.2L8.8 8.4L11.3 3C11.4 2.7 11.7 2.5 12 2.5Z"
-							stroke="#92278f" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+						<path d="M12 4C12.2 4 12.4 4.1 12.5 4.3L14.6 8.8L19.4 9.5C19.6 9.5 19.8 9.7 19.9 9.9C19.9 10.1 19.9 10.3 19.7 10.5L16.2 13.8L17 18.8C17 19 17 19.2 16.8 19.4C16.6 19.5 16.4 19.5 16.2 19.4L12 17.2L7.8 19.4C7.6 19.5 7.4 19.5 7.2 19.4C7 19.2 7 19 7 18.8L7.8 13.8L4.3 10.5C4.1 10.3 4.1 10.1 4.1 9.9C4.2 9.7 4.4 9.5 4.6 9.5L9.4 8.8L11.5 4.3C11.6 4.1 11.8 4 12 4Z"
+							stroke="#92278f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
 					</svg>
 				{/each}
 			</div>
@@ -374,6 +388,7 @@
 	.logo-img {
 		height: 80px;
 		width: auto;
+		object-fit: contain;
 	}
 
 	.nav-links {
@@ -394,10 +409,21 @@
 		color: #92278f;
 	}
 
-	.contact-icon {
+	.social-icons {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.social-icon {
 		color: #92278f;
 		display: flex;
 		align-items: center;
+		transition: color 0.2s;
+	}
+
+	.social-icon:hover {
+		color: #ff0095;
 	}
 
 	/* Hero Section */
@@ -448,7 +474,7 @@
 		display: inline-block;
 		background: #92278f;
 		color: #ffffff;
-		padding: 24px 56px;
+		padding: 24px 80px;
 		border-radius: 8px;
 		text-decoration: none;
 		font-weight: 700;
@@ -1013,6 +1039,12 @@
 
 		.nav-container {
 			padding: 20px 24px;
+		}
+
+		.logo-img {
+			height: 60px;
+			width: auto;
+			object-fit: contain;
 		}
 
 		.hero {

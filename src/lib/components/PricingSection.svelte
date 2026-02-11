@@ -19,7 +19,7 @@
 	<div class="container">
 		<h2>Incredible Prices. Monthly Subscription.<br/>Bundle Discounts.</h2>
 		<p class="pricing-subtitle">
-			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+			<svg class="star-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
 				<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#92278f"/>
 			</svg>
 			Amazing savings when you bundle
@@ -69,6 +69,23 @@
 		justify-content: center;
 	}
 
+	.star-icon {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 8px;
+		animation: starVibe 3s ease-in-out infinite;
+	}
+
+	@keyframes starVibe {
+		0% { transform: rotate(0deg) scale(1); }
+		15% { transform: rotate(15deg) scale(1.15); }
+		30% { transform: rotate(-10deg) scale(1.05); }
+		45% { transform: rotate(8deg) scale(1.1); }
+		60% { transform: rotate(-5deg) scale(1); }
+		75% { transform: rotate(3deg) scale(1.08); }
+		100% { transform: rotate(0deg) scale(1); }
+	}
+
 	.pricing-grid {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
@@ -91,11 +108,16 @@
 
 	@media (max-width: 640px) {
 		.pricing {
-			padding: 60px 20px;
+			padding: 60px 16px;
+		}
+
+		.pricing h2 {
+			font-size: 28px;
 		}
 
 		.pricing-grid {
-			grid-template-columns: 1fr;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 12px;
 		}
 	}
 </style>
