@@ -344,11 +344,11 @@
 	}
 
 	.hero-container {
-		max-width: 1200px;
+		max-width: 1400px;
 		margin: 0 auto;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 80px;
+		grid-template-columns: 1fr 1.2fr;
+		gap: 60px;
 		align-items: center;
 		width: 100%;
 	}
@@ -403,8 +403,9 @@
 
 	.illustration {
 		width: 100%;
-		max-width: 500px;
-		height: auto;
+		height: 100vh;
+		max-height: 100vh;
+		object-fit: contain;
 		animation: float 6s ease-in-out infinite;
 	}
 
@@ -809,7 +810,13 @@
 		}
 
 		.illustration {
-			max-width: 100%;
+			height: 60vh;
+			max-height: 60vh;
+		}
+
+		.hero-container {
+			grid-template-columns: 1fr;
+			gap: 40px;
 		}
 
 		.products,
