@@ -1,42 +1,81 @@
-# sv
+# Troika Insurance Website
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A professional insurance company website built with SvelteKit and TypeScript, optimized for Cloudflare Pages deployment.
 
-## Creating a project
+## 🏢 About
 
-If you're seeing this, you've probably already done this step. Congrats!
+Troika Insurance provides comprehensive insurance solutions including:
+- Health Insurance
+- Life Insurance
+- Property Insurance
+- Business Insurance
+- Auto Insurance
+- Liability Coverage
 
-```sh
-# create a new project
-npx sv create my-app
-```
+## 🚀 Quick Start
 
-To recreate this project with the same configuration:
+```bash
+# Install dependencies
+npm install
 
-```sh
-# recreate this project
-npx sv create --template minimal --types ts --install npm .
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+# Start development server
 npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
+# Build for production
 npm run build
+
+# Preview production build
+npm run preview
 ```
 
-You can preview the production build with `npm run preview`.
+## 📁 Project Structure
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```
+Troika Insurance/
+├── src/
+│   ├── lib/              # Reusable components and utilities
+│   ├── routes/           # SvelteKit routes (pages)
+│   │   └── +page.svelte  # Homepage
+│   └── app.html          # HTML template with SEO tags
+├── static/               # Static assets (favicon, images)
+├── SETUP.md              # Detailed setup and deployment guide
+└── package.json
+```
+
+## 🎨 Features
+
+- ✅ **Responsive Design**: Mobile-first, fully responsive layout
+- ✅ **SEO Optimized**: Comprehensive meta tags and Schema.org structured data
+- ✅ **Modern UI**: Gradient design with smooth animations
+- ✅ **TypeScript**: Full type safety
+- ✅ **Cloudflare Pages Ready**: Pre-configured for deployment
+
+## 📖 Documentation
+
+For detailed setup instructions, customization guide, and deployment steps, see [SETUP.md](SETUP.md).
+
+## 🛠️ Tech Stack
+
+- **Framework**: [SvelteKit](https://kit.svelte.dev/)
+- **Language**: TypeScript
+- **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/)
+- **Build Tool**: Vite
+
+## 📝 Customization
+
+1. Update contact information in `src/routes/+page.svelte`
+2. Update SEO metadata in `src/app.html`
+3. Add your logo and branding assets to `static/`
+4. Customize colors and styling in component `<style>` sections
+
+## 🚢 Deployment
+
+This project is configured for Cloudflare Pages deployment. See [SETUP.md](SETUP.md) for complete deployment instructions.
+
+## 📄 License
+
+Copyright © 2026 Troika Insurance. All rights reserved.
+
+---
+
+Built with [SvelteKit](https://kit.svelte.dev/)
