@@ -256,9 +256,9 @@
 	:global(body) {
 		margin: 0;
 		padding: 0;
-		font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+		font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		background: white;
-		color: #4a4a4a;
+		color: #646464;
 		line-height: 1.6;
 	}
 
@@ -291,7 +291,7 @@
 	}
 
 	.logo-img {
-		height: 40px;
+		height: 80px;
 		width: auto;
 	}
 
@@ -315,6 +315,8 @@
 
 	.contact-icon {
 		color: #90278e;
+		display: flex;
+		align-items: center;
 	}
 
 	.mobile-menu-btn {
@@ -360,31 +362,32 @@
 	}
 
 	.hero-content h1 {
-		font-size: 64px;
-		font-weight: 800;
-		color: #1f2937;
+		font-size: 72px;
+		font-weight: 900;
+		color: #3b3b3b;
 		margin: 0 0 24px 0;
-		line-height: 1.1;
-		letter-spacing: -1.5px;
+		line-height: 1.05;
+		letter-spacing: -2px;
 	}
 
 	.hero-subtitle {
-		font-size: 22px;
-		color: #6b7280;
-		margin: 0 0 40px 0;
-		line-height: 1.6;
+		font-size: 24px;
+		color: #646464;
+		margin: 0 0 48px 0;
+		line-height: 1.5;
+		font-weight: 400;
 	}
 
 	.btn-primary {
 		display: inline-block;
 		background: #90278e;
 		color: #ffffff;
-		padding: 15px 30px;
-		border-radius: 5px;
+		padding: 20px 48px;
+		border-radius: 50px;
 		text-decoration: none;
 		font-weight: 700;
-		font-size: 14px;
-		box-shadow: 0px 10px 40px -10px rgba(144, 39, 142, 0.5);
+		font-size: 18px;
+		box-shadow: 0px 20px 60px rgba(255, 0, 131, 0.6);
 		transition: all 0.3s, transform 0.5s;
 		border: none;
 		cursor: pointer;
@@ -393,7 +396,7 @@
 	.btn-primary:hover {
 		background: #751e73;
 		transform: translateY(-2px);
-		box-shadow: 0px 10px 40px -10px rgba(144, 39, 142, 0.5);
+		box-shadow: 0px 25px 70px rgba(255, 0, 131, 0.8);
 	}
 
 	.btn-primary:active {
@@ -472,13 +475,13 @@
 
 	.product-card h3 {
 		font-size: 28px;
-		font-weight: 700;
-		color: #1f2937;
+		font-weight: 800;
+		color: #3b3b3b;
 		margin: 0 0 16px 0;
 	}
 
 	.product-card p {
-		color: #6b7280;
+		color: #646464;
 		margin: 0 0 24px 0;
 		font-size: 16px;
 		line-height: 1.6;
@@ -512,14 +515,15 @@
 
 	.about-text h2 {
 		font-size: 48px;
-		font-weight: 800;
-		color: #1f2937;
+		font-weight: 900;
+		color: #3b3b3b;
 		margin: 0 0 24px 0;
+		letter-spacing: -1px;
 	}
 
 	.about-text p {
 		font-size: 18px;
-		color: #374151;
+		color: #3b3b3b;
 		margin: 0 0 32px 0;
 		line-height: 1.7;
 	}
@@ -536,7 +540,7 @@
 		gap: 16px;
 		margin-bottom: 16px;
 		font-size: 18px;
-		color: #1f2937;
+		color: #3b3b3b;
 	}
 
 	.check-icon {
@@ -705,7 +709,7 @@
 	}
 
 	.footer-logo {
-		height: 50px;
+		height: 100px;
 		width: auto;
 		margin-bottom: 16px;
 	}
@@ -783,7 +787,8 @@
 		}
 
 		.hero-content h1 {
-			font-size: 48px;
+			font-size: 56px;
+			letter-spacing: -1.5px;
 		}
 
 		.about-text h2,
@@ -809,7 +814,8 @@
 		}
 
 		.hero-content h1 {
-			font-size: 36px;
+			font-size: 42px;
+			letter-spacing: -1px;
 		}
 
 		.hero-subtitle {
