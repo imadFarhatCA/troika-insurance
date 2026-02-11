@@ -117,9 +117,8 @@
 
 			<div class="stars-container">
 				{#each Array(5) as _, i}
-					<svg class="review-star" style="animation-delay: {i * 0.6}s" width="160" height="160" viewBox="0 0 24 24" fill="#92278f">
-						<path d="M12 4C12.2 4 12.4 4.1 12.5 4.3L14.6 8.8L19.4 9.5C19.6 9.5 19.8 9.7 19.9 9.9C19.9 10.1 19.9 10.3 19.7 10.5L16.2 13.8L17 18.8C17 19 17 19.2 16.8 19.4C16.6 19.5 16.4 19.5 16.2 19.4L12 17.2L7.8 19.4C7.6 19.5 7.4 19.5 7.2 19.4C7 19.2 7 19 7 18.8L7.8 13.8L4.3 10.5C4.1 10.3 4.1 10.1 4.1 9.9C4.2 9.7 4.4 9.5 4.6 9.5L9.4 8.8L11.5 4.3C11.6 4.1 11.8 4 12 4Z"
-							stroke="#92278f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+					<svg class="review-star" style="animation-delay: {i * 0.8}s" width="160" height="160" viewBox="0 0 24 24" fill="#92278f">
+						<path d="M12 4C12.2 4 12.4 4.1 12.5 4.3L14.6 8.8L19.4 9.5C19.6 9.5 19.8 9.7 19.9 9.9C19.9 10.1 19.9 10.3 19.7 10.5L16.2 13.8L17 18.8C17 19 17 19.2 16.8 19.4C16.6 19.5 16.4 19.5 16.2 19.4L12 17.2L7.8 19.4C7.6 19.5 7.4 19.5 7.2 19.4C7 19.2 7 19 7 18.8L7.8 13.8L4.3 10.5C4.1 10.3 4.1 10.1 4.1 9.9C4.2 9.7 4.4 9.5 4.6 9.5L9.4 8.8L11.5 4.3C11.6 4.1 11.8 4 12 4Z"/>
 					</svg>
 				{/each}
 			</div>
@@ -511,8 +510,8 @@
 	}
 
 	@keyframes starShimmer {
-		0%, 100% { fill: #92278f; filter: brightness(1); }
-		50% { fill: #FFB4DA; filter: brightness(1.2) drop-shadow(0 0 8px rgba(255, 180, 218, 0.6)); }
+		0%, 100% { filter: brightness(1); }
+		50% { filter: brightness(1.15) drop-shadow(0 0 6px rgba(255, 180, 218, 0.3)); }
 	}
 
 	.testimonials-grid {
@@ -1122,6 +1121,12 @@
 
 		.testimonials-grid {
 			grid-template-columns: 1fr;
+		}
+
+		.stars-container {
+			max-width: 70%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		.stars-container svg {
