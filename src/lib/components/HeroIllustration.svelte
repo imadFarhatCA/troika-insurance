@@ -40,11 +40,11 @@
 		}
 
 		.illustration {
-			width: 100%;
+			width: 140%;
+			max-width: 140%;
 			height: auto;
-			object-fit: none;
+			object-fit: contain;
 			object-position: center bottom;
-			overflow: hidden;
 		}
 	}
 </style>

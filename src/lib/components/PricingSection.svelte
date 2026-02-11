@@ -73,17 +73,16 @@
 		display: inline-block;
 		vertical-align: middle;
 		margin-right: 8px;
-		animation: starVibe 3s ease-in-out infinite;
+		animation: starVibe 4s ease-in-out infinite;
 	}
 
 	@keyframes starVibe {
 		0% { transform: rotate(0deg) scale(1); }
-		15% { transform: rotate(15deg) scale(1.15); }
-		30% { transform: rotate(-10deg) scale(1.05); }
-		45% { transform: rotate(8deg) scale(1.1); }
-		60% { transform: rotate(-5deg) scale(1); }
-		75% { transform: rotate(3deg) scale(1.08); }
-		100% { transform: rotate(0deg) scale(1); }
+		20% { transform: rotate(180deg) scale(1.4); }
+		40% { transform: rotate(360deg) scale(1); }
+		60% { transform: rotate(360deg) scale(1.3); }
+		80% { transform: rotate(360deg) scale(1); }
+		100% { transform: rotate(360deg) scale(1); }
 	}
 
 	.pricing-grid {

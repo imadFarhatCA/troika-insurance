@@ -4,6 +4,14 @@
 	import PricingSection from '$lib/components/PricingSection.svelte';
 	import MobileMenu from '$lib/components/MobileMenu.svelte';
 
+	import intactLogo from '$lib/assets/insurersLogos/intactLogo.svg';
+	import avivaLogo from '$lib/assets/insurersLogos/avivaLogo.svg';
+	import wawanesaLogo from '$lib/assets/insurersLogos/wawanesaLogo.svg';
+	import echelonLogo from '$lib/assets/insurersLogos/echelonLogo.svg';
+	import northBridgeLogo from '$lib/assets/insurersLogos/northBridge logo.svg';
+	import aprilLogo from '$lib/assets/insurersLogos/aprilLogo.svg';
+	import amfLogo from '$lib/assets/insurersLogos/AMFlogo.svg';
+
 	let mobileMenuOpen = false;
 
 	function toggleMobileMenu() {
@@ -258,26 +266,27 @@
 			<h2>Insurance with Impact</h2>
 			<p class="impact-subtitle">We donate to causes you care about</p>
 
-			<div class="causes-grid">
-				<div class="cause-logo">
-					<svg viewBox="0 0 120 60" fill="#4a4a4a">
-						<text x="60" y="35" text-anchor="middle" font-size="16" font-weight="600">Direct Relief</text>
-					</svg>
+			<div class="insurers-grid">
+				<div class="insurer-logo">
+					<img src={intactLogo} alt="Intact Insurance" />
 				</div>
-				<div class="cause-logo">
-					<svg viewBox="0 0 120 60" fill="#4a4a4a">
-						<text x="60" y="35" text-anchor="middle" font-size="14" font-weight="600">American Red Cross</text>
-					</svg>
+				<div class="insurer-logo">
+					<img src={avivaLogo} alt="Aviva" />
 				</div>
-				<div class="cause-logo">
-					<svg viewBox="0 0 120 60" fill="#4a4a4a">
-						<text x="60" y="35" text-anchor="middle" font-size="16" font-weight="600">Habitat for Humanity</text>
-					</svg>
+				<div class="insurer-logo">
+					<img src={wawanesaLogo} alt="Wawanesa" />
 				</div>
-				<div class="cause-logo">
-					<svg viewBox="0 0 120 60" fill="#4a4a4a">
-						<text x="60" y="35" text-anchor="middle" font-size="16" font-weight="600">Feeding America</text>
-					</svg>
+				<div class="insurer-logo">
+					<img src={echelonLogo} alt="Echelon Insurance" />
+				</div>
+				<div class="insurer-logo">
+					<img src={northBridgeLogo} alt="Northbridge Insurance" />
+				</div>
+				<div class="insurer-logo">
+					<img src={aprilLogo} alt="April Insurance" />
+				</div>
+				<div class="insurer-logo">
+					<img src={amfLogo} alt="AMF" />
 				</div>
 			</div>
 
@@ -725,25 +734,36 @@
 		margin: 0 0 60px 0;
 	}
 
-	.causes-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 40px;
+	.insurers-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 40px 56px;
 		margin-bottom: 80px;
 		max-width: 900px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	.cause-logo {
+	.insurer-logo {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		opacity: 0.7;
 		transition: opacity 0.3s;
 	}
 
-	.cause-logo:hover {
+	.insurer-logo img {
+		height: 40px;
+		width: auto;
+		object-fit: contain;
+		filter: grayscale(100%) brightness(0.6);
+		opacity: 0.6;
+		transition: all 0.3s;
+	}
+
+	.insurer-logo:hover img {
+		filter: grayscale(0%) brightness(1);
 		opacity: 1;
 	}
 
@@ -1176,9 +1196,12 @@
 			font-size: 32px;
 		}
 
-		.causes-grid {
-			grid-template-columns: 1fr 1fr;
-			gap: 24px;
+		.insurers-grid {
+			gap: 24px 32px;
+		}
+
+		.insurer-logo img {
+			height: 28px;
 		}
 
 		.certifications {
