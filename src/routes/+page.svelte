@@ -1,4 +1,6 @@
 <script lang="ts">
+	import heroIllustration from '$lib/assets/hero-illustration.svg';
+
 	let mobileMenuOpen = false;
 
 	function toggleMobileMenu() {
@@ -64,24 +66,7 @@
 				<a href="#quote" class="btn-primary">Get a Quote</a>
 			</div>
 			<div class="hero-illustration">
-				<svg viewBox="0 0 400 400" class="illustration">
-					<!-- House illustration -->
-					<g class="house">
-						<!-- Sky -->
-						<circle cx="340" cy="80" r="30" fill="#a7d8e9" opacity="0.3"/>
-						<!-- House base -->
-						<rect x="120" y="180" width="160" height="140" fill="#ff0083" rx="8"/>
-						<!-- Roof -->
-						<path d="M 100 180 L 200 100 L 300 180 Z" fill="#FFB4DA"/>
-						<!-- Door -->
-						<rect x="170" y="250" width="60" height="70" fill="#f3f4f6" rx="4"/>
-						<!-- Windows -->
-						<rect x="140" y="200" width="40" height="40" fill="#a7d8e9" rx="4"/>
-						<rect x="220" y="200" width="40" height="40" fill="#a7d8e9" rx="4"/>
-						<!-- Ground -->
-						<ellipse cx="200" cy="340" rx="180" ry="20" fill="#e5e7eb"/>
-					</g>
-				</svg>
+				<img src={heroIllustration} alt="Troika Insurance Hero" class="illustration" />
 			</div>
 		</div>
 	</section>
@@ -96,7 +81,7 @@
 				<div class="product-card" id="homeowners">
 					<div class="product-icon">
 						<svg viewBox="0 0 100 100">
-							<rect x="20" y="40" width="60" height="50" fill="#ff0083" rx="4"/>
+							<rect x="20" y="40" width="60" height="50" fill="#90278e" rx="4"/>
 							<path d="M 10 40 L 50 10 L 90 40 Z" fill="#FFB4DA"/>
 							<rect x="42" y="60" width="16" height="30" fill="#f3f4f6" rx="2"/>
 						</svg>
@@ -110,7 +95,7 @@
 				<div class="product-card" id="commercial">
 					<div class="product-icon">
 						<svg viewBox="0 0 100 100">
-							<rect x="15" y="20" width="70" height="70" fill="#ff0083" rx="4"/>
+							<rect x="15" y="20" width="70" height="70" fill="#90278e" rx="4"/>
 							<g fill="#FFB4DA">
 								<rect x="25" y="30" width="15" height="15" rx="1"/>
 								<rect x="25" y="50" width="15" height="15" rx="1"/>
@@ -131,7 +116,7 @@
 				<div class="product-card" id="car">
 					<div class="product-icon">
 						<svg viewBox="0 0 100 100">
-							<rect x="15" y="45" width="70" height="30" fill="#ff0083" rx="8"/>
+							<rect x="15" y="45" width="70" height="30" fill="#90278e" rx="8"/>
 							<path d="M 20 45 L 30 30 L 70 30 L 80 45 Z" fill="#FFB4DA"/>
 							<circle cx="30" cy="75" r="8" fill="#6b7280"/>
 							<circle cx="70" cy="75" r="8" fill="#6b7280"/>
@@ -173,7 +158,7 @@
 					<svg viewBox="0 0 300 300">
 						<!-- Shield with checkmark -->
 						<path d="M 150 30 L 240 80 L 240 160 Q 240 220 150 270 Q 60 220 60 160 L 60 80 Z"
-							fill="#ff0083" stroke="#FFB4DA" stroke-width="4"/>
+							fill="#90278e" stroke="#FFB4DA" stroke-width="4"/>
 						<path d="M 100 150 L 130 180 L 200 100"
 							stroke="#a7d8e9" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
@@ -189,11 +174,11 @@
 				<div class="claims-illustration">
 					<svg viewBox="0 0 300 300">
 						<!-- Clock illustration -->
-						<circle cx="150" cy="150" r="100" fill="#FFB4DA" stroke="#ff0083" stroke-width="8"/>
+						<circle cx="150" cy="150" r="100" fill="#FFB4DA" stroke="#90278e" stroke-width="8"/>
 						<circle cx="150" cy="150" r="80" fill="white"/>
-						<line x1="150" y1="150" x2="150" y2="90" stroke="#ff0083" stroke-width="6" stroke-linecap="round"/>
+						<line x1="150" y1="150" x2="150" y2="90" stroke="#90278e" stroke-width="6" stroke-linecap="round"/>
 						<line x1="150" y1="150" x2="190" y2="150" stroke="#a7d8e9" stroke-width="6" stroke-linecap="round"/>
-						<circle cx="150" cy="150" r="8" fill="#ff0083"/>
+						<circle cx="150" cy="150" r="8" fill="#90278e"/>
 					</svg>
 				</div>
 				<div class="claims-text">
@@ -299,7 +284,7 @@
 	.logo {
 		font-size: 28px;
 		font-weight: 800;
-		color: #ff0083;
+		color: #90278e;
 		text-decoration: none;
 		letter-spacing: -0.5px;
 	}
@@ -319,11 +304,11 @@
 	}
 
 	.nav-links a:hover {
-		color: #ff0083;
+		color: #90278e;
 	}
 
 	.contact-icon {
-		color: #ff0083;
+		color: #90278e;
 	}
 
 	.mobile-menu-btn {
@@ -382,27 +367,27 @@
 
 	.btn-primary {
 		display: inline-block;
-		background: #ff0083;
+		background: #90278e;
 		color: #ffffff;
 		padding: 15px 30px;
 		border-radius: 5px;
 		text-decoration: none;
 		font-weight: 700;
 		font-size: 14px;
-		box-shadow: 0px 10px 40px -10px rgba(255, 0, 131, 0.5);
+		box-shadow: 0px 10px 40px -10px rgba(144, 39, 142, 0.5);
 		transition: all 0.3s, transform 0.5s;
 		border: none;
 		cursor: pointer;
 	}
 
 	.btn-primary:hover {
-		background: #dc0073;
+		background: #751e73;
 		transform: translateY(-2px);
-		box-shadow: 0px 10px 40px -10px rgba(255, 0, 131, 0.5);
+		box-shadow: 0px 10px 40px -10px rgba(144, 39, 142, 0.5);
 	}
 
 	.btn-primary:active {
-		background: #b40060;
+		background: #5f1a5d;
 		transform: translateY(1px);
 	}
 
@@ -416,9 +401,6 @@
 		width: 100%;
 		max-width: 400px;
 		height: auto;
-	}
-
-	.house {
 		animation: float 6s ease-in-out infinite;
 	}
 
@@ -461,7 +443,7 @@
 	}
 
 	.product-card:hover {
-		border-color: #ff0083;
+		border-color: #90278e;
 		transform: translateY(-4px);
 		box-shadow: 0 30px 18px -13px rgba(0, 0, 0, 0.06);
 	}
@@ -492,7 +474,7 @@
 	}
 
 	.link-arrow {
-		color: #ff0083;
+		color: #90278e;
 		text-decoration: none;
 		font-weight: 600;
 		font-size: 16px;
@@ -500,7 +482,7 @@
 	}
 
 	.link-arrow:hover {
-		color: #dc0073;
+		color: #751e73;
 		gap: 8px;
 	}
 
@@ -549,7 +531,7 @@
 	.check-icon {
 		width: 28px;
 		height: 28px;
-		background: #ff0083;
+		background: #90278e;
 		color: white;
 		border-radius: 50%;
 		display: flex;
@@ -611,27 +593,27 @@
 	.btn-secondary {
 		display: inline-block;
 		background: white;
-		color: #ff0083;
+		color: #90278e;
 		padding: 15px 30px;
 		border-radius: 5px;
 		text-decoration: none;
 		font-weight: 700;
 		font-size: 14px;
-		border: 2px solid #ff0083;
+		border: 2px solid #90278e;
 		transition: all 0.3s;
 		cursor: pointer;
 	}
 
 	.btn-secondary:hover {
-		background: #ff0083;
+		background: #90278e;
 		color: white;
 		transform: translateY(-2px);
-		box-shadow: 0px 10px 40px -10px rgba(255, 0, 131, 0.5);
+		box-shadow: 0px 10px 40px -10px rgba(144, 39, 142, 0.5);
 	}
 
 	.btn-secondary:active {
-		background: #dc0073;
-		border-color: #dc0073;
+		background: #751e73;
+		border-color: #751e73;
 		transform: translateY(1px);
 	}
 
@@ -680,7 +662,7 @@
 	}
 
 	.contact-icon {
-		color: #ff0083;
+		color: #90278e;
 		margin-bottom: 16px;
 	}
 
