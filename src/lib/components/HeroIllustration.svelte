@@ -40,11 +40,13 @@
 		}
 
 		.illustration {
-			width: 280%;
-			max-width: 280%;
+			width: 100%;
 			height: auto;
 			object-fit: contain;
 			object-position: center bottom;
+			transform: scale(2.5);
+			transform-origin: center bottom;
+			animation: none;
 		}
 	}
 </style>
