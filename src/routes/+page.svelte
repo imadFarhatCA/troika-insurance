@@ -5,6 +5,7 @@
 	import homeownersIcon from '$lib/assets/icons/HOMEOWNERS Icon.svg';
 	import corporateIcon from '$lib/assets/icons/CORPORATE Icon.svg';
 	import carIcon from '$lib/assets/icons/Car Icon.svg';
+	import customIcon from '$lib/assets/icons/CUSTOM Icon.svg';
 
 	let mobileMenuOpen = false;
 
@@ -137,10 +138,7 @@
 				<!-- Custom -->
 				<div class="pricing-card" id="custom">
 					<div class="pricing-icon">
-						<svg viewBox="0 0 100 100">
-							<circle cx="50" cy="50" r="35" fill="none" stroke="#90278e" stroke-width="3"/>
-							<path d="M 50 25 L 50 50 L 65 65" fill="none" stroke="#90278e" stroke-width="3" stroke-linecap="round"/>
-						</svg>
+						<img src={customIcon} alt="Custom Insurance" />
 					</div>
 					<h3>Custom</h3>
 					<p>Tailored coverage for unique needs</p>
@@ -662,7 +660,7 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 		gap: 20px;
-		max-width: 1400px;
+		max-width: 90%;
 		margin: 0 auto;
 	}
 
@@ -697,7 +695,7 @@
 	}
 
 	.pricing-card h3 {
-		font-size: 28px;
+		font-size: 24px;
 		font-weight: 700;
 		color: #3b3b3b;
 		margin: 0 0 12px 0;
@@ -706,7 +704,7 @@
 	.pricing-card > p {
 		color: #646464;
 		margin: 0 0 40px 0;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 1.6;
 		flex-grow: 1;
 	}
@@ -724,7 +722,7 @@
 		border: none;
 		cursor: pointer;
 		letter-spacing: 0.5px;
-		margin: 0 auto 20px;
+		margin: 0 auto 12px;
 		width: fit-content;
 	}
 
@@ -736,8 +734,8 @@
 
 	.pricing-from {
 		margin: 0;
-		font-size: 12px;
-		color: #a3a3a3;
+		font-size: 10px;
+		color: #b8b8b8;
 		font-weight: 400;
 		text-transform: lowercase;
 	}
