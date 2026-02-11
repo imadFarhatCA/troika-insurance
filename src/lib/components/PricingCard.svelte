@@ -50,12 +50,12 @@
 	.pricing-card h3 {
 		font-size: 22px;
 		font-weight: 700;
-		color: #3b3b3b;
+		color: #4a4a4a;
 		margin: 0 0 8px 0;
 	}
 
 	.pricing-card > p {
-		color: #646464;
+		color: #4a4a4a;
 		margin: 0 0 32px 0;
 		font-size: 13px;
 		line-height: 1.6;
@@ -64,7 +64,7 @@
 
 	.btn-pricing {
 		display: block;
-		background: #90278e;
+		background: #92278f;
 		color: white;
 		padding: 14px 24px;
 		border-radius: 8px;

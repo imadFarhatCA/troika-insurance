@@ -20,7 +20,7 @@
 		<h2>Incredible Prices. Monthly Subscription.<br/>Bundle Discounts.</h2>
 		<p class="pricing-subtitle">
 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
-				<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#90278e"/>
+				<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#92278f"/>
 			</svg>
 			Amazing savings when you bundle
 		</p>
@@ -54,7 +54,7 @@
 		text-align: center;
 		font-size: 48px;
 		font-weight: 700;
-		color: #3b3b3b;
+		color: #4a4a4a;
 		margin: 0 0 24px 0;
 		line-height: 1.2;
 	}
@@ -62,7 +62,7 @@
 	.pricing-subtitle {
 		text-align: center;
 		font-size: 18px;
-		color: #646464;
+		color: #4a4a4a;
 		margin: 0 0 60px 0;
 		display: flex;
 		align-items: center;
