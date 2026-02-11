@@ -356,15 +356,16 @@
 	.hero-container {
 		max-width: 100%;
 		width: 100%;
-		display: flex;
 		position: relative;
 		height: 100vh;
+		display: flex;
+		align-items: center;
 	}
 
 	.hero-content {
 		position: relative;
-		z-index: 2;
-		max-width: 600px;
+		z-index: 10;
+		max-width: 650px;
 		padding: 80px 60px 80px 120px;
 	}
 
@@ -414,20 +415,21 @@
 	.hero-illustration {
 		position: absolute;
 		top: 0;
-		right: 0;
-		width: 60%;
+		left: 0;
+		width: 100%;
 		height: 100%;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-end;
 		z-index: 1;
+		overflow: hidden;
 	}
 
 	.illustration {
-		width: 100%;
-		height: 90%;
+		width: 80%;
+		height: 100%;
 		object-fit: contain;
-		object-position: center;
+		object-position: right center;
 		animation: float 6s ease-in-out infinite;
 	}
 
@@ -793,18 +795,26 @@
 
 		.hero-container {
 			flex-direction: column;
+			align-items: flex-start;
 		}
 
 		.hero-content {
-			padding: 60px 40px 40px 40px;
+			padding: 80px 40px 40px 40px;
 			max-width: 100%;
+			z-index: 10;
 		}
 
 		.hero-illustration {
-			position: relative;
+			position: absolute;
 			width: 100%;
-			height: 50vh;
-			padding: 0;
+			height: 100%;
+			justify-content: center;
+		}
+
+		.illustration {
+			width: 100%;
+			height: 60%;
+			object-position: center bottom;
 		}
 
 		.about-content,
@@ -843,11 +853,13 @@
 
 		.hero-container {
 			flex-direction: column;
+			align-items: flex-start;
 		}
 
 		.hero-content {
-			padding: 40px 24px 30px 24px;
+			padding: 60px 24px 30px 24px;
 			max-width: 100%;
+			z-index: 10;
 		}
 
 		.hero-content h1 {
@@ -860,13 +872,16 @@
 		}
 
 		.hero-illustration {
-			position: relative;
+			position: absolute;
 			width: 100%;
-			height: 45vh;
+			height: 100%;
 		}
 
 		.illustration {
+			width: 100%;
+			height: 55%;
 			object-fit: contain;
+			object-position: center bottom;
 		}
 
 		.products,
