@@ -98,7 +98,7 @@
 					<h3>Renters</h3>
 					<p>Coverage for your stuff, and peace of mind</p>
 					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
-					<p class="pricing-from">FROM $5/MO</p>
+					<p class="pricing-from">from $5 / month</p>
 				</div>
 
 				<!-- Homeowners -->
@@ -109,7 +109,7 @@
 					<h3>Homeowners</h3>
 					<p>Protection for your home and stuff</p>
 					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
-					<p class="pricing-from">FROM $25/MO</p>
+					<p class="pricing-from">from $25 / month</p>
 				</div>
 
 				<!-- Commercial -->
@@ -120,7 +120,7 @@
 					<h3>Commercial</h3>
 					<p>Coverage for your business</p>
 					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
-					<p class="pricing-from">FROM $50/MO</p>
+					<p class="pricing-from">from $50 / month</p>
 				</div>
 
 				<!-- Car -->
@@ -131,7 +131,7 @@
 					<h3>Car</h3>
 					<p>Protect your car, passengers, and the planet</p>
 					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
-					<p class="pricing-from">AS LOW AS $30/MO</p>
+					<p class="pricing-from">as low as $30 / month</p>
 				</div>
 
 				<!-- Custom -->
@@ -145,7 +145,7 @@
 					<h3>Custom</h3>
 					<p>Tailored coverage for unique needs</p>
 					<a href="#quote" class="btn-pricing">CHECK OUR PRICES</a>
-					<p class="pricing-from">CUSTOM PRICING</p>
+					<p class="pricing-from">custom pricing</p>
 				</div>
 			</div>
 		</div>
@@ -660,8 +660,8 @@
 
 	.pricing-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-		gap: 24px;
+		grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+		gap: 20px;
 		max-width: 1400px;
 		margin: 0 auto;
 	}
@@ -670,10 +670,12 @@
 		background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
 		border: none;
 		border-radius: 20px;
-		padding: 48px 32px;
+		padding: 40px 28px;
 		text-align: center;
 		transition: all 0.3s;
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		display: flex;
+		flex-direction: column;
 	}
 
 	.pricing-card:hover {
@@ -682,8 +684,8 @@
 	}
 
 	.pricing-icon {
-		width: 100px;
-		height: 100px;
+		width: 120px;
+		height: 120px;
 		margin: 0 auto 24px;
 	}
 
@@ -703,9 +705,10 @@
 
 	.pricing-card > p {
 		color: #646464;
-		margin: 0 0 32px 0;
+		margin: 0 0 40px 0;
 		font-size: 16px;
 		line-height: 1.6;
+		flex-grow: 1;
 	}
 
 	.btn-pricing {
@@ -721,7 +724,7 @@
 		border: none;
 		cursor: pointer;
 		letter-spacing: 0.5px;
-		margin: 0 auto;
+		margin: 0 auto 20px;
 		width: fit-content;
 	}
 
@@ -732,10 +735,11 @@
 	}
 
 	.pricing-from {
-		margin: 16px 0 0 0;
-		font-size: 13px;
-		color: #9ca3af;
-		font-weight: 500;
+		margin: 0;
+		font-size: 12px;
+		color: #a3a3a3;
+		font-weight: 400;
+		text-transform: lowercase;
 	}
 
 	/* Testimonials Section */
