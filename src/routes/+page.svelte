@@ -1,102 +1,266 @@
 <script lang="ts">
-	// Add any interactive functionality here
+	let mobileMenuOpen = false;
+
+	function toggleMobileMenu() {
+		mobileMenuOpen = !mobileMenuOpen;
+	}
 </script>
 
-<div class="container">
+<div class="page">
+	<!-- Navigation -->
+	<nav class="nav">
+		<div class="nav-container">
+			<a href="/" class="logo">Troika</a>
+
+			<!-- Desktop Menu -->
+			<div class="nav-links">
+				<a href="#homeowners">Homeowners</a>
+				<a href="#commercial">Commercial</a>
+				<a href="#car">Car</a>
+				<a href="#about">About</a>
+				<a href="#claims">Claims</a>
+				<a href="#contact" class="contact-icon" aria-label="Contact">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+						<polyline points="22,6 12,13 2,6"></polyline>
+					</svg>
+				</a>
+			</div>
+
+			<!-- Mobile Menu Button -->
+			<button class="mobile-menu-btn" on:click={toggleMobileMenu} aria-label="Menu">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					{#if mobileMenuOpen}
+						<line x1="18" y1="6" x2="6" y2="18"></line>
+						<line x1="6" y1="6" x2="18" y2="18"></line>
+					{:else}
+						<line x1="3" y1="12" x2="21" y2="12"></line>
+						<line x1="3" y1="6" x2="21" y2="6"></line>
+						<line x1="3" y1="18" x2="21" y2="18"></line>
+					{/if}
+				</svg>
+			</button>
+		</div>
+
+		<!-- Mobile Menu -->
+		{#if mobileMenuOpen}
+			<div class="mobile-menu">
+				<a href="#homeowners">Homeowners</a>
+				<a href="#commercial">Commercial</a>
+				<a href="#car">Car</a>
+				<a href="#about">About</a>
+				<a href="#claims">Claims</a>
+				<a href="#contact">Contact</a>
+			</div>
+		{/if}
+	</nav>
+
 	<!-- Hero Section -->
 	<section class="hero">
-		<div class="hero-content">
-			<h1>Troika Insurance</h1>
-			<p class="tagline">Comprehensive Insurance Solutions</p>
-			<p class="subtitle">Protecting what matters most to you and your business</p>
-			<div class="cta-buttons">
-				<a href="#services" class="btn btn-primary">Our Services</a>
-				<a href="#contact" class="btn btn-secondary">Get a Quote</a>
+		<div class="hero-container">
+			<div class="hero-content">
+				<h1>Insurance that doesn't feel like insurance</h1>
+				<p class="hero-subtitle">Fast, friendly, and transparent coverage for your home, car, and business.</p>
+				<a href="#quote" class="btn-primary">Get a Quote</a>
+			</div>
+			<div class="hero-illustration">
+				<svg viewBox="0 0 400 400" class="illustration">
+					<!-- House illustration -->
+					<g class="house">
+						<!-- Sky -->
+						<circle cx="340" cy="80" r="30" fill="#a7d8e9" opacity="0.3"/>
+						<!-- House base -->
+						<rect x="120" y="180" width="160" height="140" fill="#92278f" rx="8"/>
+						<!-- Roof -->
+						<path d="M 100 180 L 200 100 L 300 180 Z" fill="#c7a0cb"/>
+						<!-- Door -->
+						<rect x="170" y="250" width="60" height="70" fill="#f3f4f6" rx="4"/>
+						<!-- Windows -->
+						<rect x="140" y="200" width="40" height="40" fill="#a7d8e9" rx="4"/>
+						<rect x="220" y="200" width="40" height="40" fill="#a7d8e9" rx="4"/>
+						<!-- Ground -->
+						<ellipse cx="200" cy="340" rx="180" ry="20" fill="#e5e7eb"/>
+					</g>
+				</svg>
 			</div>
 		</div>
 	</section>
 
-	<!-- Services Section -->
-	<section id="services" class="services">
-		<h2>Our Services</h2>
-		<div class="services-grid">
-			<div class="service-card">
-				<div class="service-icon">🏥</div>
-				<h3>Health Insurance</h3>
-				<p>Comprehensive health coverage for you and your family with access to quality healthcare.</p>
-			</div>
+	<!-- Products Section -->
+	<section id="products" class="products">
+		<div class="container">
+			<h2>What can we cover?</h2>
 
-			<div class="service-card">
-				<div class="service-icon">💼</div>
-				<h3>Life Insurance</h3>
-				<p>Secure your family's financial future with our flexible life insurance plans.</p>
-			</div>
+			<div class="products-grid">
+				<!-- Homeowners -->
+				<div class="product-card" id="homeowners">
+					<div class="product-icon">
+						<svg viewBox="0 0 100 100">
+							<rect x="20" y="40" width="60" height="50" fill="#92278f" rx="4"/>
+							<path d="M 10 40 L 50 10 L 90 40 Z" fill="#c7a0cb"/>
+							<rect x="42" y="60" width="16" height="30" fill="#f3f4f6" rx="2"/>
+						</svg>
+					</div>
+					<h3>Homeowners</h3>
+					<p>Protect your home and belongings with comprehensive coverage that's easy to understand.</p>
+					<a href="#quote" class="link-arrow">Get covered →</a>
+				</div>
 
-			<div class="service-card">
-				<div class="service-icon">🏠</div>
-				<h3>Property Insurance</h3>
-				<p>Protect your home and assets against unexpected events and damages.</p>
-			</div>
+				<!-- Commercial -->
+				<div class="product-card" id="commercial">
+					<div class="product-icon">
+						<svg viewBox="0 0 100 100">
+							<rect x="15" y="20" width="70" height="70" fill="#92278f" rx="4"/>
+							<g fill="#c7a0cb">
+								<rect x="25" y="30" width="15" height="15" rx="1"/>
+								<rect x="25" y="50" width="15" height="15" rx="1"/>
+								<rect x="25" y="70" width="15" height="15" rx="1"/>
+								<rect x="45" y="30" width="15" height="15" rx="1"/>
+								<rect x="45" y="50" width="15" height="15" rx="1"/>
+								<rect x="65" y="30" width="15" height="15" rx="1"/>
+								<rect x="65" y="50" width="15" height="15" rx="1"/>
+							</g>
+						</svg>
+					</div>
+					<h3>Commercial</h3>
+					<p>Business insurance that scales with you. From liability to property coverage.</p>
+					<a href="#quote" class="link-arrow">Learn more →</a>
+				</div>
 
-			<div class="service-card">
-				<div class="service-icon">🏢</div>
-				<h3>Business Insurance</h3>
-				<p>Comprehensive coverage to protect your business operations and assets.</p>
-			</div>
-
-			<div class="service-card">
-				<div class="service-icon">🚗</div>
-				<h3>Auto Insurance</h3>
-				<p>Complete vehicle protection with flexible coverage options and competitive rates.</p>
-			</div>
-
-			<div class="service-card">
-				<div class="service-icon">🛡️</div>
-				<h3>Liability Coverage</h3>
-				<p>Protect yourself and your business from liability claims and legal expenses.</p>
+				<!-- Car -->
+				<div class="product-card" id="car">
+					<div class="product-icon">
+						<svg viewBox="0 0 100 100">
+							<rect x="15" y="45" width="70" height="30" fill="#92278f" rx="8"/>
+							<path d="M 20 45 L 30 30 L 70 30 L 80 45 Z" fill="#c7a0cb"/>
+							<circle cx="30" cy="75" r="8" fill="#6b7280"/>
+							<circle cx="70" cy="75" r="8" fill="#6b7280"/>
+							<rect x="35" y="35" width="12" height="12" fill="#a7d8e9" rx="2"/>
+							<rect x="53" y="35" width="12" height="12" fill="#a7d8e9" rx="2"/>
+						</svg>
+					</div>
+					<h3>Car</h3>
+					<p>Auto insurance with instant quotes and claims that are handled in minutes, not weeks.</p>
+					<a href="#quote" class="link-arrow">Get a quote →</a>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- About Section -->
 	<section id="about" class="about">
-		<h2>Why Choose Troika Insurance?</h2>
-		<div class="about-grid">
-			<div class="about-item">
-				<h3>🎯 Tailored Solutions</h3>
-				<p>We customize insurance plans to meet your specific needs and budget.</p>
+		<div class="container">
+			<div class="about-content">
+				<div class="about-text">
+					<h2>Insurance, but better</h2>
+					<p>We're rebuilding insurance from the ground up. No confusing jargon, no hidden fees, just straightforward protection when you need it most.</p>
+					<ul class="feature-list">
+						<li>
+							<span class="check-icon">✓</span>
+							<span>Instant quotes in 90 seconds</span>
+						</li>
+						<li>
+							<span class="check-icon">✓</span>
+							<span>Claims paid in minutes</span>
+						</li>
+						<li>
+							<span class="check-icon">✓</span>
+							<span>Cancel anytime, no fees</span>
+						</li>
+					</ul>
+				</div>
+				<div class="about-illustration">
+					<svg viewBox="0 0 300 300">
+						<!-- Shield with checkmark -->
+						<path d="M 150 30 L 240 80 L 240 160 Q 240 220 150 270 Q 60 220 60 160 L 60 80 Z"
+							fill="#92278f" stroke="#c7a0cb" stroke-width="4"/>
+						<path d="M 100 150 L 130 180 L 200 100"
+							stroke="#a7d8e9" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</div>
 			</div>
-			<div class="about-item">
-				<h3>🤝 Trusted Service</h3>
-				<p>Years of experience providing reliable insurance solutions and customer support.</p>
-			</div>
-			<div class="about-item">
-				<h3>💡 Expert Guidance</h3>
-				<p>Our team of insurance professionals helps you make informed decisions.</p>
+		</div>
+	</section>
+
+	<!-- Claims Section -->
+	<section id="claims" class="claims">
+		<div class="container">
+			<div class="claims-content">
+				<div class="claims-illustration">
+					<svg viewBox="0 0 300 300">
+						<!-- Clock illustration -->
+						<circle cx="150" cy="150" r="100" fill="#c7a0cb" stroke="#92278f" stroke-width="8"/>
+						<circle cx="150" cy="150" r="80" fill="white"/>
+						<line x1="150" y1="150" x2="150" y2="90" stroke="#92278f" stroke-width="6" stroke-linecap="round"/>
+						<line x1="150" y1="150" x2="190" y2="150" stroke="#a7d8e9" stroke-width="6" stroke-linecap="round"/>
+						<circle cx="150" cy="150" r="8" fill="#92278f"/>
+					</svg>
+				</div>
+				<div class="claims-text">
+					<h2>Lightning-fast claims</h2>
+					<p>File a claim from your phone and get paid in minutes. Our AI handles the paperwork so you don't have to.</p>
+					<a href="#quote" class="btn-secondary">File a claim</a>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Contact Section -->
 	<section id="contact" class="contact">
-		<h2>Get in Touch</h2>
-		<p class="contact-subtitle">Ready to protect what matters most? Contact us today for a free consultation.</p>
-		<div class="contact-info">
-			<div class="contact-item">
-				<strong>Email:</strong> info@troikainsurance.com
-			</div>
-			<div class="contact-item">
-				<strong>Phone:</strong> +1 (555) 123-4567
-			</div>
-			<div class="contact-item">
-				<strong>Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM
+		<div class="container">
+			<h2>Get in touch</h2>
+			<p class="contact-subtitle">Questions? We're here to help.</p>
+			<div class="contact-grid">
+				<div class="contact-card">
+					<div class="contact-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+							<polyline points="22,6 12,13 2,6"></polyline>
+						</svg>
+					</div>
+					<h3>Email</h3>
+					<p>info@troikainsurance.com</p>
+				</div>
+				<div class="contact-card">
+					<div class="contact-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+						</svg>
+					</div>
+					<h3>Phone</h3>
+					<p>+1 (555) 123-4567</p>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Footer -->
 	<footer class="footer">
-		<p>&copy; 2026 Troika Insurance. All rights reserved.</p>
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-brand">
+					<div class="logo">Troika</div>
+					<p>Insurance made simple</p>
+				</div>
+				<div class="footer-links">
+					<div class="footer-column">
+						<h4>Products</h4>
+						<a href="#homeowners">Homeowners</a>
+						<a href="#commercial">Commercial</a>
+						<a href="#car">Car</a>
+					</div>
+					<div class="footer-column">
+						<h4>Company</h4>
+						<a href="#about">About</a>
+						<a href="#claims">Claims</a>
+						<a href="#contact">Contact</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2026 Troika Insurance. All rights reserved.</p>
+			</div>
+		</div>
 	</footer>
 </div>
 
@@ -104,9 +268,162 @@
 	:global(body) {
 		margin: 0;
 		padding: 0;
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-		min-height: 100vh;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+		background: white;
+		color: #1f2937;
+		line-height: 1.6;
+	}
+
+	.page {
+		overflow-x: hidden;
+	}
+
+	/* Navigation */
+	.nav {
+		position: sticky;
+		top: 0;
+		background: white;
+		border-bottom: 1px solid #e5e7eb;
+		z-index: 100;
+	}
+
+	.nav-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 20px 24px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		font-size: 28px;
+		font-weight: 800;
+		color: #92278f;
+		text-decoration: none;
+		letter-spacing: -0.5px;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 32px;
+		align-items: center;
+	}
+
+	.nav-links a {
+		text-decoration: none;
+		color: #4b5563;
+		font-weight: 500;
+		font-size: 15px;
+		transition: color 0.2s;
+	}
+
+	.nav-links a:hover {
+		color: #92278f;
+	}
+
+	.contact-icon {
+		color: #92278f;
+	}
+
+	.mobile-menu-btn {
+		display: none;
+		background: none;
+		border: none;
+		cursor: pointer;
+		color: #4b5563;
+	}
+
+	.mobile-menu {
+		display: none;
+		flex-direction: column;
+		padding: 20px 24px;
+		border-top: 1px solid #e5e7eb;
+		background: white;
+	}
+
+	.mobile-menu a {
+		padding: 12px 0;
+		text-decoration: none;
+		color: #4b5563;
+		font-weight: 500;
+	}
+
+	/* Hero Section */
+	.hero {
+		background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+		padding: 80px 24px 100px;
+	}
+
+	.hero-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.hero-content h1 {
+		font-size: 56px;
+		font-weight: 800;
+		color: #1f2937;
+		margin: 0 0 24px 0;
+		line-height: 1.1;
+		letter-spacing: -1px;
+	}
+
+	.hero-subtitle {
+		font-size: 20px;
+		color: #6b7280;
+		margin: 0 0 32px 0;
+		line-height: 1.5;
+	}
+
+	.btn-primary {
+		display: inline-block;
+		background: #92278f;
+		color: white;
+		padding: 16px 40px;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 16px;
+		box-shadow: 0 4px 12px rgba(146, 39, 143, 0.3);
+		transition: all 0.3s ease;
+	}
+
+	.btn-primary:hover {
+		background: #7a1f77;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(146, 39, 143, 0.4);
+	}
+
+	.hero-illustration {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.illustration {
+		width: 100%;
+		max-width: 400px;
+		height: auto;
+	}
+
+	.house {
+		animation: float 6s ease-in-out infinite;
+	}
+
+	@keyframes float {
+		0%, 100% { transform: translateY(0px); }
+		50% { transform: translateY(-20px); }
+	}
+
+	/* Products Section */
+	.products {
+		padding: 100px 24px;
+		background: white;
 	}
 
 	.container {
@@ -114,233 +431,389 @@
 		margin: 0 auto;
 	}
 
-	/* Hero Section */
-	.hero {
-		min-height: 100vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	.products h2 {
 		text-align: center;
-		color: white;
-		padding: 40px 20px;
+		font-size: 48px;
+		font-weight: 800;
+		color: #1f2937;
+		margin: 0 0 60px 0;
 	}
 
-	.hero-content h1 {
-		font-size: 4rem;
-		margin: 0 0 20px 0;
-		font-weight: 700;
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-	}
-
-	.tagline {
-		font-size: 1.8rem;
-		margin: 0 0 10px 0;
-		opacity: 0.95;
-	}
-
-	.subtitle {
-		font-size: 1.2rem;
-		margin: 0 0 40px 0;
-		opacity: 0.85;
-	}
-
-	.cta-buttons {
-		display: flex;
-		gap: 20px;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	.btn {
-		padding: 14px 32px;
-		font-size: 1rem;
-		border-radius: 8px;
-		text-decoration: none;
-		font-weight: 600;
-		transition: all 0.3s ease;
-		display: inline-block;
-	}
-
-	.btn-primary {
-		background: white;
-		color: #667eea;
-	}
-
-	.btn-primary:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-	}
-
-	.btn-secondary {
-		background: transparent;
-		color: white;
-		border: 2px solid white;
-	}
-
-	.btn-secondary:hover {
-		background: white;
-		color: #667eea;
-		transform: translateY(-2px);
-	}
-
-	/* Services Section */
-	.services {
-		background: white;
-		padding: 80px 20px;
-		text-align: center;
-	}
-
-	.services h2 {
-		font-size: 2.5rem;
-		margin: 0 0 50px 0;
-		color: #333;
-	}
-
-	.services-grid {
+	.products-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 30px;
-		max-width: 1200px;
-		margin: 0 auto;
+		gap: 32px;
 	}
 
-	.service-card {
-		background: #f8f9fa;
-		padding: 40px 30px;
-		border-radius: 12px;
+	.product-card {
+		background: white;
+		border: 2px solid #e5e7eb;
+		border-radius: 24px;
+		padding: 40px 32px;
 		transition: all 0.3s ease;
-		border: 1px solid #e9ecef;
 	}
 
-	.service-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-		border-color: #667eea;
+	.product-card:hover {
+		border-color: #92278f;
+		transform: translateY(-4px);
+		box-shadow: 0 12px 24px rgba(146, 39, 143, 0.1);
 	}
 
-	.service-icon {
-		font-size: 3rem;
-		margin-bottom: 20px;
+	.product-icon {
+		width: 100px;
+		height: 100px;
+		margin: 0 0 24px 0;
 	}
 
-	.service-card h3 {
-		font-size: 1.5rem;
-		margin: 0 0 15px 0;
-		color: #333;
+	.product-icon svg {
+		width: 100%;
+		height: 100%;
 	}
 
-	.service-card p {
-		margin: 0;
-		color: #666;
+	.product-card h3 {
+		font-size: 28px;
+		font-weight: 700;
+		color: #1f2937;
+		margin: 0 0 16px 0;
+	}
+
+	.product-card p {
+		color: #6b7280;
+		margin: 0 0 24px 0;
+		font-size: 16px;
 		line-height: 1.6;
+	}
+
+	.link-arrow {
+		color: #92278f;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 16px;
+		transition: all 0.2s;
+	}
+
+	.link-arrow:hover {
+		color: #7a1f77;
+		gap: 8px;
 	}
 
 	/* About Section */
 	.about {
-		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-		padding: 80px 20px;
-		text-align: center;
-		color: white;
+		padding: 100px 24px;
+		background: linear-gradient(135deg, #c7a0cb 0%, #a7d8e9 100%);
 	}
 
-	.about h2 {
-		font-size: 2.5rem;
-		margin: 0 0 50px 0;
-	}
-
-	.about-grid {
+	.about-content {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 40px;
-		max-width: 1000px;
-		margin: 0 auto;
+		grid-template-columns: 1fr 1fr;
+		gap: 80px;
+		align-items: center;
 	}
 
-	.about-item h3 {
-		font-size: 1.5rem;
-		margin: 0 0 15px 0;
+	.about-text h2 {
+		font-size: 48px;
+		font-weight: 800;
+		color: #1f2937;
+		margin: 0 0 24px 0;
 	}
 
-	.about-item p {
+	.about-text p {
+		font-size: 18px;
+		color: #374151;
+		margin: 0 0 32px 0;
+		line-height: 1.7;
+	}
+
+	.feature-list {
+		list-style: none;
+		padding: 0;
 		margin: 0;
-		opacity: 0.9;
-		line-height: 1.6;
+	}
+
+	.feature-list li {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 16px;
+		font-size: 18px;
+		color: #1f2937;
+	}
+
+	.check-icon {
+		width: 28px;
+		height: 28px;
+		background: #92278f;
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		flex-shrink: 0;
+	}
+
+	.about-illustration {
+		display: flex;
+		justify-content: center;
+	}
+
+	.about-illustration svg {
+		width: 100%;
+		max-width: 300px;
+		height: auto;
+	}
+
+	/* Claims Section */
+	.claims {
+		padding: 100px 24px;
+		background: white;
+	}
+
+	.claims-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 80px;
+		align-items: center;
+	}
+
+	.claims-illustration {
+		display: flex;
+		justify-content: center;
+	}
+
+	.claims-illustration svg {
+		width: 100%;
+		max-width: 300px;
+		height: auto;
+	}
+
+	.claims-text h2 {
+		font-size: 48px;
+		font-weight: 800;
+		color: #1f2937;
+		margin: 0 0 24px 0;
+	}
+
+	.claims-text p {
+		font-size: 18px;
+		color: #6b7280;
+		margin: 0 0 32px 0;
+		line-height: 1.7;
+	}
+
+	.btn-secondary {
+		display: inline-block;
+		background: white;
+		color: #92278f;
+		padding: 16px 40px;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 16px;
+		border: 2px solid #92278f;
+		transition: all 0.3s ease;
+	}
+
+	.btn-secondary:hover {
+		background: #92278f;
+		color: white;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(146, 39, 143, 0.3);
 	}
 
 	/* Contact Section */
 	.contact {
-		background: white;
-		padding: 80px 20px;
-		text-align: center;
+		padding: 100px 24px;
+		background: #f9fafb;
 	}
 
 	.contact h2 {
-		font-size: 2.5rem;
-		margin: 0 0 20px 0;
-		color: #333;
+		text-align: center;
+		font-size: 48px;
+		font-weight: 800;
+		color: #1f2937;
+		margin: 0 0 16px 0;
 	}
 
 	.contact-subtitle {
-		font-size: 1.2rem;
-		color: #666;
-		margin: 0 0 40px 0;
+		text-align: center;
+		font-size: 18px;
+		color: #6b7280;
+		margin: 0 0 48px 0;
 	}
 
-	.contact-info {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-		max-width: 600px;
+	.contact-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 32px;
+		max-width: 800px;
 		margin: 0 auto;
 	}
 
-	.contact-item {
-		padding: 20px;
-		background: #f8f9fa;
-		border-radius: 8px;
-		font-size: 1.1rem;
-		color: #333;
+	.contact-card {
+		background: white;
+		border: 2px solid #e5e7eb;
+		border-radius: 20px;
+		padding: 40px;
+		text-align: center;
+		transition: all 0.3s ease;
 	}
 
-	.contact-item strong {
-		color: #667eea;
-		margin-right: 10px;
+	.contact-card:hover {
+		border-color: #a7d8e9;
+		transform: translateY(-4px);
+		box-shadow: 0 8px 16px rgba(167, 216, 233, 0.2);
+	}
+
+	.contact-icon {
+		color: #92278f;
+		margin-bottom: 16px;
+	}
+
+	.contact-card h3 {
+		font-size: 20px;
+		font-weight: 700;
+		color: #1f2937;
+		margin: 0 0 12px 0;
+	}
+
+	.contact-card p {
+		color: #6b7280;
+		margin: 0;
+		font-size: 16px;
 	}
 
 	/* Footer */
 	.footer {
-		background: #2d3748;
+		background: #1f2937;
 		color: white;
-		text-align: center;
-		padding: 30px 20px;
+		padding: 60px 24px 32px;
 	}
 
-	.footer p {
+	.footer-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		margin-bottom: 48px;
+	}
+
+	.footer-brand .logo {
+		color: white;
+		margin-bottom: 12px;
+	}
+
+	.footer-brand p {
+		color: #9ca3af;
 		margin: 0;
-		opacity: 0.8;
+	}
+
+	.footer-links {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+	}
+
+	.footer-column h4 {
+		font-size: 14px;
+		font-weight: 600;
+		color: white;
+		margin: 0 0 16px 0;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.footer-column a {
+		display: block;
+		color: #9ca3af;
+		text-decoration: none;
+		margin-bottom: 12px;
+		font-size: 15px;
+		transition: color 0.2s;
+	}
+
+	.footer-column a:hover {
+		color: #c7a0cb;
+	}
+
+	.footer-bottom {
+		padding-top: 32px;
+		border-top: 1px solid #374151;
+		text-align: center;
+	}
+
+	.footer-bottom p {
+		color: #9ca3af;
+		margin: 0;
+		font-size: 14px;
 	}
 
 	/* Responsive Design */
-	@media (max-width: 768px) {
+	@media (max-width: 968px) {
+		.nav-links {
+			display: none;
+		}
+
+		.mobile-menu-btn {
+			display: block;
+		}
+
+		.mobile-menu {
+			display: flex;
+		}
+
+		.hero-container,
+		.about-content,
+		.claims-content,
+		.footer-content {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
 		.hero-content h1 {
-			font-size: 2.5rem;
+			font-size: 40px;
 		}
 
-		.tagline {
-			font-size: 1.3rem;
-		}
-
-		.subtitle {
-			font-size: 1rem;
-		}
-
-		.services h2,
-		.about h2,
+		.about-text h2,
+		.claims-text h2,
+		.products h2,
 		.contact h2 {
-			font-size: 2rem;
+			font-size: 36px;
 		}
 
-		.services-grid {
+		.claims-content {
+			grid-template-columns: 1fr;
+		}
+
+		.claims-illustration {
+			order: -1;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.hero {
+			padding: 60px 20px 80px;
+		}
+
+		.hero-content h1 {
+			font-size: 32px;
+		}
+
+		.hero-subtitle {
+			font-size: 18px;
+		}
+
+		.products,
+		.about,
+		.claims,
+		.contact {
+			padding: 60px 20px;
+		}
+
+		.products-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.footer-links {
 			grid-template-columns: 1fr;
 		}
 	}
