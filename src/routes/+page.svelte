@@ -116,8 +116,8 @@
 			<p class="testimonials-subtitle">Troika has earned top ratings from customers,<br/>and is trusted by thousands of families and businesses</p>
 
 			<div class="stars-container">
-				{#each Array(5) as _}
-					<svg width="120" height="120" viewBox="0 0 24 24" fill="#92278f">
+				{#each Array(5) as _, i}
+					<svg class="review-star" style="animation-delay: {i * 0.6}s" width="160" height="160" viewBox="0 0 24 24" fill="#92278f">
 						<path d="M12 4C12.2 4 12.4 4.1 12.5 4.3L14.6 8.8L19.4 9.5C19.6 9.5 19.8 9.7 19.9 9.9C19.9 10.1 19.9 10.3 19.7 10.5L16.2 13.8L17 18.8C17 19 17 19.2 16.8 19.4C16.6 19.5 16.4 19.5 16.2 19.4L12 17.2L7.8 19.4C7.6 19.5 7.4 19.5 7.2 19.4C7 19.2 7 19 7 18.8L7.8 13.8L4.3 10.5C4.1 10.3 4.1 10.1 4.1 9.9C4.2 9.7 4.4 9.5 4.6 9.5L9.4 8.8L11.5 4.3C11.6 4.1 11.8 4 12 4Z"
 							stroke="#92278f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
 					</svg>
@@ -264,7 +264,7 @@
 	<section class="social-impact">
 		<div class="container">
 			<h2>Insurance with Impact</h2>
-			<p class="impact-subtitle">We donate to causes you care about</p>
+			<p class="impact-subtitle">We partner up with the best on the market to provide you with what you deserve</p>
 
 			<div class="insurers-grid">
 				<div class="insurer-logo">
@@ -502,8 +502,17 @@
 	.stars-container {
 		display: flex;
 		justify-content: center;
-		gap: 16px;
+		gap: 4px;
 		margin-bottom: 60px;
+	}
+
+	.review-star {
+		animation: starShimmer 4s ease-in-out infinite;
+	}
+
+	@keyframes starShimmer {
+		0%, 100% { fill: #92278f; filter: brightness(1); }
+		50% { fill: #FFB4DA; filter: brightness(1.2) drop-shadow(0 0 8px rgba(255, 180, 218, 0.6)); }
 	}
 
 	.testimonials-grid {
@@ -704,9 +713,9 @@
 	.insurers-grid {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 24px 20px;
+		gap: 16px 10px;
 		margin-bottom: 0;
-		max-width: 1000px;
+		max-width: 900px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -718,9 +727,9 @@
 	}
 
 	.insurer-logo img {
-		height: 150px;
+		height: 180px;
 		width: auto;
-		max-width: 220px;
+		max-width: 200px;
 		object-fit: contain;
 		filter: grayscale(100%) brightness(0) invert(0);
 		opacity: 0.7;
@@ -1116,8 +1125,8 @@
 		}
 
 		.stars-container svg {
-			width: 60px;
-			height: 60px;
+			width: 80px;
+			height: 80px;
 		}
 
 		.competitor-bubbles {
@@ -1138,12 +1147,12 @@
 
 		.insurers-grid {
 			grid-template-columns: repeat(3, 1fr);
-			gap: 16px 12px;
+			gap: 10px 6px;
 		}
 
 		.insurer-logo img {
-			height: 80px;
-			max-width: 140px;
+			height: 90px;
+			max-width: 110px;
 		}
 
 		.footer-links {

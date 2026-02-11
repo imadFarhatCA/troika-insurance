@@ -5,14 +5,14 @@
 
 <!-- Hamburger Button -->
 <button class="mobile-menu-btn" on:click={onToggle} aria-label="Menu">
-	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+	<svg class="hamburger-icon" class:open width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 		{#if open}
-			<line x1="18" y1="6" x2="6" y2="18"></line>
-			<line x1="6" y1="6" x2="18" y2="18"></line>
+			<line class="x-line" x1="18" y1="6" x2="6" y2="18"></line>
+			<line class="x-line" x1="6" y1="6" x2="18" y2="18"></line>
 		{:else}
-			<line x1="3" y1="12" x2="21" y2="12"></line>
-			<line x1="3" y1="6" x2="21" y2="6"></line>
-			<line x1="3" y1="18" x2="21" y2="18"></line>
+			<line class="bar bar-top" x1="3" y1="6" x2="21" y2="6"></line>
+			<line class="bar bar-mid" x1="3" y1="12" x2="21" y2="12"></line>
+			<line class="bar bar-bot" x1="3" y1="18" x2="21" y2="18"></line>
 		{/if}
 	</svg>
 </button>
@@ -21,7 +21,7 @@
 {#if open}
 	<div class="mobile-menu-overlay">
 		<button class="close-btn" on:click={onToggle} aria-label="Close menu">
-			<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+			<svg class="close-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 				<line x1="18" y1="6" x2="6" y2="18"></line>
 				<line x1="6" y1="6" x2="18" y2="18"></line>
 			</svg>
@@ -48,6 +48,42 @@
 		z-index: 200;
 	}
 
+	.hamburger-icon {
+		transition: transform 0.3s ease;
+	}
+
+	.mobile-menu-btn:hover .hamburger-icon {
+		transform: scale(1.15);
+		color: #92278f;
+	}
+
+	.mobile-menu-btn:active .hamburger-icon {
+		transform: scale(0.9) rotate(90deg);
+	}
+
+	.bar {
+		transition: all 0.3s ease;
+		transform-origin: center;
+	}
+
+	.mobile-menu-btn:hover .bar-top {
+		transform: translateY(-1px);
+	}
+
+	.mobile-menu-btn:hover .bar-bot {
+		transform: translateY(1px);
+	}
+
+	.x-line {
+		transform-origin: center;
+		animation: xSpin 0.3s ease-out;
+	}
+
+	@keyframes xSpin {
+		0% { transform: rotate(0deg) scale(0.5); opacity: 0; }
+		100% { transform: rotate(0deg) scale(1); opacity: 1; }
+	}
+
 	.mobile-menu-overlay {
 		position: fixed;
 		top: 0;
@@ -62,6 +98,12 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		animation: fadeIn 0.25s ease-out;
+	}
+
+	@keyframes fadeIn {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
 	}
 
 	.close-btn {
@@ -73,6 +115,19 @@
 		cursor: pointer;
 		color: #4a4a4a;
 		padding: 8px;
+	}
+
+	.close-icon {
+		transition: all 0.3s ease;
+	}
+
+	.close-btn:hover .close-icon {
+		transform: rotate(90deg) scale(1.15);
+		color: #92278f;
+	}
+
+	.close-btn:active .close-icon {
+		transform: rotate(180deg) scale(0.9);
 	}
 
 	.mobile-nav {
