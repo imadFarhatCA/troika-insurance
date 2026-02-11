@@ -356,21 +356,21 @@
 	.hero-container {
 		max-width: 100%;
 		width: 100%;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 0;
-		align-items: center;
+		display: flex;
 		position: relative;
+		height: 100vh;
 	}
 
 	.hero-content {
-		padding: 80px 80px 80px 120px;
+		position: relative;
 		z-index: 2;
+		max-width: 600px;
+		padding: 80px 60px 80px 120px;
 	}
 
 	.hero-content h1 {
 		font-size: 72px;
-		font-weight: 900;
+		font-weight: 700;
 		color: #3b3b3b;
 		margin: 0 0 24px 0;
 		line-height: 1.05;
@@ -412,19 +412,22 @@
 	}
 
 	.hero-illustration {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 60%;
+		height: 100%;
 		display: flex;
-		justify-content: flex-end;
 		align-items: center;
-		position: relative;
-		height: 100vh;
-		padding-right: 0;
+		justify-content: center;
+		z-index: 1;
 	}
 
 	.illustration {
 		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: left center;
+		height: 90%;
+		object-fit: contain;
+		object-position: center;
 		animation: float 6s ease-in-out infinite;
 	}
 
@@ -485,7 +488,7 @@
 
 	.product-card h3 {
 		font-size: 28px;
-		font-weight: 800;
+		font-weight: 700;
 		color: #3b3b3b;
 		margin: 0 0 16px 0;
 	}
@@ -525,7 +528,7 @@
 
 	.about-text h2 {
 		font-size: 48px;
-		font-weight: 900;
+		font-weight: 700;
 		color: #3b3b3b;
 		margin: 0 0 24px 0;
 		letter-spacing: -1px;
@@ -789,15 +792,17 @@
 		}
 
 		.hero-container {
-			grid-template-columns: 1fr;
-			gap: 0;
+			flex-direction: column;
 		}
 
 		.hero-content {
 			padding: 60px 40px 40px 40px;
+			max-width: 100%;
 		}
 
 		.hero-illustration {
+			position: relative;
+			width: 100%;
 			height: 50vh;
 			padding: 0;
 		}
@@ -836,8 +841,13 @@
 			padding: 0;
 		}
 
+		.hero-container {
+			flex-direction: column;
+		}
+
 		.hero-content {
 			padding: 40px 24px 30px 24px;
+			max-width: 100%;
 		}
 
 		.hero-content h1 {
@@ -850,16 +860,13 @@
 		}
 
 		.hero-illustration {
+			position: relative;
+			width: 100%;
 			height: 45vh;
 		}
 
 		.illustration {
 			object-fit: contain;
-		}
-
-		.hero-container {
-			grid-template-columns: 1fr;
-			gap: 0;
 		}
 
 		.products,
