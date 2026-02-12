@@ -276,7 +276,7 @@
 
 		.illustration {
 			width: auto;
-			height: 100%;
+			height: 60%;
 			max-width: none;
 			object-fit: cover;
 			object-position: center bottom;
