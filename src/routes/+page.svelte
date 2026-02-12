@@ -989,6 +989,8 @@
 		height: 100px;
 		width: auto;
 		margin-bottom: 16px;
+		filter: brightness(0) invert(1);
+		opacity: 0.9;
 	}
 
 	.footer-brand p {
@@ -1150,6 +1152,11 @@
 
 		.hero-subtitle {
 			font-size: 18px;
+		}
+
+		.btn-primary {
+			padding: 19px 64px;
+			font-size: 16px;
 		}
 
 		.about,

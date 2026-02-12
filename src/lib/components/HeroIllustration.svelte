@@ -58,16 +58,16 @@
 	.anim {
 		position: absolute;
 		pointer-events: none;
-		opacity: 0.07;
+		opacity: 0.15;
 	}
 
 	/* ---- Sun ---- */
 	.sun {
-		width: 120px;
-		height: 120px;
-		top: 8%;
-		right: 8%;
-		opacity: 0.09;
+		width: 150px;
+		height: 150px;
+		top: 6%;
+		right: 6%;
+		opacity: 0.2;
 		animation: sunSpin 80s linear infinite, sunDrift 12s ease-in-out infinite;
 	}
 
