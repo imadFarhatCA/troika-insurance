@@ -99,14 +99,14 @@
 
 	.cloud-1 {
 		width: 140px;
-		bottom: 45%;
+		bottom: calc(45% - 20px);
 		right: 30%;
 		animation: cloudDrift1 14s ease-in-out infinite;
 	}
 
 	.cloud-2 {
 		width: 100px;
-		bottom: 38%;
+		bottom: calc(38% - 20px);
 		right: 55%;
 		animation: cloudDrift2 18s ease-in-out infinite;
 	}
@@ -130,21 +130,21 @@
 
 	.x-1 {
 		width: 70px;
-		bottom: 42%;
+		bottom: calc(42% - 20px);
 		right: calc(18% + 150px);
 		animation: xFloat1 10s ease-in-out infinite, xRotate 20s linear infinite;
 	}
 
 	.x-2 {
 		width: 35px;
-		bottom: calc(30% + 100px);
+		bottom: calc(30% + 80px);
 		right: 45%;
 		animation: xFloat2 13s ease-in-out infinite, xRotate 25s linear infinite reverse;
 	}
 
 	.x-3 {
 		width: 50px;
-		bottom: 50%;
+		bottom: calc(50% - 20px);
 		right: 65%;
 		animation: xFloat3 11s ease-in-out infinite, xRotate 18s linear infinite;
 	}
@@ -177,21 +177,21 @@
 
 	.circle-1 {
 		width: 75px;
-		bottom: calc(48% + 100px);
+		bottom: calc(48% + 80px);
 		right: 10%;
 		animation: circleFloat1 12s ease-in-out infinite;
 	}
 
 	.circle-2 {
 		width: 40px;
-		bottom: 35%;
+		bottom: calc(35% - 20px);
 		right: 38%;
 		animation: circleFloat2 15s ease-in-out infinite;
 	}
 
 	.circle-3 {
 		width: 58px;
-		bottom: 28%;
+		bottom: calc(28% - 20px);
 		right: 58%;
 		animation: circleFloat3 11s ease-in-out infinite;
 	}
@@ -220,28 +220,28 @@
 
 	.lines-1 {
 		width: 100px;
-		bottom: 40%;
+		bottom: calc(40% - 20px);
 		right: 40%;
 		animation: linesDrift1 15s ease-in-out infinite;
 	}
 
 	.lines-2 {
 		width: 80px;
-		bottom: 32%;
+		bottom: calc(32% - 20px);
 		right: 60%;
 		animation: linesDrift2 12s ease-in-out infinite;
 	}
 
 	.lines-3 {
 		width: 70px;
-		bottom: 50%;
+		bottom: calc(50% - 20px);
 		right: 48%;
 		animation: linesDrift3 18s ease-in-out infinite;
 	}
 
 	.lines-4 {
 		width: 90px;
-		bottom: 28%;
+		bottom: calc(28% - 20px);
 		right: 25%;
 		animation: linesDrift4 14s ease-in-out infinite;
 	}
@@ -299,7 +299,7 @@
 		.cloud-1 {
 			width: 140px;
 			bottom: auto;
-			top: 40%;
+			top: calc(40% + 20px);
 			left: 2%;
 			right: auto;
 		}
@@ -307,7 +307,7 @@
 		.cloud-2 {
 			width: 100px;
 			bottom: auto;
-			top: 42%;
+			top: calc(42% + 20px);
 			left: 48%;
 			right: auto;
 		}
@@ -315,14 +315,14 @@
 		.x-1 {
 			width: 56px;
 			bottom: auto;
-			top: 38%;
+			top: calc(38% + 20px);
 			right: 2%;
 		}
 
 		.x-2 {
 			width: 32px;
 			bottom: auto;
-			top: 52%;
+			top: calc(52% + 20px);
 			left: 38%;
 			right: auto;
 		}
@@ -330,21 +330,21 @@
 		.x-3 {
 			width: 40px;
 			bottom: auto;
-			top: 58%;
+			top: calc(58% + 20px);
 			right: 35%;
 		}
 
 		.circle-1 {
 			width: 56px;
 			bottom: auto;
-			top: 41%;
+			top: calc(41% + 20px);
 			right: 20%;
 		}
 
 		.circle-2 {
 			width: 36px;
 			bottom: auto;
-			top: 54%;
+			top: calc(54% + 20px);
 			left: 12%;
 			right: auto;
 		}
@@ -352,14 +352,14 @@
 		.circle-3 {
 			width: 44px;
 			bottom: auto;
-			top: 60%;
+			top: calc(60% + 20px);
 			right: 8%;
 		}
 
 		.lines-1 {
 			width: 100px;
 			bottom: auto;
-			top: 44%;
+			top: calc(44% + 20px);
 			left: 28%;
 			right: auto;
 		}
@@ -367,7 +367,7 @@
 		.lines-2 {
 			width: 70px;
 			bottom: auto;
-			top: 56%;
+			top: calc(56% + 20px);
 			left: 58%;
 			right: auto;
 		}
@@ -375,14 +375,14 @@
 		.lines-3 {
 			width: 80px;
 			bottom: auto;
-			top: 39%;
+			top: calc(39% + 20px);
 			right: 42%;
 		}
 
 		.lines-4 {
 			width: 60px;
 			bottom: auto;
-			top: 57%;
+			top: calc(57% + 20px);
 			left: 1%;
 			right: auto;
 		}
