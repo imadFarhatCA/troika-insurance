@@ -274,12 +274,12 @@
 			align-items: flex-end;
 		}
 
-		/* Big illustration, partially cropped at bottom */
+		/* Big illustration, stretched to fill */
 		.illustration {
-			width: 360%;
+			width: 100%;
 			max-width: none;
-			height: auto;
-			object-fit: contain;
+			height: 55%;
+			object-fit: fill;
 			object-position: center bottom;
 			opacity: 0.9;
 		}
