@@ -1056,7 +1056,7 @@
 
 		.hero {
 			min-height: 100vh;
-			padding: 0;
+			padding: 20px 0 0 0;
 			align-items: flex-end;
 		}
 
@@ -1064,7 +1064,7 @@
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: flex-start;
-			height: 100vh;
+			height: calc(100vh + 20px);
 		}
 
 		.hero-content {
