@@ -280,11 +280,11 @@
 			max-width: none;
 			object-fit: cover;
 			object-position: center bottom;
-			opacity: 0.9;
+			opacity: 0.8;
 		}
 
 		.anim {
-			opacity: 0.9;
+			opacity: 0.8;
 		}
 
 		.sun {
@@ -293,7 +293,7 @@
 			bottom: auto;
 			top: 50%;
 			right: 3%;
-			opacity: 0.9;
+			opacity: 0.8;
 		}
 
 		.cloud-1 {
