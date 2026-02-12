@@ -284,119 +284,118 @@
 			opacity: 0.9;
 		}
 
-		/* Elements at ~50% desktop size, matching user layout */
 		.anim {
 			opacity: 0.9;
 		}
 
-		/* Sun: center-right, overlapping top of illustration */
+		/* Sun: large, right-center, prominent */
 		.sun {
 			width: 90px;
 			height: 90px;
 			bottom: auto;
-			top: 60%;
-			right: 20%;
+			top: 52%;
+			right: 5%;
 			opacity: 0.9;
 		}
 
-		/* Cloud 1: left side, above trees */
+		/* Cloud 1: upper-left */
 		.cloud-1 {
-			width: 80px;
+			width: 70px;
 			bottom: auto;
-			top: 55%;
-			left: 8%;
-			right: auto;
-		}
-
-		/* Cloud 2: center area */
-		.cloud-2 {
-			width: 55px;
-			bottom: auto;
-			top: 57%;
-			left: 38%;
-			right: auto;
-		}
-
-		/* X-1: far right, just below CTA */
-		.x-1 {
-			width: 30px;
-			bottom: auto;
-			top: 53%;
-			right: 3%;
-		}
-
-		/* X-2: lower right, near houses */
-		.x-2 {
-			width: 18px;
-			bottom: auto;
-			top: 66%;
-			right: 12%;
-		}
-
-		/* X-3: center-left area */
-		.x-3 {
-			width: 22px;
-			bottom: auto;
-			top: 58%;
-			left: 28%;
-			right: auto;
-		}
-
-		/* Circle-1: right side, near X-1 */
-		.circle-1 {
-			width: 30px;
-			bottom: auto;
-			top: 54%;
-			right: 12%;
-		}
-
-		/* Circle-2: left side, near cloud */
-		.circle-2 {
-			width: 20px;
-			bottom: auto;
-			top: 58%;
-			left: 3%;
-			right: auto;
-		}
-
-		/* Circle-3: center area */
-		.circle-3 {
-			width: 25px;
-			bottom: auto;
-			top: 62%;
-			left: 52%;
-			right: auto;
-		}
-
-		/* Lines spread across middle zone */
-		.lines-1 {
-			width: 55px;
-			bottom: auto;
-			top: 56%;
-			left: 20%;
-			right: auto;
-		}
-
-		.lines-2 {
-			width: 40px;
-			bottom: auto;
-			top: 63%;
+			top: 44%;
 			left: 5%;
 			right: auto;
 		}
 
-		.lines-3 {
-			width: 35px;
+		/* Cloud 2: upper-center */
+		.cloud-2 {
+			width: 50px;
 			bottom: auto;
-			top: 55%;
+			top: 46%;
+			left: 40%;
+			right: auto;
+		}
+
+		/* X-1: top-right */
+		.x-1 {
+			width: 28px;
+			bottom: auto;
+			top: 43%;
+			right: 5%;
+		}
+
+		/* X-2: center-left */
+		.x-2 {
+			width: 16px;
+			bottom: auto;
+			top: 50%;
+			left: 32%;
+			right: auto;
+		}
+
+		/* X-3: lower-right */
+		.x-3 {
+			width: 20px;
+			bottom: auto;
+			top: 56%;
 			right: 30%;
 		}
 
-		.lines-4 {
-			width: 45px;
+		/* Circle-1: top-right, near X */
+		.circle-1 {
+			width: 28px;
 			bottom: auto;
-			top: 61%;
-			right: 40%;
+			top: 44%;
+			right: 15%;
+		}
+
+		/* Circle-2: center-left */
+		.circle-2 {
+			width: 18px;
+			bottom: auto;
+			top: 50%;
+			left: 15%;
+			right: auto;
+		}
+
+		/* Circle-3: right, below sun */
+		.circle-3 {
+			width: 22px;
+			bottom: auto;
+			top: 57%;
+			right: 12%;
+		}
+
+		/* Lines: scattered wide across the zone */
+		.lines-1 {
+			width: 50px;
+			bottom: auto;
+			top: 47%;
+			left: 22%;
+			right: auto;
+		}
+
+		.lines-2 {
+			width: 35px;
+			bottom: auto;
+			top: 53%;
+			left: 50%;
+			right: auto;
+		}
+
+		.lines-3 {
+			width: 40px;
+			bottom: auto;
+			top: 45%;
+			right: 35%;
+		}
+
+		.lines-4 {
+			width: 30px;
+			bottom: auto;
+			top: 54%;
+			left: 3%;
+			right: auto;
 		}
 	}
 </style>
