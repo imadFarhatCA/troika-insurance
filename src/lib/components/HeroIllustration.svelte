@@ -13,20 +13,24 @@
 <div class="hero-illustration">
 	<img src={cityscape} alt="Troika Insurance Hero" class="illustration" />
 
-	<!-- Sun: top-right, slow spin + gentle drift -->
+	<!-- Sun -->
 	<img src={sun} alt="" class="anim sun" />
 
-	<!-- Clouds: drift on X axis at different speeds -->
+	<!-- Clouds -->
 	<img src={cloud} alt="" class="anim cloud cloud-1" />
 	<img src={cloud} alt="" class="anim cloud cloud-2" />
 
-	<!-- X shape: gentle float + slow rotation -->
-	<img src={xShape} alt="" class="anim x-shape" />
+	<!-- X shapes scattered -->
+	<img src={xShape} alt="" class="anim x-shape x-1" />
+	<img src={xShape} alt="" class="anim x-shape x-2" />
+	<img src={xShape} alt="" class="anim x-shape x-3" />
 
-	<!-- Circle: soft float -->
-	<img src={circle} alt="" class="anim circle-shape" />
+	<!-- Circles scattered -->
+	<img src={circle} alt="" class="anim circle-shape circle-1" />
+	<img src={circle} alt="" class="anim circle-shape circle-2" />
+	<img src={circle} alt="" class="anim circle-shape circle-3" />
 
-	<!-- Lines: subtle X drift at staggered speeds -->
+	<!-- Lines -->
 	<img src={lines1} alt="" class="anim lines lines-1" />
 	<img src={lines2} alt="" class="anim lines lines-2" />
 	<img src={lines3} alt="" class="anim lines lines-3" />
@@ -72,7 +76,7 @@
 	.sun {
 		width: 150px;
 		height: 150px;
-		top: 6%;
+		bottom: 35%;
 		right: 6%;
 		opacity: 0.9;
 		animation: sunSpin 60s linear infinite, sunDrift 10s ease-in-out infinite;
@@ -95,14 +99,14 @@
 
 	.cloud-1 {
 		width: 140px;
-		top: 12%;
+		bottom: 45%;
 		right: 30%;
 		animation: cloudDrift1 14s ease-in-out infinite;
 	}
 
 	.cloud-2 {
 		width: 100px;
-		top: 22%;
+		bottom: 38%;
 		right: 55%;
 		animation: cloudDrift2 18s ease-in-out infinite;
 	}
@@ -119,18 +123,46 @@
 		80% { translate: 25px -8px; }
 	}
 
-	/* ---- X shape ---- */
+	/* ---- X shapes ---- */
 	.x-shape {
-		width: 50px;
-		top: 35%;
-		right: 18%;
 		opacity: 0.9;
-		animation: xFloat 10s ease-in-out infinite, xRotate 20s linear infinite;
 	}
 
-	@keyframes xFloat {
+	.x-1 {
+		width: 45px;
+		bottom: 42%;
+		right: 18%;
+		animation: xFloat1 10s ease-in-out infinite, xRotate 20s linear infinite;
+	}
+
+	.x-2 {
+		width: 35px;
+		bottom: 30%;
+		right: 45%;
+		animation: xFloat2 13s ease-in-out infinite, xRotate 25s linear infinite reverse;
+	}
+
+	.x-3 {
+		width: 28px;
+		bottom: 50%;
+		right: 65%;
+		animation: xFloat3 11s ease-in-out infinite, xRotate 18s linear infinite;
+	}
+
+	@keyframes xFloat1 {
 		0%, 100% { translate: 0 0; }
 		50% { translate: -20px 18px; }
+	}
+
+	@keyframes xFloat2 {
+		0%, 100% { translate: 0 0; }
+		40% { translate: 15px -12px; }
+		80% { translate: -10px 8px; }
+	}
+
+	@keyframes xFloat3 {
+		0%, 100% { translate: 0 0; }
+		50% { translate: 12px 15px; }
 	}
 
 	@keyframes xRotate {
@@ -138,19 +170,47 @@
 		100% { rotate: 360deg; }
 	}
 
-	/* ---- Circle ---- */
+	/* ---- Circles ---- */
 	.circle-shape {
-		width: 55px;
-		top: 18%;
-		right: 12%;
 		opacity: 0.9;
-		animation: circleFloat 12s ease-in-out infinite;
 	}
 
-	@keyframes circleFloat {
+	.circle-1 {
+		width: 50px;
+		bottom: 48%;
+		right: 10%;
+		animation: circleFloat1 12s ease-in-out infinite;
+	}
+
+	.circle-2 {
+		width: 35px;
+		bottom: 35%;
+		right: 38%;
+		animation: circleFloat2 15s ease-in-out infinite;
+	}
+
+	.circle-3 {
+		width: 40px;
+		bottom: 28%;
+		right: 58%;
+		animation: circleFloat3 11s ease-in-out infinite;
+	}
+
+	@keyframes circleFloat1 {
 		0%, 100% { translate: 0 0; }
 		30% { translate: 18px -15px; }
 		70% { translate: -15px 12px; }
+	}
+
+	@keyframes circleFloat2 {
+		0%, 100% { translate: 0 0; }
+		50% { translate: -12px -18px; }
+	}
+
+	@keyframes circleFloat3 {
+		0%, 100% { translate: 0 0; }
+		40% { translate: 15px 10px; }
+		80% { translate: -10px -8px; }
 	}
 
 	/* ---- Lines ---- */
@@ -160,28 +220,28 @@
 
 	.lines-1 {
 		width: 100px;
-		top: 28%;
+		bottom: 40%;
 		right: 40%;
 		animation: linesDrift1 15s ease-in-out infinite;
 	}
 
 	.lines-2 {
 		width: 80px;
-		top: 42%;
+		bottom: 32%;
 		right: 60%;
 		animation: linesDrift2 12s ease-in-out infinite;
 	}
 
 	.lines-3 {
 		width: 70px;
-		top: 15%;
+		bottom: 50%;
 		right: 48%;
 		animation: linesDrift3 18s ease-in-out infinite;
 	}
 
 	.lines-4 {
 		width: 90px;
-		top: 50%;
+		bottom: 28%;
 		right: 25%;
 		animation: linesDrift4 14s ease-in-out infinite;
 	}
@@ -230,6 +290,7 @@
 
 		.sun {
 			width: 80px;
+			bottom: auto;
 			top: 5%;
 			right: 10%;
 			opacity: 0.07;
@@ -237,48 +298,84 @@
 
 		.cloud-1 {
 			width: 90px;
+			bottom: auto;
 			top: 8%;
 			right: 40%;
 		}
 
 		.cloud-2 {
 			width: 70px;
+			bottom: auto;
 			top: 16%;
 			right: 15%;
 		}
 
-		.x-shape {
+		.x-1 {
 			width: 35px;
+			bottom: auto;
 			top: 25%;
 			right: 25%;
 		}
 
-		.circle-shape {
+		.x-2 {
+			width: 28px;
+			bottom: auto;
+			top: 18%;
+			right: 60%;
+		}
+
+		.x-3 {
+			width: 22px;
+			bottom: auto;
+			top: 30%;
+			right: 45%;
+		}
+
+		.circle-1 {
 			width: 40px;
+			bottom: auto;
 			top: 12%;
 			right: 65%;
 		}
 
+		.circle-2 {
+			width: 30px;
+			bottom: auto;
+			top: 22%;
+			right: 35%;
+		}
+
+		.circle-3 {
+			width: 25px;
+			bottom: auto;
+			top: 28%;
+			right: 70%;
+		}
+
 		.lines-1 {
 			width: 70px;
+			bottom: auto;
 			top: 20%;
 			right: 50%;
 		}
 
 		.lines-2 {
 			width: 55px;
+			bottom: auto;
 			top: 30%;
 			right: 70%;
 		}
 
 		.lines-3 {
 			width: 50px;
+			bottom: auto;
 			top: 10%;
 			right: 55%;
 		}
 
 		.lines-4 {
 			width: 60px;
+			bottom: auto;
 			top: 35%;
 			right: 30%;
 		}
