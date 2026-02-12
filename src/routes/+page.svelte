@@ -1068,7 +1068,7 @@
 		}
 
 		.hero-content {
-			padding: 30px 40px 20px 24px;
+			padding: 50px 40px 20px 24px;
 			max-width: 100%;
 			z-index: 10;
 		}
@@ -1145,7 +1145,7 @@
 		}
 
 		.hero-content {
-			padding: 20px 24px 15px 24px;
+			padding: 40px 24px 15px 24px;
 			max-width: 100%;
 			z-index: 10;
 		}
