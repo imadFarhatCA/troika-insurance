@@ -1,5 +1,4 @@
 <script lang="ts">
-	import PricingCard from './PricingCard.svelte';
 	import rentersIcon from '$lib/assets/icons/RENTERS Icon.svg';
 	import homeownersIcon from '$lib/assets/icons/HOMEOWNERS Icon.svg';
 	import corporateIcon from '$lib/assets/icons/CORPORATE Icon.svg';
@@ -7,11 +6,11 @@
 	import customIcon from '$lib/assets/icons/CUSTOM Icon.svg';
 
 	const products = [
-		{ id: 'renters', icon: rentersIcon, title: 'Renters', description: 'Coverage for your stuff, and peace of mind', pricing: 'from $5 / month' },
-		{ id: 'homeowners', icon: homeownersIcon, title: 'Homeowners', description: 'Protection for your home and stuff', pricing: 'from $25 / month' },
-		{ id: 'commercial', icon: corporateIcon, title: 'Commercial', description: 'Coverage for your business', pricing: 'from $50 / month' },
-		{ id: 'car', icon: carIcon, title: 'Car', description: 'Protect your car, passengers, and the planet', pricing: 'as low as $30 / month' },
-		{ id: 'custom', icon: customIcon, title: 'Custom', description: 'Tailored coverage for unique needs', pricing: 'custom pricing' },
+		{ id: 'renters', icon: rentersIcon, title: 'Renters', description: 'Coverage for your stuff, and peace of mind', pricing: 'from $5 / month', size: 'medium', color: '#ff0095', colorRgb: '255, 0, 149' },
+		{ id: 'homeowners', icon: homeownersIcon, title: 'Homeowners', description: 'Protection for your home and stuff', pricing: 'from $25 / month', size: 'large', color: '#92278f', colorRgb: '146, 39, 143' },
+		{ id: 'commercial', icon: corporateIcon, title: 'Commercial', description: 'Coverage for your business', pricing: 'from $50 / month', size: 'medium', color: '#a7d8e9', colorRgb: '167, 216, 233' },
+		{ id: 'car', icon: carIcon, title: 'Car', description: 'Protect your car, passengers, and the planet', pricing: 'as low as $30 / month', size: 'large', color: '#ff0095', colorRgb: '255, 0, 149' },
+		{ id: 'custom', icon: customIcon, title: 'Custom', description: 'Tailored coverage for unique needs', pricing: 'custom pricing', size: 'small', color: '#92278f', colorRgb: '146, 39, 143' },
 	];
 </script>
 
@@ -25,15 +24,18 @@
 			Amazing savings when you bundle
 		</p>
 
-		<div class="pricing-grid">
-			{#each products as product}
-				<PricingCard
-					id={product.id}
-					icon={product.icon}
-					title={product.title}
-					description={product.description}
-					pricing={product.pricing}
-				/>
+		<div class="bubbles-container">
+			{#each products as product, i}
+				<div class="bubble bubble-{i + 1} bubble-{product.size}" style="--bubble-color: {product.color}; --bubble-color-rgb: {product.colorRgb}">
+					<div class="bubble-content">
+						<div class="icon-wrapper">
+							<img src={product.icon} alt={product.title} class="bubble-icon" />
+						</div>
+						<h3>{product.title}</h3>
+						<p class="bubble-description">{product.description}</p>
+						<p class="bubble-pricing">{product.pricing}</p>
+					</div>
+				</div>
 			{/each}
 		</div>
 	</div>
@@ -41,12 +43,12 @@
 
 <style>
 	.pricing {
-		padding: 100px 24px;
-		background: white;
+		padding: 100px 24px 150px;
+		background: #ececec;
 	}
 
 	.container {
-		max-width: 1200px;
+		max-width: 1400px;
 		margin: 0 auto;
 	}
 
@@ -63,7 +65,7 @@
 		text-align: center;
 		font-size: 18px;
 		color: #4a4a4a;
-		margin: 0 0 60px 0;
+		margin: 0 0 80px 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -85,13 +87,184 @@
 		100% { transform: rotate(360deg) scale(1); }
 	}
 
-	.pricing-grid {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		gap: 24px;
-		max-width: 100%;
+	.bubbles-container {
+		position: relative;
+		width: 100%;
+		height: 600px;
 		margin: 0 auto;
-		padding: 0 40px;
+	}
+
+	.bubble {
+		position: absolute;
+		border-radius: 50%;
+		background: linear-gradient(135deg, #ffffff, #f5f5f5);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+		cursor: pointer;
+		box-shadow:
+			0 8px 20px rgba(0, 0, 0, 0.06),
+			0 0 20px rgba(var(--bubble-color-rgb), 0.3);
+		animation: bubbleFloat 6s ease-in-out infinite;
+	}
+
+	.bubble:hover {
+		transform: scale(1.15);
+		box-shadow:
+			0 12px 30px rgba(0, 0, 0, 0.08),
+			0 0 35px rgba(var(--bubble-color-rgb), 0.5);
+		z-index: 100 !important;
+		animation-play-state: paused;
+	}
+
+	.bubble-small {
+		width: 200px;
+		height: 200px;
+	}
+
+	.bubble-medium {
+		width: 280px;
+		height: 280px;
+	}
+
+	.bubble-large {
+		width: 350px;
+		height: 350px;
+	}
+
+	.bubble-1 {
+		top: 50px;
+		left: 5%;
+		z-index: 3;
+		animation-delay: 0s;
+	}
+
+	.bubble-2 {
+		top: 0;
+		left: 28%;
+		z-index: 5;
+		animation-delay: 1s;
+	}
+
+	.bubble-3 {
+		top: 120px;
+		left: 52%;
+		z-index: 2;
+		animation-delay: 2s;
+	}
+
+	.bubble-4 {
+		top: 40px;
+		right: 8%;
+		z-index: 4;
+		animation-delay: 1.5s;
+	}
+
+	.bubble-5 {
+		top: 280px;
+		left: 40%;
+		z-index: 1;
+		animation-delay: 0.5s;
+	}
+
+	@keyframes bubbleFloat {
+		0%, 100% { translate: 0 0; }
+		50% { translate: 0 -15px; }
+	}
+
+	.bubble-content {
+		text-align: center;
+		color: #4a4a4a;
+		padding: 30px;
+		width: 100%;
+	}
+
+	.icon-wrapper {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 25px;
+	}
+
+	.icon-wrapper::after {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: var(--bubble-color);
+		transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+	}
+
+	.bubble:hover .icon-wrapper::after {
+		width: 30px;
+		height: 2px;
+		border-radius: 0;
+	}
+
+	.bubble-icon {
+		width: 72px;
+		height: 72px;
+		filter: none;
+		display: block;
+	}
+
+	.bubble-large .bubble-icon {
+		width: 96px;
+		height: 96px;
+	}
+
+	.bubble-small .bubble-icon {
+		width: 48px;
+		height: 48px;
+	}
+
+	.bubble h3 {
+		font-size: 24px;
+		font-weight: 700;
+		margin: 0 0 12px 0;
+		color: #4a4a4a;
+	}
+
+	.bubble-large h3 {
+		font-size: 28px;
+	}
+
+	.bubble-small h3 {
+		font-size: 18px;
+	}
+
+	.bubble-description {
+		font-size: 14px;
+		margin: 0 0 15px 0;
+		opacity: 0.95;
+		line-height: 1.4;
+	}
+
+	.bubble-large .bubble-description {
+		font-size: 16px;
+	}
+
+	.bubble-small .bubble-description {
+		font-size: 12px;
+	}
+
+	.bubble-pricing {
+		font-size: 14px;
+		font-weight: 300;
+		margin: 0;
+		color: var(--bubble-color);
+	}
+
+	.bubble-large .bubble-pricing {
+		font-size: 16px;
+	}
+
+	.bubble-small .bubble-pricing {
+		font-size: 12px;
 	}
 
 	@media (max-width: 968px) {
@@ -99,24 +272,82 @@
 			font-size: 36px;
 		}
 
-		.pricing-grid {
-			grid-template-columns: repeat(2, 1fr);
-			padding: 0;
+		.bubbles-container {
+			height: 900px;
+		}
+
+		.bubble-small {
+			width: 160px;
+			height: 160px;
+		}
+
+		.bubble-medium {
+			width: 220px;
+			height: 220px;
+		}
+
+		.bubble-large {
+			width: 260px;
+			height: 260px;
+		}
+
+		.bubble-1 {
+			top: 30px;
+			left: 10%;
+		}
+
+		.bubble-2 {
+			top: 80px;
+			right: 8%;
+		}
+
+		.bubble-3 {
+			top: 340px;
+			left: 5%;
+		}
+
+		.bubble-4 {
+			top: 400px;
+			right: 10%;
+		}
+
+		.bubble-5 {
+			top: 650px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.bubble-content {
+			padding: 20px;
 		}
 	}
 
 	@media (max-width: 640px) {
 		.pricing {
-			padding: 60px 16px;
+			padding: 60px 16px 100px;
 		}
 
 		.pricing h2 {
 			font-size: 28px;
 		}
 
-		.pricing-grid {
-			grid-template-columns: repeat(2, 1fr);
-			gap: 12px;
+		.bubbles-container {
+			height: 800px;
+		}
+
+		.bubble-small {
+			width: 140px;
+			height: 140px;
+		}
+
+		.bubble-medium {
+			width: 180px;
+			height: 180px;
+		}
+
+		.bubble-large {
+			width: 220px;
+			height: 220px;
 		}
 	}
 </style>

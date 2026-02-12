@@ -397,7 +397,7 @@
 		.lines-1 {
 			width: 100px;
 			bottom: auto;
-			top: calc(44% - 60px);
+			top: calc(44% + 50px);
 			left: 28%;
 			right: auto;
 		}
