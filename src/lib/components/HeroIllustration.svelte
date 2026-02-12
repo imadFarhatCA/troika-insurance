@@ -8,6 +8,8 @@
 	import lines2 from '$lib/assets/heroAnimation/heroAnimation lines 001.svg';
 	import lines3 from '$lib/assets/heroAnimation/heroAnimation lines 002.svg';
 	import lines4 from '$lib/assets/heroAnimation/heroAnimation lines 003.svg';
+	import car from '$lib/assets/heroAnimation/hero Car Icon.svg';
+	import woman from '$lib/assets/heroAnimation/heroWoman Icon.svg';
 </script>
 
 <div class="hero-illustration">
@@ -35,6 +37,12 @@
 	<img src={lines2} alt="" class="anim lines lines-2" />
 	<img src={lines3} alt="" class="anim lines lines-3" />
 	<img src={lines4} alt="" class="anim lines lines-4" />
+
+	<!-- Woman (between house and tree) -->
+	<img src={woman} alt="" class="anim woman" />
+
+	<!-- Car (at bottom) -->
+	<img src={car} alt="" class="anim car" />
 </div>
 
 <style>
@@ -69,7 +77,7 @@
 	.anim {
 		position: absolute;
 		pointer-events: none;
-		opacity: 0.9;
+		opacity: 1;
 	}
 
 	/* ---- Sun ---- */
@@ -78,7 +86,7 @@
 		height: 180px;
 		bottom: 35%;
 		right: calc(6% + 200px);
-		opacity: 0.9;
+		opacity: 1;
 		animation: sunSpin 60s linear infinite, sunDrift 10s ease-in-out infinite;
 	}
 
@@ -94,7 +102,7 @@
 
 	/* ---- Clouds ---- */
 	.cloud {
-		opacity: 0.9;
+		opacity: 1;
 	}
 
 	.cloud-1 {
@@ -125,7 +133,7 @@
 
 	/* ---- X shapes ---- */
 	.x-shape {
-		opacity: 0.9;
+		opacity: 1;
 	}
 
 	.x-1 {
@@ -172,7 +180,7 @@
 
 	/* ---- Circles ---- */
 	.circle-shape {
-		opacity: 0.9;
+		opacity: 1;
 	}
 
 	.circle-1 {
@@ -215,12 +223,12 @@
 
 	/* ---- Lines ---- */
 	.lines {
-		opacity: 0.9;
+		opacity: 1;
 	}
 
 	.lines-1 {
 		width: 100px;
-		bottom: calc(40% - 20px);
+		bottom: calc(40% + 60px);
 		right: 40%;
 		animation: linesDrift1 15s ease-in-out infinite;
 	}
@@ -267,6 +275,36 @@
 		50% { translate: -28px 5px; }
 	}
 
+	/* ---- Woman (between house and tree) ---- */
+	.woman {
+		width: 129px;
+		bottom: calc(15% - 40px);
+		right: calc(25% + 60px);
+		opacity: 1;
+		animation: illustrationFloat 8s ease-in-out infinite;
+		z-index: 2;
+	}
+
+	/* ---- Car (at bottom) ---- */
+	.car {
+		width: 150px;
+		bottom: calc(8% - 50px);
+		right: 45%;
+		opacity: 1;
+		animation: carDrive 14s linear infinite;
+		z-index: 2;
+	}
+
+	@keyframes carDrive {
+		0% { translate: 150px 0; }
+		100% { translate: 550px 0; }
+	}
+
+	@keyframes carDriveMobile {
+		0% { translate: -150px 0; }
+		100% { translate: 550px 0; }
+	}
+
 	/* ---- Mobile ---- */
 	@media (max-width: 968px) {
 		.hero-illustration {
@@ -284,7 +322,7 @@
 		}
 
 		.anim {
-			opacity: 0.8;
+			opacity: 1;
 		}
 
 		.sun {
@@ -293,7 +331,7 @@
 			bottom: auto;
 			top: 50%;
 			right: 3%;
-			opacity: 0.8;
+			opacity: 1;
 		}
 
 		.cloud-1 {
@@ -359,7 +397,7 @@
 		.lines-1 {
 			width: 100px;
 			bottom: auto;
-			top: calc(44% + 20px);
+			top: calc(44% - 60px);
 			left: 28%;
 			right: auto;
 		}
@@ -385,6 +423,19 @@
 			top: calc(57% + 20px);
 			left: 1%;
 			right: auto;
+		}
+
+		.woman {
+			width: 128px;
+			bottom: calc(15% - 60px);
+			right: calc(25% + 5px);
+		}
+
+		.car {
+			width: 139px;
+			bottom: calc(8% - 60px);
+			right: 45%;
+			animation: carDriveMobile 14s linear infinite;
 		}
 	}
 </style>
