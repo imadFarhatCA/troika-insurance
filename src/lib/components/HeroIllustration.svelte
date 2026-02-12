@@ -287,87 +287,77 @@
 			opacity: 0.9;
 		}
 
-		/* Sun: large, right-center, prominent */
 		.sun {
-			width: 90px;
-			height: 90px;
+			width: 180px;
+			height: 180px;
 			bottom: auto;
 			top: 52%;
 			right: 5%;
 			opacity: 0.9;
 		}
 
-		/* Cloud 1: upper-left */
 		.cloud-1 {
-			width: 70px;
+			width: 140px;
 			bottom: auto;
 			top: 44%;
 			left: 5%;
 			right: auto;
 		}
 
-		/* Cloud 2: upper-center */
 		.cloud-2 {
-			width: 50px;
+			width: 100px;
 			bottom: auto;
 			top: 46%;
 			left: 40%;
 			right: auto;
 		}
 
-		/* X-1: top-right */
 		.x-1 {
-			width: 28px;
+			width: 56px;
 			bottom: auto;
 			top: 43%;
 			right: 5%;
 		}
 
-		/* X-2: center-left */
 		.x-2 {
-			width: 16px;
+			width: 32px;
 			bottom: auto;
 			top: 50%;
 			left: 32%;
 			right: auto;
 		}
 
-		/* X-3: lower-right */
 		.x-3 {
-			width: 20px;
+			width: 40px;
 			bottom: auto;
 			top: 56%;
 			right: 30%;
 		}
 
-		/* Circle-1: top-right, near X */
 		.circle-1 {
-			width: 28px;
+			width: 56px;
 			bottom: auto;
 			top: 44%;
 			right: 15%;
 		}
 
-		/* Circle-2: center-left */
 		.circle-2 {
-			width: 18px;
+			width: 36px;
 			bottom: auto;
 			top: 50%;
 			left: 15%;
 			right: auto;
 		}
 
-		/* Circle-3: right, below sun */
 		.circle-3 {
-			width: 22px;
+			width: 44px;
 			bottom: auto;
 			top: 57%;
 			right: 12%;
 		}
 
-		/* Lines: scattered wide across the zone */
 		.lines-1 {
-			width: 50px;
+			width: 100px;
 			bottom: auto;
 			top: 47%;
 			left: 22%;
@@ -375,7 +365,7 @@
 		}
 
 		.lines-2 {
-			width: 35px;
+			width: 70px;
 			bottom: auto;
 			top: 53%;
 			left: 50%;
@@ -383,14 +373,14 @@
 		}
 
 		.lines-3 {
-			width: 40px;
+			width: 80px;
 			bottom: auto;
 			top: 45%;
 			right: 35%;
 		}
 
 		.lines-4 {
-			width: 30px;
+			width: 60px;
 			bottom: auto;
 			top: 54%;
 			left: 3%;
