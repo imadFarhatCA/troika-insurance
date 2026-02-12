@@ -284,108 +284,119 @@
 			opacity: 0.9;
 		}
 
-		/* Elements at ~50% desktop size, spread across grey zone */
+		/* Elements at ~50% desktop size, matching user layout */
 		.anim {
 			opacity: 0.9;
 		}
 
+		/* Sun: center-right, overlapping top of illustration */
 		.sun {
 			width: 90px;
 			height: 90px;
 			bottom: auto;
-			top: 38%;
-			right: 8%;
+			top: 60%;
+			right: 20%;
 			opacity: 0.9;
 		}
 
+		/* Cloud 1: left side, above trees */
 		.cloud-1 {
-			width: 70px;
+			width: 80px;
 			bottom: auto;
-			top: 42%;
-			left: 15%;
+			top: 55%;
+			left: 8%;
 			right: auto;
 		}
 
+		/* Cloud 2: center area */
 		.cloud-2 {
-			width: 50px;
+			width: 55px;
 			bottom: auto;
-			top: 48%;
-			right: 35%;
-		}
-
-		.x-1 {
-			width: 35px;
-			bottom: auto;
-			top: 40%;
-			left: 5%;
+			top: 57%;
+			left: 38%;
 			right: auto;
 		}
 
+		/* X-1: far right, just below CTA */
+		.x-1 {
+			width: 30px;
+			bottom: auto;
+			top: 53%;
+			right: 3%;
+		}
+
+		/* X-2: lower right, near houses */
 		.x-2 {
 			width: 18px;
 			bottom: auto;
-			top: 52%;
-			right: 15%;
+			top: 66%;
+			right: 12%;
 		}
 
+		/* X-3: center-left area */
 		.x-3 {
-			width: 25px;
+			width: 22px;
 			bottom: auto;
-			top: 44%;
-			right: 55%;
+			top: 58%;
+			left: 28%;
+			right: auto;
 		}
 
+		/* Circle-1: right side, near X-1 */
 		.circle-1 {
-			width: 38px;
+			width: 30px;
 			bottom: auto;
-			top: 36%;
-			right: 25%;
+			top: 54%;
+			right: 12%;
 		}
 
+		/* Circle-2: left side, near cloud */
 		.circle-2 {
 			width: 20px;
 			bottom: auto;
-			top: 50%;
-			left: 30%;
+			top: 58%;
+			left: 3%;
 			right: auto;
 		}
 
+		/* Circle-3: center area */
 		.circle-3 {
-			width: 30px;
+			width: 25px;
 			bottom: auto;
-			top: 46%;
-			left: 55%;
+			top: 62%;
+			left: 52%;
 			right: auto;
 		}
 
+		/* Lines spread across middle zone */
 		.lines-1 {
-			width: 50px;
+			width: 55px;
 			bottom: auto;
-			top: 39%;
-			right: 45%;
+			top: 56%;
+			left: 20%;
+			right: auto;
 		}
 
 		.lines-2 {
 			width: 40px;
 			bottom: auto;
-			top: 53%;
-			left: 10%;
+			top: 63%;
+			left: 5%;
 			right: auto;
 		}
 
 		.lines-3 {
 			width: 35px;
 			bottom: auto;
-			top: 41%;
-			left: 42%;
-			right: auto;
+			top: 55%;
+			right: 30%;
 		}
 
 		.lines-4 {
 			width: 45px;
 			bottom: auto;
-			top: 50%;
-			right: 60%;
+			top: 61%;
+			right: 40%;
 		}
 	}
 </style>
