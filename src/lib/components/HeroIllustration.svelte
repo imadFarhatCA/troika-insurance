@@ -272,99 +272,120 @@
 		.hero-illustration {
 			justify-content: center;
 			align-items: flex-end;
-			transform: scale(0.5);
-			transform-origin: center bottom;
 		}
 
+		/* Big illustration, partially cropped at bottom */
 		.illustration {
-			width: 200%;
+			width: 180%;
+			max-width: none;
 			height: auto;
 			object-fit: contain;
 			object-position: center bottom;
+			opacity: 0.9;
 		}
 
+		/* Elements at ~50% desktop size, spread across grey zone */
 		.anim {
 			opacity: 0.9;
 		}
 
 		.sun {
-			width: 180px;
-			height: 180px;
-			bottom: 35%;
-			right: calc(6% + 200px);
+			width: 90px;
+			height: 90px;
+			bottom: auto;
+			top: 38%;
+			right: 8%;
 			opacity: 0.9;
 		}
 
 		.cloud-1 {
-			width: 140px;
-			bottom: 45%;
-			right: 30%;
+			width: 70px;
+			bottom: auto;
+			top: 42%;
+			left: 15%;
+			right: auto;
 		}
 
 		.cloud-2 {
-			width: 100px;
-			bottom: 38%;
-			right: 55%;
+			width: 50px;
+			bottom: auto;
+			top: 48%;
+			right: 35%;
 		}
 
 		.x-1 {
-			width: 70px;
-			bottom: 42%;
-			right: calc(18% + 150px);
+			width: 35px;
+			bottom: auto;
+			top: 40%;
+			left: 5%;
+			right: auto;
 		}
 
 		.x-2 {
-			width: 35px;
-			bottom: calc(30% + 100px);
-			right: 45%;
+			width: 18px;
+			bottom: auto;
+			top: 52%;
+			right: 15%;
 		}
 
 		.x-3 {
-			width: 50px;
-			bottom: 50%;
-			right: 65%;
+			width: 25px;
+			bottom: auto;
+			top: 44%;
+			right: 55%;
 		}
 
 		.circle-1 {
-			width: 75px;
-			bottom: calc(48% + 100px);
-			right: 10%;
+			width: 38px;
+			bottom: auto;
+			top: 36%;
+			right: 25%;
 		}
 
 		.circle-2 {
-			width: 40px;
-			bottom: 35%;
-			right: 38%;
+			width: 20px;
+			bottom: auto;
+			top: 50%;
+			left: 30%;
+			right: auto;
 		}
 
 		.circle-3 {
-			width: 58px;
-			bottom: 28%;
-			right: 58%;
+			width: 30px;
+			bottom: auto;
+			top: 46%;
+			left: 55%;
+			right: auto;
 		}
 
 		.lines-1 {
-			width: 100px;
-			bottom: 40%;
-			right: 40%;
+			width: 50px;
+			bottom: auto;
+			top: 39%;
+			right: 45%;
 		}
 
 		.lines-2 {
-			width: 80px;
-			bottom: 32%;
-			right: 60%;
+			width: 40px;
+			bottom: auto;
+			top: 53%;
+			left: 10%;
+			right: auto;
 		}
 
 		.lines-3 {
-			width: 70px;
-			bottom: 50%;
-			right: 48%;
+			width: 35px;
+			bottom: auto;
+			top: 41%;
+			left: 42%;
+			right: auto;
 		}
 
 		.lines-4 {
-			width: 90px;
-			bottom: 28%;
-			right: 25%;
+			width: 45px;
+			bottom: auto;
+			top: 50%;
+			right: 60%;
 		}
 	}
 </style>
