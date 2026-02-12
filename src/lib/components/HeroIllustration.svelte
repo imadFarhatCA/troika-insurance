@@ -131,13 +131,13 @@
 	.x-1 {
 		width: 70px;
 		bottom: 42%;
-		right: 18%;
+		right: calc(18% + 150px);
 		animation: xFloat1 10s ease-in-out infinite, xRotate 20s linear infinite;
 	}
 
 	.x-2 {
 		width: 35px;
-		bottom: 30%;
+		bottom: calc(30% + 100px);
 		right: 45%;
 		animation: xFloat2 13s ease-in-out infinite, xRotate 25s linear infinite reverse;
 	}
@@ -177,7 +177,7 @@
 
 	.circle-1 {
 		width: 75px;
-		bottom: 48%;
+		bottom: calc(48% + 100px);
 		right: 10%;
 		animation: circleFloat1 12s ease-in-out infinite;
 	}
