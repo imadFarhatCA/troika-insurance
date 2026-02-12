@@ -276,7 +276,7 @@
 
 		/* Big illustration, partially cropped at bottom */
 		.illustration {
-			width: 180%;
+			width: 360%;
 			max-width: none;
 			height: auto;
 			object-fit: contain;

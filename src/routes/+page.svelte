@@ -1057,16 +1057,18 @@
 		.hero {
 			min-height: 100vh;
 			padding: 0;
+			align-items: flex-end;
 		}
 
 		.hero-container {
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: flex-start;
+			height: 100vh;
 		}
 
 		.hero-content {
-			padding: 40px 40px 20px 24px;
+			padding: 30px 40px 20px 24px;
 			max-width: 100%;
 			z-index: 10;
 		}
@@ -1139,10 +1141,11 @@
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: flex-start;
+			height: 100vh;
 		}
 
 		.hero-content {
-			padding: 30px 24px 20px 24px;
+			padding: 20px 24px 15px 24px;
 			max-width: 100%;
 			z-index: 10;
 		}
