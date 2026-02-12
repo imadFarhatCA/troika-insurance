@@ -415,9 +415,9 @@
 	/* Hero Section */
 	.hero {
 		background: #ececec;
-		min-height: 100vh;
+		min-height: calc(100vh - 30px);
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 		padding: 0;
 		position: relative;
 		overflow: hidden;
@@ -427,16 +427,16 @@
 		max-width: 100%;
 		width: 100%;
 		position: relative;
-		height: 100vh;
+		height: calc(100vh - 30px);
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 	}
 
 	.hero-content {
 		position: relative;
 		z-index: 10;
 		max-width: 650px;
-		padding: 80px 60px 80px 120px;
+		padding: 0 60px 100px 120px;
 	}
 
 	.hero-content h1 {

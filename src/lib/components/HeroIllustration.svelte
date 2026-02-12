@@ -41,7 +41,7 @@
 		width: 100%;
 		height: 100%;
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 		justify-content: flex-end;
 		z-index: 1;
 		overflow: hidden;
@@ -49,16 +49,23 @@
 
 	.illustration {
 		width: 70%;
-		height: 100%;
+		height: auto;
 		object-fit: contain;
-		object-position: right center;
+		object-position: right bottom;
+		opacity: 0.9;
+		animation: illustrationFloat 8s ease-in-out infinite;
+	}
+
+	@keyframes illustrationFloat {
+		0%, 100% { transform: translateY(0); }
+		50% { transform: translateY(-8px); }
 	}
 
 	/* Shared animated element styles */
 	.anim {
 		position: absolute;
 		pointer-events: none;
-		opacity: 0.15;
+		opacity: 0.9;
 	}
 
 	/* ---- Sun ---- */
@@ -67,8 +74,8 @@
 		height: 150px;
 		top: 6%;
 		right: 6%;
-		opacity: 0.2;
-		animation: sunSpin 80s linear infinite, sunDrift 12s ease-in-out infinite;
+		opacity: 0.9;
+		animation: sunSpin 60s linear infinite, sunDrift 10s ease-in-out infinite;
 	}
 
 	@keyframes sunSpin {
@@ -78,38 +85,38 @@
 
 	@keyframes sunDrift {
 		0%, 100% { translate: 0 0; }
-		50% { translate: 15px -10px; }
+		50% { translate: 25px -18px; }
 	}
 
 	/* ---- Clouds ---- */
 	.cloud {
-		opacity: 0.06;
+		opacity: 0.9;
 	}
 
 	.cloud-1 {
 		width: 140px;
 		top: 12%;
 		right: 30%;
-		animation: cloudDrift1 18s ease-in-out infinite;
+		animation: cloudDrift1 14s ease-in-out infinite;
 	}
 
 	.cloud-2 {
 		width: 100px;
 		top: 22%;
 		right: 55%;
-		animation: cloudDrift2 22s ease-in-out infinite;
+		animation: cloudDrift2 18s ease-in-out infinite;
 	}
 
 	@keyframes cloudDrift1 {
 		0%, 100% { translate: 0 0; }
-		30% { translate: 30px 5px; }
-		70% { translate: -20px -3px; }
+		30% { translate: 50px 8px; }
+		70% { translate: -35px -5px; }
 	}
 
 	@keyframes cloudDrift2 {
 		0%, 100% { translate: 0 0; }
-		40% { translate: -25px 8px; }
-		80% { translate: 15px -5px; }
+		40% { translate: -40px 12px; }
+		80% { translate: 25px -8px; }
 	}
 
 	/* ---- X shape ---- */
@@ -117,13 +124,13 @@
 		width: 50px;
 		top: 35%;
 		right: 18%;
-		opacity: 0.06;
-		animation: xFloat 14s ease-in-out infinite, xRotate 30s linear infinite;
+		opacity: 0.9;
+		animation: xFloat 10s ease-in-out infinite, xRotate 20s linear infinite;
 	}
 
 	@keyframes xFloat {
 		0%, 100% { translate: 0 0; }
-		50% { translate: -12px 10px; }
+		50% { translate: -20px 18px; }
 	}
 
 	@keyframes xRotate {
@@ -136,68 +143,68 @@
 		width: 55px;
 		top: 18%;
 		right: 12%;
-		opacity: 0.06;
-		animation: circleFloat 16s ease-in-out infinite;
+		opacity: 0.9;
+		animation: circleFloat 12s ease-in-out infinite;
 	}
 
 	@keyframes circleFloat {
 		0%, 100% { translate: 0 0; }
-		30% { translate: 10px -8px; }
-		70% { translate: -8px 6px; }
+		30% { translate: 18px -15px; }
+		70% { translate: -15px 12px; }
 	}
 
 	/* ---- Lines ---- */
 	.lines {
-		opacity: 0.05;
+		opacity: 0.9;
 	}
 
 	.lines-1 {
 		width: 100px;
 		top: 28%;
 		right: 40%;
-		animation: linesDrift1 20s ease-in-out infinite;
+		animation: linesDrift1 15s ease-in-out infinite;
 	}
 
 	.lines-2 {
 		width: 80px;
 		top: 42%;
 		right: 60%;
-		animation: linesDrift2 16s ease-in-out infinite;
+		animation: linesDrift2 12s ease-in-out infinite;
 	}
 
 	.lines-3 {
 		width: 70px;
 		top: 15%;
 		right: 48%;
-		animation: linesDrift3 24s ease-in-out infinite;
+		animation: linesDrift3 18s ease-in-out infinite;
 	}
 
 	.lines-4 {
 		width: 90px;
 		top: 50%;
 		right: 25%;
-		animation: linesDrift4 19s ease-in-out infinite;
+		animation: linesDrift4 14s ease-in-out infinite;
 	}
 
 	@keyframes linesDrift1 {
 		0%, 100% { translate: 0 0; }
-		50% { translate: 25px 0; }
+		50% { translate: 40px 8px; }
 	}
 
 	@keyframes linesDrift2 {
 		0%, 100% { translate: 0 0; }
-		50% { translate: -20px 0; }
+		50% { translate: -35px 6px; }
 	}
 
 	@keyframes linesDrift3 {
 		0%, 100% { translate: 0 0; }
-		40% { translate: 18px 5px; }
-		80% { translate: -10px -3px; }
+		40% { translate: 30px 10px; }
+		80% { translate: -18px -6px; }
 	}
 
 	@keyframes linesDrift4 {
 		0%, 100% { translate: 0 0; }
-		50% { translate: -15px 0; }
+		50% { translate: -28px 5px; }
 	}
 
 	/* ---- Mobile ---- */
