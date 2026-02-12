@@ -272,112 +272,99 @@
 		.hero-illustration {
 			justify-content: center;
 			align-items: flex-end;
-		}
-
-		.illustration {
-			width: 100%;
-			height: auto;
-			object-fit: contain;
-			object-position: center bottom;
-			transform: scale(2.5);
+			transform: scale(0.5);
 			transform-origin: center bottom;
 		}
 
-		/* Reposition elements for mobile */
+		.illustration {
+			width: 200%;
+			height: auto;
+			object-fit: contain;
+			object-position: center bottom;
+		}
+
 		.anim {
-			opacity: 0.05;
+			opacity: 0.9;
 		}
 
 		.sun {
-			width: 80px;
-			bottom: auto;
-			top: 5%;
-			right: 10%;
-			opacity: 0.07;
+			width: 180px;
+			height: 180px;
+			bottom: 35%;
+			right: calc(6% + 200px);
+			opacity: 0.9;
 		}
 
 		.cloud-1 {
-			width: 90px;
-			bottom: auto;
-			top: 8%;
-			right: 40%;
+			width: 140px;
+			bottom: 45%;
+			right: 30%;
 		}
 
 		.cloud-2 {
-			width: 70px;
-			bottom: auto;
-			top: 16%;
-			right: 15%;
-		}
-
-		.x-1 {
-			width: 35px;
-			bottom: auto;
-			top: 25%;
-			right: 25%;
-		}
-
-		.x-2 {
-			width: 28px;
-			bottom: auto;
-			top: 18%;
-			right: 60%;
-		}
-
-		.x-3 {
-			width: 22px;
-			bottom: auto;
-			top: 30%;
-			right: 45%;
-		}
-
-		.circle-1 {
-			width: 40px;
-			bottom: auto;
-			top: 12%;
-			right: 65%;
-		}
-
-		.circle-2 {
-			width: 30px;
-			bottom: auto;
-			top: 22%;
-			right: 35%;
-		}
-
-		.circle-3 {
-			width: 25px;
-			bottom: auto;
-			top: 28%;
-			right: 70%;
-		}
-
-		.lines-1 {
-			width: 70px;
-			bottom: auto;
-			top: 20%;
-			right: 50%;
-		}
-
-		.lines-2 {
-			width: 55px;
-			bottom: auto;
-			top: 30%;
-			right: 70%;
-		}
-
-		.lines-3 {
-			width: 50px;
-			bottom: auto;
-			top: 10%;
+			width: 100px;
+			bottom: 38%;
 			right: 55%;
 		}
 
+		.x-1 {
+			width: 70px;
+			bottom: 42%;
+			right: calc(18% + 150px);
+		}
+
+		.x-2 {
+			width: 35px;
+			bottom: calc(30% + 100px);
+			right: 45%;
+		}
+
+		.x-3 {
+			width: 50px;
+			bottom: 50%;
+			right: 65%;
+		}
+
+		.circle-1 {
+			width: 75px;
+			bottom: calc(48% + 100px);
+			right: 10%;
+		}
+
+		.circle-2 {
+			width: 40px;
+			bottom: 35%;
+			right: 38%;
+		}
+
+		.circle-3 {
+			width: 58px;
+			bottom: 28%;
+			right: 58%;
+		}
+
+		.lines-1 {
+			width: 100px;
+			bottom: 40%;
+			right: 40%;
+		}
+
+		.lines-2 {
+			width: 80px;
+			bottom: 32%;
+			right: 60%;
+		}
+
+		.lines-3 {
+			width: 70px;
+			bottom: 50%;
+			right: 48%;
+		}
+
 		.lines-4 {
-			width: 60px;
-			bottom: auto;
-			top: 35%;
-			right: 30%;
+			width: 90px;
+			bottom: 28%;
+			right: 25%;
 		}
 	}
 </style>

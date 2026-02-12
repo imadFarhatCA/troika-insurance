@@ -1062,10 +1062,11 @@
 		.hero-container {
 			flex-direction: column;
 			align-items: flex-start;
+			justify-content: flex-start;
 		}
 
 		.hero-content {
-			padding: 80px 40px 40px 24px;
+			padding: 40px 40px 20px 24px;
 			max-width: 100%;
 			z-index: 10;
 		}
@@ -1137,10 +1138,11 @@
 		.hero-container {
 			flex-direction: column;
 			align-items: flex-start;
+			justify-content: flex-start;
 		}
 
 		.hero-content {
-			padding: 60px 24px 30px 24px;
+			padding: 30px 24px 20px 24px;
 			max-width: 100%;
 			z-index: 10;
 		}
