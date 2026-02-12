@@ -291,99 +291,99 @@
 			width: 180px;
 			height: 180px;
 			bottom: auto;
-			top: 52%;
-			right: 5%;
+			top: 50%;
+			right: 3%;
 			opacity: 0.9;
 		}
 
 		.cloud-1 {
 			width: 140px;
 			bottom: auto;
-			top: 44%;
-			left: 5%;
+			top: 40%;
+			left: 2%;
 			right: auto;
 		}
 
 		.cloud-2 {
 			width: 100px;
 			bottom: auto;
-			top: 46%;
-			left: 40%;
+			top: 42%;
+			left: 48%;
 			right: auto;
 		}
 
 		.x-1 {
 			width: 56px;
 			bottom: auto;
-			top: 43%;
-			right: 5%;
+			top: 38%;
+			right: 2%;
 		}
 
 		.x-2 {
 			width: 32px;
 			bottom: auto;
-			top: 50%;
-			left: 32%;
+			top: 52%;
+			left: 38%;
 			right: auto;
 		}
 
 		.x-3 {
 			width: 40px;
 			bottom: auto;
-			top: 56%;
-			right: 30%;
+			top: 58%;
+			right: 35%;
 		}
 
 		.circle-1 {
 			width: 56px;
 			bottom: auto;
-			top: 44%;
-			right: 15%;
+			top: 41%;
+			right: 20%;
 		}
 
 		.circle-2 {
 			width: 36px;
 			bottom: auto;
-			top: 50%;
-			left: 15%;
+			top: 54%;
+			left: 12%;
 			right: auto;
 		}
 
 		.circle-3 {
 			width: 44px;
 			bottom: auto;
-			top: 57%;
-			right: 12%;
+			top: 60%;
+			right: 8%;
 		}
 
 		.lines-1 {
 			width: 100px;
 			bottom: auto;
-			top: 47%;
-			left: 22%;
+			top: 44%;
+			left: 28%;
 			right: auto;
 		}
 
 		.lines-2 {
 			width: 70px;
 			bottom: auto;
-			top: 53%;
-			left: 50%;
+			top: 56%;
+			left: 58%;
 			right: auto;
 		}
 
 		.lines-3 {
 			width: 80px;
 			bottom: auto;
-			top: 45%;
-			right: 35%;
+			top: 39%;
+			right: 42%;
 		}
 
 		.lines-4 {
 			width: 60px;
 			bottom: auto;
-			top: 54%;
-			left: 3%;
+			top: 57%;
+			left: 1%;
 			right: auto;
 		}
 	}
