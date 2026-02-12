@@ -275,9 +275,10 @@
 		}
 
 		.illustration {
-			width: 350%;
-			height: auto;
-			object-fit: contain;
+			width: auto;
+			height: 100%;
+			max-width: none;
+			object-fit: cover;
 			object-position: center bottom;
 			opacity: 0.9;
 		}
