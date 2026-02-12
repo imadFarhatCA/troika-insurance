@@ -415,7 +415,7 @@
 	/* Hero Section */
 	.hero {
 		background: #ececec;
-		min-height: calc(100vh - 30px);
+		min-height: calc(100vh - 130px);
 		display: flex;
 		align-items: flex-end;
 		padding: 0;
@@ -427,7 +427,7 @@
 		max-width: 100%;
 		width: 100%;
 		position: relative;
-		height: calc(100vh - 30px);
+		height: calc(100vh - 130px);
 		display: flex;
 		align-items: flex-end;
 	}

@@ -77,7 +77,7 @@
 		width: 150px;
 		height: 150px;
 		bottom: 35%;
-		right: 6%;
+		right: calc(6% + 100px);
 		opacity: 0.9;
 		animation: sunSpin 60s linear infinite, sunDrift 10s ease-in-out infinite;
 	}
@@ -129,21 +129,21 @@
 	}
 
 	.x-1 {
-		width: 45px;
+		width: 55px;
 		bottom: 42%;
 		right: 18%;
 		animation: xFloat1 10s ease-in-out infinite, xRotate 20s linear infinite;
 	}
 
 	.x-2 {
-		width: 35px;
+		width: 22px;
 		bottom: 30%;
 		right: 45%;
 		animation: xFloat2 13s ease-in-out infinite, xRotate 25s linear infinite reverse;
 	}
 
 	.x-3 {
-		width: 28px;
+		width: 38px;
 		bottom: 50%;
 		right: 65%;
 		animation: xFloat3 11s ease-in-out infinite, xRotate 18s linear infinite;
@@ -176,21 +176,21 @@
 	}
 
 	.circle-1 {
-		width: 50px;
+		width: 60px;
 		bottom: 48%;
 		right: 10%;
 		animation: circleFloat1 12s ease-in-out infinite;
 	}
 
 	.circle-2 {
-		width: 35px;
+		width: 25px;
 		bottom: 35%;
 		right: 38%;
 		animation: circleFloat2 15s ease-in-out infinite;
 	}
 
 	.circle-3 {
-		width: 40px;
+		width: 45px;
 		bottom: 28%;
 		right: 58%;
 		animation: circleFloat3 11s ease-in-out infinite;
