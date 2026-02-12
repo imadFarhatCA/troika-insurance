@@ -274,14 +274,18 @@
 			align-items: flex-end;
 		}
 
-		/* Big illustration, stretched to fill */
+		/* 70% of original size, no proportion lock, partially cropped */
 		.illustration {
-			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 70%;
+			height: auto;
 			max-width: none;
-			height: 55%;
-			object-fit: fill;
-			object-position: center bottom;
+			object-fit: none;
 			opacity: 0.9;
+			animation: none;
 		}
 
 		.anim {
