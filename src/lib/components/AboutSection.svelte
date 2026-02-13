@@ -9,7 +9,10 @@
 			description: 'We take pride in performing honest assessments.',
 			color: '#92278f',
 			colorCode: '92-278F',
-			colorName: 'Deep Purple'
+			colorName: 'Deep Purple',
+			hex: '#92278F',
+			rgb: 'RGB(146, 39, 143)',
+			cmyk: 'CMYK(0, 73, 2, 43)'
 		},
 		{
 			id: 'transparency',
@@ -17,7 +20,10 @@
 			description: 'Every recommendation we make is based solely on what truly serves you, never on selling a product.',
 			color: '#c7a0cb',
 			colorCode: 'C7-A0CB',
-			colorName: 'Soft Lavender'
+			colorName: 'Soft Lavender',
+			hex: '#C7A0CB',
+			rgb: 'RGB(199, 160, 203)',
+			cmyk: 'CMYK(2, 21, 0, 20)'
 		},
 		{
 			id: 'tailored',
@@ -25,7 +31,10 @@
 			description: 'Three parties, one common goal: your best interest at the center of every decision.',
 			color: '#a7d8e9',
 			colorCode: 'A7-D8E9',
-			colorName: 'Sky Blue'
+			colorName: 'Sky Blue',
+			hex: '#A7D8E9',
+			rgb: 'RGB(167, 216, 233)',
+			cmyk: 'CMYK(28, 7, 0, 9)'
 		}
 	];
 </script>
@@ -43,11 +52,22 @@
 					<div class="pantone-color-block">
 						<div class="pantone-header">
 							<span class="pantone-label">Troika</span>
-							<span class="pantone-code">{value.colorCode}</span>
+							<div class="pantone-code-group">
+								<span class="pantone-code">{value.colorCode}</span>
+								<div class="pantone-color-specs">
+									<p class="pantone-spec">{value.hex}</p>
+									<p class="pantone-spec">{value.rgb}</p>
+									<p class="pantone-spec">{value.cmyk}</p>
+								</div>
+							</div>
 						</div>
-						<h3 class="pantone-title">{value.title}</h3>
+						<div class="pantone-title-wrapper">
+							<div class="title-shape"></div>
+							<h3 class="pantone-title">{value.title}</h3>
+						</div>
 					</div>
 					<div class="pantone-info">
+						<div class="border-dot"></div>
 						<p class="pantone-color-name">{value.colorName}</p>
 						<p class="pantone-description">{value.description}</p>
 					</div>
