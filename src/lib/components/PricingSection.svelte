@@ -178,6 +178,8 @@
 		color: #4a4a4a;
 		padding: 30px;
 		width: 100%;
+		overflow: hidden;
+		word-wrap: break-word;
 	}
 
 	.icon-wrapper {
@@ -277,18 +279,18 @@
 		}
 
 		.bubble-small {
-			width: 160px;
-			height: 160px;
+			width: 130px;
+			height: 130px;
 		}
 
 		.bubble-medium {
-			width: 220px;
-			height: 220px;
+			width: 180px;
+			height: 180px;
 		}
 
 		.bubble-large {
-			width: 260px;
-			height: 260px;
+			width: 210px;
+			height: 210px;
 		}
 
 		.bubble-1 {
@@ -315,6 +317,10 @@
 			top: 650px;
 			left: 50%;
 			transform: translateX(-50%);
+		}
+
+		.bubble-5:hover {
+			transform: translateX(-50%) scale(1.15);
 		}
 
 		.bubble-content {
