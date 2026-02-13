@@ -479,12 +479,11 @@ body {
 	font-weight: 700;
 	color: var(--color-text);
 	margin: 0 0 32px 0;
-	letter-spacing: -1px;
 }
 
 .about-description {
 	max-width: 800px;
-	margin: 0 auto 60px;
+	margin: 0 auto 80px;
 	text-align: center;
 }
 
@@ -493,6 +492,273 @@ body {
 	color: var(--color-text);
 	margin: 0 0 20px 0;
 	line-height: 1.7;
+}
+
+.pantone-cards-container {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.pantone-card {
+	position: absolute;
+	width: 320px;
+	background: white;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+	transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+	cursor: pointer;
+	animation: pantoneFloat 6s ease-in-out infinite;
+}
+
+.pantone-card-1 {
+	top: 80px;
+	left: 15%;
+	transform: rotate(-8deg);
+	z-index: 3;
+	animation-delay: 0s;
+}
+
+.pantone-card-2 {
+	top: 50px;
+	left: 50%;
+	transform: translateX(-50%) rotate(3deg);
+	z-index: 5;
+	animation-delay: 1s;
+}
+
+.pantone-card-3 {
+	top: 100px;
+	right: 15%;
+	transform: rotate(-5deg);
+	z-index: 4;
+	animation-delay: 2s;
+}
+
+.pantone-card:hover {
+	translate: 0 -20px;
+	transform: scale(1.05) rotate(0deg);
+	box-shadow: 0 35px 90px rgba(0, 0, 0, 0.3);
+	z-index: 100 !important;
+	animation-play-state: paused;
+}
+
+.pantone-card-1:hover {
+	translate: 0 -20px;
+	transform: scale(1.05) rotate(-2deg);
+	animation-play-state: paused;
+}
+
+.pantone-card-2:hover {
+	translate: 0 -20px;
+	transform: translateX(-50%) scale(1.05) rotate(0deg);
+	animation-play-state: paused;
+}
+
+.pantone-card-3:hover {
+	translate: 0 -20px;
+	transform: scale(1.05) rotate(2deg);
+	animation-play-state: paused;
+}
+
+@keyframes pantoneFloat {
+	0%, 100% {
+		translate: 0 0;
+	}
+	50% {
+		translate: 0 -20px;
+	}
+}
+
+.pantone-color-block {
+	background: var(--card-color);
+	padding: 32px 28px 40px;
+	min-height: 280px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.pantone-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 20px;
+}
+
+.pantone-label {
+	color: white;
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.pantone-code {
+	color: white;
+	font-size: 12px;
+	font-weight: 600;
+	font-family: 'Courier New', monospace;
+	letter-spacing: 0.5px;
+}
+
+.pantone-title {
+	color: white;
+	font-size: 32px;
+	font-weight: 700;
+	margin: 0;
+	line-height: 1.2;
+}
+
+.pantone-info {
+	background: white;
+	padding: 24px 28px 28px;
+	border-top: 4px solid var(--card-color);
+}
+
+.pantone-color-name {
+	color: var(--color-text);
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0 0 12px 0;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.pantone-description {
+	color: var(--color-text);
+	font-size: 14px;
+	line-height: 1.6;
+	margin: 0;
+}
+
+.bg-shape {
+	position: absolute;
+	opacity: 0.5;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.circle-bg-1 {
+	width: 140px;
+	top: 10%;
+	left: 5%;
+	animation: bgFloat1 10s ease-in-out infinite;
+}
+
+.circle-bg-2 {
+	width: 60px;
+	top: 60%;
+	right: 10%;
+	animation: bgFloat2 12s ease-in-out infinite;
+}
+
+.circle-bg-3 {
+	width: 120px;
+	bottom: 15%;
+	left: 40%;
+	animation: bgFloat3 14s ease-in-out infinite;
+}
+
+.circle-bg-4 {
+	width: 70px;
+	top: 35%;
+	right: 25%;
+	animation: bgFloat4 11s ease-in-out infinite;
+}
+
+.x-bg-1 {
+	width: 110px;
+	top: 20%;
+	right: 5%;
+	animation: bgFloat1 13s ease-in-out infinite, bgRotate 20s linear infinite;
+}
+
+.x-bg-2 {
+	width: 65px;
+	bottom: 25%;
+	left: 8%;
+	animation: bgFloat2 15s ease-in-out infinite, bgRotate 25s linear infinite reverse;
+}
+
+.x-bg-3 {
+	width: 95px;
+	top: 50%;
+	left: 30%;
+	animation: bgFloat3 11s ease-in-out infinite, bgRotate 18s linear infinite;
+}
+
+.circle-bg-5 {
+	width: 100px;
+	top: 25%;
+	left: 12%;
+	animation: bgFloat1 9s ease-in-out infinite;
+}
+
+.circle-bg-6 {
+	width: 80px;
+	bottom: 20%;
+	right: 18%;
+	animation: bgFloat4 13s ease-in-out infinite;
+}
+
+.circle-bg-7 {
+	width: 130px;
+	top: 48%;
+	right: 8%;
+	animation: bgFloat2 16s ease-in-out infinite;
+}
+
+.x-bg-4 {
+	width: 75px;
+	bottom: 10%;
+	left: 25%;
+	animation: bgFloat4 14s ease-in-out infinite, bgRotate 22s linear infinite;
+}
+
+.x-bg-5 {
+	width: 120px;
+	top: 15%;
+	left: 35%;
+	animation: bgFloat1 12s ease-in-out infinite, bgRotate 19s linear infinite reverse;
+}
+
+.x-bg-6 {
+	width: 85px;
+	bottom: 30%;
+	right: 30%;
+	animation: bgFloat3 10s ease-in-out infinite, bgRotate 21s linear infinite;
+}
+
+@keyframes bgFloat1 {
+	0%, 100% { translate: 0 0; }
+	50% { translate: 15px -20px; }
+}
+
+@keyframes bgFloat2 {
+	0%, 100% { translate: 0 0; }
+	50% { translate: -20px 15px; }
+}
+
+@keyframes bgFloat3 {
+	0%, 100% { translate: 0 0; }
+	30% { translate: 18px 12px; }
+	70% { translate: -12px -15px; }
+}
+
+@keyframes bgFloat4 {
+	0%, 100% { translate: 0 0; }
+	50% { translate: 12px 18px; }
+}
+
+@keyframes bgRotate {
+	0% { rotate: 0deg; }
+	100% { rotate: 360deg; }
 }
 
 /* Claims Section */
@@ -717,6 +983,71 @@ body {
 		font-size: 36px;
 	}
 
+	.pantone-cards-container {
+		height: 900px;
+	}
+
+	.pantone-card {
+		width: 280px;
+		animation: none;
+	}
+
+	.pantone-card-1 {
+		top: 40px;
+		left: 50%;
+		transform: translateX(-50%) rotate(-6deg);
+	}
+
+	.pantone-card-2 {
+		top: 280px;
+		left: 50%;
+		transform: translateX(-50%) rotate(2deg);
+	}
+
+	.pantone-card-3 {
+		top: 520px;
+		left: 50%;
+		transform: translateX(-50%) rotate(-4deg);
+	}
+
+	.pantone-card:hover {
+		transform: translateX(-50%) translateY(-8px) scale(1.02);
+		animation: none;
+	}
+
+	.pantone-card-1:hover {
+		transform: translateX(-50%) translateY(-8px) scale(1.02) rotate(-3deg);
+	}
+
+	.pantone-card-2:hover {
+		transform: translateX(-50%) translateY(-8px) scale(1.02) rotate(0deg);
+	}
+
+	.pantone-card-3:hover {
+		transform: translateX(-50%) translateY(-8px) scale(1.02) rotate(-2deg);
+	}
+
+	.pantone-color-block {
+		padding: 28px 24px 36px;
+		min-height: 240px;
+	}
+
+	.pantone-title {
+		font-size: 28px;
+	}
+
+	.pantone-info {
+		padding: 20px 24px 24px;
+	}
+
+	.pantone-color-name {
+		font-size: 14px;
+	}
+
+	.pantone-description {
+		font-size: 13px;
+	}
+
 	.testimonials-grid {
 		grid-template-columns: 1fr;
 	}
@@ -782,13 +1113,77 @@ body {
 		font-size: 16px;
 	}
 
-	.about,
+	.about {
+		padding: 60px 16px 100px;
+	}
+
 	.claims,
 	.testimonials,
 	.switch-section,
 	.social-impact,
 	.contact {
 		padding: 60px 20px;
+	}
+
+	.pantone-cards-container {
+		height: 700px;
+		padding: 20px;
+	}
+
+	.pantone-card {
+		width: 90%;
+		max-width: 300px;
+		animation: none;
+	}
+
+	.pantone-card-1 {
+		top: 30px;
+		left: 50%;
+		transform: translateX(-50%) rotate(-5deg);
+		z-index: 5;
+	}
+
+	.pantone-card-2 {
+		top: 220px;
+		left: 50%;
+		transform: translateX(calc(-50% - 30px)) rotate(3deg);
+		z-index: 3;
+	}
+
+	.pantone-card-3 {
+		top: 420px;
+		left: 50%;
+		transform: translateX(calc(-50% + 30px)) rotate(-4deg);
+		z-index: 4;
+	}
+
+	.pantone-card:hover,
+	.pantone-card-1:hover,
+	.pantone-card-2:hover,
+	.pantone-card-3:hover {
+		translate: 0 -8px;
+		box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+	}
+
+	.pantone-color-block {
+		padding: 24px 20px 32px;
+		min-height: 220px;
+	}
+
+	.pantone-title {
+		font-size: 24px;
+	}
+
+	.pantone-info {
+		padding: 18px 20px 22px;
+	}
+
+	.pantone-color-name {
+		font-size: 13px;
+	}
+
+	.pantone-description {
+		font-size: 12px;
 	}
 
 	.testimonials-grid {
