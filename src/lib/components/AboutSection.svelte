@@ -471,21 +471,31 @@
 		}
 
 		.bubble-content {
-			padding: 20px;
+			padding: 18px;
 		}
 
 		.icon-wrapper {
-			margin-bottom: 15px;
+			margin-bottom: 12px;
+		}
+
+		.icon-shape {
+			width: 45px;
+			height: 45px;
+		}
+
+		.bubble-large .icon-shape {
+			width: 55px;
+			height: 55px;
 		}
 
 		.bubble h3 {
-			font-size: 16px;
-			margin: 0 0 8px 0;
+			font-size: 14px;
+			margin: 0 0 6px 0;
 		}
 
 		.bubble-description {
-			font-size: 11px;
-			line-height: 1.4;
+			font-size: 10px;
+			line-height: 1.35;
 		}
 	}
 
@@ -527,17 +537,27 @@
 		}
 
 		.bubble-content {
-			padding: 16px;
+			padding: 14px;
+		}
+
+		.icon-shape {
+			width: 38px;
+			height: 38px;
+		}
+
+		.bubble-large .icon-shape {
+			width: 48px;
+			height: 48px;
 		}
 
 		.bubble h3 {
-			font-size: 14px;
-			margin: 0 0 6px 0;
+			font-size: 12px;
+			margin: 0 0 5px 0;
 		}
 
 		.bubble-description {
-			font-size: 10px;
-			line-height: 1.35;
+			font-size: 9px;
+			line-height: 1.3;
 		}
 	}
 </style>
