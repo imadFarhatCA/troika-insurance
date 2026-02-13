@@ -479,13 +479,13 @@
 		}
 
 		.bubble h3 {
-			font-size: 18px;
-			margin: 0 0 10px 0;
+			font-size: 16px;
+			margin: 0 0 8px 0;
 		}
 
 		.bubble-description {
-			font-size: 13px;
-			line-height: 1.45;
+			font-size: 11px;
+			line-height: 1.4;
 		}
 	}
 
@@ -527,16 +527,17 @@
 		}
 
 		.bubble-content {
-			padding: 18px;
+			padding: 16px;
 		}
 
 		.bubble h3 {
-			font-size: 16px;
+			font-size: 14px;
+			margin: 0 0 6px 0;
 		}
 
 		.bubble-description {
-			font-size: 12px;
-			line-height: 1.4;
+			font-size: 10px;
+			line-height: 1.35;
 		}
 	}
 </style>
