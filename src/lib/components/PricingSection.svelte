@@ -6,11 +6,11 @@
 	import customIcon from '$lib/assets/icons/CUSTOM Icon.svg';
 
 	const products = [
-		{ id: 'renters', icon: rentersIcon, title: 'Renters', description: 'Coverage for your stuff, and peace of mind', pricing: 'from $5 / month', size: 'medium', color: '#ff0095', colorRgb: '255, 0, 149' },
-		{ id: 'homeowners', icon: homeownersIcon, title: 'Homeowners', description: 'Protection for your home and stuff', pricing: 'from $25 / month', size: 'large', color: '#92278f', colorRgb: '146, 39, 143' },
-		{ id: 'commercial', icon: corporateIcon, title: 'Commercial', description: 'Coverage for your business', pricing: 'from $50 / month', size: 'medium', color: '#a7d8e9', colorRgb: '167, 216, 233' },
-		{ id: 'car', icon: carIcon, title: 'Car', description: 'Protect your car, passengers, and the planet', pricing: 'as low as $30 / month', size: 'large', color: '#ff0095', colorRgb: '255, 0, 149' },
-		{ id: 'custom', icon: customIcon, title: 'Custom', description: 'Tailored coverage for unique needs', pricing: 'custom pricing', size: 'small', color: '#92278f', colorRgb: '146, 39, 143' },
+		{ id: 'renters', icon: rentersIcon, title: 'Renters', description: 'Coverage for your stuff, and peace of mind', pricing: 'Start Saving', size: 'medium', color: '#ff0095', colorRgb: '255, 0, 149' },
+		{ id: 'homeowners', icon: homeownersIcon, title: 'Homeowners', description: 'Protection for your home and stuff', pricing: 'Save Now', size: 'large', color: '#92278f', colorRgb: '146, 39, 143' },
+		{ id: 'commercial', icon: corporateIcon, title: 'Commercial', description: 'Coverage for your business', pricing: 'Start Saving', size: 'medium', color: '#a7d8e9', colorRgb: '167, 216, 233' },
+		{ id: 'car', icon: carIcon, title: 'Car', description: 'Protect your car, passengers, and the planet', pricing: 'Save Now', size: 'large', color: '#ff0095', colorRgb: '255, 0, 149' },
+		{ id: 'custom', icon: customIcon, title: 'Custom', description: 'Tailored coverage for unique needs', pricing: 'Start Saving', size: 'small', color: '#92278f', colorRgb: '146, 39, 143' },
 	];
 </script>
 
@@ -182,10 +182,60 @@
 		word-wrap: break-word;
 	}
 
+	.bubble-large .bubble-content {
+		padding: 40px;
+	}
+
+	.bubble-small .bubble-content {
+		padding: 20px;
+	}
+
+	/* Renters - move content up */
+	.bubble-1 .bubble-content {
+		padding: 0px 30px 70px;
+		margin-top: -10px;
+	}
+
+	/* Homeowners - smaller content, moved up */
+	.bubble-2 .bubble-content {
+		padding: 5px 35px 65px;
+	}
+
+	/* Commercial - move content up */
+	.bubble-3 .bubble-content {
+		padding: 20px 30px 40px;
+	}
+
+	/* Car - smaller content, moved up more */
+	.bubble-4 .bubble-content {
+		padding: 0px 35px 80px;
+		margin-top: -10px;
+	}
+
+	/* Custom bubble - move content up */
+	.bubble-5 .bubble-content {
+		padding: 5px 20px 25px;
+		margin-top: -10px;
+	}
+
 	.icon-wrapper {
 		position: relative;
 		display: inline-block;
 		margin-bottom: 25px;
+	}
+
+	.bubble-large .icon-wrapper {
+		margin-bottom: 30px;
+	}
+
+	.bubble-small .icon-wrapper {
+		margin-bottom: 15px;
+	}
+
+	/* Car and Homeowners - smaller icons */
+	.bubble-2 .icon-wrapper,
+	.bubble-4 .icon-wrapper {
+		margin-bottom: 20px;
 	}
 
 	.icon-wrapper::after {
@@ -207,66 +257,106 @@
 		border-radius: 0;
 	}
 
+	.bubble:hover .bubble-pricing {
+		animation: pricingBob 0.6s ease-in-out infinite;
+	}
+
+	@keyframes pricingBob {
+		0%, 100% { transform: translateY(0); }
+		50% { transform: translateY(-5px); }
+	}
+
 	.bubble-icon {
-		width: 72px;
-		height: 72px;
+		width: 60px;
+		height: 60px;
 		filter: none;
 		display: block;
 	}
 
 	.bubble-large .bubble-icon {
-		width: 96px;
-		height: 96px;
+		width: 90px;
+		height: 90px;
 	}
 
 	.bubble-small .bubble-icon {
-		width: 48px;
-		height: 48px;
+		width: 40px;
+		height: 40px;
+	}
+
+	/* Car and Homeowners - smaller icons */
+	.bubble-2 .bubble-icon,
+	.bubble-4 .bubble-icon {
+		width: 70px;
+		height: 70px;
 	}
 
 	.bubble h3 {
-		font-size: 24px;
+		font-size: 20px;
 		font-weight: 700;
-		margin: 0 0 12px 0;
+		margin: 0 0 10px 0;
 		color: #4a4a4a;
 	}
 
 	.bubble-large h3 {
-		font-size: 28px;
+		font-size: 26px;
+		margin: 0 0 14px 0;
 	}
 
 	.bubble-small h3 {
-		font-size: 18px;
+		font-size: 16px;
+		margin: 0 0 8px 0;
+	}
+
+	/* Car and Homeowners - smaller titles */
+	.bubble-2 h3,
+	.bubble-4 h3 {
+		font-size: 22px;
+		margin: 0 0 10px 0;
 	}
 
 	.bubble-description {
-		font-size: 14px;
-		margin: 0 0 15px 0;
+		font-size: 13px;
+		margin: 0 0 12px 0;
 		opacity: 0.95;
 		line-height: 1.4;
 	}
 
 	.bubble-large .bubble-description {
-		font-size: 16px;
+		font-size: 15px;
+		margin: 0 0 15px 0;
 	}
 
 	.bubble-small .bubble-description {
-		font-size: 12px;
+		font-size: 11px;
+		margin: 0 0 8px 0;
+	}
+
+	/* Car and Homeowners - smaller descriptions */
+	.bubble-2 .bubble-description,
+	.bubble-4 .bubble-description {
+		font-size: 13px;
+		margin: 0 0 10px 0;
 	}
 
 	.bubble-pricing {
-		font-size: 14px;
+		font-size: 13px;
 		font-weight: 300;
 		margin: 0;
 		color: var(--bubble-color);
 	}
 
 	.bubble-large .bubble-pricing {
-		font-size: 16px;
+		font-size: 15px;
 	}
 
 	.bubble-small .bubble-pricing {
-		font-size: 12px;
+		font-size: 11px;
+	}
+
+	/* Car and Homeowners - smaller pricing */
+	.bubble-2 .bubble-pricing,
+	.bubble-4 .bubble-pricing {
+		font-size: 13px;
 	}
 
 	@media (max-width: 968px) {
@@ -324,7 +414,19 @@
 		}
 
 		.bubble-content {
-			padding: 20px;
+			padding: 15px;
+		}
+
+		.icon-wrapper {
+			margin-bottom: 12px;
+		}
+
+		.bubble h3 {
+			margin: 0 0 6px 0;
+		}
+
+		.bubble-description {
+			margin: 0 0 8px 0;
 		}
 	}
 
