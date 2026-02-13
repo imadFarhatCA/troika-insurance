@@ -489,13 +489,13 @@
 		}
 
 		.bubble h3 {
-			font-size: 14px;
+			font-size: 16px;
 			margin: 0 0 6px 0;
 		}
 
 		.bubble-description {
-			font-size: 10px;
-			line-height: 1.35;
+			font-size: 9px;
+			line-height: 1.3;
 		}
 	}
 
@@ -551,13 +551,13 @@
 		}
 
 		.bubble h3 {
-			font-size: 12px;
+			font-size: 14px;
 			margin: 0 0 5px 0;
 		}
 
 		.bubble-description {
-			font-size: 9px;
-			line-height: 1.3;
+			font-size: 8px;
+			line-height: 1.25;
 		}
 	}
 </style>
