@@ -1,35 +1,29 @@
+<script lang="ts">
+	import SemiPieChart from './SemiPieChart.svelte';
+	import xShape from '$lib/assets/heroAnimation/heroAnimation X.svg';
+	import circle from '$lib/assets/heroAnimation/heroAnimation cirlce.svg';
+</script>
+
 <section class="switch-section">
 	<div class="container">
-		<h2>Already insured? We'll help you switch!</h2>
-		<p class="switch-subtitle">People left these insurance companies to join Troika:</p>
+		<h2>We can help you get Insured across the board!</h2>
+		<p class="switch-subtitle">Whichever category your insurance falls under, we have the expertise to help you get the best out of it</p>
 
-		<div class="competitor-bubbles">
-			<div class="bubble bubble-large">
-				<span class="bubble-percent">31%</span>
-				<span class="bubble-text">Assurant, Farmers,<br/>Homesite, Progressive,<br/>Stillwater & more...</span>
-			</div>
-			<div class="bubble bubble-medium">
-				<span class="bubble-percent">19%</span>
-				<span class="bubble-text">Allstate</span>
-			</div>
-			<div class="bubble bubble-medium">
-				<span class="bubble-percent">16%</span>
-				<span class="bubble-text">State Farm</span>
-			</div>
-			<div class="bubble bubble-small">
-				<span class="bubble-percent">14%</span>
-				<span class="bubble-text">Travelers</span>
-			</div>
-			<div class="bubble bubble-small">
-				<span class="bubble-percent">10%</span>
-				<span class="bubble-text">Geico</span>
-			</div>
-			<div class="bubble bubble-small">
-				<span class="bubble-percent">10%</span>
-				<span class="bubble-text">Liberty<br/>Mutual</span>
-			</div>
+		<div class="insurance-chart">
+			<SemiPieChart />
 		</div>
 
 		<a href="#quote" class="btn-switch">CHECK PRICES AND SWITCH</a>
 	</div>
+
+	<!-- Background animated shapes -->
+	<img src={circle} alt="" class="bg-shape circle-bg switch-circle-1" />
+	<img src={circle} alt="" class="bg-shape circle-bg switch-circle-2" />
+	<img src={circle} alt="" class="bg-shape circle-bg switch-circle-3" />
+	<img src={circle} alt="" class="bg-shape circle-bg switch-circle-4" />
+	<img src={circle} alt="" class="bg-shape circle-bg switch-circle-5" />
+	<img src={xShape} alt="" class="bg-shape x-bg switch-x-1" />
+	<img src={xShape} alt="" class="bg-shape x-bg switch-x-2" />
+	<img src={xShape} alt="" class="bg-shape x-bg switch-x-3" />
+	<img src={xShape} alt="" class="bg-shape x-bg switch-x-4" />
 </section>
