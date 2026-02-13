@@ -203,7 +203,7 @@
 
 	/* Commercial - move content up */
 	.bubble-3 .bubble-content {
-		padding: 20px 30px 40px;
+		padding: 10px 30px 50px;
 	}
 
 	/* Car - smaller content, moved up more */
