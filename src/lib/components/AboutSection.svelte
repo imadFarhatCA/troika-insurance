@@ -1,5 +1,6 @@
 <script lang="ts">
 	import xShape from '$lib/assets/heroAnimation/heroAnimation X.svg';
+	import circle from '$lib/assets/heroAnimation/heroAnimation cirlce.svg';
 
 	const values = [
 		{
@@ -59,13 +60,13 @@
 			{/each}
 
 			<!-- Background animated shapes -->
-			<div class="bg-shape square-bg square-bg-1"></div>
-			<div class="bg-shape square-bg square-bg-2"></div>
-			<div class="bg-shape square-bg square-bg-3"></div>
-			<div class="bg-shape square-bg square-bg-4"></div>
-			<div class="bg-shape square-bg square-bg-5"></div>
-			<div class="bg-shape square-bg square-bg-6"></div>
-			<div class="bg-shape square-bg square-bg-7"></div>
+			<img src={circle} alt="" class="bg-shape circle-bg circle-bg-1" />
+			<img src={circle} alt="" class="bg-shape circle-bg circle-bg-2" />
+			<img src={circle} alt="" class="bg-shape circle-bg circle-bg-3" />
+			<img src={circle} alt="" class="bg-shape circle-bg circle-bg-4" />
+			<img src={circle} alt="" class="bg-shape circle-bg circle-bg-5" />
+			<img src={circle} alt="" class="bg-shape circle-bg circle-bg-6" />
+			<img src={circle} alt="" class="bg-shape circle-bg circle-bg-7" />
 			<img src={xShape} alt="" class="bg-shape x-bg x-bg-1" />
 			<img src={xShape} alt="" class="bg-shape x-bg x-bg-2" />
 			<img src={xShape} alt="" class="bg-shape x-bg x-bg-3" />
@@ -117,7 +118,7 @@
 
 	.bubble {
 		position: absolute;
-		border-radius: 50%;
+		border-radius: 24px;
 		background: var(--bubble-color);
 		display: flex;
 		align-items: center;
@@ -313,38 +314,29 @@
 		z-index: 0;
 	}
 
-	.square-bg {
-		background: #92278f;
-		border-radius: 8px;
-	}
-
-	.square-bg-1 {
+	.circle-bg-1 {
 		width: 140px;
-		height: 140px;
 		top: 10%;
 		left: 5%;
 		animation: bgFloat1 10s ease-in-out infinite;
 	}
 
-	.square-bg-2 {
+	.circle-bg-2 {
 		width: 60px;
-		height: 60px;
 		top: 60%;
 		right: 10%;
 		animation: bgFloat2 12s ease-in-out infinite;
 	}
 
-	.square-bg-3 {
+	.circle-bg-3 {
 		width: 120px;
-		height: 120px;
 		bottom: 15%;
 		left: 40%;
 		animation: bgFloat3 14s ease-in-out infinite;
 	}
 
-	.square-bg-4 {
+	.circle-bg-4 {
 		width: 70px;
-		height: 70px;
 		top: 35%;
 		right: 25%;
 		animation: bgFloat4 11s ease-in-out infinite;
@@ -371,25 +363,22 @@
 		animation: bgFloat3 11s ease-in-out infinite, bgRotate 18s linear infinite;
 	}
 
-	.square-bg-5 {
+	.circle-bg-5 {
 		width: 100px;
-		height: 100px;
 		top: 25%;
 		left: 12%;
 		animation: bgFloat1 9s ease-in-out infinite;
 	}
 
-	.square-bg-6 {
+	.circle-bg-6 {
 		width: 80px;
-		height: 80px;
 		bottom: 20%;
 		right: 18%;
 		animation: bgFloat4 13s ease-in-out infinite;
 	}
 
-	.square-bg-7 {
+	.circle-bg-7 {
 		width: 130px;
-		height: 130px;
 		top: 48%;
 		right: 8%;
 		animation: bgFloat2 16s ease-in-out infinite;
