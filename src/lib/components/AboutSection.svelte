@@ -220,7 +220,7 @@
 		width: 60px;
 		height: 60px;
 		background: var(--icon-color);
-		border-radius: 50%;
+		border-radius: 4px;
 		transition: border-radius 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 	}
 
@@ -230,7 +230,7 @@
 	}
 
 	.bubble:hover .icon-shape {
-		border-radius: 4px;
+		border-radius: 50%;
 	}
 
 	.icon-wrapper::after {
