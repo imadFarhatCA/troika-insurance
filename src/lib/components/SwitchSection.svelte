@@ -12,8 +12,6 @@
 		<div class="insurance-chart">
 			<SemiPieChart />
 		</div>
-
-		<a href="#quote" class="btn-switch">CHECK PRICES AND SWITCH</a>
 	</div>
 
 	<!-- Background animated shapes -->
