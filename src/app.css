@@ -1568,6 +1568,75 @@ body {
 		padding: 60px 20px;
 	}
 
+	.switch-section {
+		position: relative;
+	}
+
+	/* Restrict background shapes to chart area on mobile */
+	.switch-circle-1,
+	.switch-circle-2,
+	.switch-circle-3,
+	.switch-circle-4,
+	.switch-circle-5,
+	.switch-x-1,
+	.switch-x-2,
+	.switch-x-3,
+	.switch-x-4 {
+		top: auto;
+		bottom: 0;
+		z-index: 0;
+	}
+
+	.switch-circle-1 {
+		right: 5%;
+		bottom: 40%;
+	}
+
+	.switch-circle-2 {
+		left: 5%;
+		bottom: 20%;
+	}
+
+	.switch-circle-3 {
+		left: 10%;
+		bottom: 55%;
+	}
+
+	.switch-circle-4 {
+		right: 15%;
+		bottom: 15%;
+	}
+
+	.switch-circle-5 {
+		left: 12%;
+		bottom: 35%;
+	}
+
+	.switch-x-1 {
+		left: 3%;
+		bottom: 50%;
+	}
+
+	.switch-x-2 {
+		right: 4%;
+		bottom: 10%;
+	}
+
+	.switch-x-3 {
+		right: 8%;
+		bottom: 60%;
+	}
+
+	.switch-x-4 {
+		left: 20%;
+		bottom: 25%;
+	}
+
+	.insurance-chart {
+		position: relative;
+		z-index: 1;
+	}
+
 	.contact {
 		padding: 80px 20px;
 	}
