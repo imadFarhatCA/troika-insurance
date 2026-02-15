@@ -1557,7 +1557,8 @@ body {
 	.semi-pie-chart {
 		grid-column: 1;
 		grid-row: 1;
-		max-width: 100%;
+		max-width: none;
+		width: 180%;
 	}
 
 	.semi-pie-chart .label-group text:first-child {
