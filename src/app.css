@@ -1663,7 +1663,7 @@ body {
 		position: relative;
 	}
 
-	/* Restrict background shapes to chart area on mobile */
+	/* Restrict background shapes to chart area on mobile - make smaller and push to background */
 	.switch-circle-1,
 	.switch-circle-2,
 	.switch-circle-3,
@@ -1676,49 +1676,59 @@ body {
 		top: auto;
 		bottom: 0;
 		z-index: 0;
+		opacity: 0.3;
 	}
 
 	.switch-circle-1 {
+		width: 80px;
 		right: 5%;
 		bottom: 40%;
 	}
 
 	.switch-circle-2 {
+		width: 60px;
 		left: 5%;
 		bottom: 20%;
 	}
 
 	.switch-circle-3 {
+		width: 70px;
 		left: 10%;
 		bottom: 55%;
 	}
 
 	.switch-circle-4 {
+		width: 55px;
 		right: 15%;
 		bottom: 15%;
 	}
 
 	.switch-circle-5 {
+		width: 65px;
 		left: 12%;
 		bottom: 35%;
 	}
 
 	.switch-x-1 {
+		width: 70px;
 		left: 3%;
 		bottom: 50%;
 	}
 
 	.switch-x-2 {
+		width: 80px;
 		right: 4%;
 		bottom: 10%;
 	}
 
 	.switch-x-3 {
+		width: 60px;
 		right: 8%;
 		bottom: 60%;
 	}
 
 	.switch-x-4 {
+		width: 65px;
 		left: 20%;
 		bottom: 25%;
 	}
@@ -1726,6 +1736,26 @@ body {
 	.insurance-chart {
 		position: relative;
 		z-index: 1;
+	}
+
+	/* Make pie chart bigger on mobile */
+	.semi-pie-chart {
+		width: 140%;
+		max-width: 140%;
+		margin-left: -20%;
+	}
+
+	/* Bring labels closer to chart on mobile */
+	.semi-pie-chart .label-group text:first-child {
+		font-size: 28px;
+	}
+
+	.semi-pie-chart .label-group text:nth-child(2) {
+		font-size: 16px;
+	}
+
+	.semi-pie-chart .label-group text:nth-child(3) {
+		font-size: 13px;
 	}
 
 	.contact {
