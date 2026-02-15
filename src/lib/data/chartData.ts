@@ -7,17 +7,17 @@ export const segments = [
 ];
 
 export const connectors = [
-	{ id: 1, cx: 451, cy: 126, path: 'M 451,126 L 473,89 H 530', color: '#c9a0dc' },
-	{ id: 2, cx: 590, cy: 225, path: 'M 590,225 L 636,197 H 700', color: '#92278f' },
-	{ id: 3, cx: 545, cy: 488, path: 'M 545,488 L 587,522 H 645', color: '#a7d8e9' },
-	{ id: 4, cx: 228, cy: 455, path: 'M 228,455 L 197,480 H 155', color: '#ff0095' },
-	{ id: 5, cx: 277, cy: 158, path: 'M 277,158 L 225,113 H 145', color: '#4dadc9' }
+	{ id: 1, cx: 451, cy: 126, path: 'M 451,126 L 465,105 H 495', color: '#c9a0dc' },
+	{ id: 2, cx: 590, cy: 225, path: 'M 590,225 L 605,210 H 625', color: '#92278f' },
+	{ id: 3, cx: 545, cy: 488, path: 'M 545,488 L 560,500 H 580', color: '#a7d8e9' },
+	{ id: 4, cx: 228, cy: 455, path: 'M 228,455 L 213,467 H 195', color: '#ff0095' },
+	{ id: 5, cx: 277, cy: 158, path: 'M 277,158 L 255,135 H 230', color: '#4dadc9' }
 ];
 
 export const labels = [
-	{ id: 1, x: 535, y: 78, anchor: 'start', color: '#c9a0dc', pct: '7%', title: 'SPECIALTY', desc1: 'Tailored', desc2: 'solutions' },
-	{ id: 2, x: 705, y: 186, anchor: 'start', color: '#92278f', pct: '18%', title: 'BUSINESS', desc1: 'Enterprise', desc2: 'safeguard' },
-	{ id: 3, x: 650, y: 512, anchor: 'start', color: '#a7d8e9', pct: '25%', title: 'HOME', desc1: 'Property', desc2: 'protection' },
-	{ id: 4, x: 150, y: 470, anchor: 'end', color: '#ff0095', pct: '30%', title: 'LIFE', desc1: 'Security', desc2: 'for loved ones' },
-	{ id: 5, x: 140, y: 102, anchor: 'end', color: '#4dadc9', pct: '20%', title: 'AUTO', desc1: 'Vehicle', desc2: 'coverage' }
+	{ id: 1, x: 500, y: 95, anchor: 'start', color: '#c9a0dc', pct: '7%', title: 'SPECIALTY', desc1: 'Tailored', desc2: 'solutions' },
+	{ id: 2, x: 630, y: 200, anchor: 'start', color: '#92278f', pct: '18%', title: 'BUSINESS', desc1: 'Enterprise', desc2: 'safeguard' },
+	{ id: 3, x: 585, y: 490, anchor: 'start', color: '#a7d8e9', pct: '25%', title: 'HOME', desc1: 'Property', desc2: 'protection' },
+	{ id: 4, x: 190, y: 458, anchor: 'end', color: '#ff0095', pct: '30%', title: 'LIFE', desc1: 'Security', desc2: 'for loved ones' },
+	{ id: 5, x: 225, y: 125, anchor: 'end', color: '#4dadc9', pct: '20%', title: 'AUTO', desc1: 'Vehicle', desc2: 'coverage' }
 ];
