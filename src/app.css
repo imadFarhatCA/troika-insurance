@@ -1746,14 +1746,14 @@ body {
 	.semi-pie-chart {
 		width: 100%;
 		max-width: 100%;
-		transform: scale(1.6);
+		transform: scale(1.28);
 		transform-origin: center center;
 	}
 
 	/* Override graphBob animation to preserve scale on mobile */
 	@keyframes graphBob {
-		0%, 100% { transform: scale(1.6) translateY(0); }
-		50% { transform: scale(1.6) translateY(-8px); }
+		0%, 100% { transform: scale(1.28) translateY(0); }
+		50% { transform: scale(1.28) translateY(-8px); }
 	}
 
 	/* Adjust label sizes on mobile */
