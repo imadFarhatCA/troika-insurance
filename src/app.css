@@ -1748,11 +1748,21 @@ body {
 	}
 
 	.semi-pie-chart {
-		width: 130%;
-		max-width: 130%;
+		width: 150%;
+		max-width: 150%;
 	}
 
-	/* Bring labels closer to chart on mobile */
+	/* Bring labels and connectors closer to chart on mobile */
+	.semi-pie-chart .connector {
+		transform: scale(0.5);
+		transform-origin: 400px 330px;
+	}
+
+	.semi-pie-chart .label-group {
+		transform: scale(0.85);
+		transform-origin: 400px 330px;
+	}
+
 	.semi-pie-chart .label-group text:first-child {
 		font-size: 28px;
 	}
