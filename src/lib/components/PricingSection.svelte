@@ -417,6 +417,16 @@
 			padding: 15px;
 		}
 
+		/* Reset custom bubble padding for mobile */
+		.bubble-1 .bubble-content,
+		.bubble-2 .bubble-content,
+		.bubble-3 .bubble-content,
+		.bubble-4 .bubble-content,
+		.bubble-5 .bubble-content {
+			padding: 15px;
+			margin-top: 0;
+		}
+
 		.icon-wrapper {
 			margin-bottom: 12px;
 		}
