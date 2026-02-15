@@ -436,7 +436,7 @@
 		}
 
 		.bubble-description {
-			margin: 0 0 8px 0;
+			display: none;
 		}
 	}
 

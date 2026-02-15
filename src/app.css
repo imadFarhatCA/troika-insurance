@@ -1615,15 +1615,16 @@ body {
 	.hero-content h1 {
 		font-size: 42px;
 		letter-spacing: -1px;
+		text-align: left;
 	}
 
 	.hero-subtitle {
 		font-size: 18px;
+		text-align: left;
 	}
 
-	.btn-primary {
-		padding: 19px 64px;
-		font-size: 16px;
+	.hero .btn-primary {
+		text-align: left;
 	}
 
 	.about {
