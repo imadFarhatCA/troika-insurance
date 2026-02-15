@@ -1875,6 +1875,17 @@ body {
 		max-height: 400px;
 	}
 
+	.gradient-overlay {
+		height: 100px;
+		background: linear-gradient(to bottom, rgba(249, 250, 251, 0), rgba(249, 250, 251, 0.8) 40%, #f9fafb);
+	}
+
+	.see-more-btn {
+		margin: 30px auto 0;
+		padding: 10px 24px;
+		font-size: 14px;
+	}
+
 	.insurer-logo-item img {
 		height: 119px;
 		max-width: 130px;
