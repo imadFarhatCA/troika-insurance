@@ -21,7 +21,7 @@
 			<a href="#homeowners">Homeowners</a>
 			<a href="#commercial">Commercial</a>
 			<a href="#car">Car</a>
-			<a href="#about">About</a>
+			<a href="/about">About</a>
 			<a href="#claims">Claims</a>
 			<div class="social-icons">
 				<a href="#contact" class="social-icon" aria-label="Contact">
