@@ -1737,20 +1737,17 @@ body {
 	.insurance-chart {
 		position: relative;
 		z-index: 1;
-	}
-
-	/* Make pie chart bigger and centered on mobile */
-	.insurance-chart {
-		position: relative;
-		z-index: 1;
 		display: flex;
 		justify-content: center;
 		overflow: visible;
+		margin: 40px -40px;
 	}
 
 	.semi-pie-chart {
-		width: 180%;
-		max-width: 180%;
+		width: 100%;
+		max-width: 100%;
+		transform: scale(1.6);
+		transform-origin: center center;
 	}
 
 	/* Adjust label sizes on mobile */
@@ -1766,7 +1763,7 @@ body {
 		font-size: 11px;
 	}
 
-	/* Hide connector lines on mobile for cleaner look */
+	/* Make connector lines more subtle on mobile */
 	.semi-pie-chart .connector path {
 		opacity: 0.2;
 	}
