@@ -18,8 +18,8 @@
 	<section class="hero">
 		<div class="hero-container">
 			<div class="hero-content">
-				<h1>Insurance that doesn't feel like insurance</h1>
-				<p class="hero-subtitle">Fast, friendly, and transparent coverage for your home, car, and business.</p>
+				<h1>Peace of mind takes more than a policy.</h1>
+				<p class="hero-subtitle">Your Premium Insurance Brokers for Home, Auto & Business</p>
 				<a href="#quote" class="btn-primary">Get a Quote</a>
 			</div>
 			<HeroIllustration />

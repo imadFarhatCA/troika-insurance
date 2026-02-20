@@ -5,8 +5,8 @@
 <section id="contact" class="contact">
 	<div class="container">
 		<div class="contact-hero">
-			<h2 class="contact-title">Let's start a conversation</h2>
-			<p class="contact-lead">Whether you need a quote, have questions, or want to learn more about our services—we're just a message away.</p>
+			<h2 class="contact-title">Let's protect what matters most.</h2>
+			<p class="contact-lead">Tell us about your property, business, or activities, and we'll provide a quote that reflects your real risks—not just a generic policy.</p>
 		</div>
 
 		<div class="contact-bento">
