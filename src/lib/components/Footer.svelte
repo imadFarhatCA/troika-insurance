@@ -18,7 +18,7 @@
 				</div>
 				<div class="footer-column">
 					<h4>Company</h4>
-					<a href="/about">About</a>
+					<a href="/our-approach">Our Approach</a>
 					<a href="#claims">Claims</a>
 					<a href="#contact">Contact</a>
 				</div>

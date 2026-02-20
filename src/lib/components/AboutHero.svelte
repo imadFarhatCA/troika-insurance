@@ -30,15 +30,18 @@
 <section class="minimal-hero">
 	<div class="container">
 		<div class="hero-content">
-			<div class="eyebrow-tag" class:animated={animatedElements.tag}>About Us</div>
+			<div class="eyebrow-tag" class:animated={animatedElements.tag}>Our Approach</div>
 
-			<h1 class="hero-title" class:animated={animatedElements.title}>
-				Protection that matters most.
-			</h1>
+			<div class="hero-text-group" class:animated={animatedElements.title}>
+				<h1 class="hero-title">
+					Our Promise,<br>Peace of Mind, Delivered
+				</h1>
 
-			<p class="hero-description" class:animated={animatedElements.description}>
-				Introducing Troika Insurance, a personal insurance partner that gives you the convenience of expert guidance, without compromising on transparency.
-			</p>
+				<p class="hero-description">
+					<span class="hero-desc-line">We simplify insurance, eliminate uncertainty, and protect the things you've worked hard to build. From your first conversation to claims support.</span>
+					<span class="hero-desc-line">We stand beside you — every step of the way.</span>
+				</p>
+			</div>
 
 			<div class="hero-stats" class:animated={animatedElements.stats}>
 				<div class="stat-badge">

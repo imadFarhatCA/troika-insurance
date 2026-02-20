@@ -30,7 +30,7 @@
 			<a href="#homeowners" on:click={onToggle}>Homeowners</a>
 			<a href="#commercial" on:click={onToggle}>Commercial</a>
 			<a href="#car" on:click={onToggle}>Car</a>
-			<a href="/about" on:click={onToggle}>About</a>
+			<a href="/our-approach" on:click={onToggle}>Our Approach</a>
 			<a href="#claims" on:click={onToggle}>Claims</a>
 			<a href="#contact" on:click={onToggle}>Contact</a>
 		</nav>
@@ -141,7 +141,7 @@
 		text-decoration: none;
 		color: #4a4a4a;
 		font-size: 28px;
-		font-weight: 600;
+		font-weight: 300;
 		transition: color 0.2s;
 	}
 

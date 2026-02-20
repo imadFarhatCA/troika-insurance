@@ -2293,6 +2293,11 @@ body {
 	z-index: auto;
 }
 
+.hero-text-group {
+	width: 100%;
+	text-align: center;
+}
+
 .minimal-hero .hero-content > *:not(.hero-actions):not(.trust-indicators) {
 	opacity: 0;
 	transform: translateY(40px);
@@ -2330,6 +2335,16 @@ body {
 	margin: 0 0 20px 0;
 	line-height: 1.1;
 	letter-spacing: -1.5px;
+	text-align: center;
+}
+
+.minimal-hero .hero-title,
+.minimal-hero .hero-description {
+	text-align: center;
+}
+
+.hero-desc-line {
+	display: block;
 }
 
 .hero-description {
@@ -2528,6 +2543,25 @@ body {
 
 .value-header {
 	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.value-header-text {
+	flex: 1;
+}
+
+.value-arrow {
+	flex-shrink: 0;
+	color: currentColor;
+	opacity: 0.5;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.value-item.expanded .value-arrow {
+	transform: rotate(180deg);
+	opacity: 1;
 }
 
 .value-header h2::after {
@@ -2595,13 +2629,12 @@ body {
 }
 
 .value-content {
-	margin-top: 48px;
+	margin: 48px auto 0;
 	padding-top: 40px;
 	border-top: 2px solid #f3e8f3;
 	animation: slideDown 0.5s ease-out;
 	max-width: 800px;
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;
 }
 
 @keyframes slideDown {
@@ -2794,6 +2827,227 @@ body {
 	color: white;
 	transform: scale(1.05) rotate(-5deg);
 	box-shadow: 0 8px 20px rgba(146, 39, 143, 0.25);
+}
+
+
+/* ---- Power of Three ---- */
+.pot-wrapper {
+	margin-top: 56px;
+	padding-top: 48px;
+	border-top: 1px solid #e5e7eb;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.pot-eyebrow {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--color-accent-pink);
+	margin-bottom: 40px;
+}
+
+.pot-trio {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+
+.pot-node {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.pot-circle {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	border: 2px solid #e5e7eb;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+	font-weight: 600;
+	color: #374151;
+	transition: all 0.3s ease;
+}
+
+.pot-circle-accent {
+	background: linear-gradient(135deg, var(--color-primary) 0%, #a550a2 100%);
+	border-color: transparent;
+	color: #fff;
+	box-shadow: 0 8px 24px rgba(146, 39, 143, 0.3);
+	width: 108px;
+	height: 108px;
+	font-size: 17px;
+}
+
+.pot-node-accent .pot-role {
+	color: var(--color-primary);
+	font-weight: 600;
+}
+
+.pot-role {
+	font-size: 12px;
+	color: #9ca3af;
+	letter-spacing: 0.04em;
+}
+
+.pot-arrow {
+	display: flex;
+	align-items: center;
+	color: #d1d5db;
+	padding: 0 8px;
+	margin-bottom: 22px;
+}
+
+.pot-line {
+	display: block;
+	width: 32px;
+	height: 1px;
+	background: #e5e7eb;
+}
+
+.pot-goal {
+	font-size: 17px;
+	line-height: 1.7;
+	color: #4b5563;
+	max-width: 520px;
+	text-align: center;
+	margin-bottom: 36px;
+}
+
+.pot-goal em {
+	font-style: normal;
+	color: var(--color-primary);
+	font-weight: 600;
+}
+
+.pot-steps {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f9fafb;
+	border: 1px solid #e5e7eb;
+	border-radius: 16px;
+	padding: 28px 40px;
+	max-width: 520px;
+	width: 100%;
+	margin-bottom: 36px;
+}
+
+.pot-step {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	flex: 1;
+}
+
+.pot-step-num {
+	font-size: 48px;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	color: var(--color-accent-pink);
+	line-height: 1;
+}
+
+.pot-step-text {
+	font-size: 13px;
+	font-weight: 600;
+	color: #1f2937;
+	letter-spacing: 0.02em;
+}
+
+.pot-step-divider {
+	width: 1px;
+	height: 56px;
+	background: #e5e7eb;
+	margin: 0 20px;
+	flex-shrink: 0;
+}
+
+.pot-closing {
+	font-size: 15px;
+	line-height: 1.8;
+	color: #6b7280;
+	max-width: 540px;
+	font-style: italic;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.pot-wrapper {
+		margin-top: 40px;
+		padding-top: 36px;
+	}
+
+	.pot-trio {
+		gap: 0;
+	}
+
+	.pot-circle {
+		width: 68px;
+		height: 68px;
+		font-size: 13px;
+	}
+
+	.pot-circle-accent {
+		width: 82px;
+		height: 82px;
+		font-size: 15px;
+	}
+
+	.pot-line {
+		width: 16px;
+	}
+
+	.pot-arrow {
+		padding: 0 2px;
+	}
+
+	.pot-goal {
+		font-size: 15px;
+	}
+
+	.pot-steps {
+		padding: 20px 16px;
+		gap: 0;
+		max-width: 100%;
+	}
+
+	.pot-step-num {
+		font-size: 34px;
+	}
+
+	.pot-step-text {
+		font-size: 11px;
+	}
+
+	.pot-step-divider {
+		height: 44px;
+		margin: 0 10px;
+	}
+
+	.pot-closing {
+		font-size: 14px;
+	}
+}
+
+.benefit-network-heading {
+	font-size: 22px;
+	font-weight: 600;
+	color: #1f2937;
+	margin: 48px 0 32px;
+	padding-top: 40px;
+	border-top: 1px solid #e5e7eb;
 }
 
 .benefit-card h3 {
@@ -2992,9 +3246,6 @@ body {
 		margin-bottom: 40px;
 	}
 
-	.hero-description br {
-		display: none;
-	}
 
 	.hero-stats {
 		gap: 20px;
@@ -3015,6 +3266,7 @@ body {
 
 	.hero-actions {
 		flex-direction: column;
+		align-items: center;
 		gap: 12px;
 		margin-bottom: 48px;
 	}
