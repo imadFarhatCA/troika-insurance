@@ -2772,9 +2772,21 @@ body {
 
 .benefit-grid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(6, 1fr);
 	gap: 24px;
 	margin-top: 40px;
+}
+
+.benefit-grid .benefit-card {
+	grid-column: span 2;
+}
+
+.benefit-grid .benefit-card:nth-child(4) {
+	grid-column: 2 / 4;
+}
+
+.benefit-grid .benefit-card:nth-child(5) {
+	grid-column: 4 / 6;
 }
 
 .benefit-card {
@@ -3387,6 +3399,12 @@ body {
 		grid-template-columns: 1fr;
 		gap: 16px;
 		margin-top: 28px;
+	}
+
+	.benefit-grid .benefit-card,
+	.benefit-grid .benefit-card:nth-child(4),
+	.benefit-grid .benefit-card:nth-child(5) {
+		grid-column: span 1;
 	}
 
 	.benefit-card {
