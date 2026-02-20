@@ -6,8 +6,8 @@
 
 <section class="switch-section">
 	<div class="container">
-		<h2>We can help you get Insured across the board!</h2>
-		<p class="switch-subtitle">Whichever category your insurance falls under, we have the expertise to help you get the best out of it</p>
+		<h2>Full-Spectrum Protection for Your Life and Work</h2>
+		<p class="switch-subtitle">Your risks are unique — your insurance should be too. We offer a complete suite of commercial, personal, and specialized coverage, all supported by expert guidance and access to Canada's top insurers. Whatever you're building, growing, or protecting, we're here to make sure you're covered with confidence.</p>
 
 		<div class="insurance-chart">
 			<SemiPieChart />

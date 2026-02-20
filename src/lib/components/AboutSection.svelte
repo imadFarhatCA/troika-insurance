@@ -28,7 +28,7 @@
 		{
 			id: 'tailored',
 			title: 'Tailored Protection',
-			description: 'Three parties, one common goal: your best interest at the center of every decision.',
+			description: 'We work under a "power of three" philosophy: you, us, and the insurer. Three parties, one common goal, your best interest at the center of every decision.',
 			color: '#a7d8e9',
 			colorCode: 'A7-D8E9',
 			colorName: 'Sky Blue',

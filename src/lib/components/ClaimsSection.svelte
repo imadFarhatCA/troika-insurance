@@ -14,8 +14,10 @@
 
 <section id="claims" class="claims">
 	<div class="claims-hero">
-		<h2>Lightning-fast claims</h2>
-		<p class="claims-description">File a claim from your phone and get paid in minutes. Our AI handles the paperwork so you don't have to.</p>
+		<h2>By Your Side When Life Takes a Turn</h2>
+		<p class="claims-description">When a claim happens, it's more than paperwork — it's a moment of uncertainty that can impact your life, your business, and your peace of mind.</p>
+		<p class="claims-description">At Troika, we understand that this is when insurance needs to work… and when we need to be right by your side.</p>
+		<p class="claims-description">This is where our commitment becomes action.</p>
 		<button class="btn-claims-cta" on:click={openModal}>File a Claim Now</button>
 	</div>
 </section>

@@ -1740,20 +1740,23 @@ body {
 		display: flex;
 		justify-content: center;
 		overflow: visible;
-		margin: 40px -40px;
+		width: 100vw;
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 40px 0;
 	}
 
 	.semi-pie-chart {
 		width: 100%;
 		max-width: 100%;
-		transform: scale(1.15);
+		transform: scale(1.35) translateX(15px);
 		transform-origin: center center;
 	}
 
 	/* Override graphBob animation to preserve scale on mobile */
 	@keyframes graphBob {
-		0%, 100% { transform: scale(1.15) translateY(0); }
-		50% { transform: scale(1.15) translateY(-8px); }
+		0%, 100% { transform: scale(1.35) translateX(15px) translateY(0); }
+		50% { transform: scale(1.35) translateX(15px) translateY(-8px); }
 	}
 
 	/* Adjust label sizes on mobile */
@@ -1816,28 +1819,28 @@ body {
 	}
 
 	.pantone-cards-container {
-		height: 550px;
+		height: 440px;
 		padding: 20px;
 	}
 
 	.pantone-card {
-		width: 240px;
+		width: 185px;
 		animation: none;
 	}
 
 	.pantone-card-1 {
-		top: 80px;
-		transform: translateX(calc(-50% - 110px)) rotate(-12deg);
+		top: 70px;
+		transform: translateX(calc(-50% - 85px)) rotate(-12deg);
 	}
 
 	.pantone-card-2 {
-		top: 50px;
+		top: 40px;
 		transform: translateX(-50%) rotate(0deg);
 	}
 
 	.pantone-card-3 {
-		top: 80px;
-		transform: translateX(calc(-50% + 110px)) rotate(12deg);
+		top: 70px;
+		transform: translateX(calc(-50% + 85px)) rotate(12deg);
 	}
 
 	.pantone-card:hover {
@@ -1846,7 +1849,7 @@ body {
 	}
 
 	.pantone-card-1:hover {
-		transform: translateX(calc(-50% - 110px)) scale(1.03) rotate(-10deg);
+		transform: translateX(calc(-50% - 85px)) scale(1.03) rotate(-10deg);
 	}
 
 	.pantone-card-2:hover {
@@ -1854,12 +1857,12 @@ body {
 	}
 
 	.pantone-card-3:hover {
-		transform: translateX(calc(-50% + 110px)) scale(1.03) rotate(10deg);
+		transform: translateX(calc(-50% + 85px)) scale(1.03) rotate(10deg);
 	}
 
 	.pantone-color-block {
-		padding: 24px 20px 32px;
-		min-height: 220px;
+		padding: 18px 16px 24px;
+		min-height: 175px;
 	}
 
 	.pantone-title {
@@ -2256,7 +2259,7 @@ body {
 	line-height: 1.1;
 }
 
-.hero-subtitle {
+.minimal-hero .hero-subtitle {
 	font-size: 20px;
 	line-height: 1.6;
 	max-width: 700px;
@@ -2769,7 +2772,7 @@ body {
 
 .benefit-grid {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 24px;
 	margin-top: 40px;
 }
@@ -3193,7 +3196,7 @@ body {
 		margin-bottom: 16px;
 	}
 
-	.hero-subtitle {
+	.minimal-hero .hero-subtitle {
 		font-size: 16px;
 		padding: 0 20px;
 	}
