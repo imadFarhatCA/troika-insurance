@@ -27,12 +27,12 @@
 			</svg>
 		</button>
 		<nav class="mobile-nav">
-			<a href="#homeowners" on:click={onToggle}>Homeowners</a>
-			<a href="#commercial" on:click={onToggle}>Commercial</a>
-			<a href="#car" on:click={onToggle}>Car</a>
+			<a href="/#homeowners" on:click={onToggle}>Homeowners</a>
+			<a href="/#commercial" on:click={onToggle}>Commercial</a>
+			<a href="/#car" on:click={onToggle}>Car</a>
 			<a href="/our-approach" on:click={onToggle}>Our Approach</a>
-			<a href="#claims" on:click={onToggle}>Claims</a>
-			<a href="#contact" on:click={onToggle}>Contact</a>
+			<a href="/#claims" on:click={onToggle}>Claims</a>
+			<a href="/#contact" on:click={onToggle}>Contact</a>
 		</nav>
 	</div>
 {/if}

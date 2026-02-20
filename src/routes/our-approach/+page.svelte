@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Navigation from '$lib/components/Navigation.svelte';
-	import Footer from '$lib/components/Footer.svelte';
 	import AboutHero from '$lib/components/AboutHero.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 
@@ -16,8 +14,6 @@
 </svelte:head>
 
 <div class="page">
-	<Navigation />
-
 	<AboutHero />
 
 	<!-- Mission Section -->
@@ -308,5 +304,4 @@
 		</div>
 	</section>
 
-	<Footer />
 </div>

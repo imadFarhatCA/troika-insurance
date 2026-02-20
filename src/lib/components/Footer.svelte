@@ -12,15 +12,15 @@
 			<div class="footer-links">
 				<div class="footer-column">
 					<h4>Products</h4>
-					<a href="#homeowners">Homeowners</a>
-					<a href="#commercial">Commercial</a>
-					<a href="#car">Car</a>
+					<a href="/#homeowners">Homeowners</a>
+					<a href="/#commercial">Commercial</a>
+					<a href="/#car">Car</a>
 				</div>
 				<div class="footer-column">
 					<h4>Company</h4>
 					<a href="/our-approach">Our Approach</a>
-					<a href="#claims">Claims</a>
-					<a href="#contact">Contact</a>
+					<a href="/#claims">Claims</a>
+					<a href="/#contact">Contact</a>
 				</div>
 			</div>
 		</div>

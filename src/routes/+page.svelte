@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Navigation from '$lib/components/Navigation.svelte';
 	import HeroIllustration from '$lib/components/HeroIllustration.svelte';
 	import PricingSection from '$lib/components/PricingSection.svelte';
 	import AboutSection from '$lib/components/AboutSection.svelte';
@@ -8,12 +7,9 @@
 	import ClaimsSection from '$lib/components/ClaimsSection.svelte';
 	import ContactSection from '$lib/components/ContactSection.svelte';
 	import SocialImpactSection from '$lib/components/SocialImpactSection.svelte';
-	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <div class="page">
-	<Navigation />
-
 	<!-- Hero Section -->
 	<section class="hero">
 		<div class="hero-container">
@@ -33,5 +29,4 @@
 	<ClaimsSection />
 	<ContactSection />
 	<SocialImpactSection />
-	<Footer />
 </div>
