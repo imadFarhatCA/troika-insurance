@@ -7,27 +7,21 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
 	{
-		initials: 'JD',
-		name: 'John Davis',
-		handle: '@johndavis',
-		quote: "Switched to Troika for homeowners insurance and couldn't be happier. The process was incredibly smooth and I'm saving $200/year!"
+		initials: 'C',
+		name: 'Client',
+		handle: 'AssurUni Review',
+		quote: "Best service ever, no more stressful time shopping around and renegotiating insurance. With Mr Aiman Alameddine I don't worry about that anymore and I always have the best premiums for the best prices."
 	},
 	{
-		initials: 'SM',
-		name: 'Sarah Martinez',
-		handle: '@sarahm',
-		quote: 'Filed a claim and got paid in literally 3 minutes. This is the future of insurance. No more waiting weeks for a response!'
+		initials: 'C',
+		name: 'Client',
+		handle: 'AssurUni Review',
+		quote: 'Ask for Aiman Alameddine. He is professional and doing a very good job — you feel that he is with you all the way and he is making himself available for you anytime. Great person, great service, and great quality.'
 	},
 	{
-		initials: 'MK',
-		name: 'Michael Kim',
-		handle: '@mkim_biz',
-		quote: "Best business insurance I've found. Clear pricing, no hidden fees, and actual human support when I need it."
-	},
-	{
-		initials: 'AL',
-		name: 'Amanda Lopez',
-		handle: '@alopez',
-		quote: 'Finally, an insurance company that speaks plain English. Got my car insured in under 5 minutes from my phone.'
+		initials: 'C',
+		name: 'Client',
+		handle: 'AssurUni Review',
+		quote: 'It was an absolute pleasure to work with him! He listened to what I needed and was there every step of the way. Very professional, knowledgeable and patient.'
 	}
 ];

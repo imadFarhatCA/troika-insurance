@@ -4,8 +4,8 @@
 
 <section class="testimonials">
 	<div class="container">
-		<h2>The (Almost) 5 Star Insurance Company</h2>
-		<p class="testimonials-subtitle">Troika has earned top ratings from customers,<br/>and is trusted by thousands of families and businesses</p>
+		<h2>Trust, Earned One Client at a Time</h2>
+		<p class="testimonials-subtitle">Troika has earned top ratings from customers,<br/>and is trusted by hundreds of families and businesses</p>
 
 		<div class="stars-container">
 			{#each Array(5) as _, i}
