@@ -41,11 +41,6 @@
 		'Professional firms'
 	];
 
-	const philosophyPillars = [
-		{ label: 'Asset Protection', icon: 'building' },
-		{ label: 'Revenue Protection', icon: 'trending-up' },
-		{ label: 'Liability Protection', icon: 'shield' }
-	];
 
 	const cards = [
 		{
@@ -193,35 +188,6 @@
 
 		</div>
 
-		<!-- Troika Philosophy -->
-		<div class="philosophy-container">
-			<div class="philosophy-inner">
-				<p class="philosophy-eyebrow">Troika Philosophy</p>
-				<p class="philosophy-tagline">Three pillars. One objective. Your continuity.</p>
-				<div class="philosophy-pillars">
-					{#each philosophyPillars as pillar}
-						<div class="philosophy-pillar">
-							<div class="pillar-icon">
-								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-									{#if pillar.icon === 'building'}
-										<rect x="2" y="3" width="20" height="18" rx="1"/><path d="M9 3v18"/><path d="M5 8h1"/><path d="M5 12h1"/><path d="M5 16h1"/><path d="M13 8h3"/><path d="M13 12h3"/><path d="M13 16h3"/>
-									{:else if pillar.icon === 'trending-up'}
-										<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
-									{:else if pillar.icon === 'shield'}
-										<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-									{/if}
-								</svg>
-							</div>
-							<span class="pillar-label">{pillar.label}</span>
-						</div>
-						{#if pillar !== philosophyPillars[philosophyPillars.length - 1]}
-							<div class="pillar-connector" aria-hidden="true">+</div>
-						{/if}
-					{/each}
-				</div>
-				<p class="philosophy-footer">Together, forming true business stability.</p>
-			</div>
-		</div>
 	</section>
 
 	<!-- CTA -->
@@ -312,7 +278,7 @@
 /* ── Troika Difference ─────────────────────────────────── */
 .troika-diff-section {
 	background: #f9f9fb;
-	padding: 80px 0 0;
+	padding: 80px 0;
 }
 
 .troika-diff-container {
@@ -428,87 +394,6 @@
 	opacity: 0.5;
 }
 
-/* ── Troika Philosophy ─────────────────────────────────── */
-.philosophy-container {
-	margin-top: 64px;
-	border-top: 1px solid #e8e8ea;
-	padding: 48px 0 64px;
-}
-
-.philosophy-inner {
-	max-width: 1080px;
-	margin: 0 auto;
-	padding: 0 40px;
-	text-align: center;
-}
-
-.philosophy-eyebrow {
-	font-size: 11px;
-	font-weight: 700;
-	letter-spacing: 1.6px;
-	text-transform: uppercase;
-	color: #92278f;
-	margin: 0 0 10px;
-}
-
-.philosophy-tagline {
-	font-size: 22px;
-	font-weight: 700;
-	color: #111827;
-	margin: 0 0 36px;
-}
-
-.philosophy-pillars {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 20px;
-	flex-wrap: wrap;
-	margin-bottom: 32px;
-}
-
-.philosophy-pillar {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 10px;
-	background: #fff;
-	border: 1px solid #e8e8ea;
-	border-radius: 16px;
-	padding: 24px 32px;
-	min-width: 180px;
-}
-
-.pillar-icon {
-	width: 44px;
-	height: 44px;
-	border-radius: 12px;
-	background: #92278f;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #fff;
-}
-
-.pillar-label {
-	font-size: 14px;
-	font-weight: 600;
-	color: #111827;
-}
-
-.pillar-connector {
-	font-size: 22px;
-	font-weight: 300;
-	color: #c7a0cb;
-}
-
-.philosophy-footer {
-	font-size: 15px;
-	color: #6b7280;
-	font-style: italic;
-	margin: 0;
-}
-
 /* ── Responsive ────────────────────────────────────────── */
 @media (max-width: 980px) {
 	.troika-diff-container {
@@ -536,21 +421,8 @@
 		padding: 0 24px;
 	}
 
-	.philosophy-inner {
-		padding: 0 24px;
-	}
-
 	.core-idea-lead {
 		font-size: 18px;
-	}
-
-	.philosophy-pillar {
-		min-width: 140px;
-		padding: 18px 20px;
-	}
-
-	.pillar-connector {
-		display: none;
 	}
 }
 </style>

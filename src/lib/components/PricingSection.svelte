@@ -133,7 +133,7 @@
 
 	.bubble-1 {
 		top: 50px;
-		left: 5%;
+		left: 10%;
 		z-index: 3;
 		animation-delay: 0s;
 	}
@@ -147,14 +147,14 @@
 
 	.bubble-3 {
 		top: 120px;
-		left: 52%;
+		left: 48%;
 		z-index: 2;
 		animation-delay: 2s;
 	}
 
 	.bubble-4 {
 		top: 40px;
-		right: 8%;
+		right: 12%;
 		z-index: 4;
 		animation-delay: 1.5s;
 	}
@@ -420,6 +420,11 @@
 		.pricing {
 			padding: 60px 16px 100px;
 		}
+
+		.bubble-1 { left: 2%; }
+		.bubble-2 { right: 2%; }
+		.bubble-3 { top: 360px; left: 2%; }
+		.bubble-4 { top: 430px; right: 2%; }
 
 		.pricing h2 {
 			font-size: 28px;
