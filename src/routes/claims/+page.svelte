@@ -485,6 +485,10 @@
 		gap: 40px;
 	}
 
+	.contact-text {
+		text-align: center;
+	}
+
 	.advocate-grid {
 		grid-template-columns: 1fr;
 	}
