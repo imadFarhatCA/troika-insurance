@@ -445,8 +445,8 @@
 		}
 
 		.bubble-2 {
-			width: 270px;
-			height: 270px;
+			width: 216px;
+			height: 216px;
 		}
 
 		.bubble-large {
