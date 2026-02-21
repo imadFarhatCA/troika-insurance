@@ -22,6 +22,7 @@
 			<a href="/#commercial">Commercial</a>
 			<a href="/#car">Car</a>
 			<a href="/our-approach">Our Approach</a>
+			<a href="/services">Services</a>
 			<a href="/#claims">Claims</a>
 			<div class="social-icons">
 				<a href="/#contact" class="social-icon" aria-label="Contact">
