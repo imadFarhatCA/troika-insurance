@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import TroikaProductCard from '$lib/components/TroikaProductCard.svelte';
-	import HomeIllustration from '$lib/components/HomeIllustration.svelte';
+	import homeownersIcon from '$lib/assets/icons/HOMEOWNERS Icon.svg';
 
 	let animated = { tag: false, title: false, description: false, action: false };
 	let cardsVisible = false;
@@ -141,7 +141,9 @@
 
 				<!-- Right: illustration -->
 				<div class="hero-visual" class:animated={animated.title}>
-					<HomeIllustration />
+					<div class="icon-bubble">
+						<img src={homeownersIcon} alt="Homeowners Insurance" class="bubble-icon" />
+					</div>
 				</div>
 
 			</div>
@@ -266,6 +268,32 @@
 	opacity: 1;
 	transform: translateY(0) scale(1);
 }
+
+.icon-bubble {
+	width: 360px;
+	height: 360px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #ffffff, #f5f5f5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow:
+		0 8px 32px rgba(0, 0, 0, 0.07),
+		0 0 48px rgba(146, 39, 143, 0.18);
+	animation: heroBubbleFloat 6s ease-in-out infinite;
+}
+
+.bubble-icon {
+	width: 180px;
+	height: 180px;
+	display: block;
+}
+
+@keyframes heroBubbleFloat {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-14px); }
+}
+
 
 /* ── Products Section ──────────────────────────────────── */
 .products-section {
@@ -456,8 +484,18 @@
 	}
 
 	.hero-visual {
-		max-width: 340px;
-		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+	}
+
+	.icon-bubble {
+		width: 280px;
+		height: 280px;
+	}
+
+	.bubble-icon {
+		width: 140px;
+		height: 140px;
 	}
 }
 
