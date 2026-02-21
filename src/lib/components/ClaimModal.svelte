@@ -93,13 +93,16 @@
 					{:else if currentStep === 3}
 						<h2 class="modal-title">Provide us with your details</h2>
 						<div class="form-group">
-							<input type="text" bind:value={fullName} placeholder="Full Name" required />
+							<label for="claim-fullname" class="sr-only">Full Name</label>
+							<input id="claim-fullname" type="text" bind:value={fullName} placeholder="Full Name" required />
 						</div>
 						<div class="form-group">
-							<input type="tel" bind:value={phone} placeholder="Phone Number" required />
+							<label for="claim-phone" class="sr-only">Phone Number</label>
+							<input id="claim-phone" type="tel" bind:value={phone} placeholder="Phone Number" required />
 						</div>
 						<div class="form-group">
-							<input type="email" bind:value={email} placeholder="Email address" required />
+							<label for="claim-email" class="sr-only">Email Address</label>
+							<input id="claim-email" type="email" bind:value={email} placeholder="Email address" required />
 						</div>
 						<button class="submit-button" on:click={nextStep} disabled={!fullName || !phone || !email}>Next</button>
 
@@ -112,8 +115,8 @@
 
 					{:else if currentStep === 5}
 						<div class="success-icon">✓</div>
-						<h2 class="modal-title">thank you for your submission</h2>
-						<p class="success-message">we will review your submission and get back to you the soonest</p>
+						<h2 class="modal-title">Thank You for Your Submission</h2>
+						<p class="success-message">We will review your submission and get back to you as soon as possible.</p>
 						<div class="reference-box">
 							<p class="reference-label">Reference Number</p>
 							<p class="reference-number">{referenceNumber}</p>

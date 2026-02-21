@@ -3,7 +3,7 @@
 		'message-circle' | 'handshake' | 'target' | 'clock' | 'trending-up' | 'award' | 'star' |
 		'building' | 'truck' | 'layers' | 'zap' | 'file' | 'briefcase' | 'tag' | 'trending-down' |
 		'package' | 'tool' | 'home' | 'settings' | 'monitor' | 'car' | 'compass' | 'anchor' |
-		'bar-chart' | 'file-text' | 'coffee';
+		'bar-chart' | 'file-text' | 'coffee' | 'check';
 
 	export let name: IconName;
 	export let size: number = 24;
@@ -126,5 +126,7 @@
 		<line x1="6" y1="1" x2="6" y2="4"/>
 		<line x1="10" y1="1" x2="10" y2="4"/>
 		<line x1="14" y1="1" x2="14" y2="4"/>
+	{:else if name === 'check'}
+		<polyline points="20 6 9 17 4 12"/>
 	{/if}
 </svg>

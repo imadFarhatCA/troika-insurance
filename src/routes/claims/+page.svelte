@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import Icon from '$lib/components/Icon.svelte';
+	import ClaimModal from '$lib/components/ClaimModal.svelte';
 
 	let animated = { tag: false, title: false, action: false };
+	let isModalOpen = false;
 
 	onMount(() => {
 		setTimeout(() => { animated.tag = true; }, 150);
@@ -30,6 +33,12 @@
 
 <svelte:head>
 	<title>Claims Support – Troika Insurance</title>
+	<meta name="description" content="Troika stands with you when a claim happens. We act as your intermediary between you and the insurer — guiding, coordinating, and supporting you from report to resolution." />
+	<meta property="og:title" content="Claims Support – Troika Insurance" />
+	<meta property="og:description" content="Troika stands with you when a claim happens. We act as your intermediary between you and the insurer — guiding, coordinating, and supporting you from report to resolution." />
+	<meta property="og:url" content="https://troikainsurance.com/claims" />
+	<meta name="twitter:title" content="Claims Support – Troika Insurance" />
+	<meta name="twitter:description" content="Troika stands with you when a claim happens. We act as your intermediary between you and the insurer — guiding, coordinating, and supporting you from report to resolution." />
 </svelte:head>
 
 <div class="page">
@@ -72,31 +81,31 @@
 			<div class="advocate-grid">
 				<div class="advocate-item">
 					<div class="advocate-check">
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+						<Icon name="check" size={14} strokeWidth={2.5} />
 					</div>
 					<span>Report the claim properly and efficiently</span>
 				</div>
 				<div class="advocate-item">
 					<div class="advocate-check">
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+						<Icon name="check" size={14} strokeWidth={2.5} />
 					</div>
 					<span>Understand the process and what to expect</span>
 				</div>
 				<div class="advocate-item">
 					<div class="advocate-check">
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+						<Icon name="check" size={14} strokeWidth={2.5} />
 					</div>
 					<span>Communicate with the insurer and adjuster</span>
 				</div>
 				<div class="advocate-item">
 					<div class="advocate-check">
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+						<Icon name="check" size={14} strokeWidth={2.5} />
 					</div>
 					<span>Ensure required information is accurate and complete</span>
 				</div>
 				<div class="advocate-item">
 					<div class="advocate-check">
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+						<Icon name="check" size={14} strokeWidth={2.5} />
 					</div>
 					<span>Provide clarity and support from start to resolution</span>
 				</div>
@@ -121,7 +130,7 @@
 			</div>
 
 			<div class="model-cta">
-				<a href="/contact" class="btn-primary">Report a Claim</a>
+				<button class="btn-primary" on:click={() => isModalOpen = true}>Report a Claim</button>
 			</div>
 		</div>
 	</section>
@@ -182,6 +191,8 @@
 	</section>
 
 </div>
+
+<ClaimModal isOpen={isModalOpen} on:close={() => isModalOpen = false} />
 
 <style>
 /* ── Hero Icon ─────────────────────────────────────────── */
@@ -355,7 +366,7 @@
 
 .model-cta {
 	text-align: center;
-	margin-top: 48px;
+	margin-top: 78px;
 }
 
 /* ── Contact Section ───────────────────────────────────── */
