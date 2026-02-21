@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { claimModalOpen } from '$lib/claimStore';
 	export let open: boolean = false;
 	export let onToggle: () => void;
 </script>
@@ -32,7 +33,7 @@
 			<a href="/#car" on:click={onToggle}>Car</a>
 			<a href="/our-approach" on:click={onToggle}>Our Approach</a>
 			<a href="/services" on:click={onToggle}>Services</a>
-			<a href="/#claims" on:click={onToggle}>Claims</a>
+			<button class="mobile-claims-btn" on:click={() => { claimModalOpen.set(true); onToggle(); }}>Claims</button>
 			<a href="/#contact" on:click={onToggle}>Contact</a>
 		</nav>
 	</div>
@@ -147,6 +148,22 @@
 	}
 
 	.mobile-nav a:hover {
+		color: #92278f;
+	}
+
+	.mobile-claims-btn {
+		background: none;
+		border: none;
+		cursor: pointer;
+		color: #4a4a4a;
+		font-size: 28px;
+		font-weight: 300;
+		font-family: inherit;
+		padding: 0;
+		transition: color 0.2s;
+	}
+
+	.mobile-claims-btn:hover {
 		color: #92278f;
 	}
 

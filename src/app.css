@@ -91,6 +91,22 @@ body {
 	color: var(--color-primary);
 }
 
+.nav-claims-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: var(--color-text);
+	font-weight: 500;
+	font-size: 15px;
+	font-family: inherit;
+	padding: 0;
+	transition: color 0.2s;
+}
+
+.nav-claims-btn:hover {
+	color: var(--color-primary);
+}
+
 .social-icons {
 	display: flex;
 	align-items: center;
@@ -1367,6 +1383,10 @@ body {
 	letter-spacing: 0.5px;
 }
 
+.footer-column h4 .the {
+	text-transform: lowercase;
+}
+
 .footer-column a {
 	display: block;
 	color: var(--color-text-footer);
@@ -1377,6 +1397,24 @@ body {
 }
 
 .footer-column a:hover {
+	color: #ffffff;
+}
+
+.footer-claims-btn {
+	display: block;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: var(--color-text-footer);
+	font-size: 15px;
+	font-family: inherit;
+	padding: 0;
+	margin-bottom: 12px;
+	text-align: left;
+	transition: color 0.3s;
+}
+
+.footer-claims-btn:hover {
 	color: #ffffff;
 }
 
@@ -3226,36 +3264,57 @@ body {
 }
 
 .tab-btn {
+	position: relative;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	gap: 9px;
-	padding: 16px 28px;
+	gap: 10px;
+	padding: 28px 36px 24px;
 	background: none;
 	border: none;
-	border-bottom: 2px solid transparent;
-	margin-bottom: -2px;
 	cursor: pointer;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 500;
-	color: #6b7280;
-	transition: color 0.2s ease, border-color 0.2s ease;
+	color: #9ca3af;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
 	white-space: nowrap;
-	letter-spacing: 0.01em;
+	transition: color 0.25s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.tab-btn svg {
-	flex-shrink: 0;
-	transition: color 0.2s ease;
+.tab-btn::after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 4px;
+	height: 3px;
+	border-radius: 999px;
+	background: #92278f;
+	opacity: 0;
+	transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
 }
 
 .tab-btn:hover {
 	color: #92278f;
+	transform: translateY(-5px);
+}
+
+.tab-btn:hover::after {
+	width: 40%;
+	opacity: 0.45;
 }
 
 .tab-btn.active {
 	color: #92278f;
-	border-bottom-color: #92278f;
+	transform: translateY(-5px);
 	font-weight: 600;
+}
+
+.tab-btn.active::after {
+	width: 100%;
+	opacity: 1;
 }
 
 /* Animated Content Area */
@@ -3277,28 +3336,41 @@ body {
 }
 
 .service-item {
-	background: #f8f9fa;
-	border-radius: 16px;
-	padding: 32px 28px;
-	transition: background 0.2s ease, box-shadow 0.2s ease;
+	background: #ffffff;
+	border: 1px solid #eeeeee;
+	border-radius: 20px;
+	padding: 40px 28px 32px;
+	text-align: center;
+	transition: box-shadow 0.25s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .service-item:hover {
-	background: #f3f0f8;
-	box-shadow: 0 4px 20px rgba(146, 39, 143, 0.08);
+	box-shadow: 0 10px 36px rgba(146, 39, 143, 0.1);
+	transform: translateY(-4px);
 }
 
 .service-item-header {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	gap: 14px;
-	margin-bottom: 12px;
+	gap: 16px;
+	margin-bottom: 14px;
 }
 
-.service-emoji {
-	font-size: 28px;
-	line-height: 1;
-	flex-shrink: 0;
+.service-icon-wrapper {
+	width: 68px;
+	height: 68px;
+	border-radius: 50%;
+	background: rgba(146, 39, 143, 0.08);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #92278f;
+	transition: background 0.25s ease;
+}
+
+.service-item:hover .service-icon-wrapper {
+	background: rgba(146, 39, 143, 0.15);
 }
 
 .service-item h3 {
@@ -3312,7 +3384,7 @@ body {
 .service-item p {
 	font-size: 15px;
 	line-height: 1.65;
-	color: #4b5563;
+	color: #6b7280;
 	margin: 0;
 }
 
@@ -3336,10 +3408,36 @@ body {
 		padding: 0 20px;
 	}
 
+	.services-tabs {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		border-bottom: none;
+		gap: 8px;
+		margin-bottom: 32px;
+	}
+
 	.tab-btn {
-		padding: 14px 18px;
-		font-size: 13px;
-		gap: 7px;
+		padding: 18px 12px 16px;
+		font-size: 11px;
+		gap: 8px;
+		border-bottom: none;
+		border-radius: 14px;
+		border: 1px solid #e8e8e8;
+	}
+
+	.tab-btn::after {
+		display: none;
+	}
+
+	.tab-btn.active {
+		background: #92278f;
+		border-color: #92278f;
+		color: #ffffff;
+		transform: none;
+	}
+
+	.tab-btn:hover {
+		transform: none;
 	}
 
 	.service-items {
