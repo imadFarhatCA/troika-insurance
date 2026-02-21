@@ -119,6 +119,10 @@
 					</div>
 				{/each}
 			</div>
+
+			<div class="model-cta">
+				<a href="/contact" class="btn-primary">Report a Claim</a>
+			</div>
 		</div>
 	</section>
 
@@ -347,6 +351,11 @@
 	color: #4b5563;
 	line-height: 1.65;
 	margin: 0;
+}
+
+.model-cta {
+	text-align: center;
+	margin-top: 48px;
 }
 
 /* ── Contact Section ───────────────────────────────────── */
