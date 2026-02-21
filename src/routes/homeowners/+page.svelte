@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import TroikaProductCard from '$lib/components/TroikaProductCard.svelte';
+	import HomeIllustration from '$lib/components/HomeIllustration.svelte';
 
 	let animated = { tag: false, title: false, description: false, action: false };
 	let cardsVisible = false;
@@ -115,25 +116,34 @@
 <div class="page">
 
 	<!-- Hero -->
-	<section class="minimal-hero">
+	<section class="minimal-hero hero-split-section">
 		<div class="container">
-			<div class="hero-content">
-				<div class="eyebrow-tag" class:animated={animated.tag}>Residential Insurance</div>
+			<div class="hero-split">
 
-				<div class="hero-text-group" class:animated={animated.title}>
-					<h1 class="hero-title">
-						For Homeowners, Tenants,<br>Rental Properties, Plex Owners,<br>and Chalets
-					</h1>
-					<p class="hero-description">
-						<span class="hero-desc-line">This is not just home insurance. It is a structured protection system designed to protect your property, your financial stability, and your continuity after a loss.</span>
-						<span class="hero-desc-line">Whether you live in the property, rent it, or own it as an investment or secondary residence, a loss can create far more than physical damage — it can disrupt your living situation, your income, and your long-term financial stability.</span>
-						<span class="hero-desc-line">Troika Residential Continuity Protection™ ensures your home and your financial continuity remain secure.</span>
-					</p>
+				<!-- Left: text -->
+				<div class="hero-content hero-text-col">
+					<div class="eyebrow-tag" class:animated={animated.tag}>Residential Insurance</div>
+
+					<div class="hero-text-group" class:animated={animated.title}>
+						<h1 class="hero-title">
+							For Homeowners, Tenants,<br>Plex Owners,<br>and Chalets
+						</h1>
+						<p class="hero-description">
+							<span class="hero-desc-line">A structured protection system designed to protect your property, your financial stability, and your continuity after a loss.</span>
+							<span class="hero-desc-line">Whether you live in the property, rent it, or own it as an investment — Troika Residential Continuity Protection™ keeps you covered.</span>
+						</p>
+					</div>
+
+					<div class="hero-actions">
+						<a href="/contact" class="btn-primary-hero" class:animated={animated.action}>Get a Quote</a>
+					</div>
 				</div>
 
-				<div class="hero-actions">
-					<a href="/contact" class="btn-primary-hero" class:animated={animated.action}>Get a Quote</a>
+				<!-- Right: illustration -->
+				<div class="hero-visual" class:animated={animated.title}>
+					<HomeIllustration />
 				</div>
+
 			</div>
 		</div>
 	</section>
@@ -213,6 +223,50 @@
 </div>
 
 <style>
+/* ── Hero 2-column layout ──────────────────────────────── */
+.hero-split-section :global(.container) {
+	max-width: 1100px;
+}
+
+.hero-split {
+	display: grid;
+	grid-template-columns: 1fr 420px;
+	gap: 48px;
+	align-items: center;
+	padding: 60px 0 48px;
+}
+
+/* Override global centered hero-content for this page */
+.hero-text-col {
+	text-align: left !important;
+	max-width: none !important;
+	padding: 0 !important;
+	align-items: flex-start !important;
+}
+
+.hero-text-col :global(.hero-title),
+.hero-text-col :global(.hero-description) {
+	text-align: left !important;
+}
+
+.hero-text-col :global(.hero-actions) {
+	justify-content: flex-start !important;
+	margin-bottom: 0 !important;
+}
+
+.hero-visual {
+	opacity: 0;
+	transform: translateY(32px) scale(0.97);
+	transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+				transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+	transition-delay: 400ms;
+}
+
+.hero-visual.animated {
+	opacity: 1;
+	transform: translateY(0) scale(1);
+}
+
 /* ── Products Section ──────────────────────────────────── */
 .products-section {
 	padding: 80px 0 80px;
@@ -377,6 +431,33 @@
 	.troika-diff-container {
 		grid-template-columns: 1fr;
 		gap: 40px;
+	}
+}
+
+@media (max-width: 960px) {
+	.hero-split {
+		grid-template-columns: 1fr;
+		gap: 32px;
+		padding: 48px 0 32px;
+	}
+
+	.hero-text-col {
+		text-align: center !important;
+		align-items: center !important;
+	}
+
+	.hero-text-col :global(.hero-title),
+	.hero-text-col :global(.hero-description) {
+		text-align: center !important;
+	}
+
+	.hero-text-col :global(.hero-actions) {
+		justify-content: center !important;
+	}
+
+	.hero-visual {
+		max-width: 340px;
+		margin: 0 auto;
 	}
 }
 
