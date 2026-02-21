@@ -1,6 +1,5 @@
 <script lang="ts">
 	import logo from '$lib/assets/troikaInsurance logo.svg';
-	import Icon from './Icon.svelte';
 	import MobileMenu from './MobileMenu.svelte';
 	import { language } from '$lib/languageStore';
 	let mobileMenuOpen = false;
@@ -21,6 +20,7 @@
 		</a>
 
 		<!-- Desktop Menu -->
+		<div class="nav-right">
 		<div class="nav-links">
 			<a href="/homeowners">Homeowners</a>
 			<a href="/commercial">Commercial</a>
@@ -28,17 +28,6 @@
 			<a href="/our-approach">Our Approach</a>
 			<a href="/services">Services</a>
 			<a href="/claims" class="nav-claims-btn">Claims</a>
-			<div class="social-icons">
-				<a href="/#contact" class="social-icon" aria-label="Contact">
-					<Icon name="email" size={19} />
-				</a>
-				<a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
-					<Icon name="facebook" size={19} />
-				</a>
-				<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
-					<Icon name="instagram" size={19} />
-				</a>
-			</div>
 		</div>
 
 		<!-- Language Toggle -->
@@ -56,12 +45,20 @@
 				aria-pressed={$language === 'FR'}
 			>FR</button>
 		</div>
+		</div><!-- /nav-right -->
 
 		<MobileMenu open={mobileMenuOpen} onToggle={toggleMobileMenu} lang={$language} onLangChange={setLang} />
 	</div>
 </nav>
 
 <style>
+.nav-right {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-left: auto;
+}
+
 .lang-toggle {
 	display: flex;
 	align-items: center;
@@ -80,7 +77,7 @@
 	font-weight: 700;
 	letter-spacing: 0.8px;
 	color: #7b2a7b;
-	padding: 5px 10px;
+	padding: 8px 10px;
 	transition: background 0.18s ease, color 0.18s ease;
 	font-family: inherit;
 	line-height: 1;
@@ -96,7 +93,7 @@
 }
 
 @media (max-width: 968px) {
-	.lang-toggle {
+	.nav-right {
 		display: none;
 	}
 }
