@@ -10,7 +10,33 @@
 </script>
 
 <svelte:head>
-	<title>Our Approach - Troika Insurance</title>
+	<title>Our Approach – Troika Insurance</title>
+	<meta name="description" content="Troika Insurance operates as a trusted advisory partner — not just a broker. Our continuity-focused approach means we assess, protect, and remain by your side before and after a loss." />
+	<meta name="keywords" content="insurance broker philosophy Quebec, continuity focused insurance, trusted insurance advisor Montreal, transparent insurance broker, proactive insurance broker, insurance advisory service Quebec, Troika approach" />
+	<link rel="canonical" href="https://troikainsurance.com/our-approach" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Our Approach – Troika Insurance" />
+	<meta property="og:description" content="Troika Insurance operates as a trusted advisory partner — not just a broker. Our continuity-focused approach means we assess, protect, and remain by your side before and after a loss." />
+	<meta property="og:url" content="https://troikainsurance.com/our-approach" />
+	<meta property="og:image" content="https://troikainsurance.com/og-image.jpg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Our Approach – Troika Insurance" />
+	<meta name="twitter:description" content="Troika Insurance operates as a trusted advisory partner — not just a broker. Our continuity-focused approach means we assess, protect, and remain by your side before and after a loss." />
+	<meta name="twitter:image" content="https://troikainsurance.com/og-image.jpg" />
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "AboutPage",
+		"name": "Our Approach – Troika Insurance",
+		"description": "Troika Insurance operates as a proactive advisory partner focused on continuity protection — ensuring clients are properly covered before, during, and after a loss.",
+		"url": "https://troikainsurance.com/our-approach",
+		"provider": {
+			"@type": "InsuranceAgency",
+			"name": "Troika Insurance",
+			"url": "https://troikainsurance.com"
+		}
+	}
+	</script>
 </svelte:head>
 
 <div class="page">

@@ -33,12 +33,33 @@
 
 <svelte:head>
 	<title>Claims Support – Troika Insurance</title>
-	<meta name="description" content="Troika stands with you when a claim happens. We act as your intermediary between you and the insurer — guiding, coordinating, and supporting you from report to resolution." />
+	<meta name="description" content="Troika acts as your intermediary when a claim happens — guiding, coordinating, and supporting you between you and your insurer from report to resolution." />
+	<meta name="keywords" content="insurance claim Quebec, file insurance claim Montreal, claims support broker, insurance claims assistance, claim process Quebec, insurance intermediary, claim help Quebec, insurance claim support, report a claim Quebec" />
+	<link rel="canonical" href="https://troikainsurance.com/claims" />
+	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Claims Support – Troika Insurance" />
-	<meta property="og:description" content="Troika stands with you when a claim happens. We act as your intermediary between you and the insurer — guiding, coordinating, and supporting you from report to resolution." />
+	<meta property="og:description" content="Troika acts as your intermediary when a claim happens — guiding, coordinating, and supporting you between you and your insurer from report to resolution." />
 	<meta property="og:url" content="https://troikainsurance.com/claims" />
+	<meta property="og:image" content="https://troikainsurance.com/og-image.jpg" />
+	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Claims Support – Troika Insurance" />
-	<meta name="twitter:description" content="Troika stands with you when a claim happens. We act as your intermediary between you and the insurer — guiding, coordinating, and supporting you from report to resolution." />
+	<meta name="twitter:description" content="Troika acts as your intermediary when a claim happens — guiding, coordinating, and supporting you between you and your insurer from report to resolution." />
+	<meta name="twitter:image" content="https://troikainsurance.com/og-image.jpg" />
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"name": "Insurance Claims Support",
+		"description": "Expert claims support and intermediary services. Troika guides clients through the full claims process — from reporting to resolution — acting as their dedicated advocate with the insurer.",
+		"url": "https://troikainsurance.com/claims",
+		"provider": {
+			"@type": "InsuranceAgency",
+			"name": "Troika Insurance",
+			"url": "https://troikainsurance.com"
+		},
+		"areaServed": ["Quebec", "Ontario", "Canada"]
+	}
+	</script>
 </svelte:head>
 
 <div class="page">
