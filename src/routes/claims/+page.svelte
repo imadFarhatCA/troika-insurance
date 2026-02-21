@@ -110,6 +110,7 @@
 	<section class="model-section">
 		<div class="model-container">
 			<p class="model-eyebrow">Troika Claims Model™</p>
+			<h2 class="model-title">How We Guide You Through a Claim</h2>
 			<div class="model-steps">
 				{#each steps as step}
 					<div class="model-step">
@@ -303,6 +304,15 @@
 	letter-spacing: 1.6px;
 	text-transform: uppercase;
 	color: #92278f;
+	margin: 0 0 12px;
+	text-align: center;
+}
+
+.model-title {
+	font-size: 28px;
+	font-weight: 700;
+	color: #111827;
+	line-height: 1.3;
 	margin: 0 0 40px;
 	text-align: center;
 }
