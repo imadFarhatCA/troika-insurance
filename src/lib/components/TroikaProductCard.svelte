@@ -2,7 +2,7 @@
 	import Icon from '$lib/components/Icon.svelte';
 
 	type IconName = 'home' | 'shield' | 'building' | 'trending-up' | 'briefcase' |
-		'layers' | 'zap' | 'target' | 'award' | 'users';
+		'layers' | 'zap' | 'target' | 'award' | 'users' | 'car';
 
 	export let index: number;
 	export let icon: IconName;
