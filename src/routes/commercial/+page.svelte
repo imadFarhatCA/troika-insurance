@@ -167,8 +167,8 @@
 }
 
 .hero-icon {
-	width: 180px;
-	height: 180px;
+	width: 144px;
+	height: 144px;
 	display: block;
 	margin: 0 auto;
 }
