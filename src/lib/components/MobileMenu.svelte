@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { claimModalOpen } from '$lib/claimStore';
 	export let open: boolean = false;
 	export let onToggle: () => void;
 </script>
@@ -33,7 +32,7 @@
 			<a href="/car" on:click={onToggle}>Car</a>
 			<a href="/our-approach" on:click={onToggle}>Our Approach</a>
 			<a href="/services" on:click={onToggle}>Services</a>
-			<button class="mobile-claims-btn" on:click={() => { claimModalOpen.set(true); onToggle(); }}>Claims</button>
+			<a href="/claims" class="mobile-claims-btn" on:click={onToggle}>Claims</a>
 			<a href="/#contact" on:click={onToggle}>Contact</a>
 		</nav>
 	</div>

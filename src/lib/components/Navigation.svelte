@@ -2,8 +2,6 @@
 	import logo from '$lib/assets/troikaInsurance logo.svg';
 	import Icon from './Icon.svelte';
 	import MobileMenu from './MobileMenu.svelte';
-	import { claimModalOpen } from '$lib/claimStore';
-
 	let mobileMenuOpen = false;
 
 	function toggleMobileMenu() {
@@ -24,7 +22,7 @@
 			<a href="/car">Car</a>
 			<a href="/our-approach">Our Approach</a>
 			<a href="/services">Services</a>
-			<button class="nav-claims-btn" on:click={() => claimModalOpen.set(true)}>Claims</button>
+			<a href="/claims" class="nav-claims-btn">Claims</a>
 			<div class="social-icons">
 				<a href="/#contact" class="social-icon" aria-label="Contact">
 					<Icon name="email" size={19} />
