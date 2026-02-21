@@ -116,34 +116,28 @@
 <div class="page">
 
 	<!-- Hero -->
-	<section class="minimal-hero hero-split-section">
+	<section class="minimal-hero">
 		<div class="container">
-			<div class="hero-split">
+			<div class="hero-content">
 
-				<!-- Left: text -->
-				<div class="hero-content hero-text-col">
-					<div class="eyebrow-tag" class:animated={animated.tag}>Residential Insurance</div>
-
-					<div class="hero-text-group" class:animated={animated.title}>
-						<h1 class="hero-title">
-							For Homeowners, Tenants,<br>Plex Owners,<br>and Chalets
-						</h1>
-						<p class="hero-description">
-							<span class="hero-desc-line">A structured protection system designed to protect your property, your financial stability, and your continuity after a loss.</span>
-							<span class="hero-desc-line">Whether you live in the property, rent it, or own it as an investment — Troika Residential Continuity Protection™ keeps you covered.</span>
-						</p>
-					</div>
-
-					<div class="hero-actions">
-						<a href="/contact" class="btn-primary-hero" class:animated={animated.action}>Get a Quote</a>
-					</div>
+				<div class="hero-visual" class:animated={animated.title}>
+					<img src={homeownersIcon} alt="Homeowners Insurance" class="hero-icon" />
 				</div>
 
-				<!-- Right: illustration -->
-				<div class="hero-visual" class:animated={animated.title}>
-					<div class="icon-bubble">
-						<img src={homeownersIcon} alt="Homeowners Insurance" class="bubble-icon" />
-					</div>
+				<div class="eyebrow-tag" class:animated={animated.tag}>Residential Insurance</div>
+
+				<div class="hero-text-group" class:animated={animated.title}>
+					<h1 class="hero-title">
+						For Homeowners, Tenants,<br>Plex Owners,<br>and Chalets
+					</h1>
+					<p class="hero-description">
+						<span class="hero-desc-line">A structured protection system designed to protect your property, your financial stability, and your continuity after a loss.</span>
+						<span class="hero-desc-line">Whether you live in the property, rent it, or own it as an investment — Troika Residential Continuity Protection™ keeps you covered.</span>
+					</p>
+				</div>
+
+				<div class="hero-actions">
+					<a href="/contact" class="btn-primary-hero" class:animated={animated.action}>Get a Quote</a>
 				</div>
 
 			</div>
@@ -225,73 +219,25 @@
 </div>
 
 <style>
-/* ── Hero 2-column layout ──────────────────────────────── */
-.hero-split-section :global(.container) {
-	max-width: 1100px;
-}
-
-.hero-split {
-	display: grid;
-	grid-template-columns: 1fr 420px;
-	gap: 48px;
-	align-items: center;
-	padding: 60px 0 48px;
-}
-
-/* Override global centered hero-content for this page */
-.hero-text-col {
-	text-align: left !important;
-	max-width: none !important;
-	padding: 0 !important;
-	align-items: flex-start !important;
-}
-
-.hero-text-col :global(.hero-title),
-.hero-text-col :global(.hero-description) {
-	text-align: left !important;
-}
-
-.hero-text-col :global(.hero-actions) {
-	justify-content: flex-start !important;
-	margin-bottom: 0 !important;
-}
-
 .hero-visual {
 	opacity: 0;
-	transform: translateY(32px) scale(0.97);
-	transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-				transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-	transition-delay: 400ms;
+	transform: translateY(20px);
+	transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+				transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+	transition-delay: 100ms;
+	margin-bottom: 24px;
 }
 
 .hero-visual.animated {
 	opacity: 1;
-	transform: translateY(0) scale(1);
+	transform: translateY(0);
 }
 
-.icon-bubble {
-	width: 360px;
-	height: 360px;
-	border-radius: 50%;
-	background: linear-gradient(135deg, #ffffff, #f5f5f5);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-shadow:
-		0 8px 32px rgba(0, 0, 0, 0.07),
-		0 0 48px rgba(146, 39, 143, 0.18);
-	animation: heroBubbleFloat 6s ease-in-out infinite;
-}
-
-.bubble-icon {
-	width: 180px;
-	height: 180px;
+.hero-icon {
+	width: 120px;
+	height: 120px;
 	display: block;
-}
-
-@keyframes heroBubbleFloat {
-	0%, 100% { transform: translateY(0); }
-	50% { transform: translateY(-14px); }
+	margin: 0 auto;
 }
 
 
@@ -459,43 +405,6 @@
 	.troika-diff-container {
 		grid-template-columns: 1fr;
 		gap: 40px;
-	}
-}
-
-@media (max-width: 960px) {
-	.hero-split {
-		grid-template-columns: 1fr;
-		gap: 32px;
-		padding: 48px 0 32px;
-	}
-
-	.hero-text-col {
-		text-align: center !important;
-		align-items: center !important;
-	}
-
-	.hero-text-col :global(.hero-title),
-	.hero-text-col :global(.hero-description) {
-		text-align: center !important;
-	}
-
-	.hero-text-col :global(.hero-actions) {
-		justify-content: center !important;
-	}
-
-	.hero-visual {
-		display: flex;
-		justify-content: center;
-	}
-
-	.icon-bubble {
-		width: 280px;
-		height: 280px;
-	}
-
-	.bubble-icon {
-		width: 140px;
-		height: 140px;
 	}
 }
 
