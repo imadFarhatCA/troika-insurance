@@ -422,7 +422,7 @@
 		}
 
 		.bubble-1 { left: 2%; }
-		.bubble-2 { right: 2%; top: 140px; width: 252px; height: 252px; }
+		.bubble-2 { right: 2%; top: 190px; width: 270px; height: 270px; }
 		.bubble-3 { top: 360px; left: 2%; }
 		.bubble-4 { top: 430px; right: 2%; }
 
