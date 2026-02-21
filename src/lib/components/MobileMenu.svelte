@@ -30,7 +30,7 @@
 		<nav class="mobile-nav">
 			<a href="/homeowners" on:click={onToggle}>Homeowners</a>
 			<a href="/commercial" on:click={onToggle}>Commercial</a>
-			<a href="/#car" on:click={onToggle}>Car</a>
+			<a href="/car" on:click={onToggle}>Car</a>
 			<a href="/our-approach" on:click={onToggle}>Our Approach</a>
 			<a href="/services" on:click={onToggle}>Services</a>
 			<button class="mobile-claims-btn" on:click={() => { claimModalOpen.set(true); onToggle(); }}>Claims</button>

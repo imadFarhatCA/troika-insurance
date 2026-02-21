@@ -21,7 +21,7 @@
 		<div class="nav-links">
 			<a href="/homeowners">Homeowners</a>
 			<a href="/commercial">Commercial</a>
-			<a href="/#car">Car</a>
+			<a href="/car">Car</a>
 			<a href="/our-approach">Our Approach</a>
 			<a href="/services">Services</a>
 			<button class="nav-claims-btn" on:click={() => claimModalOpen.set(true)}>Claims</button>
