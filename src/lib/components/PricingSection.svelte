@@ -1,12 +1,10 @@
 <script lang="ts">
-	import rentersIcon from '$lib/assets/icons/RENTERS Icon.svg';
 	import homeownersIcon from '$lib/assets/icons/HOMEOWNERS Icon.svg';
 	import corporateIcon from '$lib/assets/icons/CORPORATE Icon.svg';
 	import carIcon from '$lib/assets/icons/Car Icon.svg';
 	import customIcon from '$lib/assets/icons/CUSTOM Icon.svg';
 
 	const products = [
-		{ id: 'renters', icon: rentersIcon, title: 'Renters', description: 'Coverage for your stuff, and peace of mind', pricing: 'Start Saving', size: 'medium', color: '#ff0095', colorRgb: '255, 0, 149' },
 		{ id: 'homeowners', icon: homeownersIcon, title: 'Homeowners', description: 'Protection for your home and stuff', pricing: 'Save Now', size: 'large', color: '#92278f', colorRgb: '146, 39, 143' },
 		{ id: 'commercial', icon: corporateIcon, title: 'Commercial', description: 'Coverage for your business', pricing: 'Start Saving', size: 'medium', color: '#a7d8e9', colorRgb: '167, 216, 233' },
 		{ id: 'car', icon: carIcon, title: 'Car', description: 'Protect your car, passengers, and the planet', pricing: 'Save Now', size: 'large', color: '#ff0095', colorRgb: '255, 0, 149' },
@@ -90,7 +88,7 @@
 	.bubbles-container {
 		position: relative;
 		width: 100%;
-		height: 600px;
+		height: 500px;
 		margin: 0 auto;
 	}
 
@@ -161,12 +159,6 @@
 		animation-delay: 1.5s;
 	}
 
-	.bubble-5 {
-		top: 280px;
-		left: 40%;
-		z-index: 1;
-		animation-delay: 0.5s;
-	}
 
 	@keyframes bubbleFloat {
 		0%, 100% { translate: 0 0; }
@@ -190,30 +182,24 @@
 		padding: 20px;
 	}
 
-	/* Renters - move content up */
+	/* Homeowners */
 	.bubble-1 .bubble-content {
-		padding: 0px 30px 70px;
-		margin-top: -10px;
-	}
-
-	/* Homeowners - smaller content, moved up */
-	.bubble-2 .bubble-content {
 		padding: 5px 35px 65px;
 	}
 
-	/* Commercial - move content up */
-	.bubble-3 .bubble-content {
+	/* Commercial */
+	.bubble-2 .bubble-content {
 		padding: 10px 30px 50px;
 	}
 
-	/* Car - smaller content, moved up more */
-	.bubble-4 .bubble-content {
+	/* Car */
+	.bubble-3 .bubble-content {
 		padding: 0px 35px 80px;
 		margin-top: -10px;
 	}
 
-	/* Custom bubble - move content up */
-	.bubble-5 .bubble-content {
+	/* Custom */
+	.bubble-4 .bubble-content {
 		padding: 5px 20px 25px;
 		margin-top: -10px;
 	}
@@ -232,9 +218,9 @@
 		margin-bottom: 15px;
 	}
 
-	/* Car and Homeowners - smaller icons */
-	.bubble-2 .icon-wrapper,
-	.bubble-4 .icon-wrapper {
+	/* Homeowners and Car - smaller icons */
+	.bubble-1 .icon-wrapper,
+	.bubble-3 .icon-wrapper {
 		margin-bottom: 20px;
 	}
 
@@ -283,9 +269,9 @@
 		height: 40px;
 	}
 
-	/* Car and Homeowners - smaller icons */
-	.bubble-2 .bubble-icon,
-	.bubble-4 .bubble-icon {
+	/* Homeowners and Car - smaller icons */
+	.bubble-1 .bubble-icon,
+	.bubble-3 .bubble-icon {
 		width: 70px;
 		height: 70px;
 	}
@@ -307,9 +293,9 @@
 		margin: 0 0 8px 0;
 	}
 
-	/* Car and Homeowners - smaller titles */
-	.bubble-2 h3,
-	.bubble-4 h3 {
+	/* Homeowners and Car - smaller titles */
+	.bubble-1 h3,
+	.bubble-3 h3 {
 		font-size: 22px;
 		margin: 0 0 10px 0;
 	}
@@ -331,9 +317,9 @@
 		margin: 0 0 8px 0;
 	}
 
-	/* Car and Homeowners - smaller descriptions */
-	.bubble-2 .bubble-description,
-	.bubble-4 .bubble-description {
+	/* Homeowners and Car - smaller descriptions */
+	.bubble-1 .bubble-description,
+	.bubble-3 .bubble-description {
 		font-size: 13px;
 		margin: 0 0 10px 0;
 	}
@@ -353,9 +339,9 @@
 		font-size: 11px;
 	}
 
-	/* Car and Homeowners - smaller pricing */
-	.bubble-2 .bubble-pricing,
-	.bubble-4 .bubble-pricing {
+	/* Homeowners and Car - smaller pricing */
+	.bubble-1 .bubble-pricing,
+	.bubble-3 .bubble-pricing {
 		font-size: 13px;
 	}
 
@@ -365,7 +351,7 @@
 		}
 
 		.bubbles-container {
-			height: 900px;
+			height: 700px;
 		}
 
 		.bubble-small {
@@ -403,15 +389,6 @@
 			right: 10%;
 		}
 
-		.bubble-5 {
-			top: 650px;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-
-		.bubble-5:hover {
-			transform: translateX(-50%) scale(1.15);
-		}
 
 		.bubble-content {
 			padding: 15px;
@@ -421,8 +398,7 @@
 		.bubble-1 .bubble-content,
 		.bubble-2 .bubble-content,
 		.bubble-3 .bubble-content,
-		.bubble-4 .bubble-content,
-		.bubble-5 .bubble-content {
+		.bubble-4 .bubble-content {
 			padding: 15px;
 			margin-top: 0;
 		}
@@ -450,7 +426,7 @@
 		}
 
 		.bubbles-container {
-			height: 800px;
+			height: 650px;
 		}
 
 		.bubble-small {
