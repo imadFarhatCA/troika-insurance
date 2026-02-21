@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import TroikaProductCard from '$lib/components/TroikaProductCard.svelte';
+	import commercialIcon from '$lib/assets/icons/CORPORATE Icon.svg';
 
 	let animated = { tag: false, title: false, description: false, action: false };
 	let cardsVisible = false;
@@ -82,6 +83,10 @@
 	<section class="minimal-hero">
 		<div class="container">
 			<div class="hero-content">
+				<div class="hero-visual" class:animated={animated.title}>
+					<img src={commercialIcon} alt="Commercial Insurance" class="hero-icon" />
+				</div>
+
 				<div class="eyebrow-tag" class:animated={animated.tag}>Commercial Insurance</div>
 
 				<div class="hero-text-group" class:animated={animated.title}>
@@ -146,6 +151,28 @@
 </div>
 
 <style>
+/* ── Hero Icon ─────────────────────────────────────────── */
+.hero-visual {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+				transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+	transition-delay: 100ms;
+	margin-bottom: 24px;
+}
+
+.hero-visual.animated {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.hero-icon {
+	width: 180px;
+	height: 180px;
+	display: block;
+	margin: 0 auto;
+}
+
 /* ── Core Idea ─────────────────────────────────────────── */
 .core-idea-section {
 	background: #ffffff;
