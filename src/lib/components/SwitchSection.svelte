@@ -2,12 +2,15 @@
 	import SemiPieChart from './SemiPieChart.svelte';
 	import xShape from '$lib/assets/heroAnimation/heroAnimation X.svg';
 	import circle from '$lib/assets/heroAnimation/heroAnimation cirlce.svg';
+	import { language } from '$lib/languageStore';
+	import { t } from '$lib/i18n';
+	$: s = t[$language].switchSection;
 </script>
 
 <section class="switch-section">
 	<div class="container">
-		<h2>Full-Spectrum Protection for Your Life and Work</h2>
-		<p class="switch-subtitle">Your risks are unique — your insurance should be too. We offer a complete suite of commercial, personal, and specialized coverage, all supported by expert guidance and access to Canada's top insurers. Whatever you're building, growing, or protecting, we're here to make sure you're covered with confidence.</p>
+		<h2>{s.title}</h2>
+		<p class="switch-subtitle">{s.subtitle}</p>
 
 		<div class="insurance-chart">
 			<SemiPieChart />

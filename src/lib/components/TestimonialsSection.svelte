@@ -1,11 +1,14 @@
 <script lang="ts">
 	import { testimonials } from '$lib/data/testimonials';
+	import { language } from '$lib/languageStore';
+	import { t } from '$lib/i18n';
+	$: s = t[$language].testimonials;
 </script>
 
 <section class="testimonials">
 	<div class="container">
-		<h2>Trust, Earned One Client at a Time</h2>
-		<p class="testimonials-subtitle">Troika has earned top ratings from customers,<br/>and is trusted by hundreds of families and businesses</p>
+		<h2>{s.title}</h2>
+		<p class="testimonials-subtitle">{@html s.subtitle.replace('\\n', '<br/>')}</p>
 
 		<div class="stars-container">
 			{#each Array(5) as _, i}

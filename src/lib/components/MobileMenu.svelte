@@ -3,6 +3,8 @@
 	export let onToggle: () => void;
 	export let lang: 'EN' | 'FR' = 'EN';
 	export let onLangChange: (l: 'EN' | 'FR') => void = () => {};
+	import { t } from '$lib/i18n';
+	$: s = t[lang].nav;
 </script>
 
 <!-- Hamburger Button -->
@@ -28,6 +30,16 @@
 				<line x1="6" y1="6" x2="18" y2="18"></line>
 			</svg>
 		</button>
+		<nav class="mobile-nav">
+			<a href="/homeowners" on:click={onToggle}>{s.homeowners}</a>
+			<a href="/commercial" on:click={onToggle}>{s.commercial}</a>
+			<a href="/car" on:click={onToggle}>{s.car}</a>
+			<a href="/our-approach" on:click={onToggle}>{s.ourApproach}</a>
+			<a href="/services" on:click={onToggle}>{s.services}</a>
+			<a href="/claims" class="mobile-claims-btn" on:click={onToggle}>{s.claims}</a>
+			<a href="/#contact" on:click={onToggle}>{s.contact}</a>
+		</nav>
+
 		<!-- Language Toggle -->
 		<div class="mobile-lang-toggle" role="group" aria-label="Language">
 			<button
@@ -43,16 +55,6 @@
 				aria-pressed={lang === 'FR'}
 			>FR</button>
 		</div>
-
-		<nav class="mobile-nav">
-			<a href="/homeowners" on:click={onToggle}>Homeowners</a>
-			<a href="/commercial" on:click={onToggle}>Commercial</a>
-			<a href="/car" on:click={onToggle}>Car</a>
-			<a href="/our-approach" on:click={onToggle}>Our Approach</a>
-			<a href="/services" on:click={onToggle}>Services</a>
-			<a href="/claims" class="mobile-claims-btn" on:click={onToggle}>Claims</a>
-			<a href="/#contact" on:click={onToggle}>Contact</a>
-		</nav>
 	</div>
 {/if}
 
@@ -196,7 +198,7 @@
 		border-radius: 8px;
 		padding: 3px;
 		gap: 2px;
-		margin-bottom: 32px;
+		margin-top: 52px;
 	}
 
 	.mobile-lang-btn {

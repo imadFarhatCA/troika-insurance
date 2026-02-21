@@ -1,7 +1,10 @@
 <script lang="ts">
 	import ClaimModal from './ClaimModal.svelte';
+	import { language } from '$lib/languageStore';
+	import { t } from '$lib/i18n';
 
 	let isModalOpen = false;
+	$: s = t[$language].claimsSection;
 
 	function openModal() {
 		isModalOpen = true;
@@ -14,11 +17,11 @@
 
 <section id="claims" class="claims">
 	<div class="claims-hero">
-		<h2>By Your Side When Life Takes a Turn</h2>
-		<p class="claims-description">When a claim happens, it's more than paperwork — it's a moment of uncertainty that can impact your life, your business, and your peace of mind.</p>
-		<p class="claims-description">At Troika, we understand that this is when insurance needs to work… and when we need to be right by your side.</p>
-		<p class="claims-description">This is where our commitment becomes action.</p>
-		<button class="btn-claims-cta" on:click={openModal}>File a Claim Now</button>
+		<h2>{s.title}</h2>
+		<p class="claims-description">{s.p1}</p>
+		<p class="claims-description">{s.p2}</p>
+		<p class="claims-description">{s.p3}</p>
+		<button class="btn-claims-cta" on:click={openModal}>{s.cta}</button>
 	</div>
 </section>
 

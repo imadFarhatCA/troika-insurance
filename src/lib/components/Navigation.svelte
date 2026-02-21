@@ -2,7 +2,9 @@
 	import logo from '$lib/assets/troikaInsurance logo.svg';
 	import MobileMenu from './MobileMenu.svelte';
 	import { language } from '$lib/languageStore';
+	import { t } from '$lib/i18n';
 	let mobileMenuOpen = false;
+	$: s = t[$language].nav;
 
 	function toggleMobileMenu() {
 		mobileMenuOpen = !mobileMenuOpen;
@@ -22,12 +24,12 @@
 		<!-- Desktop Menu -->
 		<div class="nav-right">
 		<div class="nav-links">
-			<a href="/homeowners">Homeowners</a>
-			<a href="/commercial">Commercial</a>
-			<a href="/car">Car</a>
-			<a href="/our-approach">Our Approach</a>
-			<a href="/services">Services</a>
-			<a href="/claims" class="nav-claims-btn">Claims</a>
+			<a href="/homeowners">{s.homeowners}</a>
+			<a href="/commercial">{s.commercial}</a>
+			<a href="/car">{s.car}</a>
+			<a href="/our-approach">{s.ourApproach}</a>
+			<a href="/services">{s.services}</a>
+			<a href="/claims" class="nav-claims-btn">{s.claims}</a>
 		</div>
 
 		<!-- Language Toggle -->
@@ -55,7 +57,7 @@
 .nav-right {
 	display: flex;
 	align-items: center;
-	gap: 20px;
+	gap: 40px;
 	margin-left: auto;
 }
 

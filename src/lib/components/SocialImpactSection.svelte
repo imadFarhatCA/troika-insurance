@@ -28,8 +28,11 @@
 	import swg from '$lib/assets/insurersLogos/SWG.svg';
 	import soplex from '$lib/assets/insurersLogos/soplex.svg';
 	import cfc from '$lib/assets/insurersLogos/CFC.svg';
+	import { language } from '$lib/languageStore';
+	import { t } from '$lib/i18n';
 
 	let expanded = false;
+	$: s = t[$language].social;
 
 	const logos = [
 		{ src: intactLogo, alt: 'Intact Insurance', scale: 1.35 },
@@ -67,8 +70,8 @@
 
 <section class="social-impact">
 	<div class="container">
-		<h2>Insurance with Impact</h2>
-		<p class="impact-subtitle">We partner up with the best on the market to provide you with what you deserve</p>
+		<h2>{s.title}</h2>
+		<p class="impact-subtitle">{s.subtitle}</p>
 
 		<div class="insurers-wrapper">
 			<div class="insurers-masonry" class:expanded>
@@ -84,7 +87,7 @@
 		</div>
 
 		<button class="see-more-btn" on:click={() => (expanded = !expanded)}>
-			{expanded ? 'Show Less' : 'See More'}
+			{expanded ? s.showLess : s.showMore}
 			<svg
 				width="16"
 				height="16"

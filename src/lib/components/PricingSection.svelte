@@ -3,31 +3,34 @@
 	import corporateIcon from '$lib/assets/icons/CORPORATE Icon.svg';
 	import carIcon from '$lib/assets/icons/Car Icon.svg';
 	import customIcon from '$lib/assets/icons/CUSTOM Icon.svg';
+	import { language } from '$lib/languageStore';
+	import { t } from '$lib/i18n';
 
-	const products = [
-		{ id: 'homeowners', href: '/homeowners', icon: homeownersIcon, title: 'Homeowners', description: 'Protection for your home and stuff', pricing: 'Save Now', size: 'large', color: '#92278f', colorRgb: '146, 39, 143' },
-		{ id: 'commercial', href: '/commercial', icon: corporateIcon, title: 'Commercial', description: 'Coverage for your business', pricing: 'Start Saving', size: 'medium', color: '#a7d8e9', colorRgb: '167, 216, 233' },
-		{ id: 'car', href: '/car', icon: carIcon, title: 'Car', description: 'Protect your car, passengers, and the planet', pricing: 'Save Now', size: 'large', color: '#ff0095', colorRgb: '255, 0, 149' },
-		{ id: 'custom', href: null, icon: customIcon, title: 'Custom', description: 'Tailored coverage for unique needs', pricing: 'Start Saving', size: 'small', color: '#92278f', colorRgb: '146, 39, 143' },
-	];
+	$: s = t[$language].pricing;
+
+	const icons = [homeownersIcon, corporateIcon, carIcon, customIcon];
+	const hrefs = ['/homeowners', '/commercial', '/car', null];
+	const sizes = ['large', 'medium', 'large', 'small'];
+	const colors = ['#92278f', '#a7d8e9', '#ff0095', '#92278f'];
+	const colorRgbs = ['146, 39, 143', '167, 216, 233', '255, 0, 149', '146, 39, 143'];
 </script>
 
 <section id="pricing" class="pricing">
 	<div class="container">
-		<h2>Incredible Prices. Monthly Subscription.<br/>Bundle Discounts.</h2>
+		<h2>{@html s.title.replace(/\n/g, '<br/>')}</h2>
 		<p class="pricing-subtitle">
 			<svg class="star-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
 				<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#92278f"/>
 			</svg>
-			Amazing savings when you bundle
+			{s.subtitle}
 		</p>
 
 		<div class="bubbles-container">
-			{#each products as product, i}
-				<svelte:element this={product.href ? 'a' : 'div'} href={product.href ?? undefined} class="bubble bubble-{i + 1} bubble-{product.size}" style="--bubble-color: {product.color}; --bubble-color-rgb: {product.colorRgb}">
+			{#each s.products as product, i}
+				<svelte:element this={hrefs[i] ? 'a' : 'div'} href={hrefs[i] ?? undefined} class="bubble bubble-{i + 1} bubble-{sizes[i]}" style="--bubble-color: {colors[i]}; --bubble-color-rgb: {colorRgbs[i]}">
 					<div class="bubble-content">
 						<div class="icon-wrapper">
-							<img src={product.icon} alt={product.title} class="bubble-icon" />
+							<img src={icons[i]} alt={product.title} class="bubble-icon" />
 						</div>
 						<h3>{product.title}</h3>
 						<p class="bubble-description">{product.description}</p>

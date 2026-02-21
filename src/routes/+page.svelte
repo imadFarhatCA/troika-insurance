@@ -7,6 +7,9 @@
 	import ClaimsSection from '$lib/components/ClaimsSection.svelte';
 	import ContactSection from '$lib/components/ContactSection.svelte';
 	import SocialImpactSection from '$lib/components/SocialImpactSection.svelte';
+	import { language } from '$lib/languageStore';
+	import { t } from '$lib/i18n';
+	$: s = t[$language].homepage;
 </script>
 
 <svelte:head>
@@ -44,9 +47,9 @@
 	<section class="hero">
 		<div class="hero-container">
 			<div class="hero-content">
-				<h1>Peace of mind takes more than a policy.</h1>
-				<p class="hero-subtitle">Your Premium Insurance Brokers for Home, Auto & Business</p>
-				<a href="#quote" class="btn-primary">Get a Quote</a>
+				<h1>{s.heroTitle}</h1>
+				<p class="hero-subtitle">{s.heroSubtitle}</p>
+				<a href="#quote" class="btn-primary">{s.heroCta}</a>
 			</div>
 			<HeroIllustration />
 		</div>

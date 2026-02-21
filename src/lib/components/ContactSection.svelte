@@ -1,23 +1,26 @@
 <script lang="ts">
 	import Icon from './Icon.svelte';
+	import { language } from '$lib/languageStore';
+	import { t } from '$lib/i18n';
+	$: s = t[$language].contact;
 </script>
 
 <section id="contact" class="contact">
 	<div class="container">
 		<div class="contact-hero">
-			<h2 class="contact-title">Let's protect what matters most.</h2>
-			<p class="contact-lead">Tell us about your property, business, or activities, and we'll provide a quote that reflects your real risks—not just a generic policy.</p>
+			<h2 class="contact-title">{s.title}</h2>
+			<p class="contact-lead">{s.lead}</p>
 		</div>
 
 		<div class="contact-bento">
 			<div class="contact-card contact-card-large">
 				<div class="card-glow"></div>
 				<div class="card-content">
-					<span class="card-label">Email us</span>
+					<span class="card-label">{s.emailLabel}</span>
 					<h3 class="card-title">info@troikainsurance.com</h3>
-					<p class="card-desc">Send us an email and we'll respond within 24 hours</p>
+					<p class="card-desc">{s.emailDesc}</p>
 					<a href="mailto:info@troikainsurance.com" class="card-link">
-						Send message
+						{s.emailCta}
 						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
@@ -28,11 +31,11 @@
 			<div class="contact-card contact-card-medium">
 				<div class="card-glow"></div>
 				<div class="card-content">
-					<span class="card-label">Call us</span>
+					<span class="card-label">{s.phoneLabel}</span>
 					<h3 class="card-title">+1 (555) 123-4567</h3>
-					<p class="card-desc">Mon-Fri, 9am-6pm EST</p>
+					<p class="card-desc">{s.phoneHours}</p>
 					<a href="tel:+15551234567" class="card-link">
-						Start call
+						{s.phoneCta}
 						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
@@ -43,9 +46,9 @@
 			<div class="contact-card contact-card-small">
 				<div class="card-glow"></div>
 				<div class="card-content">
-					<span class="card-label">Live chat</span>
-					<h3 class="card-title">Chat with us</h3>
-					<p class="card-desc">Get instant answers</p>
+					<span class="card-label">{s.chatLabel}</span>
+					<h3 class="card-title">{s.chatTitle}</h3>
+					<p class="card-desc">{s.chatDesc}</p>
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { trustIndicators } from '$lib/data/trustIndicators';
+	import { language } from '$lib/languageStore';
+	import { t } from '$lib/i18n';
 
 	let animatedElements = {
 		tag: false,
@@ -25,44 +27,46 @@
 		setTimeout(() => { animatedElements.trust2 = true; }, 1400);
 		setTimeout(() => { animatedElements.trust3 = true; }, 1550);
 	});
+
+	$: s = t[$language].ourApproach;
 </script>
 
 <section class="minimal-hero">
 	<div class="container">
 		<div class="hero-content">
-			<div class="eyebrow-tag" class:animated={animatedElements.tag}>Our Approach</div>
+			<div class="eyebrow-tag" class:animated={animatedElements.tag}>{s.eyebrow}</div>
 
 			<div class="hero-text-group" class:animated={animatedElements.title}>
 				<h1 class="hero-title">
-					Our Promise,<br>Peace of Mind, Delivered
+					{@html s.heroTitle.replace(/\n/g, '<br>')}
 				</h1>
 
 				<p class="hero-description">
-					<span class="hero-desc-line">We simplify insurance, eliminate uncertainty, and protect the things you've worked hard to build. From your first conversation to claims support.</span>
-					<span class="hero-desc-line">We stand beside you — every step of the way.</span>
+					<span class="hero-desc-line">{s.heroDesc1}</span>
+					<span class="hero-desc-line">{s.heroDesc2}</span>
 				</p>
 			</div>
 
 			<div class="hero-stats" class:animated={animatedElements.stats}>
 				<div class="stat-badge">
 					<span class="stat-value">15+</span>
-					<span class="stat-text">Years Experience</span>
+					<span class="stat-text">{s.statsYears}</span>
 				</div>
 				<div class="stat-divider">•</div>
 				<div class="stat-badge">
 					<span class="stat-value">28</span>
-					<span class="stat-text">Insurance Partners</span>
+					<span class="stat-text">{s.statsPartners}</span>
 				</div>
 				<div class="stat-divider">•</div>
 				<div class="stat-badge">
 					<span class="stat-value">100%</span>
-					<span class="stat-text">Client Focused</span>
+					<span class="stat-text">{s.statsClient}</span>
 				</div>
 			</div>
 
 			<div class="hero-actions">
-				<a href="/contact" class="btn-primary-hero" class:animated={animatedElements.action1}>Get Started</a>
-				<a href="#mission" class="btn-secondary-hero" class:animated={animatedElements.action2}>Learn More</a>
+				<a href="/contact" class="btn-primary-hero" class:animated={animatedElements.action1}>{s.heroBtn1}</a>
+				<a href="#mission" class="btn-secondary-hero" class:animated={animatedElements.action2}>{s.heroBtn2}</a>
 			</div>
 
 			<div class="trust-indicators">
@@ -71,7 +75,7 @@
 						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 							{@html indicator.svgContent}
 						</svg>
-						<span>{indicator.label}</span>
+						<span>{s.trustLabels[i]}</span>
 					</div>
 				{/each}
 			</div>

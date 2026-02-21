@@ -3,6 +3,8 @@
 	import TroikaProductCard from '$lib/components/TroikaProductCard.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 	import homeownersIcon from '$lib/assets/icons/HOMEOWNERS Icon.svg';
+	import { language } from '$lib/languageStore';
+	import { t } from '$lib/i18n';
 
 	let animated = { tag: false, title: false, description: false, action: false };
 	let cardsVisible = false;
@@ -26,88 +28,8 @@
 		if (section) observer.observe(section);
 	});
 
-	const cards = [
-		{
-			icon: 'home' as const,
-			title: 'Property & Asset Protection',
-			subtitle: 'Protecting the physical structure and contents',
-			includesLabel: 'Includes protection for',
-			includes: [
-				'Building replacement cost (homes, plex, rental dwellings, chalets)',
-				'Condo improvements and tenant improvements',
-				'Personal belongings and contents',
-				'Detached structures (garage, sheds, outbuildings)',
-				'Equipment and installations attached to the building',
-				'Sewer backup and water damage',
-				'Flood protection (where available)',
-				'Fire, theft, vandalism, and weather damage'
-			],
-			additionalLabel: 'Additional Protection Layers',
-			additionalSub: 'Optional structured protection includes',
-			additionalItems: [
-				'Protection for high-value contents',
-				'Coverage for water damage extensions',
-				'Protection for secondary and seasonal residences',
-				'Protection for rented dwellings and plex structures',
-				'Coverage aligned with tenant, owner, or landlord status'
-			],
-			feature: 'Reconstruction cost verification to ensure full rebuilding capability and eliminate underinsurance risk.',
-			featureNote: 'This ensures your property can be fully restored after a loss.'
-		},
-		{
-			icon: 'trending-up' as const,
-			title: 'Living & Income Continuity Protection',
-			subtitle: 'Protecting your financial stability and ability to recover',
-			includesLabel: 'Includes protection for',
-			includes: [
-				'Additional living expenses if the property becomes uninhabitable',
-				'Loss of rental income for landlords and plex owners',
-				'Coverage for tenant relocation expenses',
-				'Protection for secondary residences and seasonal properties (chalets)',
-				'Coverage aligned with owner-occupied or rented status'
-			],
-			additionalLabel: null,
-			additionalSub: null,
-			additionalItems: null,
-			feature: 'Continuity-based protection aligned with your real financial exposure and living situation.',
-			featureNote: 'This ensures stability during the recovery period.'
-		},
-		{
-			icon: 'shield' as const,
-			title: 'Liability Shield',
-			subtitle: 'Protecting you from financial and legal exposure',
-			includesLabel: 'Includes protection for',
-			includes: [
-				'Personal liability protection',
-				'Property owner liability protection',
-				'Tenant liability protection',
-				'Protection against bodily injury or property damage claims',
-				'Legal defense costs'
-			],
-			additionalLabel: null,
-			additionalSub: null,
-			additionalItems: null,
-			feature: 'Liability structuring aligned with ownership type, occupancy, and exposure level.',
-			featureNote: 'This protects your assets and long-term financial security.'
-		}
-	];
-
-	const troikaDiffPoints = [
-		'Property reconstruction cost validation',
-		'Coverage gap identification',
-		'Protection aligned with occupancy and usage',
-		'Protection aligned with investment and ownership structure'
-	];
-
-	const idealFor = [
-		'Homeowners',
-		'Tenants',
-		'Condo owners',
-		'Plex owners (duplex, triplex, multi-unit buildings)',
-		'Real estate investors',
-		'Rental property owners',
-		'Chalet and secondary residence owners'
-	];
+	$: s = t[$language].homeowners;
+	const cardIcons = ['home', 'trending-up', 'shield'] as const;
 </script>
 
 <svelte:head>
@@ -152,20 +74,20 @@
 					<img src={homeownersIcon} alt="Homeowners Insurance" class="hero-icon" />
 				</div>
 
-				<div class="eyebrow-tag" class:animated={animated.tag}>Residential Insurance</div>
+				<div class="eyebrow-tag" class:animated={animated.tag}>{s.eyebrow}</div>
 
 				<div class="hero-text-group" class:animated={animated.title}>
 					<h1 class="hero-title">
-						For Homeowners, Tenants,<br>Plex Owners,<br>and Chalets
+						{@html s.heroTitle.replace(/\n/g, '<br>')}
 					</h1>
 					<p class="hero-description">
-						<span class="hero-desc-line">A structured protection system designed to protect your property, your financial stability, and your continuity after a loss.</span>
-						<span class="hero-desc-line">Whether you live in the property, rent it, or own it as an investment — Troika Residential Continuity Protection™ keeps you covered.</span>
+						<span class="hero-desc-line">{s.heroDesc1}</span>
+						<span class="hero-desc-line">{s.heroDesc2}</span>
 					</p>
 				</div>
 
 				<div class="hero-actions">
-					<a href="/contact" class="btn-primary-hero" class:animated={animated.action}>Get a Quote</a>
+					<a href="/contact" class="btn-primary-hero" class:animated={animated.action}>{s.heroCta}</a>
 				</div>
 
 			</div>
@@ -177,14 +99,14 @@
 		<div class="products-container">
 
 			<div class="section-label-wrap">
-				<span class="section-label">The Three Pillars of Residential Continuity™</span>
+				<span class="section-label">{s.sectionLabel}</span>
 			</div>
 
 			<div class="products-grid">
-				{#each cards as card, i}
+				{#each s.cards as card, i}
 					<TroikaProductCard
 						index={i}
-						icon={card.icon}
+						icon={cardIcons[i]}
 						title={card.title}
 						subtitle={card.subtitle}
 						includesLabel={card.includesLabel}
@@ -207,24 +129,24 @@
 		<div class="troika-diff-container">
 
 			<div class="troika-diff-main">
-				<h2 class="troika-diff-title">The Troika Difference:<br>Continuity-Focused Residential Protection</h2>
-				<p class="troika-diff-intro">Troika Residential Continuity Protection™ includes structured advisory and proactive review:</p>
+				<h2 class="troika-diff-title">{@html s.diffTitle.replace(/\n/g, '<br>')}</h2>
+				<p class="troika-diff-intro">{s.diffIntro}</p>
 				<ul class="troika-diff-list">
-					{#each troikaDiffPoints as point}
+					{#each s.diffPoints as point}
 						<li>
 							<Icon name="check" size={14} strokeWidth={2.5} />
 							{point}
 						</li>
 					{/each}
 				</ul>
-				<p class="objective-label">Our objective is simple:</p>
-				<p class="objective-text">To ensure a loss does not disrupt your home, your income, or your financial stability.</p>
+				<p class="objective-label">{s.objectiveLabel}</p>
+				<p class="objective-text">{s.objectiveText}</p>
 			</div>
 
 			<div class="ideal-for-block">
-				<h3 class="ideal-for-title">Ideal for</h3>
+				<h3 class="ideal-for-title">{s.idealForTitle}</h3>
 				<ul class="ideal-for-list">
-					{#each idealFor as item}
+					{#each s.idealFor as item}
 						<li>{item}</li>
 					{/each}
 				</ul>
@@ -236,9 +158,9 @@
 	<!-- CTA -->
 	<section class="about-cta">
 		<div class="container">
-			<h2>Ready to Protect Your Home?</h2>
-			<p>We'll assess your situation and build a continuity plan tailored to your property and lifestyle.</p>
-			<a href="/contact" class="btn-primary">Talk to a Broker</a>
+			<h2>{s.ctaTitle}</h2>
+			<p>{s.ctaBody}</p>
+			<a href="/contact" class="btn-primary">{s.ctaBtn}</a>
 		</div>
 	</section>
 

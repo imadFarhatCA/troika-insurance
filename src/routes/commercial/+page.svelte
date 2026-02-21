@@ -3,6 +3,8 @@
 	import TroikaProductCard from '$lib/components/TroikaProductCard.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 	import commercialIcon from '$lib/assets/icons/CORPORATE Icon.svg';
+	import { language } from '$lib/languageStore';
+	import { t } from '$lib/i18n';
 
 	let animated = { tag: false, title: false, description: false, action: false };
 	let cardsVisible = false;
@@ -26,69 +28,8 @@
 		if (section) observer.observe(section);
 	});
 
-	const troikaDiffPoints = [
-		'Ongoing risk assessment',
-		'Coverage gap identification',
-		'Operational exposure review',
-		'Protection aligned with business growth'
-	];
-
-	const idealFor = [
-		'Business owners',
-		'Commercial property owners',
-		'Investors and landlords',
-		'Contractors and trades',
-		'Manufacturers and distributors',
-		'Professional firms'
-	];
-
-
-	const cards = [
-		{
-			icon: 'building' as const,
-			title: 'Property & Asset Protection',
-			subtitle: 'Protects physical infrastructure',
-			includes: [
-				'Building replacement cost',
-				'Tenant improvements',
-				'Equipment & machinery',
-				'Stock & inventory',
-				'Tools and mobile equipment',
-				'Sewer backup',
-				'Flood',
-				'Equipment breakdown'
-			],
-			feature: 'Annual reconstruction cost verification to avoid underinsurance.'
-		},
-		{
-			icon: 'trending-up' as const,
-			title: 'Revenue Continuity Protection',
-			subtitle: 'Protects cashflow after a loss',
-			badge: 'Key Differentiator',
-			includes: [
-				'Business interruption',
-				'Crime / employee dishonesty',
-				'Extra expense coverage',
-				'Loss of rents',
-				'Extended indemnity period (12–24 months recommended)'
-			],
-			feature: 'Cashflow-based indemnity calculation, not arbitrary limits.'
-		},
-		{
-			icon: 'shield' as const,
-			title: 'Liability Shield',
-			subtitle: 'Protects against lawsuits',
-			includes: [
-				'Commercial General Liability',
-				'Product liability',
-				'Completed operations',
-				'Tenant liability',
-				'Legal defense costs',
-				'Cyber liability'
-			],
-			feature: 'Risk-specific liability structuring based on actual operations.'
-		}
-	];
+	$: s = t[$language].commercial;
+	const cardIcons = ['building', 'trending-up', 'shield'] as const;
 </script>
 
 <svelte:head>
@@ -132,19 +73,19 @@
 					<img src={commercialIcon} alt="Commercial Insurance" class="hero-icon" />
 				</div>
 
-				<div class="eyebrow-tag" class:animated={animated.tag}>Commercial Insurance</div>
+				<div class="eyebrow-tag" class:animated={animated.tag}>{s.eyebrow}</div>
 
 				<div class="hero-text-group" class:animated={animated.title}>
 					<h1 class="hero-title">
-						Continuity Protection™<br>for Business Owners
+						{@html s.heroTitle.replace(/\n/g, '<br>')}
 					</h1>
 					<p class="hero-description">
-						<span class="hero-desc-line">This is not just insurance. It's a structured protection system designed to ensure a business can survive and continue after a loss.</span>
+						<span class="hero-desc-line">{s.heroDesc}</span>
 					</p>
 				</div>
 
 				<div class="hero-actions">
-					<a href="/contact" class="btn-primary-hero" class:animated={animated.action}>Get a Quote</a>
+					<a href="/contact" class="btn-primary-hero" class:animated={animated.action}>{s.heroCta}</a>
 				</div>
 			</div>
 		</div>
@@ -154,10 +95,10 @@
 	<section class="products-section">
 		<div class="products-container">
 			<div class="products-grid">
-				{#each cards as card, i}
+				{#each s.cards as card, i}
 					<TroikaProductCard
 						index={i}
-						icon={card.icon}
+						icon={cardIcons[i]}
 						title={card.title}
 						subtitle={card.subtitle}
 						badge={card.badge}
@@ -175,11 +116,11 @@
 	<section class="core-idea-section">
 		<div class="core-idea-container">
 			<p class="core-idea-lead">
-				Most business owners think insurance replaces damaged property.<br>
-				But what really kills businesses is <strong>interruption, liability, and operational gaps.</strong>
+				{s.coreLeadPart1}<br>
+				<strong>{s.coreLeadPart2}</strong>
 			</p>
 			<p class="core-idea-body">
-				Troika's Continuity Protection™ focuses on keeping the business alive, not just replacing assets.
+				{s.coreBody}
 			</p>
 		</div>
 	</section>
@@ -189,24 +130,24 @@
 		<div class="troika-diff-container">
 
 			<div class="troika-diff-main">
-				<h2 class="troika-diff-title">The Troika Difference:<br>Continuity-Focused Protection</h2>
-				<p class="troika-diff-intro">Troika Continuity Protection™ is built on a proactive advisory model. This includes:</p>
+				<h2 class="troika-diff-title">{@html s.diffTitle.replace(/\n/g, '<br>')}</h2>
+				<p class="troika-diff-intro">{s.diffIntro}</p>
 				<ul class="troika-diff-list">
-					{#each troikaDiffPoints as point}
+					{#each s.diffPoints as point}
 						<li>
 							<Icon name="check" size={14} strokeWidth={2.5} />
 							{point}
 						</li>
 					{/each}
 				</ul>
-				<p class="objective-label">Our objective is simple:</p>
-				<p class="objective-text">To ensure that a loss does not become a permanent disruption.</p>
+				<p class="objective-label">{s.objectiveLabel}</p>
+				<p class="objective-text">{s.objectiveText}</p>
 			</div>
 
 			<div class="ideal-for-block">
-				<h3 class="ideal-for-title">Ideal for</h3>
+				<h3 class="ideal-for-title">{s.idealForTitle}</h3>
 				<ul class="ideal-for-list">
-					{#each idealFor as item}
+					{#each s.idealFor as item}
 						<li>{item}</li>
 					{/each}
 				</ul>
@@ -219,9 +160,9 @@
 	<!-- CTA -->
 	<section class="about-cta">
 		<div class="container">
-			<h2>Ready to Protect Your Business?</h2>
-			<p>We'll assess your risks and build a continuity plan tailored to your operations.</p>
-			<a href="/contact" class="btn-primary">Talk to a Broker</a>
+			<h2>{s.ctaTitle}</h2>
+			<p>{s.ctaBody}</p>
+			<a href="/contact" class="btn-primary">{s.ctaBtn}</a>
 		</div>
 	</section>
 

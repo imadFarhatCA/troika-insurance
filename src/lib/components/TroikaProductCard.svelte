@@ -1,5 +1,8 @@
 <script lang="ts">
 	import Icon from '$lib/components/Icon.svelte';
+	import { language } from '$lib/languageStore';
+	import { t } from '$lib/i18n';
+	$: pc = t[$language].productCard;
 
 	type IconName = 'home' | 'shield' | 'building' | 'trending-up' | 'briefcase' |
 		'layers' | 'zap' | 'target' | 'award' | 'users' | 'car';
@@ -88,7 +91,7 @@
 							on:click={() => additionalExpanded = !additionalExpanded}
 							aria-expanded={additionalExpanded}
 						>
-							{additionalExpanded ? 'Show less' : additionalLabel}
+							{additionalExpanded ? pc.showLess : additionalLabel}
 							<svg
 								class="read-more-chevron"
 								class:open={additionalExpanded}
@@ -126,7 +129,7 @@
 				<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
 					<polyline points="20 6 9 17 4 12"></polyline>
 				</svg>
-				Troika Feature
+				{pc.troikaFeature}
 			</div>
 			<p class="troika-feature-text">{feature}</p>
 			{#if featureNote}

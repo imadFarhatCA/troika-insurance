@@ -2,6 +2,8 @@
 	import { onMount } from 'svelte';
 	import Icon from '$lib/components/Icon.svelte';
 	import ClaimModal from '$lib/components/ClaimModal.svelte';
+	import { language } from '$lib/languageStore';
+	import { t } from '$lib/i18n';
 
 	let animated = { tag: false, title: false, action: false };
 	let isModalOpen = false;
@@ -12,23 +14,7 @@
 		setTimeout(() => { animated.action = true; }, 750);
 	});
 
-	const steps = [
-		{
-			number: '01',
-			title: 'Report',
-			body: 'Notify Troika or your insurer immediately after a loss.'
-		},
-		{
-			number: '02',
-			title: 'Guide',
-			body: 'Troika acts as your intermediary, coordinating and supporting you throughout the process.'
-		},
-		{
-			number: '03',
-			title: 'Restore',
-			body: 'Your insurer processes the claim while Troika remains present to help ensure continuity and resolution.'
-		}
-	];
+	$: s = t[$language].claims;
 </script>
 
 <svelte:head>
@@ -76,15 +62,15 @@
 					</svg>
 				</div>
 
-				<div class="eyebrow-tag" class:animated={animated.tag}>Claims Support</div>
+				<div class="eyebrow-tag" class:animated={animated.tag}>{s.eyebrow}</div>
 
 				<div class="hero-text-group" class:animated={animated.title}>
 					<h1 class="hero-title">
-						We Stand With You<br>When It Matters Most
+						{@html s.heroTitle.replace(/\n/g, '<br>')}
 					</h1>
 					<p class="hero-description">
-						<span class="hero-desc-line">A claim is more than a file — it is a real event that can affect your property, your business, and your peace of mind. You should never have to face it alone.</span>
-						<span class="hero-desc-line">At Troika, we remain by your side, acting as your advisor and intermediary between you and the insurer, helping ensure your claim is handled properly and your protection responds as intended.</span>
+						<span class="hero-desc-line">{s.heroDesc1}</span>
+						<span class="hero-desc-line">{s.heroDesc2}</span>
 					</p>
 				</div>
 
@@ -95,53 +81,31 @@
 	<!-- Your Advocate -->
 	<section class="advocate-section">
 		<div class="advocate-container">
-			<p class="advocate-eyebrow">Your Advocate</p>
-			<h2 class="advocate-title">Between You and the Insurer</h2>
-			<p class="advocate-intro">Troika serves as your dedicated intermediary, helping bridge communication and guide you throughout the claims process.</p>
+			<p class="advocate-eyebrow">{s.advocateEyebrow}</p>
+			<h2 class="advocate-title">{s.advocateTitle}</h2>
+			<p class="advocate-intro">{s.advocateIntro}</p>
 
 			<div class="advocate-grid">
-				<div class="advocate-item">
-					<div class="advocate-check">
-						<Icon name="check" size={14} strokeWidth={2.5} />
+				{#each s.advocateItems as item}
+					<div class="advocate-item">
+						<div class="advocate-check">
+							<Icon name="check" size={14} strokeWidth={2.5} />
+						</div>
+						<span>{item}</span>
 					</div>
-					<span>Report the claim properly and efficiently</span>
-				</div>
-				<div class="advocate-item">
-					<div class="advocate-check">
-						<Icon name="check" size={14} strokeWidth={2.5} />
-					</div>
-					<span>Understand the process and what to expect</span>
-				</div>
-				<div class="advocate-item">
-					<div class="advocate-check">
-						<Icon name="check" size={14} strokeWidth={2.5} />
-					</div>
-					<span>Communicate with the insurer and adjuster</span>
-				</div>
-				<div class="advocate-item">
-					<div class="advocate-check">
-						<Icon name="check" size={14} strokeWidth={2.5} />
-					</div>
-					<span>Ensure required information is accurate and complete</span>
-				</div>
-				<div class="advocate-item">
-					<div class="advocate-check">
-						<Icon name="check" size={14} strokeWidth={2.5} />
-					</div>
-					<span>Provide clarity and support from start to resolution</span>
-				</div>
+				{/each}
 			</div>
 
-			<p class="advocate-closing">Our role is to protect your continuity and ensure you are supported every step of the way.</p>
+			<p class="advocate-closing">{s.advocateClosing}</p>
 		</div>
 	</section>
 
 	<!-- Troika Claims Model -->
 	<section class="model-section">
 		<div class="model-container">
-			<h2 class="model-title">Troika Claims Model™</h2>
+			<h2 class="model-title">{s.modelTitle}</h2>
 			<div class="model-steps">
-				{#each steps as step}
+				{#each s.steps as step}
 					<div class="model-step">
 						<span class="step-number">{step.number}</span>
 						<h3 class="step-title">{step.title}</h3>
@@ -151,7 +115,7 @@
 			</div>
 
 			<div class="model-cta">
-				<button class="btn-primary" on:click={() => isModalOpen = true}>Report a Claim</button>
+				<button class="btn-primary" on:click={() => isModalOpen = true}>{s.reportCta}</button>
 			</div>
 		</div>
 	</section>
@@ -160,29 +124,29 @@
 	<section class="contact-section">
 		<div class="contact-container">
 			<div class="contact-text">
-				<h2 class="contact-title">Claim Support Contact</h2>
-				<p class="contact-intro">If you experience a loss, immediate reporting is essential.</p>
-				<p class="contact-body">You may contact your insurer directly using the claims number listed on your policy, or contact Troika for guidance and support.</p>
-				<p class="contact-body">Troika will guide you through the proper steps and act as your intermediary throughout the process.</p>
+				<h2 class="contact-title">{s.contactTitle}</h2>
+				<p class="contact-intro">{s.contactIntro}</p>
+				<p class="contact-body">{s.contactBody1}</p>
+				<p class="contact-body">{s.contactBody2}</p>
 			</div>
 			<div class="contact-card">
-				<p class="contact-card-title">Troika Claims Support</p>
+				<p class="contact-card-title">{s.contactCardTitle}</p>
 				<ul class="contact-details">
 					<li>
 						<span class="contact-icon">📞</span>
-						<span><strong>Claim Support Number:</strong> [Insert Troika Phone Number]</span>
+						<span><strong>{s.contactPhone}</strong> [Insert Troika Phone Number]</span>
 					</li>
 					<li>
 						<span class="contact-icon">✉️</span>
-						<span><strong>Email:</strong> [Insert Troika Claims Email]</span>
+						<span><strong>{s.contactEmail}</strong> [Insert Troika Claims Email]</span>
 					</li>
 					<li>
 						<span class="contact-icon">🕒</span>
-						<span><strong>Availability:</strong> Monday to Friday, 9:00 AM – 5:00 PM</span>
+						<span><strong>{s.contactAvailability}</strong> {s.contactHours}</span>
 					</li>
 					<li class="emergency-note">
 						<span class="contact-icon">🚨</span>
-						<span>For emergencies outside business hours, please contact your insurer directly.</span>
+						<span>{s.contactEmergency}</span>
 					</li>
 				</ul>
 			</div>
@@ -192,22 +156,22 @@
 	<!-- The Troika Commitment -->
 	<section class="commitment-section">
 		<div class="commitment-container">
-			<p class="commitment-eyebrow">The Troika Commitment</p>
+			<p class="commitment-eyebrow">{s.commitmentEyebrow}</p>
 			<blockquote class="commitment-quote">
-				Protection is not only defined by the policy you hold, but by the support behind it.
+				{s.commitmentQuote}
 			</blockquote>
 			<p class="commitment-body">
-				Troika stands with you — providing guidance, clarity, and advocacy when it matters most.
-			</p>
+			{s.commitmentBody}
+		</p>
 		</div>
 	</section>
 
 	<!-- CTA -->
 	<section class="about-cta">
 		<div class="container">
-			<h2>Need Help With a Claim?</h2>
-			<p>Reach out to Troika and we'll guide you through every step of the process.</p>
-			<a href="/contact" class="btn-primary">Contact Troika</a>
+			<h2>{s.ctaTitle}</h2>
+			<p>{s.ctaBody}</p>
+			<a href="/contact" class="btn-primary">{s.ctaBtn}</a>
 		</div>
 	</section>
 
