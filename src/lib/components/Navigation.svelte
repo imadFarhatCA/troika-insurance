@@ -19,7 +19,7 @@
 
 		<!-- Desktop Menu -->
 		<div class="nav-links">
-			<a href="/#homeowners">Homeowners</a>
+			<a href="/homeowners">Homeowners</a>
 			<a href="/commercial">Commercial</a>
 			<a href="/#car">Car</a>
 			<a href="/our-approach">Our Approach</a>

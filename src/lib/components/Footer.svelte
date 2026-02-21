@@ -13,7 +13,7 @@
 			<div class="footer-links">
 				<div class="footer-column">
 					<h4><span class="the">the</span> products</h4>
-					<a href="/#homeowners">Homeowners</a>
+					<a href="/homeowners">Homeowners</a>
 					<a href="/#commercial">Commercial</a>
 					<a href="/#car">Car</a>
 				</div>
