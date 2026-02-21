@@ -255,7 +255,7 @@
 	border: 1px solid #e8e8ea;
 	border-radius: 14px;
 	padding: 18px 20px;
-	font-size: 14px;
+	font-size: 15px;
 	color: #374151;
 	line-height: 1.5;
 }
@@ -318,28 +318,35 @@
 	border: 1px solid #e8e8ea;
 	border-radius: 20px;
 	padding: 36px 32px;
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(160deg, #fdf5ff 0%, #fff 55%);
 }
 
 .step-number {
-	display: block;
-	font-size: 11px;
-	font-weight: 700;
-	letter-spacing: 2px;
-	color: #92278f;
-	margin-bottom: 16px;
+	position: absolute;
+	top: 14px;
+	right: 20px;
+	font-size: 72px;
+	font-weight: 900;
+	color: transparent;
+	-webkit-text-stroke: 1.5px rgba(146, 39, 143, 0.18);
+	line-height: 1;
+	user-select: none;
+	letter-spacing: -3px;
 }
 
 .step-title {
 	font-size: 20px;
 	font-weight: 700;
 	color: #111827;
-	margin: 0 0 14px;
+	margin: 56px 0 14px;
 }
 
 .step-body {
-	font-size: 14px;
+	font-size: 15px;
 	color: #4b5563;
-	line-height: 1.6;
+	line-height: 1.65;
 	margin: 0;
 }
 
@@ -410,7 +417,7 @@
 	display: flex;
 	align-items: flex-start;
 	gap: 12px;
-	font-size: 14px;
+	font-size: 15px;
 	color: #374151;
 	line-height: 1.5;
 }
