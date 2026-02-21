@@ -1,6 +1,8 @@
 <script lang="ts">
 	export let open: boolean = false;
 	export let onToggle: () => void;
+	export let lang: 'EN' | 'FR' = 'EN';
+	export let onLangChange: (l: 'EN' | 'FR') => void = () => {};
 </script>
 
 <!-- Hamburger Button -->
@@ -26,6 +28,22 @@
 				<line x1="6" y1="6" x2="18" y2="18"></line>
 			</svg>
 		</button>
+		<!-- Language Toggle -->
+		<div class="mobile-lang-toggle" role="group" aria-label="Language">
+			<button
+				class="mobile-lang-btn"
+				class:mobile-lang-active={lang === 'EN'}
+				on:click={() => onLangChange('EN')}
+				aria-pressed={lang === 'EN'}
+			>EN</button>
+			<button
+				class="mobile-lang-btn"
+				class:mobile-lang-active={lang === 'FR'}
+				on:click={() => onLangChange('FR')}
+				aria-pressed={lang === 'FR'}
+			>FR</button>
+		</div>
+
 		<nav class="mobile-nav">
 			<a href="/homeowners" on:click={onToggle}>Homeowners</a>
 			<a href="/commercial" on:click={onToggle}>Commercial</a>
@@ -171,4 +189,38 @@
 			display: block;
 		}
 	}
+	.mobile-lang-toggle {
+		display: flex;
+		align-items: center;
+		background: #f0e8f5;
+		border-radius: 8px;
+		padding: 3px;
+		gap: 2px;
+		margin-bottom: 32px;
+	}
+
+	.mobile-lang-btn {
+		background: transparent;
+		border: none;
+		border-radius: 6px;
+		cursor: pointer;
+		font-size: 13px;
+		font-weight: 700;
+		letter-spacing: 0.8px;
+		color: #7b2a7b;
+		padding: 7px 18px;
+		transition: background 0.18s ease, color 0.18s ease;
+		font-family: inherit;
+		line-height: 1;
+	}
+
+	.mobile-lang-btn:hover:not(.mobile-lang-active) {
+		background: rgba(92, 26, 126, 0.1);
+	}
+
+	.mobile-lang-active {
+		background: #4d1060;
+		color: #ffffff;
+	}
+
 </style>
