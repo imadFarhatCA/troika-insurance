@@ -5,10 +5,10 @@
 	import customIcon from '$lib/assets/icons/CUSTOM Icon.svg';
 
 	const products = [
-		{ id: 'homeowners', icon: homeownersIcon, title: 'Homeowners', description: 'Protection for your home and stuff', pricing: 'Save Now', size: 'large', color: '#92278f', colorRgb: '146, 39, 143' },
-		{ id: 'commercial', icon: corporateIcon, title: 'Commercial', description: 'Coverage for your business', pricing: 'Start Saving', size: 'medium', color: '#a7d8e9', colorRgb: '167, 216, 233' },
-		{ id: 'car', icon: carIcon, title: 'Car', description: 'Protect your car, passengers, and the planet', pricing: 'Save Now', size: 'large', color: '#ff0095', colorRgb: '255, 0, 149' },
-		{ id: 'custom', icon: customIcon, title: 'Custom', description: 'Tailored coverage for unique needs', pricing: 'Start Saving', size: 'small', color: '#92278f', colorRgb: '146, 39, 143' },
+		{ id: 'homeowners', href: '/homeowners', icon: homeownersIcon, title: 'Homeowners', description: 'Protection for your home and stuff', pricing: 'Save Now', size: 'large', color: '#92278f', colorRgb: '146, 39, 143' },
+		{ id: 'commercial', href: '/commercial', icon: corporateIcon, title: 'Commercial', description: 'Coverage for your business', pricing: 'Start Saving', size: 'medium', color: '#a7d8e9', colorRgb: '167, 216, 233' },
+		{ id: 'car', href: '/car', icon: carIcon, title: 'Car', description: 'Protect your car, passengers, and the planet', pricing: 'Save Now', size: 'large', color: '#ff0095', colorRgb: '255, 0, 149' },
+		{ id: 'custom', href: null, icon: customIcon, title: 'Custom', description: 'Tailored coverage for unique needs', pricing: 'Start Saving', size: 'small', color: '#92278f', colorRgb: '146, 39, 143' },
 	];
 </script>
 
@@ -24,7 +24,7 @@
 
 		<div class="bubbles-container">
 			{#each products as product, i}
-				<div class="bubble bubble-{i + 1} bubble-{product.size}" style="--bubble-color: {product.color}; --bubble-color-rgb: {product.colorRgb}">
+				<svelte:element this={product.href ? 'a' : 'div'} href={product.href ?? undefined} class="bubble bubble-{i + 1} bubble-{product.size}" style="--bubble-color: {product.color}; --bubble-color-rgb: {product.colorRgb}">
 					<div class="bubble-content">
 						<div class="icon-wrapper">
 							<img src={product.icon} alt={product.title} class="bubble-icon" />
@@ -33,7 +33,7 @@
 						<p class="bubble-description">{product.description}</p>
 						<p class="bubble-pricing">{product.pricing}</p>
 					</div>
-				</div>
+				</svelte:element>
 			{/each}
 		</div>
 	</div>
@@ -90,6 +90,10 @@
 		width: 100%;
 		height: 500px;
 		margin: 0 auto;
+	}
+
+	a.bubble {
+		text-decoration: none;
 	}
 
 	.bubble {
