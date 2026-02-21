@@ -25,6 +25,13 @@
 		if (section) observer.observe(section);
 	});
 
+	const troikaDiffPoints = [
+		'Ongoing risk assessment',
+		'Coverage gap identification',
+		'Operational exposure review',
+		'Protection aligned with business growth'
+	];
+
 	const cards = [
 		{
 			icon: 'building' as const,
@@ -139,6 +146,26 @@
 		</div>
 	</section>
 
+	<!-- Troika Difference -->
+	<section class="troika-diff-section">
+		<div class="troika-diff-container">
+			<h2 class="troika-diff-title">The Troika Difference:<br>Continuity-Focused Protection</h2>
+			<p class="troika-diff-intro">Troika Continuity Protection™ is built on a proactive advisory model. This includes:</p>
+			<ul class="troika-diff-list">
+				{#each troikaDiffPoints as point}
+					<li>
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="20 6 9 17 4 12"></polyline>
+						</svg>
+						{point}
+					</li>
+				{/each}
+			</ul>
+			<p class="objective-label">Our objective is simple:</p>
+			<p class="objective-text">To ensure that a loss does not become a permanent disruption.</p>
+		</div>
+	</section>
+
 	<!-- CTA -->
 	<section class="about-cta">
 		<div class="container">
@@ -224,6 +251,75 @@
 	align-items: stretch;
 }
 
+/* ── Troika Difference ─────────────────────────────────── */
+.troika-diff-section {
+	background: #f9f9fb;
+	padding: 80px 0;
+}
+
+.troika-diff-container {
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 0 40px;
+}
+
+.troika-diff-title {
+	font-size: 26px;
+	font-weight: 700;
+	color: #111827;
+	line-height: 1.3;
+	margin: 0 0 20px;
+}
+
+.troika-diff-intro {
+	font-size: 15px;
+	color: #4b5563;
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+
+.troika-diff-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.troika-diff-list li {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	font-size: 14px;
+	color: #374151;
+	line-height: 1.4;
+}
+
+.troika-diff-list li svg {
+	color: #92278f;
+	min-width: 14px;
+	margin-top: 2px;
+	flex-shrink: 0;
+}
+
+.objective-label {
+	font-size: 14px;
+	font-weight: 600;
+	color: #111827;
+	margin-bottom: 6px;
+}
+
+.objective-text {
+	font-size: 15px;
+	color: #4b5563;
+	line-height: 1.6;
+	font-style: italic;
+	margin: 0;
+	padding-left: 14px;
+	border-left: 3px solid #92278f;
+}
+
 /* ── Responsive ────────────────────────────────────────── */
 @media (max-width: 900px) {
 	.products-grid {
@@ -237,6 +333,10 @@
 	}
 
 	.core-idea-container {
+		padding: 0 24px;
+	}
+
+	.troika-diff-container {
 		padding: 0 24px;
 	}
 
