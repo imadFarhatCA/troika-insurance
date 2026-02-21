@@ -1,5 +1,5 @@
 <script lang="ts">
-	import logo from '$lib/assets/logo.svg';
+	import logo from '$lib/assets/troikaInsurance logo.svg';
 	import Icon from './Icon.svelte';
 	import MobileMenu from './MobileMenu.svelte';
 	import { claimModalOpen } from '$lib/claimStore';
