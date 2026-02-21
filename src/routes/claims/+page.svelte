@@ -65,19 +65,44 @@
 	<!-- Your Advocate -->
 	<section class="advocate-section">
 		<div class="advocate-container">
-			<div class="advocate-inner">
-				<h2 class="advocate-title">Your Advocate Between You and the Insurer</h2>
-				<p class="advocate-intro">Troika serves as your dedicated intermediary, helping bridge communication and guide you throughout the claims process.</p>
-				<p class="advocate-sub">We help you:</p>
-				<ul class="advocate-list">
-					<li>Report the claim properly and efficiently</li>
-					<li>Understand the process and what to expect</li>
-					<li>Communicate with the insurer and adjuster</li>
-					<li>Ensure required information is accurate and complete</li>
-					<li>Provide clarity and support from start to resolution</li>
-				</ul>
-				<p class="advocate-closing">Our role is to protect your continuity and ensure you are supported every step of the way.</p>
+			<p class="advocate-eyebrow">Your Advocate</p>
+			<h2 class="advocate-title">Between You and the Insurer</h2>
+			<p class="advocate-intro">Troika serves as your dedicated intermediary, helping bridge communication and guide you throughout the claims process.</p>
+
+			<div class="advocate-grid">
+				<div class="advocate-item">
+					<div class="advocate-check">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+					</div>
+					<span>Report the claim properly and efficiently</span>
+				</div>
+				<div class="advocate-item">
+					<div class="advocate-check">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+					</div>
+					<span>Understand the process and what to expect</span>
+				</div>
+				<div class="advocate-item">
+					<div class="advocate-check">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+					</div>
+					<span>Communicate with the insurer and adjuster</span>
+				</div>
+				<div class="advocate-item">
+					<div class="advocate-check">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+					</div>
+					<span>Ensure required information is accurate and complete</span>
+				</div>
+				<div class="advocate-item">
+					<div class="advocate-check">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+					</div>
+					<span>Provide clarity and support from start to resolution</span>
+				</div>
 			</div>
+
+			<p class="advocate-closing">Our role is to protect your continuity and ensure you are supported every step of the way.</p>
 		</div>
 	</section>
 
@@ -179,23 +204,28 @@
 
 /* ── Advocate Section ──────────────────────────────────── */
 .advocate-section {
-	background: #ffffff;
+	background: #f9f9fb;
 	padding: 80px 0;
 }
 
 .advocate-container {
-	max-width: 800px;
+	max-width: 780px;
 	margin: 0 auto;
 	padding: 0 40px;
+	text-align: center;
 }
 
-.advocate-inner {
-	border-left: 3px solid #92278f;
-	padding-left: 32px;
+.advocate-eyebrow {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 1.6px;
+	text-transform: uppercase;
+	color: #92278f;
+	margin: 0 0 12px;
 }
 
 .advocate-title {
-	font-size: 24px;
+	font-size: 28px;
 	font-weight: 700;
 	color: #111827;
 	line-height: 1.3;
@@ -206,47 +236,50 @@
 	font-size: 16px;
 	color: #4b5563;
 	line-height: 1.7;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
-.advocate-sub {
-	font-size: 14px;
-	font-weight: 600;
-	color: #111827;
-	margin-bottom: 12px;
+.advocate-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 14px;
+	margin-bottom: 40px;
+	text-align: left;
 }
 
-.advocate-list {
-	list-style: none;
-	padding: 0;
-	margin: 0 0 24px;
+.advocate-item {
 	display: flex;
-	flex-direction: column;
-	gap: 10px;
-}
-
-.advocate-list li {
+	align-items: flex-start;
+	gap: 14px;
+	background: #fff;
+	border: 1px solid #e8e8ea;
+	border-radius: 14px;
+	padding: 18px 20px;
 	font-size: 14px;
 	color: #374151;
 	line-height: 1.5;
-	padding-left: 20px;
-	position: relative;
 }
 
-.advocate-list li::before {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 8px;
-	width: 6px;
-	height: 6px;
-	border-radius: 50%;
+.advocate-item:last-child {
+	grid-column: 1 / -1;
+}
+
+.advocate-check {
+	flex-shrink: 0;
+	width: 28px;
+	height: 28px;
+	border-radius: 8px;
 	background: #92278f;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	margin-top: 1px;
 }
 
 .advocate-closing {
 	font-size: 15px;
-	color: #4b5563;
+	color: #6b7280;
 	font-style: italic;
 	line-height: 1.6;
 	margin: 0;
@@ -444,6 +477,14 @@
 	.contact-container {
 		grid-template-columns: 1fr;
 		gap: 40px;
+	}
+
+	.advocate-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.advocate-item:last-child {
+		grid-column: auto;
 	}
 
 	.advocate-container,
