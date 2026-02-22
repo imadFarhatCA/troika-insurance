@@ -1,5 +1,6 @@
 <script lang="ts">
-	import logo from '$lib/assets/troikaInsurance logo.svg';
+	import logoEN from '$lib/assets/troikaInsurance logo.svg';
+	import logoFR from '$lib/assets/troikaInsurance logo FR.svg';
 	import Icon from '$lib/components/Icon.svelte';
 	import { claimModalOpen } from '$lib/claimStore';
 	import { language } from '$lib/languageStore';
@@ -12,7 +13,7 @@
 	<div class="container">
 		<div class="footer-content">
 			<div class="footer-brand">
-				<img src={logo} alt="Troika Insurance" class="footer-logo" />
+				<img src={$language === 'FR' ? logoFR : logoEN} alt="Troika Insurance" class="footer-logo" />
 				<p>{s.tagline}</p>
 				<div class="footer-social">
 					<a href="/#contact" class="footer-social-icon" aria-label="Contact">
