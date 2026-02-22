@@ -61,7 +61,7 @@
 
 			<!-- Tab Bar -->
 			<div class="services-tabs">
-				{#each tabs as tab, i}
+				{#each s.tabs as tab, i}
 					<button class="tab-btn" class:active={activeTab === i} on:click={() => setTab(i)}>
 						<Icon name={tabIcons[i]} size={36} strokeWidth={1.25} />
 						<span>{s.tabs[i].label}</span>

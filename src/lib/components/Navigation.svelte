@@ -1,5 +1,6 @@
 <script lang="ts">
-	import logo from '$lib/assets/troikaInsurance logo.svg';
+	import logoEN from '$lib/assets/troikaInsurance logo.svg';
+import logoFR from '$lib/assets/troikaInsurance logo FR.svg';
 	import MobileMenu from './MobileMenu.svelte';
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
@@ -18,7 +19,7 @@
 <nav class="nav">
 	<div class="nav-container">
 		<a href="/" class="logo">
-			<img src={logo} alt="Troika Insurance" class="logo-img" />
+			<img src={$language === 'FR' ? logoFR : logoEN} alt="Troika Insurance" class="logo-img" />
 		</a>
 
 		<!-- Desktop Menu -->
