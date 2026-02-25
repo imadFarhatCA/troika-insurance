@@ -11,6 +11,13 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<!-- Website Control Panel Analytics — replace data-key and data-endpoint with values from Settings -->
+	<script
+		src="https://CONTROL_PANEL_URL/tracker.js"
+		data-key="TROIKA_API_KEY"
+		data-endpoint="https://CONTROL_PANEL_URL/api/track"
+		defer
+	></script>
 </svelte:head>
 
 <Navigation />
