@@ -11,10 +11,9 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<!-- Website Control Panel Analytics — replace data-key and data-endpoint with values from Settings -->
 	<script
 		src="https://website-control-panel.pages.dev/tracker.js"
-		data-key="wcp_7b33239d466c0391cb8d45258d919135cc2600c5"
+		data-key="wcp_ffdccebbb511dd0c0689f038e07f887bb6d7b9b1"
 		data-endpoint="https://website-control-panel.pages.dev/api/track"
 		defer
 	></script>
