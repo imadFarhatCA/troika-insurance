@@ -5,14 +5,15 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import ClaimModal from '$lib/components/ClaimModal.svelte';
 	import { claimModalOpen } from '$lib/claimStore';
+	import WebsiteTracker from '$lib/components/WebsiteTracker.svelte';
 
 	let { children } = $props();
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<script src="https://website-control-panel.pages.dev/tracker.js"></script>
 </svelte:head>
+<WebsiteTracker />
 
 <Navigation />
 {@render children()}
