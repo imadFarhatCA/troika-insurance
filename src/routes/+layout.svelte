@@ -11,12 +11,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<script
-		src="https://website-control-panel.pages.dev/tracker.js"
-		data-key="wcp_ffdccebbb511dd0c0689f038e07f887bb6d7b9b1"
-		data-endpoint="https://website-control-panel.pages.dev/api/track"
-		defer
-	></script>
+	<script src="https://website-control-panel.pages.dev/tracker.js"></script>
 </svelte:head>
 
 <Navigation />
