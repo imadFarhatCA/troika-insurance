@@ -583,9 +583,9 @@ const translations = {
 			p1: "Chez Troika, l'assurance n'est pas un produit — c'est un partenariat. Nous évaluons, nous conseillons, et vous décidez, avec une clarté et une transparence totales à chaque étape. Vos besoins restent au cœur de chaque recommandation, afin que vous puissiez protéger ce qui compte le plus en toute confiance.",
 			p2: "Notre philosophie est simple : trois parties, un objectif commun — votre intérêt. Avec des conseils transparents et une protection sur mesure, nous vous aidons à protéger vos actifs, votre entreprise et votre avenir en toute confiance.",
 			values: [
-				{ title: 'Confiance', colorName: 'Violet profond', description: 'Nous sommes fiers de réaliser des évaluations honnêtes.' },
+				{ title: 'Confiance', colorName: 'Violet profond', description: "Nous sommes fiers d'offrir des évaluations honnêtes, fondées sur une analyse rigoureuse." },
 				{ title: 'Transparence', colorName: 'Lavande douce', description: "Chaque recommandation que nous faisons est uniquement basée sur ce qui vous sert vraiment, jamais sur la vente d'un produit." },
-				{ title: 'Protection sur mesure', colorName: 'Bleu ciel', description: "Nous travaillons selon une philosophie du « pouvoir des trois » : vous, nous et l'assureur. Trois parties, un objectif commun, votre intérêt au cœur de chaque décision." },
+				{ title: 'Protection sur mesure', colorName: 'Bleu ciel', description: "Nous travaillons selon une philosophie d'équilibre à trois : vous, nous et l'assureur. Trois parties, un objectif commun — votre intérêt au cœur de chaque décision." },
 			],
 		},
 		claimsSection: {
@@ -918,7 +918,7 @@ const translations = {
 			heroTitle: 'Nous sommes avec vous\nquand ça compte le plus',
 			heroDesc1: "Une réclamation, c'est plus qu'un dossier — c'est un événement réel qui peut affecter votre propriété, votre entreprise et votre tranquillité d'esprit. Vous ne devriez jamais avoir à y faire face seul.",
 			heroDesc2: "Chez Troika, nous restons à vos côtés, agissant comme votre conseiller et intermédiaire entre vous et l'assureur, pour nous assurer que votre réclamation est traitée correctement et que votre protection répond comme prévu.",
-			advocateEyebrow: 'Votre défenseur',
+			advocateEyebrow: 'Votre représentant',
 			advocateTitle: "Entre vous et l'assureur",
 			advocateIntro: "Troika agit comme votre intermédiaire dédié, aidant à établir la communication et vous guidant tout au long du processus de réclamation.",
 			advocateItems: [
@@ -928,7 +928,7 @@ const translations = {
 				"S'assurer que les informations requises sont exactes et complètes",
 				'Fournir clarté et soutien du début à la résolution',
 			],
-			advocateClosing: 'Notre rôle est de protéger votre continuité et de vous assurer un soutien à chaque étape.',
+			advocateClosing: 'Notre rôle est de protéger la continuité de vos activités et de vous offrir un soutien constant, à chaque étape.',
 			modelTitle: 'Le modèle de réclamation Troika™',
 			steps: [
 				{ number: '01', title: 'Déclarer', body: "Avisez Troika ou votre assureur immédiatement après un sinistre." },
@@ -947,8 +947,8 @@ const translations = {
 			contactHours: 'Lundi au vendredi, 9h00 – 17h00',
 			contactEmergency: "Pour les urgences en dehors des heures de bureau, veuillez contacter votre assureur directement.",
 			commitmentEyebrow: "L'engagement Troika",
-			commitmentQuote: "La protection ne se définit pas seulement par la police que vous détenez, mais par le soutien qui l'accompagne.",
-			commitmentBody: "Troika est avec vous — fournissant guidance, clarté et défense quand ça compte le plus.",
+			commitmentQuote: "La protection ne se mesure pas uniquement à la police en votre possession, mais au soutien qui se tient derrière elle.",
+			commitmentBody: "Troika est à vos côtés pour vous guider, vous éclairer et défendre vos intérêts lorsque cela compte vraiment.",
 			ctaTitle: "Besoin d'aide pour une réclamation?",
 			ctaBody: "Contactez Troika et nous vous guiderons à travers chaque étape du processus.",
 			ctaBtn: 'Contacter Troika',
@@ -982,7 +982,7 @@ const translations = {
 				step1: 'Nous évaluons',
 				step2: 'Nous conseillons',
 				step3: 'Vous décidez',
-				potClosing: "Parce que votre tranquillité d'esprit nécessite plus qu'une police — elle nécessite compréhension, clarté et une équipe qui vous soutient.",
+				potClosing: "Parce que votre tranquillité d'esprit exige plus qu'une simple police — elle requiert compréhension, clarté et une équipe à vos côtés.",
 			},
 			role: {
 				label: 'Notre rôle',
@@ -994,7 +994,7 @@ const translations = {
 			different: {
 				label: 'Pourquoi Troika est différent',
 				subtitle: 'Expérience personnelle, compréhension réelle',
-				p1: "En tant qu'homme de famille marié avec trois petites filles, je comprends ce que signifie vraiment travailler dur pour les choses qui comptent.",
+				p1: "En tant qu'homme de famille, marié et père de trois filles, je comprends réellement ce que signifie travailler fort pour ce qui compte le plus.",
 				p2: "Toutes ces longues journées, les sacrifices, les efforts — tout ce que vous construisez a une signification.",
 				p3: "Que vous achetiez votre première voiture, votre premier condo ou que vous construisiez votre propre entreprise, ces moments ne sont pas que des transactions.\nCe sont des réussites. Des souvenirs. La preuve de tout ce pour quoi vous avez travaillé.",
 				p4: "C'est pourquoi, pour moi, l'assurance n'est pas qu'un bout de papier.\nL'assurance est un filet de sécurité — un moyen de protéger ce que vous avez construit et de garantir que lorsque l'inattendu se produit, vous ne perdez pas les choses qui comptent le plus.",
