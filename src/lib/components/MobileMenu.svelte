@@ -24,12 +24,6 @@
 <!-- Fullscreen Overlay -->
 {#if open}
 	<div class="mobile-menu-overlay">
-		<button class="close-btn" on:click={onToggle} aria-label="Close menu">
-			<svg class="close-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-				<line x1="18" y1="6" x2="6" y2="18"></line>
-				<line x1="6" y1="6" x2="18" y2="18"></line>
-			</svg>
-		</button>
 		<nav class="mobile-nav">
 			<a href="/homeowners" on:click={onToggle}>{s.homeowners}</a>
 			<a href="/commercial" on:click={onToggle}>{s.commercial}</a>
@@ -66,7 +60,8 @@
 		cursor: pointer;
 		color: #4a4a4a;
 		padding: 8px;
-		z-index: 200;
+		position: relative;
+		z-index: 1001;
 	}
 
 	.hamburger-icon {
@@ -125,30 +120,6 @@
 	@keyframes fadeIn {
 		0% { opacity: 0; }
 		100% { opacity: 1; }
-	}
-
-	.close-btn {
-		position: absolute;
-		top: 24px;
-		right: 24px;
-		background: none;
-		border: none;
-		cursor: pointer;
-		color: #4a4a4a;
-		padding: 8px;
-	}
-
-	.close-icon {
-		transition: all 0.3s ease;
-	}
-
-	.close-btn:hover .close-icon {
-		transform: rotate(90deg) scale(1.15);
-		color: #92278f;
-	}
-
-	.close-btn:active .close-icon {
-		transform: rotate(180deg) scale(0.9);
 	}
 
 	.mobile-nav {
