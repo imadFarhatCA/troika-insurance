@@ -29,17 +29,19 @@
 			</div>
 			<div class="footer-links">
 				<div class="footer-column">
-					<h4><span class="the">the</span> {s.products}</h4>
+					<h4><span class="the">{s.productsArticle}</span> {s.products}</h4>
 					<a href="/homeowners">{nav.homeowners}</a>
 					<a href="/#commercial">{nav.commercial}</a>
 					<a href="/#car">{nav.car}</a>
 				</div>
 				<div class="footer-column">
-					<h4><span class="the">the</span> {s.company}</h4>
+					<h4><span class="the">{s.companyArticle}</span> {s.company}</h4>
 					<a href="/our-approach">{s.ourApproach}</a>
 					<a href="/services">{s.services}</a>
 					<button class="footer-claims-btn" on:click={() => claimModalOpen.set(true)}>{s.claims}</button>
 					<a href="/#contact">Contact</a>
+					<a href="/privacy-policy">{s.privacyPolicy}</a>
+					<a href="/complaints-policy">{s.complaintsPolicy}</a>
 				</div>
 			</div>
 		</div>
