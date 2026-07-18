@@ -55,8 +55,10 @@
 	padding: 48px 0 100px;
 }
 
+.legal-hero .container,
 .legal-body .container {
 	max-width: 780px;
+	padding: 0 24px;
 }
 
 .legal-body h2 {
