@@ -40,6 +40,7 @@
 					<a href="/services">{s.services}</a>
 					<button class="footer-claims-btn" on:click={() => claimModalOpen.set(true)}>{s.claims}</button>
 					<a href="/#contact">Contact</a>
+					<a href="/our-partners">{s.ourPartners}</a>
 					<a href="/privacy-policy">{s.privacyPolicy}</a>
 					<a href="/complaints-policy">{s.complaintsPolicy}</a>
 				</div>

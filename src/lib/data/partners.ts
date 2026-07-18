@@ -1,0 +1,33 @@
+export const personalPartners = [
+	'Intact Insurance',
+	'Intact Prestige',
+	'Aviva',
+	'Wawanesa',
+	'Promutuel',
+	'Optimum',
+	'Pafco',
+	'Unique Assurance',
+	'Vago',
+	'Orbit',
+	'Premier Canada',
+	'JUSTe',
+];
+
+export const businessPartners = [
+	'Northbridge Insurance',
+	'Echelon Insurance',
+	'April Insurance',
+	'Chubb',
+	'Markel',
+	'Victor',
+	'Zurich',
+	'Liberty Mutual',
+	'CFC',
+	'Ches',
+	'SMB',
+	'TSW',
+	'SWG',
+	'Soplex',
+	'Revau',
+	'AMF',
+];

@@ -20,6 +20,7 @@ const translations = {
 			ourApproach: 'Our Approach',
 			services: 'Services',
 			claims: 'Claims',
+			ourPartners: 'Our Partners',
 			privacyPolicy: 'Privacy Policy',
 			complaintsPolicy: 'Complaints Policy',
 			copyright: '© 2026 Troika Insurance. All rights reserved.',
@@ -82,6 +83,12 @@ const translations = {
 			subtitle: 'We partner up with the best on the market to provide you with what you deserve',
 			showMore: 'See More',
 			showLess: 'Show Less',
+		},
+		partners: {
+			title: 'Our Partners',
+			subtitle: "We partner with Canada's top insurers to give you the best coverage and pricing, whatever you're protecting.",
+			personalTitle: 'Personal Insurance',
+			businessTitle: 'Business Insurance',
 		},
 		claimModal: {
 			step1Title: 'What is your Claim about?',
@@ -567,6 +574,7 @@ const translations = {
 			ourApproach: 'Notre Approche',
 			services: 'Services',
 			claims: 'Réclamations',
+			ourPartners: 'Nos partenaires',
 			privacyPolicy: 'Politique de confidentialité',
 			complaintsPolicy: 'Politique de traitement des plaintes',
 			copyright: '© 2026 Troika Insurance. Tous droits réservés.',
@@ -629,6 +637,12 @@ const translations = {
 			subtitle: 'Nous nous associons aux meilleurs du marché pour vous offrir ce que vous méritez',
 			showMore: 'Voir plus',
 			showLess: 'Voir moins',
+		},
+		partners: {
+			title: 'Nos partenaires',
+			subtitle: "Nous collaborons avec les meilleurs assureurs au Canada pour vous offrir la meilleure couverture et les meilleurs tarifs, peu importe ce que vous protégez.",
+			personalTitle: 'Assurance des particuliers',
+			businessTitle: 'Assurance des entreprises',
 		},
 		claimModal: {
 			step1Title: 'De quoi concerne votre réclamation?',
