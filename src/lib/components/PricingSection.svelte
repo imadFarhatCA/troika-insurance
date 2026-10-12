@@ -168,57 +168,59 @@
 		50% { translate: 0 -10px; }
 	}
 
+	/* Text scales with the circle (cqw = 1% of the bubble width) so it always fits inside */
+	.bubble { container-type: inline-size; }
+
 	.bubble-content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
 		color: #4a4a4a;
-		padding: 0 30px 16px;
+		padding: 0 13cqw 6cqw;
+		width: 100%;
 	}
 
 	.bubble-icon {
-		width: 76px;
-		height: 76px;
+		width: 24cqw;
+		height: 24cqw;
 		display: block;
 		object-fit: contain;
 	}
 
 	.bubble-dot {
-		width: 5px;
-		height: 5px;
+		width: 1.8cqw;
+		height: 1.8cqw;
 		border-radius: 50%;
 		background: var(--bubble-color);
-		margin: 10px 0 12px;
+		margin: 3.4cqw 0 4cqw;
 		transition: width 0.3s ease, border-radius 0.3s ease;
 	}
 
 	.bubble:hover .bubble-dot {
-		width: 30px;
-		border-radius: 3px;
+		width: 10cqw;
+		border-radius: 1cqw;
 	}
 
 	.bubble h3 {
 		font-family: Georgia, 'Times New Roman', serif;
-		font-size: 24px;
+		font-size: 8cqw;
 		font-weight: 600;
 		color: #1d1b3a;
-		margin: 0 0 8px 0;
+		margin: 0 0 2.6cqw 0;
 		line-height: 1.15;
 	}
 
 	.bubble-description {
-		font-size: 13.5px;
-		line-height: 1.45;
+		font-size: 4.6cqw;
+		line-height: 1.4;
 		color: #55536a;
-		margin: 0 0 12px 0;
+		margin: 0 0 3.8cqw 0;
 	}
 
 	.bubble-pricing {
-		display: inline-flex;
-		align-items: center;
-		gap: 6px;
-		font-size: 13.5px;
+		display: block;
+		font-size: 4.6cqw;
 		font-weight: 500;
 		color: var(--bubble-text);
 		margin: 0;
@@ -226,7 +228,11 @@
 	}
 
 	.bubble-pricing svg {
-		flex-shrink: 0;
+		display: inline-block;
+		width: 5.4cqw;
+		height: 5.4cqw;
+		margin-left: 1.4cqw;
+		vertical-align: -0.12em;
 		transition: transform 0.25s ease;
 	}
 
@@ -236,9 +242,6 @@
 
 	@media (max-width: 1100px) {
 		.bubble { width: 250px; height: 250px; }
-		.bubble-content { padding: 0 26px; }
-		.bubble-icon { width: 70px; height: 70px; }
-		.bubble h3 { font-size: 22px; }
 		.bubble-1 { left: 1%; }
 		.bubble-2 { left: 25%; }
 		.bubble-3 { left: 49%; }
@@ -262,25 +265,23 @@
 			position: relative;
 			inset: auto;
 			width: 100%;
-			max-width: 330px;
+			max-width: 340px;
 			height: auto;
 			aspect-ratio: 1;
 			margin: 0 auto;
 		}
 
 		.bubble-2, .bubble-4 { margin-top: 36px; }
-		.bubble-icon { width: 60px; height: 60px; }
-		.bubble h3 { font-size: 19px; }
-		.bubble-description { display: none; }
-		.bubble-content { padding: 0 14px; }
 	}
 
 	@media (max-width: 640px) {
 		.pricing { padding: 60px 16px 90px; }
 		.pricing h2 { font-size: 28px; }
-		.bubble-icon { width: 48px; height: 48px; }
-		.bubble h3 { font-size: 16px; }
-		.bubble-pricing { font-size: 11.5px; }
-		.bubble-pricing svg { width: 12px; height: 12px; }
+
+		/* One circle per row, alternating sides, so the text keeps a readable size */
+		.bubbles-container { grid-template-columns: 1fr; gap: 22px; }
+		.bubble { width: min(310px, 86vw); max-width: none; }
+		.bubble-1, .bubble-3 { margin: 0 auto 0 0; }
+		.bubble-2, .bubble-4 { margin: 0 0 0 auto; }
 	}
 </style>
