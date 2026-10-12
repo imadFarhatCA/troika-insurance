@@ -28,7 +28,7 @@ const translations = {
 		homepage: {
 			heroTitle: 'Peace of mind takes more than a policy.',
 			heroSubtitle: 'Your insurance brokers, here to understand your needs and guide you toward the right coverage',
-			heroCta: 'Let’s Find the Right Coverage Together',
+			heroCta: 'Find the Right Coverage',
 		},
 		pricing: {
 			title: 'Understand Better. Advise Better. Protect Better.',
@@ -75,8 +75,13 @@ const translations = {
 			subtitle: 'Our greatest recognition is the trust of those we serve.',
 		},
 		switchSection: {
-			title: 'Coverage for Every Part of Your Life.',
-			subtitle: "Whether it's your personal assets, your business, or more complex risks, every situation deserves careful attention. At Troika, we take the time to understand your circumstances, assess your risks, and guide you toward coverage that fits your needs.",
+			title: 'Your life. Your business.\nThe same attention to your needs.',
+			chart: {
+				centerTop: 'Our',
+				centerMain: 'PORTFOLIO',
+				caption: 'Breakdown by type of insurance',
+				segments: ['Your business', 'Your home', 'Your car', 'Your business vehicles'],
+			},
 		},
 		social: {
 			title: 'Insurance with Impact',
@@ -582,7 +587,7 @@ const translations = {
 		homepage: {
 			heroTitle: "La tranquillité d'esprit va au-delà d'une police.",
 			heroSubtitle: 'Vos courtiers en assurance de dommages, à l’écoute de vos besoins et à vos côtés pour vous conseiller',
-			heroCta: 'Trouvons ensemble la bonne protection',
+			heroCta: 'Trouvez la bonne protection',
 		},
 		pricing: {
 			title: 'Bien comprendre. Bien conseiller. Bien protéger.',
@@ -629,8 +634,13 @@ const translations = {
 			subtitle: 'Notre plus belle reconnaissance, c’est la confiance de ceux que nous accompagnons',
 		},
 		switchSection: {
-			title: 'Des protections adaptées à chaque réalité.',
-			subtitle: "Que ce soit pour vos biens personnels, votre entreprise ou des risques plus complexes, chaque situation mérite une attention particulière. Chez Troika, nous prenons le temps de comprendre votre réalité, d'évaluer vos risques et de vous guider vers les protections qui répondent à vos besoins.",
+			title: 'Votre vie. Votre entreprise.\nUne même attention à vos besoins.',
+			chart: {
+				centerTop: 'Notre',
+				centerMain: 'PORTEFEUILLE',
+				caption: 'Répartition par type d’assurance',
+				segments: ['Votre entreprise', 'Votre habitation', 'Votre automobile', 'Vos véhicules d’entreprise'],
+			},
 		},
 		social: {
 			title: "L'assurance avec impact",

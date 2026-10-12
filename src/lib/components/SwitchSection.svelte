@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SemiPieChart from './SemiPieChart.svelte';
+	import DonutChart from './DonutChart.svelte';
 	import xShape from '$lib/assets/heroAnimation/heroAnimation X.svg';
 	import circle from '$lib/assets/heroAnimation/heroAnimation cirlce.svg';
 	import { language } from '$lib/languageStore';
@@ -9,11 +9,10 @@
 
 <section class="switch-section">
 	<div class="container">
-		<h2>{s.title}</h2>
-		<p class="switch-subtitle">{s.subtitle}</p>
+		<h2>{@html s.title.replace(/\n/g, '<br/>')}</h2>
 
 		<div class="insurance-chart">
-			<SemiPieChart />
+			<DonutChart />
 		</div>
 	</div>
 
