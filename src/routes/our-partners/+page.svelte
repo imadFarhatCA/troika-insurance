@@ -1,9 +1,15 @@
 <script lang="ts">
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
-	import { partnerLogos } from '$lib/data/partnerLogos';
+	import { personalPartners, commercialPartners, mgaPartners } from '$lib/data/partnersDirectory';
 
 	$: s = t[$language].partners;
+	$: groups = [
+		{ title: s.personalTitle, partners: personalPartners },
+		{ title: s.commercialTitle, partners: commercialPartners },
+		{ title: s.mgaTitle, partners: mgaPartners }
+	];
+	const host = (url: string) => new URL(url).hostname.replace(/^www\./, '');
 </script>
 
 <svelte:head>
@@ -22,14 +28,25 @@
 
 	<section class="partners-body">
 		<div class="container">
-			<!-- All LMBF partners as names, to be sorted into personal / business later -->
-			<div class="partners-group">
-				<div class="partners-grid">
-					{#each partnerLogos as partner}
-						<div class="partner-card">{partner.name}</div>
-					{/each}
+			{#each groups as group}
+				<div class="partners-group">
+					<h2>{group.title}</h2>
+					<div class="partners-grid">
+						{#each group.partners as partner}
+							<article class="partner-card">
+								<h3>{partner.name}</h3>
+								<div class="partner-line">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" /></svg>
+									<div>
+										<span class="line-label">{s.website}</span>
+										<a href={partner.website} target="_blank" rel="noopener noreferrer">{host(partner.website)}</a>
+									</div>
+								</div>
+							</article>
+						{/each}
+					</div>
 				</div>
-			</div>
+			{/each}
 		</div>
 	</section>
 </div>
@@ -75,21 +92,32 @@
 
 
 
+.partners-group + .partners-group {
+	margin-top: 72px;
+}
+
+.partners-group h2 {
+	font-size: 28px;
+	font-weight: 700;
+	color: var(--color-bg-dark);
+	margin: 0 0 6px 0;
+}
+
+
 .partners-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	gap: 14px;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: 16px;
 }
 
 .partner-card {
-	padding: 18px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 20px 22px;
 	border: 1px solid var(--color-border);
 	border-radius: 12px;
 	background: var(--color-bg-white);
-	font-size: 15px;
-	font-weight: 600;
-	color: var(--color-text);
-	text-align: center;
 	transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
@@ -99,9 +127,57 @@
 	transform: translateY(-2px);
 }
 
+.partner-card h3 {
+	font-size: 17px;
+	font-weight: 700;
+	color: var(--color-text);
+	margin: 0;
+}
+
+.partner-line {
+	display: flex;
+	gap: 10px;
+	align-items: flex-start;
+	font-size: 14px;
+}
+
+.partner-line svg {
+	flex-shrink: 0;
+	margin-top: 2px;
+	color: var(--color-primary);
+}
+
+.partner-line > div {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	min-width: 0;
+}
+
+.line-label {
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--color-text-muted);
+}
+
+.partner-line a {
+	color: var(--color-text);
+	font-weight: 500;
+	text-decoration: none;
+	overflow-wrap: anywhere;
+}
+
+.partner-line a:hover {
+	color: var(--color-primary);
+	text-decoration: underline;
+}
+
+
 @media (max-width: 640px) {
 	.partners-grid {
-		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		grid-template-columns: 1fr;
 	}
 }
 </style>

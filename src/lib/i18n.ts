@@ -94,6 +94,9 @@ const translations = {
 			subtitle: "We partner with Canada's top insurers to give you the best coverage and pricing, whatever you're protecting.",
 			personalTitle: 'Personal Insurance',
 			businessTitle: 'Business Insurance',
+			commercialTitle: 'Commercial Insurance',
+			mgaTitle: 'Special Risk MGAs & Wholesalers',
+			website: 'Official website',
 		},
 		claimModal: {
 			step1Title: 'What is your Claim about?',
@@ -651,8 +654,11 @@ const translations = {
 		partners: {
 			title: 'Nos partenaires',
 			subtitle: "Nous collaborons avec les meilleurs assureurs au Canada pour vous offrir la meilleure couverture et les meilleurs tarifs, peu importe ce que vous protégez.",
-			personalTitle: 'Assurance des particuliers',
+			personalTitle: 'Assurance personnelle',
 			businessTitle: 'Assurance des entreprises',
+			commercialTitle: 'Assurance commerciale',
+			mgaTitle: 'MGA et grossistes',
+			website: 'Site officiel',
 		},
 		claimModal: {
 			step1Title: 'De quoi concerne votre réclamation?',
