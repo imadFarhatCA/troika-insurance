@@ -22,6 +22,6 @@ export const networkFeatures: NetworkFeature[] = [
 		id: 'service',
 		icon: 'star',
 		title: 'Big-Network Power, Boutique-Level Service',
-		description: 'With AssurUni, you benefit from the reach of a large organization while enjoying the personalized attention of a dedicated advisor.'
+		description: 'The Strength of a Large Network. The Personal Touch of a Broker Who Knows You. With Troika, benefit from AssurUni’s extensive resources while enjoying dedicated, personalized guidance.'
 	}
 ];
