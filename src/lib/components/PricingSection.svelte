@@ -69,7 +69,7 @@
 		text-align: center;
 		font-size: 48px;
 		font-weight: 700;
-		color: #2b2748;
+		color: #4a4a4a;
 		margin: 0 0 24px 0;
 		line-height: 1.2;
 	}
@@ -203,10 +203,9 @@
 	}
 
 	.bubble h3 {
-		font-family: Georgia, 'Times New Roman', serif;
 		font-size: 8cqw;
-		font-weight: 600;
-		color: #1d1b3a;
+		font-weight: 700;
+		color: #4a4a4a;
 		margin: 0 0 2.6cqw 0;
 		line-height: 1.15;
 	}

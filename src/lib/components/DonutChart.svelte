@@ -83,13 +83,13 @@
 	.label.hovered .pct { font-size: 40px; }
 
 	.pct { font-size: 36px; font-weight: 700; transition: font-size 0.2s ease; }
-	.name { font-size: 21px; font-weight: 700; fill: #1d1b3a; }
+	.name { font-size: 21px; font-weight: 700; fill: var(--color-text, #4a4a4a); }
 	.center-top { font-size: 24px; fill: #6b6a7c; }
 	.center-main { font-size: 32px; font-weight: 700; fill: #92278f; letter-spacing: 0.5px; }
 	.caption { font-size: 18px; fill: #6b6a7c; }
 
 	.legend { display: none; list-style: none; margin: 18px auto 0; padding: 0; max-width: 360px; }
-	.legend li { display: grid; grid-template-columns: 14px auto 1fr; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #ece9f0; font-size: 15px; color: #1d1b3a; }
+	.legend li { display: grid; grid-template-columns: 14px auto 1fr; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #ece9f0; font-size: 15px; color: var(--color-text, #4a4a4a); }
 	.swatch { width: 14px; height: 14px; border-radius: 3px; }
 	.legend b { font-size: 17px; white-space: nowrap; }
 
