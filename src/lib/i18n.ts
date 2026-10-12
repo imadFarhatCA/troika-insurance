@@ -47,7 +47,7 @@ const translations = {
 			values: [
 				{ title: 'Trust', colorName: 'Deep Purple', description: 'We take pride in performing honest assessments.' },
 				{ title: 'Transparency', colorName: 'Soft Lavender', description: "Every recommendation we make is based solely on what truly serves you, never on selling a product." },
-				{ title: 'Tailored Protection', colorName: 'Sky Blue', description: 'We believe in the power of three: you, your broker, and the insurer. Three parties, one essential balance, working toward a shared goal: finding coverage tailored to your needs while keeping your best interests at the heart of our recommendations.' },
+				{ title: 'Tailored Protection', colorName: 'Sky Blue', description: 'Three parties, one essential balance, working toward a shared goal: finding coverage tailored to your needs while keeping your best interests at the heart of our recommendations.' },
 			],
 		},
 		claimsSection: {
@@ -606,7 +606,7 @@ const translations = {
 			values: [
 				{ title: 'Confiance', colorName: 'Violet profond', description: "Nous sommes fiers d'offrir des évaluations honnêtes, fondées sur une analyse rigoureuse." },
 				{ title: 'Transparence', colorName: 'Lavande douce', description: "Chaque recommandation que nous faisons est uniquement basée sur ce qui vous sert vraiment, jamais sur la vente d'un produit." },
-				{ title: 'Protection sur mesure', colorName: 'Bleu ciel', description: 'Nous croyons à la force de trois : vous, votre courtier et l’assureur. Trois parties, un équilibre essentiel, avec un objectif commun : trouver la protection adaptée à votre réalité, tout en plaçant vos intérêts au cœur de nos recommandations.' },
+				{ title: 'Protection sur mesure', colorName: 'Bleu ciel', description: 'Trois parties, un équilibre essentiel, avec un objectif commun : trouver la protection adaptée à votre réalité, tout en plaçant vos intérêts au cœur de nos recommandations.' },
 			],
 		},
 		claimsSection: {
