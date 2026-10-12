@@ -3,11 +3,6 @@
 	import { segments } from '$lib/data/chartData';
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
-	import homeownersIcon from '$lib/assets/icons/HOMEOWNERS Icon.svg';
-	import corporateIcon from '$lib/assets/icons/CORPORATE Icon.svg';
-	import carIcon from '$lib/assets/icons/Car Icon.svg';
-
-	const icons = [corporateIcon, homeownersIcon, carIcon, carIcon];
 
 	$: c = t[$language].switchSection.chart;
 	$: fmt = (n: number) => ($language === 'FR' ? `${String(n).replace('.', ',')} %` : `${n}%`);
@@ -54,10 +49,6 @@
 	</g>
 
 	{#each arcs as a, i}
-		<image class="seg-icon" class:shown={hovered === i} href={icons[i]} x={a.icon[0] - 22} y={a.icon[1] - 22} width="44" height="44" />
-	{/each}
-
-	{#each arcs as a, i}
 		{@const right = a.side === 'right'}
 		{@const hx = right ? a.elbow[0] + 32 : a.elbow[0] - 32}
 		<g class="label label-{i + 1}" class:hovered={hovered === i} style="transition-delay: {600 + i * 150}ms; --ax: {a.attract[0]}px; --ay: {a.attract[1]}px">
@@ -97,9 +88,6 @@
 	}
 	.arc.hovered { transform: scale(1.06); filter: brightness(0.85) saturate(1.3) drop-shadow(0 0 12px rgba(var(--glow), 0.7)); }
 
-	/* Icon pops in over the hovered segment */
-	.seg-icon { opacity: 0; transform: scale(0.6); transform-box: fill-box; transform-origin: center; pointer-events: none; filter: brightness(0) invert(1); transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); }
-	.seg-icon.shown { opacity: 1; transform: scale(1); }
 
 	/* Labels fade in, bob on their own rhythm and slide toward the segment on hover */
 	.label { opacity: 0; transition: opacity 0.6s ease, translate 0.4s ease; }
@@ -132,7 +120,7 @@
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		.arc, .label, .seg-icon { transition: none; }
+		.arc, .label { transition: none; }
 		.donut.in-view, .in-view .label { animation: none; }
 	}
 </style>
