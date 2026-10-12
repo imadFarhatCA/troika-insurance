@@ -661,10 +661,15 @@ body {
 	justify-content: center;
 }
 
+.insurer-logo-item {
+	min-height: 96px;
+}
+
 .insurer-logo-item img {
-	height: 149px;
-	width: auto;
-	max-width: 162px;
+	width: calc(var(--w) * 1px);
+	height: auto;
+	max-width: 100%;
+	max-height: 86px;
 	object-fit: contain;
 	filter: grayscale(100%) brightness(0) invert(0);
 	opacity: 0.6;
@@ -1892,9 +1897,11 @@ body {
 	}
 
 	.insurer-logo-item img {
-		height: 119px;
-		max-width: 130px;
+		width: calc(var(--w) * 0.7px);
+		max-height: 64px;
 	}
+
+	.insurer-logo-item { min-height: 76px; }
 
 	.footer-links {
 		grid-template-columns: 1fr;

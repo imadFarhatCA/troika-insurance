@@ -1,8 +1,7 @@
 <script lang="ts">
-	import Icon from '$lib/components/Icon.svelte';
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
-	import { personalPartners, businessPartners } from '$lib/data/partners';
+	import { partnerLogos } from '$lib/data/partnerLogos';
 
 	$: s = t[$language].partners;
 </script>
@@ -23,26 +22,11 @@
 
 	<section class="partners-body">
 		<div class="container">
+			<!-- All LMBF partners as names, to be sorted into personal / business later -->
 			<div class="partners-group">
-				<div class="group-heading">
-					<div class="group-icon"><Icon name="home" size={22} strokeWidth={1.75} /></div>
-					<h2>{s.personalTitle}</h2>
-				</div>
 				<div class="partners-grid">
-					{#each personalPartners as name}
-						<div class="partner-card">{name}</div>
-					{/each}
-				</div>
-			</div>
-
-			<div class="partners-group">
-				<div class="group-heading">
-					<div class="group-icon"><Icon name="briefcase" size={22} strokeWidth={1.75} /></div>
-					<h2>{s.businessTitle}</h2>
-				</div>
-				<div class="partners-grid">
-					{#each businessPartners as name}
-						<div class="partner-card">{name}</div>
+					{#each partnerLogos as partner}
+						<div class="partner-card">{partner.name}</div>
 					{/each}
 				</div>
 			</div>
@@ -87,35 +71,9 @@
 	margin: 0 auto;
 }
 
-.partners-group + .partners-group {
-	margin-top: 56px;
-}
 
-.group-heading {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-	margin-bottom: 24px;
-}
 
-.group-icon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 40px;
-	height: 40px;
-	border-radius: 10px;
-	background: rgba(146, 39, 143, 0.1);
-	color: var(--color-primary);
-	flex-shrink: 0;
-}
 
-.group-heading h2 {
-	font-size: 24px;
-	font-weight: 700;
-	color: var(--color-bg-dark);
-	margin: 0;
-}
 
 .partners-grid {
 	display: grid;
