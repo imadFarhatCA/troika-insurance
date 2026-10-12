@@ -96,7 +96,6 @@ const translations = {
 			businessTitle: 'Business Insurance',
 			commercialTitle: 'Commercial Insurance',
 			mgaTitle: 'Special Risk MGAs & Wholesalers',
-			website: 'Official website',
 		},
 		claimModal: {
 			step1Title: 'What is your Claim about?',
@@ -658,7 +657,6 @@ const translations = {
 			businessTitle: 'Assurance des entreprises',
 			commercialTitle: 'Assurance commerciale',
 			mgaTitle: 'MGA et grossistes',
-			website: 'Site officiel',
 		},
 		claimModal: {
 			step1Title: 'De quoi concerne votre réclamation?',

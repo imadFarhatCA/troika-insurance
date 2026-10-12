@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
-	import { personalPartners, commercialPartners, mgaPartners } from '$lib/data/partnersDirectory';
+	import { insurersIn } from '$lib/data/insurers';
 
 	$: s = t[$language].partners;
 	$: groups = [
-		{ title: s.personalTitle, partners: personalPartners },
-		{ title: s.commercialTitle, partners: commercialPartners },
-		{ title: s.mgaTitle, partners: mgaPartners }
+		{ title: s.personalTitle, partners: insurersIn('personal') },
+		{ title: s.commercialTitle, partners: insurersIn('commercial') },
+		{ title: s.mgaTitle, partners: insurersIn('mga') }
 	];
 	const host = (url: string) => new URL(url).hostname.replace(/^www\./, '');
 </script>
@@ -38,7 +38,6 @@
 								<div class="partner-line">
 									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" /></svg>
 									<div>
-										<span class="line-label">{s.website}</span>
 										<a href={partner.website} target="_blank" rel="noopener noreferrer">{host(partner.website)}</a>
 									</div>
 								</div>
@@ -154,13 +153,6 @@
 	min-width: 0;
 }
 
-.line-label {
-	font-size: 11px;
-	font-weight: 600;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-	color: var(--color-text-muted);
-}
 
 .partner-line a {
 	color: var(--color-text);
