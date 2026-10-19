@@ -11,11 +11,11 @@
 		src: urls[`/src/lib/assets/partnerLogos/${l.file}`]
 	}));
 
-	// Insurers listed on the Our Partners page come first; only a short preview shows until "See More" is clicked.
-	// 15 = three full rows on desktop (5 columns) and five on mobile (3 columns).
+	// Only the insurers listed on the Our Partners page (insurers.ts) get a logo here.
+	// Preview = three full rows on desktop (5 columns) and five on mobile (3 columns) until "See More".
 	const PREVIEW_COUNT = 15;
 	const onPartnersPage = new Set(insurers.map((i) => i.logo));
-	const ordered = [...logos.filter((l) => onPartnersPage.has(l.file)), ...logos.filter((l) => !onPartnersPage.has(l.file))];
+	const ordered = logos.filter((l) => onPartnersPage.has(l.file));
 
 	let expanded = false;
 	$: s = t[$language].social;
