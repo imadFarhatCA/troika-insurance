@@ -32,9 +32,9 @@
 				<div class="card-glow"></div>
 				<div class="card-content">
 					<span class="card-label">{s.phoneLabel}</span>
-					<h3 class="card-title">+1 (555) 123-4567</h3>
+					<h3 class="card-title">+1 (514) 447 7475</h3>
 					<p class="card-desc">{s.phoneHours}</p>
-					<a href="tel:+15551234567" class="card-link">
+					<a href="tel:+15144477475" class="card-link">
 						{s.phoneCta}
 						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
