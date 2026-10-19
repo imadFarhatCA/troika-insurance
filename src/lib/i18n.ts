@@ -315,7 +315,7 @@ const translations = {
 		},
 		commercial: {
 			eyebrow: 'Commercial Insurance',
-			heroTitle: 'Continuity Protection™\nfor Business Owners',
+			heroTitle: 'Protection\nfor Business Owners',
 			heroDesc: "This is not just insurance. It's a structured protection system designed to ensure a business can survive and continue after a loss.",
 			heroCta: 'Get a Quote',
 			cards: [
@@ -877,7 +877,7 @@ const translations = {
 		},
 		commercial: {
 			eyebrow: 'Assurance commerciale',
-			heroTitle: "Continuity Protection™\npour les propriétaires d'entreprise",
+			heroTitle: "Protection\npour les propriétaires d'entreprise",
 			heroDesc: "Ce n'est pas seulement une assurance. C'est un système de protection structuré conçu pour garantir qu'une entreprise puisse survivre et continuer après un sinistre.",
 			heroCta: 'Obtenir un devis',
 			cards: [
