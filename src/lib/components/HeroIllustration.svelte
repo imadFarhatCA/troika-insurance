@@ -315,6 +315,7 @@
 		.illustration {
 			width: auto;
 			height: 60%;
+			margin-bottom: -56px;
 			max-width: none;
 			object-fit: cover;
 			object-position: center bottom;

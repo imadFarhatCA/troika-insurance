@@ -11,15 +11,16 @@
 		src: urls[`/src/lib/assets/partnerLogos/${l.file}`]
 	}));
 
-	// Every insurer listed on the Our Partners page is shown by default; the other LMBF logos stay behind "See More"
+	// Insurers listed on the Our Partners page come first; only a short preview shows until "See More" is clicked.
+	// 15 = three full rows on desktop (5 columns) and five on mobile (3 columns).
+	const PREVIEW_COUNT = 15;
 	const onPartnersPage = new Set(insurers.map((i) => i.logo));
 	const ordered = [...logos.filter((l) => onPartnersPage.has(l.file)), ...logos.filter((l) => !onPartnersPage.has(l.file))];
-	const visibleCount = logos.filter((l) => onPartnersPage.has(l.file)).length;
 
 	let expanded = false;
 	$: s = t[$language].social;
 
-	$: displayedLogos = expanded ? ordered : ordered.slice(0, visibleCount);
+	$: displayedLogos = expanded ? ordered : ordered.slice(0, PREVIEW_COUNT);
 </script>
 
 <section class="social-impact">
