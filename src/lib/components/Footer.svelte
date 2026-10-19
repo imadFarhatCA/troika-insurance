@@ -14,6 +14,7 @@
 		<div class="footer-content">
 			<div class="footer-brand">
 				<img src={$language === 'FR' ? logoFR : logoEN} alt="Troika Insurance" class="footer-logo" />
+				<p class="footer-partner">{s.partnerOf}</p>
 				<p>{s.tagline}</p>
 				<div class="footer-social">
 					<a href="/#contact" class="footer-social-icon" aria-label="Contact">
@@ -53,6 +54,13 @@
 </footer>
 
 <style>
+.footer-partner {
+	margin: 10px 0 6px;
+	font-size: 0.85rem;
+	font-style: italic;
+	opacity: 0.9;
+}
+
 .footer-social {
 	display: flex;
 	align-items: center;

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { partnerLogos } from '$lib/data/partnerLogos';
+	import { insurers } from '$lib/data/insurers';
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
 
@@ -10,10 +11,15 @@
 		src: urls[`/src/lib/assets/partnerLogos/${l.file}`]
 	}));
 
+	// Every insurer listed on the Our Partners page is shown by default; the other LMBF logos stay behind "See More"
+	const onPartnersPage = new Set(insurers.map((i) => i.logo));
+	const ordered = [...logos.filter((l) => onPartnersPage.has(l.file)), ...logos.filter((l) => !onPartnersPage.has(l.file))];
+	const visibleCount = logos.filter((l) => onPartnersPage.has(l.file)).length;
+
 	let expanded = false;
 	$: s = t[$language].social;
 
-	$: displayedLogos = expanded ? logos : logos.slice(0, 20);
+	$: displayedLogos = expanded ? ordered : ordered.slice(0, visibleCount);
 </script>
 
 <section class="social-impact">
@@ -29,9 +35,6 @@
 					</div>
 				{/each}
 			</div>
-			{#if !expanded}
-				<div class="gradient-overlay"></div>
-			{/if}
 		</div>
 
 		<button class="see-more-btn" on:click={() => (expanded = !expanded)}>

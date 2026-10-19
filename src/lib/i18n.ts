@@ -13,6 +13,7 @@ const translations = {
 		},
 		footer: {
 			tagline: 'Insurance made simple',
+			partnerOf: 'Proud partner of Assurini',
 			productsArticle: 'the',
 			products: 'products',
 			companyArticle: 'the',
@@ -574,6 +575,7 @@ const translations = {
 		},
 		footer: {
 			tagline: "L'assurance simplifiée",
+			partnerOf: "Fière partenaire d'Assurini",
 			productsArticle: 'les',
 			products: 'produits',
 			companyArticle: 'la',
