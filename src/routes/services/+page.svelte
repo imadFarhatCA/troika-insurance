@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { openQuote } from '$lib/quoteStore';
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	import ServicesHero from '$lib/components/ServicesHero.svelte';
@@ -154,7 +155,7 @@
 		<div class="container">
 			<h2>{s.ctaTitle}</h2>
 			<p>{s.ctaBody}</p>
-			<a href="/contact" class="btn-primary">{s.ctaBtn}</a>
+			<a href="/#quote" class="btn-primary" on:click|preventDefault={() => openQuote()}>{s.ctaBtn}</a>
 		</div>
 	</section>
 </div>

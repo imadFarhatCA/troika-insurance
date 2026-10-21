@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { openQuote } from '$lib/quoteStore';
 	import { onMount } from 'svelte';
 	import TroikaProductCard from '$lib/components/TroikaProductCard.svelte';
 	import Icon from '$lib/components/Icon.svelte';
@@ -87,7 +88,7 @@
 				</div>
 
 				<div class="hero-actions">
-					<a href="/contact" class="btn-primary-hero" class:animated={animated.action}>{s.heroCta}</a>
+					<a href="/#quote" class="btn-primary-hero" class:animated={animated.action} on:click|preventDefault={() => openQuote('auto')}>{s.heroCta}</a>
 				</div>
 
 			</div>
@@ -173,7 +174,7 @@
 		<div class="container">
 			<h2>{s.ctaTitle}</h2>
 			<p>{s.ctaBody}</p>
-			<a href="/contact" class="btn-primary">{s.ctaBtn}</a>
+			<a href="/#quote" class="btn-primary" on:click|preventDefault={() => openQuote('auto')}>{s.ctaBtn}</a>
 		</div>
 	</section>
 

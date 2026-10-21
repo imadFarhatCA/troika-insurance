@@ -5,6 +5,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import ClaimModal from '$lib/components/ClaimModal.svelte';
 	import { claimModalOpen } from '$lib/claimStore';
+	import QuoteModal from '$lib/components/QuoteModal.svelte';
 	import WebsiteTracker from '$lib/components/WebsiteTracker.svelte';
 
 	let { children } = $props();
@@ -18,4 +19,5 @@
 <Navigation />
 {@render children()}
 <Footer />
+<QuoteModal />
 <ClaimModal isOpen={$claimModalOpen} on:close={() => claimModalOpen.set(false)} />

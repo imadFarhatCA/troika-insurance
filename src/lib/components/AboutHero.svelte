@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { openQuote } from '$lib/quoteStore';
 	import { onMount } from 'svelte';
 	import { trustIndicators } from '$lib/data/trustIndicators';
 	import { language } from '$lib/languageStore';
@@ -65,7 +66,7 @@
 			</div>
 
 			<div class="hero-actions">
-				<a href="/contact" class="btn-primary-hero" class:animated={animatedElements.action1}>{s.heroBtn1}</a>
+				<a href="/#quote" class="btn-primary-hero" class:animated={animatedElements.action1} on:click|preventDefault={() => openQuote()}>{s.heroBtn1}</a>
 				<a href="#mission" class="btn-secondary-hero" class:animated={animatedElements.action2}>{s.heroBtn2}</a>
 			</div>
 

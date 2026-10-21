@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { openQuote } from '$lib/quoteStore';
 	import HeroIllustration from '$lib/components/HeroIllustration.svelte';
 	import PricingSection from '$lib/components/PricingSection.svelte';
 	import AboutSection from '$lib/components/AboutSection.svelte';
@@ -49,7 +50,7 @@
 			<div class="hero-content">
 				<h1>{s.heroTitle}</h1>
 				<p class="hero-subtitle">{s.heroSubtitle}</p>
-				<a href="#quote" class="btn-primary">{s.heroCta}</a>
+				<a href="/#quote" class="btn-primary" on:click|preventDefault={() => openQuote()}>{s.heroCta}</a>
 			</div>
 			<HeroIllustration />
 		</div>

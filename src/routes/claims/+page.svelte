@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { openQuote } from '$lib/quoteStore';
 	import { onMount } from 'svelte';
 	import Icon from '$lib/components/Icon.svelte';
 	import ClaimModal from '$lib/components/ClaimModal.svelte';
@@ -171,7 +172,7 @@
 		<div class="container">
 			<h2>{s.ctaTitle}</h2>
 			<p>{s.ctaBody}</p>
-			<a href="/contact" class="btn-primary">{s.ctaBtn}</a>
+			<a href="/#quote" class="btn-primary" on:click|preventDefault={() => openQuote()}>{s.ctaBtn}</a>
 		</div>
 	</section>
 
