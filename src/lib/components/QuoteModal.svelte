@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { quoteModal, closeQuote } from '$lib/quoteStore';
 	import { stepsFor, type CategoryId } from '$lib/data/quoteFlow';
-	import { mailtoLink, summarize, type Answers } from '$lib/data/quoteEmail';
+	import { mailtoLink, summarize, quoteRows, type Answers } from '$lib/data/quoteEmail';
 	import { language } from '$lib/languageStore';
 	import { sendMail } from '$lib/sendMail';
 	import QuoteStep from './QuoteStep.svelte';
@@ -33,7 +33,14 @@
 	async function finish() {
 		ref = `TRK-Q${Date.now().toString().slice(-6)}`;
 		sent = null;
-		sent = await sendMail('quote', ref, String(answers['contact.email']), summarize(steps, answers, ref));
+		sent = await sendMail({
+			type: 'quote',
+			ref,
+			name: String(answers['contact.name']),
+			email: String(answers['contact.email']),
+			phone: String(answers['contact.phone']),
+			rows: quoteRows(steps, answers)
+		});
 	}
 </script>
 

@@ -58,8 +58,15 @@
 		referenceNumber = generateReferenceNumber();
 		currentStep = 5;
 		sendFailed = false;
-		const body = [`Claim ${referenceNumber}`, '', `Type: ${claimType}`, `Province: ${province}`, `Name: ${fullName}`, `Phone: ${phone}`, `Email: ${email}`, '', additionalInfo].join('\n');
-		sendMail('claim', referenceNumber, email, body).then((ok) => (sendFailed = !ok));
+		sendMail({
+			type: 'claim',
+			ref: referenceNumber,
+			name: fullName,
+			email,
+			phone,
+			rows: [{ k: 'Claim type', v: claimType }, { k: 'Province', v: province }],
+			message: additionalInfo
+		}).then((ok) => (sendFailed = !ok));
 	}
 </script>
 

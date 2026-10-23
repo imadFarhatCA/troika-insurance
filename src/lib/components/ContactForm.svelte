@@ -14,7 +14,7 @@
 	async function submit() {
 		if (!valid || status === 'sending') return;
 		status = 'sending';
-		const ok = await sendMail('contact', '', email, `Name: ${name}\nEmail: ${email}\n\n${message}`, website);
+		const ok = await sendMail({ type: 'contact', name, email, message, website });
 		status = ok ? 'sent' : 'error';
 		if (ok) name = email = message = '';
 	}

@@ -16,6 +16,18 @@ export function summarize(steps: Step[], answers: Answers, ref: string): string 
 	return [`Quote request ${ref}`, '', ...lines, '', `Name: ${c('name')}`, `Phone: ${c('phone')}`, `Email: ${c('email')}`, `Preferred contact: ${c('method')}`].join('\n');
 }
 
+export function quoteRows(steps: Step[], answers: Answers): { k: string; v: string }[] {
+	const label = (s: Step, v: string) => s.options?.find((x) => x.value === v)?.label.en ?? v;
+	const rows = steps
+		.filter((s) => s.kind !== 'contact' && answers[s.id])
+		.map((s) => {
+			const a = answers[s.id];
+			return { k: s.title.en, v: Array.isArray(a) ? a.map((v) => label(s, v)).join(', ') : label(s, a) };
+		});
+	const method = String(answers['contact.method'] ?? '');
+	return method ? [...rows, { k: 'Preferred contact', v: method }] : rows;
+}
+
 export const mailtoLink = (steps: Step[], answers: Answers, ref: string) =>
 	`mailto:${EMAIL}?subject=${encodeURIComponent(`Quote request ${ref}`)}&body=${encodeURIComponent(summarize(steps, answers, ref))}`;
 
