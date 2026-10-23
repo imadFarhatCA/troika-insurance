@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Icon from './Icon.svelte';
+	import ContactForm from './ContactForm.svelte';
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
 	$: s = t[$language].contact;
@@ -17,14 +17,8 @@
 				<div class="card-glow"></div>
 				<div class="card-content">
 					<span class="card-label">{s.emailLabel}</span>
-					<h3 class="card-title">info@troikainsurance.com</h3>
 					<p class="card-desc">{s.emailDesc}</p>
-					<a href="mailto:info@troikainsurance.com" class="card-link">
-						{s.emailCta}
-						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</a>
+					<ContactForm />
 				</div>
 			</div>
 

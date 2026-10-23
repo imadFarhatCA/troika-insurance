@@ -1,7 +1,7 @@
 import type { Step, Text } from './quoteFlow';
 
 export type Answers = Record<string, string | string[]>;
-const EMAIL = 'info@troikainsurance.com';
+const EMAIL = 'info@troikaassurance.ca';
 
 /** Plain-text summary of the questionnaire, in English for the brokers. */
 export function summarize(steps: Step[], answers: Answers, ref: string): string {

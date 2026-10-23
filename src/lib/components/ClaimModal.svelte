@@ -12,6 +12,7 @@
 	let email = '';
 	let additionalInfo = '';
 	let referenceNumber = '';
+	import { sendMail } from '$lib/sendMail';
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
 	$: s = t[$language].claimModal;
@@ -51,9 +52,14 @@
 		currentStep--;
 	}
 
+	let sendFailed = false;
+
 	function handleSubmit() {
 		referenceNumber = generateReferenceNumber();
 		currentStep = 5;
+		sendFailed = false;
+		const body = [`Claim ${referenceNumber}`, '', `Type: ${claimType}`, `Province: ${province}`, `Name: ${fullName}`, `Phone: ${phone}`, `Email: ${email}`, '', additionalInfo].join('\n');
+		sendMail('claim', referenceNumber, email, body).then((ok) => (sendFailed = !ok));
 	}
 </script>
 
@@ -120,6 +126,7 @@
 						<div class="success-icon">✓</div>
 						<h2 class="modal-title">{s.successTitle}</h2>
 						<p class="success-message">{s.successMsg}</p>
+						{#if sendFailed}<p class="success-message">Could not send automatically. Please email info@troikaassurance.ca with this reference.</p>{/if}
 						<div class="reference-box">
 							<p class="reference-label">{s.referenceLabel}</p>
 							<p class="reference-number">{referenceNumber}</p>
