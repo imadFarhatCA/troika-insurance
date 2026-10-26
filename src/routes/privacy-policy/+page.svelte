@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>{s.title} – Troika Insurance</title>
+	<title>{s.title} | Troika Insurance</title>
 	<meta name="description" content="How Troika Insurance collects, uses, discloses, and protects your personal information." />
 	<link rel="canonical" href="https://troikainsurance.com/privacy-policy" />
 </svelte:head>

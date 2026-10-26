@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-	<title>{s.title} – Troika Insurance</title>
+	<title>{s.title} | Troika Insurance</title>
 	<meta name="description" content="Troika Insurance partners with Canada's top personal and business insurers to give you the best coverage and pricing." />
 	<link rel="canonical" href="https://troikainsurance.com/our-partners" />
 </svelte:head>

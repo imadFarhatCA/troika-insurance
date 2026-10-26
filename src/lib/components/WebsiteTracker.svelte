@@ -3,7 +3,7 @@
   ================
   Adds the Website Control Panel tracking script to any SvelteKit site.
   The tracker auto-detects the site by matching location.hostname against
-  the URL registered in the control panel — no API keys or env vars needed.
+  the URL registered in the control panel, no API keys or env vars needed.
 
   USAGE:
   1. Copy this file to your project: src/lib/components/WebsiteTracker.svelte

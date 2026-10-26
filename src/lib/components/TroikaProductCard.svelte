@@ -21,7 +21,7 @@
 	export let badgeSpace: boolean = false;
 	export let includesLabel: string = 'Includes';
 	export let includes: string[];
-	/** Expandable section label — triggers the expand button when set */
+	/** Expandable section label, triggers the expand button when set */
 	export let additionalLabel: string | null = null;
 	export let additionalSub: string | null = null;
 	export let additionalItems: string[] | null = null;

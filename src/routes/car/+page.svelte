@@ -35,17 +35,17 @@
 </script>
 
 <svelte:head>
-	<title>Car Insurance – Troika Insurance</title>
+	<title>Car Insurance | Troika Insurance</title>
 	<meta name="description" content="Auto insurance for personal and commercial vehicle use in Quebec. Vehicle asset, mobility continuity, and liability protection structured around how you actually drive." />
 	<meta name="keywords" content="car insurance Quebec, auto insurance Montreal, vehicle insurance broker Quebec, commercial vehicle insurance Quebec, auto insurance broker, fleet insurance Quebec, rideshare insurance Quebec, delivery vehicle insurance, collision insurance Quebec, auto liability insurance" />
 	<link rel="canonical" href="https://troikainsurance.com/car" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Car Insurance – Troika Insurance" />
+	<meta property="og:title" content="Car Insurance | Troika Insurance" />
 	<meta property="og:description" content="Auto insurance for personal and commercial vehicle use in Quebec. Vehicle asset, mobility continuity, and liability protection structured around how you actually drive." />
 	<meta property="og:url" content="https://troikainsurance.com/car" />
 	<meta property="og:image" content="https://troikainsurance.com/og-image.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Car Insurance – Troika Insurance" />
+	<meta name="twitter:title" content="Car Insurance | Troika Insurance" />
 	<meta name="twitter:description" content="Auto insurance for personal and commercial vehicle use in Quebec. Vehicle asset, mobility continuity, and liability protection structured around how you actually drive." />
 	<meta name="twitter:image" content="https://troikainsurance.com/og-image.jpg" />
 	<script type="application/ld+json">
@@ -53,7 +53,7 @@
 		"@context": "https://schema.org",
 		"@type": "Service",
 		"name": "Car Insurance",
-		"description": "Auto insurance for personal and commercial vehicle use. Covers vehicle asset protection, mobility continuity, and civil liability — structured around real usage patterns.",
+		"description": "Auto insurance for personal and commercial vehicle use. Covers vehicle asset protection, mobility continuity, and civil liability, structured around real usage patterns.",
 		"url": "https://troikainsurance.com/car",
 		"provider": {
 			"@type": "InsuranceAgency",

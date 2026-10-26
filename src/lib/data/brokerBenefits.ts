@@ -10,13 +10,13 @@ export const brokerBenefits: BrokerBenefit[] = [
 		id: 'protect',
 		icon: 'shield',
 		title: 'We Protect Your Interests',
-		description: 'We don\'t work for a single insurance company — we work for you. We search the market, compare insurers, and recommend coverage that truly fits your needs.'
+		description: 'We don\'t work for a single insurance company, we work for you. We search the market, compare insurers, and recommend coverage that truly fits your needs.'
 	},
 	{
 		id: 'speak',
 		icon: 'message-circle',
 		title: 'We Speak the Insurer\'s Language',
-		description: 'Insurance contracts can be complex. We ensure every detail is accurate, properly represented, and aligned with your risk — preventing issues at claim time.'
+		description: 'Insurance contracts can be complex. We ensure every detail is accurate, properly represented, and aligned with your risk, preventing issues at claim time.'
 	},
 	{
 		id: 'negotiate',

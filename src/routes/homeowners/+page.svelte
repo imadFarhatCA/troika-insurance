@@ -34,17 +34,17 @@
 </script>
 
 <svelte:head>
-	<title>Homeowners Insurance – Troika Insurance</title>
+	<title>Homeowners Insurance | Troika Insurance</title>
 	<meta name="description" content="Structured residential insurance for homeowners, tenants, condo owners, plex owners, and chalet owners in Quebec. Property, income continuity, and liability protection from Troika Insurance." />
 	<meta name="keywords" content="homeowners insurance Quebec, home insurance Montreal, condo insurance Quebec, tenant insurance Quebec, plex insurance Quebec, landlord insurance Quebec, chalet insurance Quebec, residential insurance broker, rental property insurance, property continuity protection" />
 	<link rel="canonical" href="https://troikainsurance.com/homeowners" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Homeowners Insurance – Troika Insurance" />
+	<meta property="og:title" content="Homeowners Insurance | Troika Insurance" />
 	<meta property="og:description" content="Structured residential insurance for homeowners, tenants, condo owners, plex owners, and chalet owners in Quebec. Property, income continuity, and liability protection from Troika Insurance." />
 	<meta property="og:url" content="https://troikainsurance.com/homeowners" />
 	<meta property="og:image" content="https://troikainsurance.com/og-image.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Homeowners Insurance – Troika Insurance" />
+	<meta name="twitter:title" content="Homeowners Insurance | Troika Insurance" />
 	<meta name="twitter:description" content="Structured residential insurance for homeowners, tenants, condo owners, plex owners, and chalet owners in Quebec. Property, income continuity, and liability protection from Troika Insurance." />
 	<meta name="twitter:image" content="https://troikainsurance.com/og-image.jpg" />
 	<script type="application/ld+json">

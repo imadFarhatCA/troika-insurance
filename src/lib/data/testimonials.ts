@@ -16,7 +16,7 @@ export const testimonials: Testimonial[] = [
 		initials: 'C',
 		name: 'Client',
 		handle: 'AssurUni Review',
-		quote: 'Ask for Aiman Alameddine. He is professional and doing a very good job — you feel that he is with you all the way and he is making himself available for you anytime. Great person, great service, and great quality.'
+		quote: 'Ask for Aiman Alameddine. He is professional and doing a very good job, you feel that he is with you all the way and he is making himself available for you anytime. Great person, great service, and great quality.'
 	},
 	{
 		initials: 'C',
