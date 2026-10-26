@@ -38,7 +38,7 @@ const translations = {
 				{ title: 'Homeowners', description: 'Protect your home and what matters most to you.', pricing: "Let's Talk About Your Home" },
 				{ title: 'Business Insurance', description: 'Coverage for your business', pricing: "Let's Talk About Your Business" },
 				{ title: 'Car', description: 'Coverage tailored to your vehicle, your needs, and your lifestyle.', pricing: "Let's Talk About Your Auto Insurance" },
-				{ title: 'Custom', description: 'Tailored coverage for unique needs', pricing: 'Start Saving' },
+				{ title: 'Custom', description: 'Tailored coverage for unique needs', pricing: 'Tell Us What You Need' },
 			],
 		},
 		about: {
@@ -600,7 +600,7 @@ const translations = {
 				{ title: 'Propriétaires', description: 'Protégez votre maison et tout ce qui compte pour vous.', pricing: 'Parlons de votre maison' },
 				{ title: 'Commercial', description: 'Couverture pour votre entreprise', pricing: 'Parlons de votre entreprise' },
 				{ title: 'Automobile', description: 'Une protection adaptée à votre véhicule, à vos besoins et à votre réalité.', pricing: 'Parlons de votre assurance auto' },
-				{ title: 'Sur mesure', description: 'Couverture personnalisée pour besoins uniques', pricing: 'Commencer' },
+				{ title: 'Sur mesure', description: 'Couverture personnalisée pour besoins uniques', pricing: 'Dites-nous ce qu\'il vous faut' },
 			],
 		},
 		about: {

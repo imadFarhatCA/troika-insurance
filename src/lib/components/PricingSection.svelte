@@ -5,6 +5,7 @@
 	import customIcon from '$lib/assets/icons/CUSTOM Icon.svg';
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
+	import { openQuote } from '$lib/quoteStore';
 
 	$: s = t[$language].pricing;
 
@@ -37,7 +38,7 @@
 			</svg>
 
 			{#each s.products as product, i}
-				<svelte:element this={hrefs[i] ? 'a' : 'div'} href={hrefs[i] ?? undefined} class="bubble bubble-{i + 1}" style="--bubble-color: {colors[i]}; --bubble-color-rgb: {colorRgbs[i]}; --bubble-text: {textColors[i]}">
+				<svelte:element this={hrefs[i] ? 'a' : 'button'} href={hrefs[i] ?? undefined} type={hrefs[i] ? undefined : 'button'} on:click={() => !hrefs[i] && openQuote('custom')} class="bubble bubble-{i + 1}" style="--bubble-color: {colors[i]}; --bubble-color-rgb: {colorRgbs[i]}; --bubble-text: {textColors[i]}">
 					<div class="bubble-content">
 						<img src={icons[i]} alt={product.title} class="bubble-icon" />
 						<span class="bubble-dot"></span>
@@ -127,6 +128,12 @@
 
 	a.bubble {
 		text-decoration: none;
+	}
+
+	button.bubble {
+		border: 0;
+		padding: 0;
+		font: inherit;
 	}
 
 	.bubble {

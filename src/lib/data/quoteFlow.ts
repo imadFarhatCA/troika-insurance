@@ -2,7 +2,7 @@ export type Text = { en: string; fr: string };
 export type Option = { value: string; label: Text };
 export type Kind = 'choice' | 'multi' | 'text' | 'contact';
 export type Step = { id: string; title: Text; kind: Kind; options?: Option[]; optional?: boolean; placeholder?: Text };
-export type CategoryId = 'auto' | 'home' | 'commercial' | 'fleet';
+export type CategoryId = 'auto' | 'home' | 'commercial' | 'fleet' | 'custom';
 
 const o = (value: string, en: string, fr = en): Option => ({ value, label: { en, fr } });
 const yesNo = [o('yes', 'Yes', 'Oui'), o('no', 'No', 'Non')];
@@ -11,7 +11,7 @@ export const CATEGORY_STEP: Step = {
 	id: 'category',
 	title: { en: 'What would you like to insure?', fr: 'Que souhaitez-vous assurer?' },
 	kind: 'choice',
-	options: [o('auto', 'Auto', 'Auto'), o('home', 'Home', 'Habitation'), o('commercial', 'Business', 'Entreprise'), o('fleet', 'Fleet', 'Flotte')]
+	options: [o('auto', 'Auto', 'Auto'), o('home', 'Home', 'Habitation'), o('commercial', 'Business', 'Entreprise'), o('fleet', 'Fleet', 'Flotte'), o('custom', 'Something else', 'Autre chose')]
 };
 
 /** Steps specific to one category. The category question itself is skipped when the visitor starts from that category's page. */
@@ -39,6 +39,11 @@ export const CATEGORY_STEPS: Record<CategoryId, Step[]> = {
 		{ id: 'vehicles', kind: 'choice', title: { en: 'How many vehicles?', fr: 'Combien de véhicules?' }, options: [o('2-5', '2 to 5', '2 à 5'), o('6-20', '6 to 20', '6 à 20'), o('20+', 'More than 20', 'Plus de 20')] },
 		{ id: 'use', kind: 'choice', title: { en: 'How are they used?', fr: 'Quel est leur usage?' },
 			options: [o('delivery', 'Delivery', 'Livraison'), o('trades', 'Trades and services', 'Métiers et services'), o('transport', 'Transport', 'Transport'), o('other', 'Other', 'Autre')] }
+	],
+	custom: [
+		{ id: 'need', kind: 'text', title: { en: 'What do you need help with?', fr: 'De quoi avez-vous besoin?' }, placeholder: { en: 'Describe what you are looking for...', fr: 'Décrivez ce que vous recherchez...' } },
+		{ id: 'callback', kind: 'choice', title: { en: 'When is the best time to call you?', fr: 'Quel est le meilleur moment pour vous appeler?' },
+			options: [o('morning', 'Morning', 'Matin'), o('afternoon', 'Afternoon', 'Après-midi'), o('evening', 'Evening', 'Soir'), o('anytime', 'Anytime', 'N\'importe quand')] }
 	]
 };
 
@@ -52,5 +57,5 @@ export const COMMON_STEPS: Step[] = [
 export const stepsFor = (category: CategoryId | '' | null, preset: boolean): Step[] => [
 	...(preset ? [] : [CATEGORY_STEP]),
 	...(category ? CATEGORY_STEPS[category] : []),
-	...COMMON_STEPS
+	...COMMON_STEPS.filter((x) => !(category === 'custom' && x.id === 'notes'))
 ];
