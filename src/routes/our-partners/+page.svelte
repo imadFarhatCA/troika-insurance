@@ -152,6 +152,8 @@
 
 
 .partner-line a {
+	display: inline-block;
+	padding: 10px 0;
 	color: var(--color-text);
 	font-weight: 500;
 	text-decoration: none;

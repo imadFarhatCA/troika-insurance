@@ -66,6 +66,9 @@
 	color: var(--color-text-footer);
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	min-width: 44px;
+	min-height: 44px;
 	transition: color 0.2s;
 }
 
