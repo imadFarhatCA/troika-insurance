@@ -20,20 +20,14 @@
 					<a href="/#contact" class="footer-social-icon" aria-label="Contact">
 						<Icon name="email" size={18} />
 					</a>
-					<a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Facebook">
-						<Icon name="facebook" size={18} />
-					</a>
-					<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Instagram">
-						<Icon name="instagram" size={18} />
-					</a>
 				</div>
 			</div>
 			<div class="footer-links">
 				<div class="footer-column">
 					<h4><span class="the">{s.productsArticle}</span> {s.products}</h4>
 					<a href="/homeowners">{nav.homeowners}</a>
-					<a href="/#commercial">{nav.commercial}</a>
-					<a href="/#car">{nav.car}</a>
+					<a href="/commercial">{nav.commercial}</a>
+					<a href="/car">{nav.car}</a>
 				</div>
 				<div class="footer-column">
 					<h4><span class="the">{s.companyArticle}</span> {s.company}</h4>

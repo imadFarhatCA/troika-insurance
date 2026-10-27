@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
 	import { openQuote } from '$lib/quoteStore';
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
@@ -24,35 +25,7 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Insurance Services | Troika Insurance</title>
-	<meta name="description" content="Troika Insurance offers commercial, personal, and specialized insurance services in Quebec, including professional liability, cyber coverage, industry-specific programs, and full advisory support." />
-	<meta name="keywords" content="insurance services Quebec, specialized insurance Montreal, professional liability insurance Quebec, cyber liability insurance Quebec, industry specific insurance, commercial insurance services, personal insurance services Quebec, insurance advisory Montreal" />
-	<link rel="canonical" href="https://troikainsurance.com/services" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Insurance Services | Troika Insurance" />
-	<meta property="og:description" content="Troika Insurance offers commercial, personal, and specialized insurance services in Quebec, including professional liability, cyber coverage, industry-specific programs, and full advisory support." />
-	<meta property="og:url" content="https://troikainsurance.com/services" />
-	<meta property="og:image" content="https://troikainsurance.com/og-image.jpg" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Insurance Services | Troika Insurance" />
-	<meta name="twitter:description" content="Troika Insurance offers commercial, personal, and specialized insurance services in Quebec, including professional liability, cyber coverage, industry-specific programs, and full advisory support." />
-	<meta name="twitter:image" content="https://troikainsurance.com/og-image.jpg" />
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Service",
-		"name": "Insurance Services",
-		"description": "Comprehensive insurance services including commercial insurance, specialized coverage, industry expertise programs, personal insurance, and advisory & claims support.",
-		"url": "https://troikainsurance.com/services",
-		"provider": {
-			"@type": "InsuranceAgency",
-			"name": "Troika Insurance",
-			"url": "https://troikainsurance.com"
-		}
-	}
-	</script>
-</svelte:head>
+<Seo title="Insurance Services" description="Troika Insurance offers commercial, personal, and specialized insurance services in Quebec, including professional liability, cyber coverage, industry-specific programs, and full advisory support." path="/services" schema="Service" />
 
 <div class="page">
 	<ServicesHero />

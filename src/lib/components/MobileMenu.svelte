@@ -181,7 +181,7 @@
 		font-weight: 700;
 		letter-spacing: 0.8px;
 		color: #7b2a7b;
-		padding: 7px 18px;
+		padding: 13px 18px;
 		transition: background 0.18s ease, color 0.18s ease;
 		font-family: inherit;
 		line-height: 1;

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
 	import { openQuote } from '$lib/quoteStore';
 	import { onMount } from 'svelte';
 	import TroikaProductCard from '$lib/components/TroikaProductCard.svelte';
@@ -33,36 +34,7 @@
 	const cardIcons = ['building', 'trending-up', 'shield'] as const;
 </script>
 
-<svelte:head>
-	<title>Commercial Insurance | Troika Insurance</title>
-	<meta name="description" content="Commercial insurance for business owners in Quebec. Property, revenue continuity, and liability protection built around keeping your business running after a loss." />
-	<meta name="keywords" content="commercial insurance Quebec, business insurance Montreal, commercial property insurance Quebec, business interruption insurance, commercial liability insurance Quebec, small business insurance, contractor insurance Quebec, commercial insurance broker Montreal, revenue continuity insurance, business continuity insurance" />
-	<link rel="canonical" href="https://troikainsurance.com/commercial" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Commercial Insurance | Troika Insurance" />
-	<meta property="og:description" content="Commercial insurance for business owners in Quebec. Property, revenue continuity, and liability protection built around keeping your business running after a loss." />
-	<meta property="og:url" content="https://troikainsurance.com/commercial" />
-	<meta property="og:image" content="https://troikainsurance.com/og-image.jpg" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Commercial Insurance | Troika Insurance" />
-	<meta name="twitter:description" content="Commercial insurance for business owners in Quebec. Property, revenue continuity, and liability protection built around keeping your business running after a loss." />
-	<meta name="twitter:image" content="https://troikainsurance.com/og-image.jpg" />
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Service",
-		"name": "Commercial Insurance",
-		"description": "Business insurance covering property & asset protection, revenue continuity, and commercial liability. Built for business owners, contractors, investors, and professional firms.",
-		"url": "https://troikainsurance.com/commercial",
-		"provider": {
-			"@type": "InsuranceAgency",
-			"name": "Troika Insurance",
-			"url": "https://troikainsurance.com"
-		},
-		"areaServed": ["Quebec", "Ontario", "Canada"]
-	}
-	</script>
-</svelte:head>
+<Seo title="Commercial Insurance" description="Commercial insurance for business owners in Quebec. Property, revenue continuity, and liability protection built around keeping your business running after a loss." path="/commercial" schema="Service" />
 
 <div class="page">
 

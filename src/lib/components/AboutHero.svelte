@@ -5,7 +5,7 @@
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
 
-	let animatedElements = {
+	let animatedElements: Record<string, boolean> = {
 		tag: false,
 		title: false,
 		description: false,

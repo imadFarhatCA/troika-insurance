@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
 	import { insurersIn } from '$lib/data/insurers';
@@ -12,11 +13,7 @@
 	const host = (url: string) => new URL(url).hostname.replace(/^www\./, '');
 </script>
 
-<svelte:head>
-	<title>{s.title} | Troika Insurance</title>
-	<meta name="description" content="Troika Insurance partners with Canada's top personal and business insurers to give you the best coverage and pricing." />
-	<link rel="canonical" href="https://troikainsurance.com/our-partners" />
-</svelte:head>
+<Seo title={s.title} description="Troika Insurance partners with Canada's top personal and business insurers to give you the best coverage and pricing." path="/our-partners" />
 
 <div class="page">
 	<section class="partners-hero">

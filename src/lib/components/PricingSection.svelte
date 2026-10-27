@@ -37,19 +37,26 @@
 				<circle cx="1269" cy="366" r="5" fill="#7fc4e0" />
 			</svg>
 
+			{#snippet body(product: { title: string; description: string; pricing: string }, i: number)}
+				<div class="bubble-content">
+					<img src={icons[i]} alt="" class="bubble-icon" />
+					<span class="bubble-dot"></span>
+					<h3>{product.title}</h3>
+					<p class="bubble-description">{product.description}</p>
+					<p class="bubble-pricing">
+						{product.pricing}
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+					</p>
+				</div>
+			{/snippet}
+
 			{#each s.products as product, i}
-				<svelte:element this={hrefs[i] ? 'a' : 'button'} href={hrefs[i] ?? undefined} type={hrefs[i] ? undefined : 'button'} on:click={() => !hrefs[i] && openQuote('custom')} class="bubble bubble-{i + 1}" style="--bubble-color: {colors[i]}; --bubble-color-rgb: {colorRgbs[i]}; --bubble-text: {textColors[i]}">
-					<div class="bubble-content">
-						<img src={icons[i]} alt={product.title} class="bubble-icon" />
-						<span class="bubble-dot"></span>
-						<h3>{product.title}</h3>
-						<p class="bubble-description">{product.description}</p>
-						<p class="bubble-pricing">
-							{product.pricing}
-							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-						</p>
-					</div>
-				</svelte:element>
+				{@const style = `--bubble-color: ${colors[i]}; --bubble-color-rgb: ${colorRgbs[i]}; --bubble-text: ${textColors[i]}`}
+				{#if hrefs[i]}
+					<a href={hrefs[i]} class="bubble bubble-{i + 1}" {style}>{@render body(product, i)}</a>
+				{:else}
+					<button type="button" class="bubble bubble-{i + 1}" {style} on:click={() => openQuote('custom')}>{@render body(product, i)}</button>
+				{/if}
 			{/each}
 		</div>
 	</div>

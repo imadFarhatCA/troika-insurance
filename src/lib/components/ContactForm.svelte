@@ -34,7 +34,7 @@
 
 <style>
 	.cf { display: grid; gap: 12px; }
-	.cf input, .cf textarea { width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 10px; font: inherit; font-size: 15px; background: #fff; color: #1a1a1a; transition: border-color 0.2s, box-shadow 0.2s; }
+	.cf input, .cf textarea { width: 100%; box-sizing: border-box; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 10px; font: inherit; font-size: 15px; background: #fff; color: #1a1a1a; transition: border-color 0.2s, box-shadow 0.2s; }
 	.cf input:focus, .cf textarea:focus { outline: none; border-color: #92278f; box-shadow: 0 0 0 3px rgba(146, 39, 143, 0.15); }
 	.cf textarea { resize: vertical; }
 	.cf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
 	import { openQuote } from '$lib/quoteStore';
 	import { onMount } from 'svelte';
 	import Icon from '$lib/components/Icon.svelte';
@@ -18,36 +19,7 @@
 	$: s = t[$language].claims;
 </script>
 
-<svelte:head>
-	<title>Claims Support | Troika Insurance</title>
-	<meta name="description" content="Troika acts as your intermediary when a claim happens, guiding, coordinating, and supporting you between you and your insurer from report to resolution." />
-	<meta name="keywords" content="insurance claim Quebec, file insurance claim Montreal, claims support broker, insurance claims assistance, claim process Quebec, insurance intermediary, claim help Quebec, insurance claim support, report a claim Quebec" />
-	<link rel="canonical" href="https://troikainsurance.com/claims" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Claims Support | Troika Insurance" />
-	<meta property="og:description" content="Troika acts as your intermediary when a claim happens, guiding, coordinating, and supporting you between you and your insurer from report to resolution." />
-	<meta property="og:url" content="https://troikainsurance.com/claims" />
-	<meta property="og:image" content="https://troikainsurance.com/og-image.jpg" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Claims Support | Troika Insurance" />
-	<meta name="twitter:description" content="Troika acts as your intermediary when a claim happens, guiding, coordinating, and supporting you between you and your insurer from report to resolution." />
-	<meta name="twitter:image" content="https://troikainsurance.com/og-image.jpg" />
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Service",
-		"name": "Insurance Claims Support",
-		"description": "Expert claims support and intermediary services. Troika guides clients through the full claims process, from reporting to resolution, acting as their dedicated advocate with the insurer.",
-		"url": "https://troikainsurance.com/claims",
-		"provider": {
-			"@type": "InsuranceAgency",
-			"name": "Troika Insurance",
-			"url": "https://troikainsurance.com"
-		},
-		"areaServed": ["Quebec", "Ontario", "Canada"]
-	}
-	</script>
-</svelte:head>
+<Seo title="Claims Support" description="Troika acts as your intermediary when a claim happens, guiding, coordinating, and supporting you between you and your insurer from report to resolution." path="/claims" schema="Service" />
 
 <div class="page">
 

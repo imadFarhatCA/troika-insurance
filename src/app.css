@@ -3900,3 +3900,13 @@ body {
 @media (max-width: 560px) {
 	.switch-section h2 { font-size: 26px; }
 }
+
+/* Touch-friendly footer targets */
+@media (max-width: 768px) {
+	.footer-column a,
+	.footer-claims-btn {
+		display: flex;
+		align-items: center;
+		min-height: 44px;
+	}
+}

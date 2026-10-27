@@ -20,5 +20,5 @@
 </script>
 
 <svelte:head>
-	<script src="{panel}/tracker.js"></script>
+	<script defer src="{panel}/tracker.js"></script>
 </svelte:head>
