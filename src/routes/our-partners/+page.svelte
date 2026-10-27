@@ -13,7 +13,7 @@
 	const host = (url: string) => new URL(url).hostname.replace(/^www\./, '');
 </script>
 
-<Seo title={s.title} description="Troika Insurance partners with Canada's top personal and business insurers to give you the best coverage and pricing." path="/our-partners" />
+<Seo path="/our-partners" />
 
 <div class="page">
 	<section class="partners-hero">

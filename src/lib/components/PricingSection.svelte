@@ -6,6 +6,7 @@
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
 	import { openQuote } from '$lib/quoteStore';
+	import { localize } from '$lib/localize';
 
 	$: s = t[$language].pricing;
 
@@ -53,7 +54,7 @@
 			{#each s.products as product, i}
 				{@const style = `--bubble-color: ${colors[i]}; --bubble-color-rgb: ${colorRgbs[i]}; --bubble-text: ${textColors[i]}`}
 				{#if hrefs[i]}
-					<a href={hrefs[i]} class="bubble bubble-{i + 1}" {style}>{@render body(product, i)}</a>
+					<a href={$localize(hrefs[i] ?? '/')} class="bubble bubble-{i + 1}" {style}>{@render body(product, i)}</a>
 				{:else}
 					<button type="button" class="bubble bubble-{i + 1}" {style} on:click={() => openQuote('custom')}>{@render body(product, i)}</button>
 				{/if}

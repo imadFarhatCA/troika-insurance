@@ -19,7 +19,7 @@
 	$: s = t[$language].claims;
 </script>
 
-<Seo title="Claims Support" description="Troika acts as your intermediary when a claim happens, guiding, coordinating, and supporting you between you and your insurer from report to resolution." path="/claims" schema="Service" />
+<Seo path="/claims" />
 
 <div class="page">
 

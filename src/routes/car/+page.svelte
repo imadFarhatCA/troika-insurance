@@ -35,7 +35,7 @@
 	const cardIcons = ['car', 'trending-up', 'shield'] as const;
 </script>
 
-<Seo title="Car Insurance" description="Auto insurance for personal and commercial vehicle use in Quebec. Vehicle asset, mobility continuity, and liability protection structured around how you actually drive." path="/car" schema="Service" />
+<Seo path="/car" />
 
 <div class="page">
 

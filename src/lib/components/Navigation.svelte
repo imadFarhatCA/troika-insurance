@@ -4,6 +4,9 @@ import logoFR from '$lib/assets/troikaInsurance logo FR.svg';
 	import MobileMenu from './MobileMenu.svelte';
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+	import { localize, stripLang, withLang } from '$lib/localize';
 	let mobileMenuOpen = false;
 	$: s = t[$language].nav;
 
@@ -12,25 +15,26 @@ import logoFR from '$lib/assets/troikaInsurance logo FR.svg';
 	}
 
 	function setLang(lang: 'EN' | 'FR') {
-		language.set(lang);
+		if (lang === $language) return;
+		goto(withLang(stripLang($page.url.pathname), lang) + $page.url.hash, { noScroll: true, keepFocus: true });
 	}
 </script>
 
 <nav class="nav">
 	<div class="nav-container">
-		<a href="/" class="logo">
+		<a href={$localize('/')} class="logo">
 			<img src={$language === 'FR' ? logoFR : logoEN} alt="Troika Insurance" class="logo-img" />
 		</a>
 
 		<!-- Desktop Menu -->
 		<div class="nav-right">
 		<div class="nav-links">
-			<a href="/homeowners">{s.homeowners}</a>
-			<a href="/commercial">{s.commercial}</a>
-			<a href="/car">{s.car}</a>
-			<a href="/our-approach">{s.ourApproach}</a>
-			<a href="/services">{s.services}</a>
-			<a href="/claims" class="nav-claims-btn">{s.claims}</a>
+			<a href={$localize('/homeowners')}>{s.homeowners}</a>
+			<a href={$localize('/commercial')}>{s.commercial}</a>
+			<a href={$localize('/car')}>{s.car}</a>
+			<a href={$localize('/our-approach')}>{s.ourApproach}</a>
+			<a href={$localize('/services')}>{s.services}</a>
+			<a href={$localize('/claims')} class="nav-claims-btn">{s.claims}</a>
 		</div>
 
 		<!-- Language Toggle -->

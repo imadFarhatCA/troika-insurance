@@ -5,6 +5,7 @@
 	import { claimModalOpen } from '$lib/claimStore';
 	import { language } from '$lib/languageStore';
 	import { t } from '$lib/i18n';
+	import { localize } from '$lib/localize';
 	$: s = t[$language].footer;
 	$: nav = t[$language].nav;
 </script>
@@ -17,7 +18,7 @@
 				<p class="footer-partner">{s.partnerOf}</p>
 				<p>{s.tagline}</p>
 				<div class="footer-social">
-					<a href="/#contact" class="footer-social-icon" aria-label="Contact">
+					<a href={$localize('/#contact')} class="footer-social-icon" aria-label="Contact">
 						<Icon name="email" size={18} />
 					</a>
 				</div>
@@ -25,19 +26,19 @@
 			<div class="footer-links">
 				<div class="footer-column">
 					<h4><span class="the">{s.productsArticle}</span> {s.products}</h4>
-					<a href="/homeowners">{nav.homeowners}</a>
-					<a href="/commercial">{nav.commercial}</a>
-					<a href="/car">{nav.car}</a>
+					<a href={$localize('/homeowners')}>{nav.homeowners}</a>
+					<a href={$localize('/commercial')}>{nav.commercial}</a>
+					<a href={$localize('/car')}>{nav.car}</a>
 				</div>
 				<div class="footer-column">
 					<h4><span class="the">{s.companyArticle}</span> {s.company}</h4>
-					<a href="/our-approach">{s.ourApproach}</a>
-					<a href="/services">{s.services}</a>
+					<a href={$localize('/our-approach')}>{s.ourApproach}</a>
+					<a href={$localize('/services')}>{s.services}</a>
 					<button class="footer-claims-btn" on:click={() => claimModalOpen.set(true)}>{s.claims}</button>
-					<a href="/#contact">Contact</a>
-					<a href="/our-partners">{s.ourPartners}</a>
-					<a href="/privacy-policy">{s.privacyPolicy}</a>
-					<a href="/complaints-policy">{s.complaintsPolicy}</a>
+					<a href={$localize('/#contact')}>Contact</a>
+					<a href={$localize('/our-partners')}>{s.ourPartners}</a>
+					<a href={$localize('/privacy-policy')}>{s.privacyPolicy}</a>
+					<a href={$localize('/complaints-policy')}>{s.complaintsPolicy}</a>
 				</div>
 			</div>
 		</div>

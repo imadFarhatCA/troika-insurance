@@ -7,7 +7,8 @@
 	import QuoteModal from '$lib/components/QuoteModal.svelte';
 	import WebsiteTracker from '$lib/components/WebsiteTracker.svelte';
 
-	import { onMount } from 'svelte';
+	import { page } from '$app/state';
+	import { langFromPath } from '$lib/localize';
 	import { language } from '$lib/languageStore';
 	import { SITE_EMAIL, SITE_NAME, SITE_PHONE, SITE_URL } from '$lib/seo';
 
@@ -29,17 +30,11 @@
 		{ '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${SITE_URL}/#website`, url: SITE_URL, name: SITE_NAME, inLanguage: ['en-CA', 'fr-CA'], publisher: { '@id': `${SITE_URL}/#organization` } }
 	]);
 
-	onMount(() => {
-		try {
-			const saved = localStorage.getItem('lang');
-			if (saved === 'EN' || saved === 'FR') language.set(saved);
-		} catch {}
-		return language.subscribe((l) => {
-			document.documentElement.lang = l === 'FR' ? 'fr' : 'en';
-			try {
-				localStorage.setItem('lang', l);
-			} catch {}
-		});
+	const lang = $derived(langFromPath(page.url.pathname));
+	language.set(langFromPath(page.url.pathname));
+	$effect.pre(() => language.set(lang));
+	$effect(() => {
+		document.documentElement.lang = lang === 'FR' ? 'fr' : 'en';
 	});
 </script>
 

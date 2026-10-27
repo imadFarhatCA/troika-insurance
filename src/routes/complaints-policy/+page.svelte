@@ -7,6 +7,6 @@
 	$: s = complaintsPolicy[$language];
 </script>
 
-<Seo title={s.title} description="How Troika Insurance handles client complaints and disputes, from receipt through to resolution." path="/complaints-policy" />
+<Seo path="/complaints-policy" />
 
 <LegalPage title={s.title} updatedLabel={s.updatedLabel} updatedDate={s.updatedDate} blocks={s.blocks} />

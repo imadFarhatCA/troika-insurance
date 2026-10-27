@@ -34,7 +34,7 @@
 	const cardIcons = ['building', 'trending-up', 'shield'] as const;
 </script>
 
-<Seo title="Commercial Insurance" description="Commercial insurance for business owners in Quebec. Property, revenue continuity, and liability protection built around keeping your business running after a loss." path="/commercial" schema="Service" />
+<Seo path="/commercial" />
 
 <div class="page">
 

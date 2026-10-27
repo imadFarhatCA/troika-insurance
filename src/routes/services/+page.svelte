@@ -25,7 +25,7 @@
 	}
 </script>
 
-<Seo title="Insurance Services" description="Troika Insurance offers commercial, personal, and specialized insurance services in Quebec, including professional liability, cyber coverage, industry-specific programs, and full advisory support." path="/services" schema="Service" />
+<Seo path="/services" />
 
 <div class="page">
 	<ServicesHero />

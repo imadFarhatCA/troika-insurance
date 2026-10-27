@@ -1,4 +1,5 @@
 import type { Handle } from '@sveltejs/kit';
+import { langFromPath } from '$lib/localize';
 
 const SECURITY_HEADERS = {
 	'X-Content-Type-Options': 'nosniff',
@@ -9,7 +10,8 @@ const SECURITY_HEADERS = {
 
 /** _headers only covers static assets; page responses come from the worker. */
 export const handle: Handle = async ({ event, resolve }) => {
-	const response = await resolve(event);
+	const lang = langFromPath(event.url.pathname) === 'FR' ? 'fr' : 'en';
+	const response = await resolve(event, { transformPageChunk: ({ html }) => html.replace('<html lang="en">', `<html lang="${lang}">`) });
 	for (const [k, v] of Object.entries(SECURITY_HEADERS)) response.headers.set(k, v);
 	return response;
 };

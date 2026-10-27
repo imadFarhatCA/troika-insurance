@@ -7,6 +7,6 @@
 	$: s = privacyPolicy[$language];
 </script>
 
-<Seo title={s.title} description="How Troika Insurance collects, uses, discloses, and protects your personal information." path="/privacy-policy" />
+<Seo path="/privacy-policy" />
 
 <LegalPage title={s.title} updatedLabel={s.updatedLabel} updatedDate={s.updatedDate} blocks={s.blocks} />

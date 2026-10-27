@@ -17,7 +17,7 @@
 	const networkIcons = ['trending-up', 'users', 'award'] as const;
 </script>
 
-<Seo title="Our Approach" description="Troika Insurance operates as a trusted advisory partner, not just a broker. Our continuity-focused approach means we assess, protect, and remain by your side before and after a loss." path="/our-approach" schema="AboutPage" />
+<Seo path="/our-approach" />
 
 <div class="page">
 	<AboutHero />

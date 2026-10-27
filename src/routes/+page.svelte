@@ -14,7 +14,7 @@
 	$: s = t[$language].homepage;
 </script>
 
-<Seo full title="Troika Insurance | Premium Insurance Brokers for Home, Auto & Business" description="Troika Insurance is a premium insurance brokerage in Quebec offering homeowners, car, and commercial insurance. Continuity-focused protection for individuals and businesses." path="/" />
+<Seo path="/" />
 
 <div class="page">
 	<!-- Hero Section -->

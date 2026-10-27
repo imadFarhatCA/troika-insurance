@@ -2,6 +2,7 @@
 	export let open: boolean = false;
 	export let onToggle: () => void;
 	export let lang: 'EN' | 'FR' = 'EN';
+	import { localize } from '$lib/localize';
 	export let onLangChange: (l: 'EN' | 'FR') => void = () => {};
 	import { t } from '$lib/i18n';
 	$: s = t[lang].nav;
@@ -25,13 +26,13 @@
 {#if open}
 	<div class="mobile-menu-overlay">
 		<nav class="mobile-nav">
-			<a href="/homeowners" on:click={onToggle}>{s.homeowners}</a>
-			<a href="/commercial" on:click={onToggle}>{s.commercial}</a>
-			<a href="/car" on:click={onToggle}>{s.car}</a>
-			<a href="/our-approach" on:click={onToggle}>{s.ourApproach}</a>
-			<a href="/services" on:click={onToggle}>{s.services}</a>
-			<a href="/claims" class="mobile-claims-btn" on:click={onToggle}>{s.claims}</a>
-			<a href="/#contact" on:click={onToggle}>{s.contact}</a>
+			<a href={$localize('/homeowners')} on:click={onToggle}>{s.homeowners}</a>
+			<a href={$localize('/commercial')} on:click={onToggle}>{s.commercial}</a>
+			<a href={$localize('/car')} on:click={onToggle}>{s.car}</a>
+			<a href={$localize('/our-approach')} on:click={onToggle}>{s.ourApproach}</a>
+			<a href={$localize('/services')} on:click={onToggle}>{s.services}</a>
+			<a href={$localize('/claims')} class="mobile-claims-btn" on:click={onToggle}>{s.claims}</a>
+			<a href={$localize('/#contact')} on:click={onToggle}>{s.contact}</a>
 		</nav>
 
 		<!-- Language Toggle -->

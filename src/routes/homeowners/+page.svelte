@@ -34,7 +34,7 @@
 	const cardIcons = ['home', 'trending-up', 'shield'] as const;
 </script>
 
-<Seo title="Homeowners Insurance" description="Structured residential insurance for homeowners, tenants, condo owners, plex owners, and chalet owners in Quebec. Property, income continuity, and liability protection from Troika Insurance." path="/homeowners" schema="Service" />
+<Seo path="/homeowners" />
 
 <div class="page">
 

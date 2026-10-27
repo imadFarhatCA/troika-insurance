@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { language } from '$lib/languageStore';
+	import { localize } from '$lib/localize';
 
 	const fr = $derived($language === 'FR');
 </script>
@@ -14,7 +15,7 @@
 	<p class="error-code">{page.status}</p>
 	<h1>{page.status === 404 ? (fr ? 'Page introuvable' : 'Page not found') : fr ? 'Une erreur est survenue' : 'Something went wrong'}</h1>
 	<p>{fr ? "La page que vous cherchez n'existe pas ou a été déplacée." : 'The page you are looking for does not exist or has moved.'}</p>
-	<a href="/" class="btn-primary">{fr ? "Retour à l'accueil" : 'Back to home'}</a>
+	<a href={$localize('/')} class="btn-primary">{fr ? "Retour à l'accueil" : 'Back to home'}</a>
 </section>
 
 <style>
